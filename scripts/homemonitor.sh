@@ -23,23 +23,10 @@
 #    { 0.78988728,  0.86491137,  1.00000000, }, /* 10000K */
 #    { 0.77442176,  0.85453121,  1.00000000, },
 
-#xrandr --output DP-1-1 --gamma 1:1:1 --brightness 1.0  #default brightness
-#xrandr --output DP-1-1 --gamma 1.1:0.8:0.7 --brightness 0.55 	#nightlight
-
 # hp home laptop setup
 set_lap(){
 xrandr --output LVDS-1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output VGA-1 --off --output HDMI-1 --off --output DP-1 --off
 }
-
-
-
-
-
-
-
-
-
-
 
 
 #hp homelaptop + Monitor
@@ -47,9 +34,9 @@ set_multmon(){
 xrandr --output LVDS-1 --primary --mode 1366x768 --pos 277x1080 --rotate normal --output VGA-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off
 }
 
-mointorsetup(){
-PS3="Selet the monitor setup?  '
-options=("Laptop" "Multimon" "Quit")
+MonitorSetup(){
+PS3="Selet the monitor setup?"  
+options=("Laptop" "MultiMon" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -59,7 +46,7 @@ do
 	    set_lap 
 	    break
 	    ;;
-        "SingleMonitor")
+        "MultiMon")
             echo "your choice is $REPLY"
             echo "activating $opt setup"
             set_multmon
@@ -76,23 +63,25 @@ do
 done
 }
 
-nightlight(){
+NightLight(){
 
-PS3="Selet the monitor setup?  '
-options=("Laptop" "Multimon" "Quit")
+PS3="Select the Brightness and Color setup"
+options=("Day Light" "NightMode" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
-        "Laptop")
+        "Day Light")
 	echo "your choice is $REPLY."
             echo "activating $opt setup"
-	    set_lap 
+		xrandr --output LVDS-1 --gamma 1:1:1 --brightness 1.0  #default brightness
+		xrandr --output VGA-1  --gamma 1:1:1 --brightness 1.0  #default brightness
 	    break
 	    ;;
-        "SingleMonitor")
+        "NightMode")
             echo "your choice is $REPLY"
             echo "activating $opt setup"
-            set_multmon
+		xrandr --output LVDS-1 --gamma 1.1:0.8:0.7 --brightness 0.8 	#Nightmode nightlight
+		xrandr --output VGA-1  --gamma 1.1:0.8:0.7 --brightness 0.8  #Nightmode brightness
 	    break
 	    ;;
 #        "Option 3")
@@ -107,11 +96,31 @@ done
 }
 
 
+echo "You can set up the monitor config &night color in this setup"
+PS3="What do you want to do?"
+options=("Set Monitor" "Set Color" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Set Monitor")
+		echo "your choice is $REPLY."
+            echo "activating $opt setup"
+	    MonitorSetup
+	    break
 
-}
-
-
-
-
-
-
+	    ;;
+        "Set Color")
+            echo "your choice is $REPLY"
+            echo "activating $opt setup"
+		NightLight
+	    break
+	    ;;
+#        "Option 3")
+#            echo "you chose choice $REPLY which is $opt"
+#            ;;
+        "Quit")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done

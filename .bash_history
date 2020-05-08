@@ -1,50 +1,3 @@
-sh backup.sh | wc -l
-sh backup.sh | wc -l
-sh backup.sh | wc -l
-sh backup.sh | wc -l
-ls -alt
-sh backup.sh
-readlink ls
-readlink $ls
-readlink $(ls)
-readlink -f $(ls)
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-[A
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-sh backup.sh
-xrandr | grep connected
-subl
-vim .bashrc
-cd Desktop/
-ls
-vim kdei3.sh 
-cd 
 cd .config/
 ls
 cd i3
@@ -498,3 +451,50 @@ pacman -Qe
 pacman -Qe | wc -l
 pacman -Qn | wc -l
 kill -9 -1
+cd Desktop/
+cat xrandr.sh 
+rm -rf xrandr.sh 
+cd .config/
+ls
+cd 
+cd .dotfiles/scripts/
+ls
+vim homemonitor.sh 
+cat homemonitor.sh > ~/lwwlearn/ myscripts.txt
+cat homemonitor.sh > ~/lwwlearn/myscripts.txt
+ls
+cat backup.sh >> ~/lwwlearn/myscripts.txt
+cat link.sh >> ~/lwwlearn/myscripts.txt
+i3-dmenu-desktop 
+i3-dmsg 
+i3-msg 
+i3-msg move workspace to output left
+i3-msg move workspace to output top
+i3-msg move workspace to output right
+sudo pacman -S vscode
+yay -S vscode
+pacman -Q vscode
+pacman -Q visualstudio
+pacman -Ss visualstudio
+yay -Ss visualstudio
+yay -S mono-visualstudio
+ls
+ls
+ls
+cd LEARN/
+ls
+mv 'how to git' howtogit.txt
+mv 'xrandr configuration' xrandr\ configuration.txt
+ls
+mv 'xrandr configuration' xrandrConfiguration.txt
+ls
+mv 'xrandr configuration' xrandrConfiguration.txt
+ls
+mv 'xrandr\ configuration.txt' xrandrConfiguration.txt
+mv 'xrandr configuration.txt' xrandrConfiguration.txt
+ls
+vim howtogit.txt 
+cat /etc/profile
+less /etc/profile.d/
+less /etc/profile/
+less /etc/profile
