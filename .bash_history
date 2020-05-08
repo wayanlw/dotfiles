@@ -1,155 +1,3 @@
-$(date +%y%m%d_%H%M%S)
-$(date +D%y%m%d_T%H%M%S)
-date +D%y%m%d_T%H%M%S)
-date +D%y%m%d_T%H%M%S
-date +%y%m%d_%H%M%S
-ls -alt
-cd
-ls
-cd lwwbackups/
-ls
-ls
-ls -alt
-ls
-ls -al
-ls -a
-rm -rf *
-ls -a
-ls -a
-cat 200508_035
-cd 200508_035
-ls -a
-cd 200508_035
-cat 200508_035
-ls -alt
-cat 200508_035
-rm -rf *
-ls -alt
-ls -alt
-cd 
-ls -a
-cd lwwbackups/
-ls
-vm -rf *
-rvm -rf *
-rm -rf *
-ls
-ls -a
-ls -a
-cat 200508_0404
-ls -a
-ls -a
-ls -a
-ls -alt
-find . -maxdepth 1 -nmin +2
-find . -maxdepth 1 -mmin +2
-ls -alt | wc -l
-rm -rf $(find . -maxdepth 1 -mmin +2)
-ls -alt | wc -l
-ls -a
-find "$pwd"
-find "$(pwd)"
-find "$~"
-find $(~)
-find "$(~)"
-find "$(~)" -name
-find "$(~)" -name bash
-find "$(pwd)" -name bash
-find "$(pwd)"
-find . -maxdepth 1 -mmin +2
-raadlink -f find . -maxdepth 1 -mmin +2
-raadlink -f $(find . -maxdepth 1 -mmin +2)
-readlink -f find . -maxdepth 1 -mmin +2
-readlink -f $(find . -maxdepth 1 -mmin +2)
-ls -alt | wc -l
-read link -f .
-readlink -f
-readlink -f ls
-readlink -f $(ls)
-readlink -f $(find bash)
-readlink -f $(find *bash*)
-readlink -f $(find *bash* -maxdepth 1)
-readlink -f $(find *bash* -maxdepth 1 -min 2) 
-readlink -f $(find *bash* -maxdepth 1 -mmin 2) 
-readlink -f $(find *bash* -maxdepth 1 -mmin +2) 
-readlink -f $(find . -maxdepth 1 -mmin +2) 
-readlink -f $(find ~/lwwbackup -maxdepth 1 -mmin +2) 
-readlink -f $(find ~/lwwbackups -maxdepth 1 -mmin +2) 
-readlink -f $(find ~/lwwbackup -maxdepth 1 -mmin +2) 
-ls -alt | wc -l
-ls -alt | wc -l
-ls -alt
-ls -a
-cd .dotfiles/
-cd scripts/
-ls
-alias scripts = cd ~/.dotfiles/scripts/
-alias --hepl
-alias --help
-alias scripts=cd ~/.dotfiles/scripts/
-alias ss=cd ~/.dotfiles/scripts/
-alias ss=cd ~/.dotfiles/scripts/
-alias ss='cd ~/.dotfiles/scripts/'
-ss
-cd 
-ss
-vim link.sh 
-ls
-vim backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-echo $subs
-sub=ls ~
-sub = ls ~
-sub= ls ~
-echo $sub
-sub=ls ~
-sub=ls
-echo $sub
-sub=`ls`
-echo $sub
-sub=`ls ~`
-echo $sub
-sub=`ls -a ~ | grep .bash`
-echo $sub
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-ls
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-subs=`ls -a ~ | grep .bash*`
-$subs
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-ls -alt
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
-sh backup.sh 
 sh backup.sh | wc -l
 sh backup.sh | wc -l
 sh backup.sh | wc -l
@@ -498,3 +346,155 @@ xrandr --verbose | grep -i gamma
 xrandr --verbose | grep -i brightness oR gamma
 xrandr --verbose | grep -i brightness OR gamma
 xrandr --verbose | grep -i brightness || gamma
+ls
+git clone https://github.com/wayanlw/.dotfiles
+cd .dotfiles/
+ls
+cd scripts/
+ls
+ls
+ls -alt
+chmod +x *
+sh .backup.sh
+ls 
+cat backup.sh 
+./backup.sh 
+cd 
+ls
+cd lwwbackups/
+ls
+cd 
+cd .dotfiles/
+ls
+cd scripts/
+ls
+./link.sh 
+kill -9 -1
+ls
+ls -alt
+vim .bashrc.bak 
+ls
+cat .bashrc
+pkill -9 -1
+kill -9 -1
+arandr
+vim .bashrc
+pkill -9 -1
+kill -9 -1
+kill -9 -1
+sudo pacman -S xbindkeys
+sudo pacman -S xbindkey
+sudo pacman -S xblndkeys
+sudo pacman -Sy xblndkeys
+pacman -Ss xbldkeys
+pacman -Ss xblndkeys
+pacman -Ss xbkeys
+pacman -Ss keys
+sudo pacman -S sxhkd
+man sxhkd
+$XDG_CONFIG_HOME
+ls
+cd .config/
+ls
+cd sxhkd
+cat sxhkd
+ls
+ls -alt
+ls -alt | grep sx
+sxhkd -c
+cd /usr/share/doc/
+ls
+cd sxhkd/
+ls
+cd examples/
+ls
+cd background_shell/
+ls
+cat profile 
+cd shell 
+ls
+cat shell 
+cat sxhkdrc 
+cat xinitrc 
+cd ..
+ls
+cd notification/
+ls
+cat autostart 
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+sudo updatedb
+locate sxhkd
+wget
+locate sxhkdrc
+cat /usr/share/doc/sxhkd/examples/background_shell/sxhkdrc
+cp /usr/share/doc/sxhkd/examples/background_shell/sxhkdrc ~/.dotfiles/
+cd ~/.dotfiles/
+lf
+ranger
+mv ~/.config/terminator/config ~/.dotfiles/.config/terminator/config
+yay -Ss dwm
+yay -S dwm
+dwm
+pkill -9 -1
+kill -9 -1
+echo $(echo /n/n/n)
+echo /n
+echo $/n
+echo $'/n'
+echo $`/n`
+echo "$`/n`"
+echo "$/n"
+echo "$(/n)"
+echo "$(ls)"
+echo "$(\a)"
+bash
+set bash
+bash
+bash --help
+bash --version
+ls -al | grep .bash
+vim .bash_profile 
+less /etc/profile
+cd .dotfiles/
+ls
+ls -a
+ln -sf .inputrc ~/.inputrc
+bash
+ls
+i
+kd;alsk
+sdfa
+pkill -9 -1
+pacman -Qe
+pacman -Qe | cut -f1
+pacman -Qe | cut -f 1
+pacman -Qe
+pcman -Qe
+pacman -Qe
+pacman -Qe | awk '{print $1}'
+sudo pacman -S --needed -S $(pacman -Qe | awk '{print $1}')
+sudo pacman -S --needed -S < $(pacman -Qe | awk '{print $1}')
+pacman -Qe | awk '{print $1}' >> test.txt
+ls
+sudo pacman -S --needed -S < test.txt 
+sudo pacman -S --needed  < test.txt 
+sudo pacman -S --needed  - < test.txt 
+yay -S --needed  - < test.txt 
+pacman -Qn
+pacman -Qn > test.txt
+yay -S --needed  - < test.txt 
+sudo pacman -S --needed  - < test.txt 
+pacman -Qn | awek '{print $1}' > test.txt
+pacman -Qn | awk '{print $1}' > test.txt
+sudo pacman -S --needed  - < test.txt 
+sudo pacman -S --needed  - < test.txt 
+pacman -Qn
+pacman -Qe
+pacman -Qe | wc -l
+pacman -Qn | wc -l
+kill -9 -1
