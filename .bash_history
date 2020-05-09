@@ -1,5 +1,3 @@
-sudo pacman -S --needed -S < test.txt 
-sudo pacman -S --needed  < test.txt 
 sudo pacman -S --needed  - < test.txt 
 yay -S --needed  - < test.txt 
 pacman -Qn
@@ -498,3 +496,5 @@ bindsym button3 floating toggle
 bindsym $mod+button3 floating toggle
 # The side buttons move the window around
 bindsym button9 move left
+lwwdir
+git push origin master
