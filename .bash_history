@@ -1,283 +1,3 @@
-pacman -Qn | awek '{print $1}' > test.txt
-pacman -Qn | awk '{print $1}' > test.txt
-sudo pacman -S --needed  - < test.txt 
-sudo pacman -S --needed  - < test.txt 
-pacman -Qn
-pacman -Qe
-pacman -Qe | wc -l
-pacman -Qn | wc -l
-kill -9 -1
-cd Desktop/
-cat xrandr.sh 
-rm -rf xrandr.sh 
-cd .config/
-ls
-cd 
-cd .dotfiles/scripts/
-ls
-vim homemonitor.sh 
-cat homemonitor.sh > ~/lwwlearn/ myscripts.txt
-cat homemonitor.sh > ~/lwwlearn/myscripts.txt
-ls
-cat backup.sh >> ~/lwwlearn/myscripts.txt
-cat link.sh >> ~/lwwlearn/myscripts.txt
-i3-dmenu-desktop 
-i3-dmsg 
-i3-msg 
-i3-msg move workspace to output left
-i3-msg move workspace to output top
-i3-msg move workspace to output right
-sudo pacman -S vscode
-yay -S vscode
-pacman -Q vscode
-pacman -Q visualstudio
-pacman -Ss visualstudio
-yay -Ss visualstudio
-yay -S mono-visualstudio
-ls
-ls
-ls
-cd LEARN/
-ls
-mv 'how to git' howtogit.txt
-mv 'xrandr configuration' xrandr\ configuration.txt
-ls
-mv 'xrandr configuration' xrandrConfiguration.txt
-ls
-mv 'xrandr configuration' xrandrConfiguration.txt
-ls
-mv 'xrandr\ configuration.txt' xrandrConfiguration.txt
-mv 'xrandr configuration.txt' xrandrConfiguration.txt
-ls
-vim howtogit.txt 
-cat /etc/profile
-less /etc/profile.d/
-less /etc/profile/
-less /etc/profile
-xrandr
-cd .dotfiles/scripts/
-ls
-cd ~/.config/i3
-ls
-rm -rf config 
-ls
-cd ~/.dotfiles/
-ls
-cd scripts/
-ls
-link.sh 
-cd 
-cd .dotfiles/
-cd scripts/
-ls
-vim backup.sh 
-vim confilebackup.sh
-cd .dotfiles/config 
-cd .dotfiles/.config 
-ls
-cd i3/
-nano i3
-ls
-nano config
-nano config
-ls -alt
-cd ..
-ls
-cd ..
-ls
-cd scripts/
-ls
-vim link.sh 
-sh link.sh 
-ls
-cat backup.sh 
-cd 
-cd .dotfiles/
-ls
-git init
-git status
-git add *
-git status
-git add *.
-git add .*
-git add *
-git status
-git add .inputrc 
-git add *.b
-git add .b*
-git status
-git commit
-git commit -m "saturday morning"
-git remote -v
-git push
-ls
-arandr
-vim .dotfiles/.config/i3/config 
-pacman -S nano 
-sudo pacman -S nano
-nano .config/i3/config 
-ls -alt
-cd .config/i3/config 
-cd .config/i3/
-ls -a
-ls -alt
-nano config 
-cat config 
-cat config 
-readlink config
-cat readlink config
-cat `readlink config`
-ls
-cd 
-ls -alt
-ls
-cat sylinkscript.sh 
-cat sylinkscript.sh 
-ls -A
-pacman -S code
-sudo pacman -S atom
-apm install vim-mode-plus
-alsamixer
-conky
-cronie
-inetcat
-inetcat 8080
-inetutils
-cd /home/suadmin/
-ls
-cd .dotfiles/
-ls
-cd config 
-cd ..
-.
-cd .dotfiles/
-git commit
-git add *
-git commit *
-git commit -m 
-git commit -m "updated the i3"
-git remote -v
-git push origin master
-ls
-cd scripts/
-ls
-ls
-ls
-cd ..
-ls
-git add *
-git status
-ls .*
-ls 
-ls \.*
-ls
-git status
-git ls-files
-git ls-files --exclude-standard -oi
-git add $(ls -a)
-git ls-tree -r master --name-only
-git add $(ls -A)
-git commmit -m "my commit"
-git commit -m "my commit"
-git status
-git remote -v
-git push origin master
-cat .bashrc
-vim .bashrc
-ls
-ls -alt
-sh .bashrc
-vim .bashrc
-source bash
-source ~/.bash_profile 
-homemonitor.sh 
-homemonitor.sh 
-homemonitor.sh 
-homemonitor.sh 
-homemonitor.sh 
-homemonitor.sh 
-homemonitor.sh 
-homemonitor.sh 
-homemonitor.sh
-homemonitor.sh
-homemonitor.sh
-homemonitor.sh
-homemonitor.sh
-homemonitor.sh
-cd .dotfiles/scripts/
-ls
-cat link.sh 
-vim link.sh 
-cd ..
-cd .config/
-ls
-cd i3/
-ls
-vim config 
-cd ../..
-cd scripts/
-ls
-vim link.sh 
-ls
-ls -al
-apm install relative-numbers
-rofi -dmenu
-rofi -combi-modi window,drun
-rofi -combi-modi window,drun -show combi -modi combi
-rofi -combi-modi window,drun -show combi
-rofi -combi-modi window,drun -show combi -modi combi
-rofi -combi-modi window,drun -show combi
-rofi -combi window,drun -show combi
-rofi -combi window,drun -show combi -modi
-rofi -combi window,drun -show combi -modi
-rofi -show run
-rofi -combi-modi window,drun -show combi -modi combi
-locate rofi.conf
-updatedb
-sudo updatedb
-locate rofi.conf
-ls -A 
-ls -Al
-rm -rf .bashrc.bak 
-ls -al
-rm .dotfiles/.bashrc.bak 
-cd .atom/
-ls
-du -hd 1 .atom-socket-secret-suadmin-1.46.0 
-cd 
-du -hd .atom/
-du -hd 1 .atom/
-find .atom/ -name *.conf
-find .atom/ -name *packages
-find .atom/ -name *.packages
-find .atom/ -name *.con*
-vim $(find .atom/ -name *.con*)
-vim .Xauthority 
-vim .bash.rc
-vim .bashrc 
-source bashrc
-source .bashrc
-brightness .9
-brightness 1
-brithness .9
-vim .bashrc 
-source .bashrc
-lcmd man
-vim .bashrc 
-source .bash
-source .bashrc 
-vim .bashrc 
-source .bashrc 
-vim .bashrc 
-sourcerc
-source bashrc
-source .bashrc
-vim .bashrc 
-source .bashrc
-lwwdir 
-lwwdir scripts/
-vim .bashrc 
-lwwdir scripts
 vim .bashrc 
 source .bashrc
 lwwdir scripts
@@ -498,3 +218,283 @@ git branch
 ls
 ls
 xterm 
+sudo pacman -S urxvt
+sudo pacman -Ss urxvt
+ls
+lwwdir
+vim .Xresources
+cd scripts/
+vim link.sh 
+cd 
+ls
+ls -alt
+link.sh
+xrdb .Xresources 
+xprop
+xprop
+xprop
+ls
+i3status
+which i3status
+cat /usr/bin/i3status 
+locate i3status
+cat /etc/i3status.conf 
+git status
+cd .dotfiles/
+git status
+git add .Xresources 
+git status
+git commit -m "test"
+git push origin master
+git status
+i3-input
+alsamixr
+alsamixer 
+ls
+tar -xzvf fontawesome-free-5.13.0-desktop.zip 
+file fontawesome-free-5.13.0-desktop.zip 
+gunzip --help
+gunzip -v fontawesome-free-5.13.0-desktop.zip 
+sudo pacman -S p7zip
+xprop
+cd 
+ls
+wget https://github.com/FortAwesome/Font-Awesome/releases/download/5.13.0/fontawesome-free-5.13.0-desktop.zip
+mkdir fontawesome
+mv fontawesome-free-5.13.0-desktop.zip ./fontawesome
+cd fontawesome/
+ls
+7z --help
+7z -o test fontawesome-free-5.13.0-desktop.zip 
+7z -e -o fontawesome-free-5.13.0-desktop.zip 
+7z e -o fontawesome-free-5.13.0-desktop.zip 
+7z e fontawesome-free-5.13.0-desktop.zip 
+ls
+ls | grep *.ttf
+rm -rf *
+ls
+wget https://github.com/FortAwesome/Font-Awesome/releases/download/5.13.0/fontawesome-free-5.13.0-web.zip
+7z e fontawesome-free-5.13.0-desktop.zip 
+7z e fontawesome-free-5.13.0-web.zip 
+ls
+ls -a | grep *.otf
+ls -a | grep *.ttf
+ls 
+ls | less
+unzip
+wget https://github.com/FortAwesome/Font-Awesome/archive/5.13.0.tar.gz
+ls
+ls | grep otf
+ls
+ls  | less
+cd
+ls
+cd Downloads/
+ls
+cd ..
+ls
+cd fontawesome/
+ls
+ls
+cd 
+mkdir .fonts
+cd fontawesome/
+wget https://fontawesome.com/icons/?s=regular
+ls
+rm -rf *
+wget https://fontawesome.com/icons/?s=regular
+ls
+sudo pacman -S peazip
+pacman -Ss peazip
+pacman -Ss zip
+yay -Ss peazip
+cd 
+cd Downloads/
+ls
+7z l fontawesome-free-5.13.0-web.zip 
+cd
+ls
+cd Downloads/
+ls
+7z l fontawesome-free-5.13.0-desktop.zip 
+ranger
+ls
+mkdir fonts
+mv fontawesome-free-5.13.0-desktop.zip fonts/
+ls
+cd font
+cd fonts
+ls
+7z e fontawesome-free-5.13.0-desktop.zip 
+ls
+ranger
+
+
+sudo pacman -S awesomefonts
+yay -S awesomefonts
+yay -Ss awesomefonts
+yay -Ss awesome
+sudo fc-cache
+sudo fc-cache -f -v
+fc-cache -f -v
+cd 
+cd Downloads/
+ls
+mv fontawesome-webfont.ttf ~/.fonts/
+mv FontAwesome.otf ~/.fonts/
+fc-cache -f -v
+cd 
+ls
+cd .fonts/
+ls
+mv fontawesome-webfont.ttf ~/.dotfiles/
+lwwdir
+ls
+mkdir .fonts
+mv fontawesome-webfont.ttf .fonts/
+ls
+cd .fonts/
+ls
+fc-cache -f -v
+cd 
+mv .fonts/FontAwesome.otf ./.dotfiles/.fonts/
+cd .fonts/
+ls
+fc-cache -f -v
+link.sh 
+rm -f .fonts/
+rm -rf .fonts/
+cd .fonts/
+ls
+fce --help`
+
+fce -f 0v
+fce -f -v
+fc-cache --help
+fc-cache -f -v
+link.sh 
+lwwdir
+ls
+cd 
+ls
+ls 0alt
+ls -alt
+ln --help
+rm -rf .Xresources 
+lwwdir
+ls
+ls -alt
+7z 
+7z e
+cd 
+7z e fontawesome-free-5.13.0-desktop.zip 
+ls
+ls
+ls
+mkdir fonts
+mv *.svg fonts/
+ls
+ranger 
+lf
+lf --help
+ls -alt
+rm -rf 'Font*
+
+rm -rf \'Font*
+ls
+rm -rf 'Font Awesome 5 
+*'
+ls
+rm -rf \'Font*'
+
+rm -rf 
+ls
+rm -rf icons.json 
+rm -rf "'Font*"
+ls
+rm -rf "'Font*'"
+ls
+rm -rf 'Font Awesome 5 Brands-Regular-400.otf' 
+ls
+rm -rf "'Font Awesome 5 Brands-Regular-400.otf'" 
+ls
+rm -rf \'Font Awesome 5 Brands-Regular-400.otf\' 
+ls
+ls
+cd otfs/
+ls
+ls -alt
+cd ..
+rm -rf otfs/
+ls regular/
+rm -rf regular/
+rm -rf shims*
+ls
+rm -rf metadata/
+ls
+rm -rf icons.yml LICENSE.txt README.md 
+ls
+ls brands/
+cd brands/
+ls
+cd ..
+rm -rf brands/
+ls
+rm -rf fonts/
+ls solid/
+ls
+rm -rf solid/
+cd sources/
+ls
+ls
+ls -a
+cd ..
+rm -rf sources/ svgs/ 
+ls
+ranger
+lf
+feh
+sudo pacman -S feh
+feh
+locate *.jpg
+cd /usr/share/wallpapers/Next/contents/images/1920x1080.jpg 
+cd /usr/share/wallpapers/Next/contents/images/
+feh 1920x1080.jpg 
+ranger
+cd lwwdir
+lwwdir
+cd /usr/share/wallpapers/Next/contents/images/
+cp 1920x1080.jpg ~/.dotfiles/
+lwwdir
+ls
+mkdir wallpaper
+mv 1920x1080.jpg ./wallpaper/wallpaper.jpg
+cd wallpaper/
+ls
+homemonitor.sh 
+lwwdir
+homemonitor.sh 
+homemonitor.sh 
+ls
+cd 
+cd Downloads/
+ls
+cd font
+ls
+cd fonts
+ls
+mv fonts .fonts
+mkdir .fonts
+mf ./fonts/* .fonts
+mv ./fonts/* .fonts
+ls -alt
+cd ..
+ls
+ls -a
+mkdir .fonts
+ls 0a
+ls -a
+mv ./fonts/* .fonts/
+rm -rf fonts
+cd .fonts/
+ls

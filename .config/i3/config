@@ -11,10 +11,6 @@
 
 set $mod Mod1
 
-# Try to kill the wallpaper set by Plasma (it takes up the entire workspace
-# and hides everythiing)
-exec --no-startup-id wmctrl -c Plasma
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 # Avoid tiling popups, dropdown windows from plasma
 for_window [class="plasmashell"] floating enable
@@ -65,13 +61,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -129,8 +125,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:Main"
-set $ws2 "2:Internet "
+set $ws1 "1:Main "
+set $ws2 "2:WWW "
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -198,35 +194,48 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+####################################################################################################################
+#Thunderboltz config
+####################################################################################################################
 
 
-#thunderboltz customizatino
-## ---- windows gaps ------##
+
+# ---- windows gaps ------##
 #for_window [class="^.*"] border pixel 2
 gaps inner 5
 gaps outer 0
 
-bindsym $mod+x exec rofi -show window
+bindsym $mod+x exec --no-startup-id rofi -show window
 
 bindsym $mod+p			gaps inner current plus 5
 bindsym $mod+Shift+p		gaps inner current minus 5
 
 
-#----- <> move the entire workspace to another monior. Be careful on the words that can be used. move workspace to output left|right|down|up|current|primary|<output>
-bindsym $mod+shift+greater move workspace to output down
-bindsym $mod+shift+less move workspace to output up
+#----- shift+m move the entire workspace to another monior. Be careful on the words that can be used. move workspace to output left|right|down|up|current|primary|<output>
+bindsym $mod+Shift+m move workspace to output down
+#bindsym $mod+Shift+less move workspace to output up
+#move enire workspace 
+#bindsym $mod+Shift+b move container to workspace back_and_forth
 
 
 #----m    move the container to the other monior. Be careful on the words that can be used. move workspace to output left|right|down|up|current|primary|<output>
 bindsym $mod+m move container to output down
-bindsym $mod+shift+m move container to output up
+                #bindsym $mod+shift+m move container to output up
 
-# switch between the current and the previously focused one
+# switch between the current and the previously focused oneuuu
 bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+Shift+Tab workspace next
-bindsym $mod+Shift+b move container to workspace back_and_forth
 
+#----shift+Tab cycle through the workspaces
+bindsym $mod+Shift+Tab workspace next     
+
+#########make firefox always open in internet workspace
+assign [class="firefox"] $ws2
+
+
+
+####################################################################################################################
+#Mouse Configurations
+####################################################################################################################
 
 # The middle button over a titlebar kills the window
 bindsym --release button2 kill
@@ -258,6 +267,11 @@ mode "$mode_launcher" {
 
 #delay the disapearance of highlighting for a urgency window
 force_display_urgency_hint 500 ms
+
+
+#load wallpaper
+
+exec_always --no-startup-id feh --bg-scale ~/.dotfiles/wallpaper/wallpaper.jpg
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

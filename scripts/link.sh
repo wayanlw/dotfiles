@@ -8,7 +8,7 @@
 echo "this script links the config files of below packages to the HOME folder"
 printf "i3, all bash files\n"
 
-sudo pacman -Sy --needed i3 rofi dmenu
+#sudo pacman -Sy --needed i3 rofi dmenu
 
 #symlinking i3
 [ -d ~/.config/i3 ] && ln -sf ~/.dotfiles/.config/i3/config ~/.config/i3/config && i3-msg reload
@@ -24,7 +24,16 @@ done
 
 ln -sf $HOME/.dotfiles/.Xresources $HOME/.Xresources
 
+
+
+echo "Linking the .fonts directory"
+ln -sf $HOME/.dotfiles/.fonts $HOME/.fonts
+fc-cache -f -v
+
+
+
 source ~/.bashrc
+
 
 
 
