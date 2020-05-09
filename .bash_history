@@ -1,9 +1,3 @@
-sudo pacman -S --needed  - < test.txt 
-yay -S --needed  - < test.txt 
-pacman -Qn
-pacman -Qn > test.txt
-yay -S --needed  - < test.txt 
-sudo pacman -S --needed  - < test.txt 
 pacman -Qn | awek '{print $1}' > test.txt
 pacman -Qn | awk '{print $1}' > test.txt
 sudo pacman -S --needed  - < test.txt 
@@ -498,3 +492,9 @@ bindsym $mod+button3 floating toggle
 bindsym button9 move left
 lwwdir
 git push origin master
+lwwdir
+git status
+git branch
+ls
+ls
+xterm 

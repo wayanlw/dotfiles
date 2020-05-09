@@ -129,8 +129,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
+set $ws1 "1:Main"
+set $ws2 "2:Internet "
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -256,7 +256,8 @@ mode "$mode_launcher" {
 }
 
 
-
+#delay the disapearance of highlighting for a urgency window
+force_display_urgency_hint 500 ms
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -276,4 +277,15 @@ bar {
 	status_command i3status
 	position top
 	mode dock
+        colors {
+        background #000000
+        statusline #ffffff
+        separator #666666
+
+        focused_workspace  #4c7899 #285577 #ffffff
+        active_workspace   #333333 #5f676a #ffffff
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #2f343a #900000 #ffffff
+        binding_mode       #2f343a #900000 #ffffff
+    }
 }
