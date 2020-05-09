@@ -1,107 +1,3 @@
-vim .bashrc 
-source .bashrc
-lwwdir scripts
-vim .bashrc 
-ls -alt
-ls -alt
-cat .bashrc 
-cd ..
-ls
-ls -alt
-ldir
-lwwdir script
-lwwdir scripts
-vim .bashrc 
-ldir
-link.sh
-homemonitor.sh 
-homemonitor.sh 
-xrandr
-arandr 
-xrandr --output VHA-1 --brightness .0
-xrandr --output VHA-1 --brightness .8
-xrandr --output VGA-1 --brightness .8
-xrandr --output VGA-1 --brightness .6
-wget https://github.com/FortAwesome/Font-Awesome/releases/download/5.13.0/fontawesome-free-5.13.0-desktop.zip
-ls
-tar --help
-tar -xvf *.tar
-ls
-unzip fontawesome-free-5.13.0-desktop.zip 
-tar -zvf fontawesome-free-5.13.0-desktop.zip 
-man pacman
-ldir
-lwwdir
-ls
-cd scripts/
-ls
-vim link.sh 
-vim link.sh 
-vim link.sh 
-atom link.sh
-pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
-sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
-sudo pacman -Ss subl
-sudo pacman -Ss sublime
-sudo pacman -Ss ranger
-sudo pacman -Ss subl
-sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
-sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
-sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
-sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
-sudo pacman -Ss subl
-sudo pacman -Ss sublime
-sudo pacman -Ss sublimetext
-pacman -Qet 
-pacman -Qe
-pacman -Qet 
-sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
-sudo pacman -S man
-sudo pacman -S mandb
-lcmd
-source .bashrc
-lcmd
-lcmd
-lcmd *
-lcmd lww
-lcmd lww
-lcmd
-lcmd
-lcmd
-lcmd
-source .bashrc
-lcmd
-brightness 1
-brightness .5
-brightness .8
-ldir
-lcmd
-lwwdir
-link.sh
-link.sh
-link.sh
-xrandr
-xrandr --output VGA-1 --brightness .8
-xrandr --output VGA-1 --brightness .7
-xrandr --output VGA-1 --brightness .6
-xrandr --output VGA-1 --gamma 1:.5:1
-xrandr --output DP-1-1 --gamma 1.1:0.8:0.7 --brightness 0.55
-xrandr --output VGA-1 --gamma 1.1:0.8:0.7 --brightness 0.55
-ls
-cd .dotfiles/scripts/
-ls
-./homemonitor.sh 
-./homemonitor.sh 
-./homemonitor.sh 
-./homemonitor.sh 
-./homemonitor.sh 
-ls
-./homemonitor.sh
-./homemonitor.sh 
-cd 
-ls
-mv LEARN/ lwwlearn
-ls
 cd lwwlearn/
 ls
 subl myscripts.txt 
@@ -498,3 +394,107 @@ mv ./fonts/* .fonts/
 rm -rf fonts
 cd .fonts/
 ls
+$FILEMANAGER
+dolphin
+ranger
+cd 
+ls
+ls -alt
+cd .fonts
+ls
+cd f
+ls
+mv .f/* .
+cd f
+ls
+mv fa_solid_900.ttf ./..
+ls
+cd ..
+ls
+rm -rf f
+ls
+fc-cache -f -v
+ls -a
+rm -rf .fonts
+ls -a
+i3status
+cd .
+cd 
+cd .config/i3status/
+ls
+vim config
+cd 
+ls
+lwwdir
+cd .config/
+ls
+cd i3/
+vim config
+fc-list
+fc-list : file
+cd ~/.local/
+ls
+cd share/
+ls
+cd sddm
+ls
+cd ..
+cd kwalletd/
+ls
+cd ..
+cd dolphin/
+ls
+cd view_properties/
+ls
+cd global/
+ls
+ls -a
+cd .directory 
+ls
+cat .directory 
+cd /etc/fonts/
+ls
+cat fonts.conf 
+ls
+cat fonts.dtd 
+ranger
+lf
+cd Downloads
+cd ..
+cd .fonts
+ls
+git clone https://github.com/supermarin/YosemiteSanFranciscoFont
+ls
+cd YosemiteSanFranciscoFont/
+l
+ls
+mv 'System San Francisco Display Regular.ttf' System San Francisco Display Regular.ttf
+ls
+dolphin
+mv System* ./..
+cd ..
+ls
+fc-cache -f -v
+ls
+cd YosemiteSanFranciscoFont/
+ls
+cd Text\ Face\ \(alternate\)/
+ls
+mv System* ~/.fonts
+cd 
+cd .fonts
+ls
+cd .dotfiles/
+git status
+git add $(ls -A)
+git commit
+git commit -m "test"
+git push origin master
+git push origin master
+xmodmap 
+nm-applet
+sudo pacman -S nm-applet
+i3-msg reload
+ while true; do i3-mesg reload; sleep 1; done
+ while true; do i3-msg reload; sleep 1; done
+ while true; do i3-msg reload; sleep 1; done
