@@ -1,4 +1,3 @@
-xrandr
 xrandr --output VGA-1 --brightness .5
 xrandr --output VGA-1 --brightness .1
 xrandr --output VGA-1 --brightness 1
@@ -498,3 +497,4 @@ cat sylinkscript.sh
 cat sylinkscript.sh 
 ls -A
 pacman -S code
+sudo pacman -S atom
