@@ -1,84 +1,3 @@
-cd .config/
-ls
-cd i3
-ls
-vim config 
-source i3
-lf
-which lf
-whatis lf
-man lf
-cd 
-cd .config/
-ls
-cd i3blocks/
-ls
-vim config 
-vim config 
-ls
-arandr
-sudo pacman -Ss arandr
-sudo pacman -S arandr
-arandr
-cd 
-mkdir .dotfiles
-ls
-cd .dotfiles/
-ls
-git init
-cd ..
-ls
-cd .config/i3/
-ls
-cd 
-cd .dotfiles/
-mv ~/.config/i3/config .
-ln -sf ./config ~/.config/i3/config
-ls
-ls -alt
-ls -alt
-git add config 
-git commit -m "i3config
-"
-git config --global user.email "luxithaw@gmail.com"
-git conig --global user.name "wayanlw"
-git config --global user.name "wayanlw"
-git status
-git commit -m "i3 config"
-git pull origin master
-git pull dotfiles master
-git pull .dotfiles master
-git remote -v
-git remote add upstream https://github.com/lwayanw/.dotfiles
-git remote -v
-git checkout master
-git merge upstream/master
-git merge upstream
-git push
-git remote add .dotfiles https://github.com/lwayanw/.dotfiles
-git remote add .dotfiles https://github.com/lwayanw/
-git remote add .dotfiles https://github.com/lwayanw/
-git remote -v
-git remote add dotfiles https://github.com/lwayanw
-git remote -v
-git remote remove dotfiles
-git remote -v
-git push upstream
-git push --set-upstream upstream master
-git push --set-upstream upstream master
-git push --set-upstream upstream master
-git remote -v
-git rremote remove upstream
-git remote remove upstream
-git status
-git remote -v
-git remote add
-git remote add -f 
-git remote add upstream https://github.com/wayanlw/.dotfiles.git
-git push -u upstream master
-git status
-git -v
-xrandr --output DVI-I-1 --brightness .5
 xrandr
 xrandr --output VGA-1 --brightness .5
 xrandr --output VGA-1 --brightness .1
@@ -498,3 +417,84 @@ cat /etc/profile
 less /etc/profile.d/
 less /etc/profile/
 less /etc/profile
+xrandr
+cd .dotfiles/scripts/
+ls
+cd ~/.config/i3
+ls
+rm -rf config 
+ls
+cd ~/.dotfiles/
+ls
+cd scripts/
+ls
+link.sh 
+cd 
+cd .dotfiles/
+cd scripts/
+ls
+vim backup.sh 
+vim confilebackup.sh
+cd .dotfiles/config 
+cd .dotfiles/.config 
+ls
+cd i3/
+nano i3
+ls
+nano config
+nano config
+ls -alt
+cd ..
+ls
+cd ..
+ls
+cd scripts/
+ls
+vim link.sh 
+sh link.sh 
+ls
+cat backup.sh 
+cd 
+cd .dotfiles/
+ls
+git init
+git status
+git add *
+git status
+git add *.
+git add .*
+git add *
+git status
+git add .inputrc 
+git add *.b
+git add .b*
+git status
+git commit
+git commit -m "saturday morning"
+git remote -v
+git push
+ls
+arandr
+vim .dotfiles/.config/i3/config 
+pacman -S nano 
+sudo pacman -S nano
+nano .config/i3/config 
+ls -alt
+cd .config/i3/config 
+cd .config/i3/
+ls -a
+ls -alt
+nano config 
+cat config 
+cat config 
+readlink config
+cat readlink config
+cat `readlink config`
+ls
+cd 
+ls -alt
+ls
+cat sylinkscript.sh 
+cat sylinkscript.sh 
+ls -A
+pacman -S code
