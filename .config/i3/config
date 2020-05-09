@@ -72,7 +72,6 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
-bindsym $mod+x exec rofi -show window
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -199,20 +198,67 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 #thunderboltz customizatino
 ## ---- windows gaps ------##
 #for_window [class="^.*"] border pixel 2
 gaps inner 5
 gaps outer 0
 
+bindsym $mod+x exec rofi -show window
 
 bindsym $mod+p			gaps inner current plus 5
 bindsym $mod+Shift+p		gaps inner current minus 5
 
 
-#move the workspace to another monior
-bindsym $mod+m move workspace to output top
+#----- <> move the entire workspace to another monior. Be careful on the words that can be used. move workspace to output left|right|down|up|current|primary|<output>
+bindsym $mod+shift+greater move workspace to output down
+bindsym $mod+shift+less move workspace to output up
 
+
+#----m    move the container to the other monior. Be careful on the words that can be used. move workspace to output left|right|down|up|current|primary|<output>
+bindsym $mod+m move container to output down
+bindsym $mod+shift+m move container to output up
+
+# switch between the current and the previously focused one
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab workspace next
+bindsym $mod+Shift+b move container to workspace back_and_forth
+
+
+# The middle button over a titlebar kills the window
+bindsym --release button2 kill
+
+# The middle button and a modifer over any part of the window kills the window
+bindsym --whole-window $mod+button2 kill
+
+# The right button toggles floating
+bindsym button3 floating toggle
+bindsym $mod+button3 floating toggle
+
+# The side buttons move the window around
+bindsym button9 move left
+bindsym button8 move right
+
+#keybindings. mod+o then the key
+set $mode_launcher Launch: [f]irefox [t]hunderbird
+bindsym $mod+o mode "$mode_launcher"
+
+
+mode "$mode_launcher" {
+    bindsym f exec firefox ; mode "default"
+    bindsym t exec thunderbird; mode "default"
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
+
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #bar {
 #	font pango:mono 10

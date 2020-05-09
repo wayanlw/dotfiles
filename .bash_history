@@ -1,272 +1,3 @@
-ls -a $HOME | grep bash*
-ls -a $HOME | grep ^.bash*
-xrandr --ouput LVDS-1 --brightness 100
-xrandr --ouput VGA-1 --brightness 100
-xrandr --ouput VGA-1 --brightness 1
-xrandr --output VGA-1 --brightness 1
-xrandr --output VGA-1 --brightness 100
-xrandr --output VGA-1 --brightness 1
-xrandr --output VGA-1 --brightness 2
-xrandr --output VGA-1 --brightness 1.5
-xrandr --output VGA-1 --brightness 11
-xrandr --output VGA-1 --brightness 1
-xrandr --output VGA-1 --brightness .8
-xrandr --prop
-xrandr v
-xrandr -v
-xrandr =-verbose
-xrandr --output VGA-1 --verbose
-xrandr --verbose --output VGA-1
-xrandr --verbose
-xrandr --verbose | grep brightness
-xrandr --verbose | grep -i brightness
-xrandr --verbose --ouput VGA-1
-xrandr --verbose --output VGA-1
-xrandr --output --brightness 1
-xrandr --output VGA-1 --brightness 1
-xrandr --verbose | grep -i gamma
-xrandr --verbose | grep -i temp*
-xrandr --verbose | less
-man script
-cd .dotfiles/.config/i3
-ls
-vim config 
-ls
-ls -a
-touch test.txt
-cat sylinkscript.sh 
-sh sylinkscript.sh 
-sh sylinkscript.sh 
-sh sylinkscript.sh 
-ls
-sh sylinkscript.sh 
-ls -alt
-cd .dotfiles/
-ls
-echo "this is a test" > test.txt 
-ls
-echo "this is a test" > test.txt 
-ls -alt
-rm -rf test.txt 
-sh ~/sylinkscript.sh 
-ls -alt
-rm -rf test.txt 
-cd 
-ls
-ls -alt
-touch test.txt
-ls -a
-ls -alt
-rm -rf text.txt
-rm -rf list 
-find . list
-find ~ -name list
-find ~ -name bash
-find ~/ -name bash
-find ~/ -name scripts
-find ~/ -name list
-echo "this is a test" > test.txt
-ls
-ls -alt
-rm -rf test.txt
-ls -alt
-touch "hello" > test.txt
-ls
-ls -alt
-sh sylinkscript.sh 
-ls - alt
-ls -alt
-cd .dotfiles/
-ls
-ls -alt
-cd 
-sudo pacman -S sybl
-sudo pacman -S syblime
-sudo pacman -S sublime
-sudo pacman -S subl
-sudo pacman -Ss sublime
-yay -Ss sublime
-yay -S sublime-text
-xrandr
-xrandr --help
-xrandr | grep l
-xrandr
-xrandr | grep connected
-xranr --help
-xrandr --help
-xrandr --ouput
-xrandr --output
-xrandr --gamma
-xrandr --help
-xrandr --current
-arandr
-xrandr --current
-xrandr --verbose | grep gamma
-xrandr --verbose | grep brightness
-xrandr --verbose
-xrandr --verbose | grep gamma
-xrandr --verbose | grep brig
-xrandr --verbose 
-xrandr --verbose | less
-xrandr --verbose | grep bright
-xrandr --verbose | grep brightness
-xrandr --verbose | grep gamma
-xrandr --verbose | grep -i gamma
-grep --help
-grep --help | less
-xrandr --verbose | grep -i gamma
-xrandr --output VGA-1 --gamma 0:0:0
-xrandr --output VGA-1 --gamma .50:.50:.50
-xrandr --output VGA-1 --gamma 1:1:1
-xrandr --output VGA-1 --gamma 1:1:1 --brightness 1
-xrandr --output VGA-1 --gamma .1:.1:.1 --brightness 1
-xrandr --output VGA-1 --gamma 1:1:1 --brightness 1
-xrandr --output VGA-1 --gamma 1:1:1 --brightness .5
-xrandr --output VGA-1 --gamma 1:1:1 --brightness 1
-xrandr --output VGA-1 --gamma 1:1:1 --brightness .8
-xrandr --verbose | grep brightness gamma
-xrandr --verbose | grep -i brightness gamma
-xrandr --verbose | grep -i brightness
-xrandr --verbose | grep -i brightness gamma
-xrandr --verbose | grep -i gamma
-xrandr --verbose | grep -i brightness oR gamma
-xrandr --verbose | grep -i brightness OR gamma
-xrandr --verbose | grep -i brightness || gamma
-ls
-git clone https://github.com/wayanlw/.dotfiles
-cd .dotfiles/
-ls
-cd scripts/
-ls
-ls
-ls -alt
-chmod +x *
-sh .backup.sh
-ls 
-cat backup.sh 
-./backup.sh 
-cd 
-ls
-cd lwwbackups/
-ls
-cd 
-cd .dotfiles/
-ls
-cd scripts/
-ls
-./link.sh 
-kill -9 -1
-ls
-ls -alt
-vim .bashrc.bak 
-ls
-cat .bashrc
-pkill -9 -1
-kill -9 -1
-arandr
-vim .bashrc
-pkill -9 -1
-kill -9 -1
-kill -9 -1
-sudo pacman -S xbindkeys
-sudo pacman -S xbindkey
-sudo pacman -S xblndkeys
-sudo pacman -Sy xblndkeys
-pacman -Ss xbldkeys
-pacman -Ss xblndkeys
-pacman -Ss xbkeys
-pacman -Ss keys
-sudo pacman -S sxhkd
-man sxhkd
-$XDG_CONFIG_HOME
-ls
-cd .config/
-ls
-cd sxhkd
-cat sxhkd
-ls
-ls -alt
-ls -alt | grep sx
-sxhkd -c
-cd /usr/share/doc/
-ls
-cd sxhkd/
-ls
-cd examples/
-ls
-cd background_shell/
-ls
-cat profile 
-cd shell 
-ls
-cat shell 
-cat sxhkdrc 
-cat xinitrc 
-cd ..
-ls
-cd notification/
-ls
-cat autostart 
-cd ..
-ls
-cd ..
-ls
-cd ..
-ls
-sudo updatedb
-locate sxhkd
-wget
-locate sxhkdrc
-cat /usr/share/doc/sxhkd/examples/background_shell/sxhkdrc
-cp /usr/share/doc/sxhkd/examples/background_shell/sxhkdrc ~/.dotfiles/
-cd ~/.dotfiles/
-lf
-ranger
-mv ~/.config/terminator/config ~/.dotfiles/.config/terminator/config
-yay -Ss dwm
-yay -S dwm
-dwm
-pkill -9 -1
-kill -9 -1
-echo $(echo /n/n/n)
-echo /n
-echo $/n
-echo $'/n'
-echo $`/n`
-echo "$`/n`"
-echo "$/n"
-echo "$(/n)"
-echo "$(ls)"
-echo "$(\a)"
-bash
-set bash
-bash
-bash --help
-bash --version
-ls -al | grep .bash
-vim .bash_profile 
-less /etc/profile
-cd .dotfiles/
-ls
-ls -a
-ln -sf .inputrc ~/.inputrc
-bash
-ls
-i
-kd;alsk
-sdfa
-pkill -9 -1
-pacman -Qe
-pacman -Qe | cut -f1
-pacman -Qe | cut -f 1
-pacman -Qe
-pcman -Qe
-pacman -Qe
-pacman -Qe | awk '{print $1}'
-sudo pacman -S --needed -S $(pacman -Qe | awk '{print $1}')
-sudo pacman -S --needed -S < $(pacman -Qe | awk '{print $1}')
-pacman -Qe | awk '{print $1}' >> test.txt
-ls
 sudo pacman -S --needed -S < test.txt 
 sudo pacman -S --needed  < test.txt 
 sudo pacman -S --needed  - < test.txt 
@@ -498,3 +229,272 @@ vim link.sh
 ls
 ls -al
 apm install relative-numbers
+rofi -dmenu
+rofi -combi-modi window,drun
+rofi -combi-modi window,drun -show combi -modi combi
+rofi -combi-modi window,drun -show combi
+rofi -combi-modi window,drun -show combi -modi combi
+rofi -combi-modi window,drun -show combi
+rofi -combi window,drun -show combi
+rofi -combi window,drun -show combi -modi
+rofi -combi window,drun -show combi -modi
+rofi -show run
+rofi -combi-modi window,drun -show combi -modi combi
+locate rofi.conf
+updatedb
+sudo updatedb
+locate rofi.conf
+ls -A 
+ls -Al
+rm -rf .bashrc.bak 
+ls -al
+rm .dotfiles/.bashrc.bak 
+cd .atom/
+ls
+du -hd 1 .atom-socket-secret-suadmin-1.46.0 
+cd 
+du -hd .atom/
+du -hd 1 .atom/
+find .atom/ -name *.conf
+find .atom/ -name *packages
+find .atom/ -name *.packages
+find .atom/ -name *.con*
+vim $(find .atom/ -name *.con*)
+vim .Xauthority 
+vim .bash.rc
+vim .bashrc 
+source bashrc
+source .bashrc
+brightness .9
+brightness 1
+brithness .9
+vim .bashrc 
+source .bashrc
+lcmd man
+vim .bashrc 
+source .bash
+source .bashrc 
+vim .bashrc 
+source .bashrc 
+vim .bashrc 
+sourcerc
+source bashrc
+source .bashrc
+vim .bashrc 
+source .bashrc
+lwwdir 
+lwwdir scripts/
+vim .bashrc 
+lwwdir scripts
+vim .bashrc 
+source .bashrc
+lwwdir scripts
+vim .bashrc 
+ls -alt
+ls -alt
+cat .bashrc 
+cd ..
+ls
+ls -alt
+ldir
+lwwdir script
+lwwdir scripts
+vim .bashrc 
+ldir
+link.sh
+homemonitor.sh 
+homemonitor.sh 
+xrandr
+arandr 
+xrandr --output VHA-1 --brightness .0
+xrandr --output VHA-1 --brightness .8
+xrandr --output VGA-1 --brightness .8
+xrandr --output VGA-1 --brightness .6
+wget https://github.com/FortAwesome/Font-Awesome/releases/download/5.13.0/fontawesome-free-5.13.0-desktop.zip
+ls
+tar --help
+tar -xvf *.tar
+ls
+unzip fontawesome-free-5.13.0-desktop.zip 
+tar -zvf fontawesome-free-5.13.0-desktop.zip 
+man pacman
+ldir
+lwwdir
+ls
+cd scripts/
+ls
+vim link.sh 
+vim link.sh 
+vim link.sh 
+atom link.sh
+pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
+sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
+sudo pacman -Ss subl
+sudo pacman -Ss sublime
+sudo pacman -Ss ranger
+sudo pacman -Ss subl
+sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
+sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
+sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
+sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
+sudo pacman -Ss subl
+sudo pacman -Ss sublime
+sudo pacman -Ss sublimetext
+pacman -Qet 
+pacman -Qe
+pacman -Qet 
+sudo pacman -S --needed - < .dotfiles/Install-SoftwareList.txt 
+sudo pacman -S man
+sudo pacman -S mandb
+lcmd
+source .bashrc
+lcmd
+lcmd
+lcmd *
+lcmd lww
+lcmd lww
+lcmd
+lcmd
+lcmd
+lcmd
+source .bashrc
+lcmd
+brightness 1
+brightness .5
+brightness .8
+ldir
+lcmd
+lwwdir
+link.sh
+link.sh
+link.sh
+xrandr
+xrandr --output VGA-1 --brightness .8
+xrandr --output VGA-1 --brightness .7
+xrandr --output VGA-1 --brightness .6
+xrandr --output VGA-1 --gamma 1:.5:1
+xrandr --output DP-1-1 --gamma 1.1:0.8:0.7 --brightness 0.55
+xrandr --output VGA-1 --gamma 1.1:0.8:0.7 --brightness 0.55
+ls
+cd .dotfiles/scripts/
+ls
+./homemonitor.sh 
+./homemonitor.sh 
+./homemonitor.sh 
+./homemonitor.sh 
+./homemonitor.sh 
+ls
+./homemonitor.sh
+./homemonitor.sh 
+cd 
+ls
+mv LEARN/ lwwlearn
+ls
+cd lwwlearn/
+ls
+subl myscripts.txt 
+cat ~/.dotfiles/.config/i3/config 
+cat ~/.dotfiles/.config/i3/config | less
+vim ~/.dotfiles/.config/i3/config 
+vim ~/.dotfiles/.config/i3/config 
+ls
+cd 
+cd .dotfiles/
+ls
+cd scripts/
+ls
+vim homemonitor.sh 
+vim homemonitor.sh 
+vim homemonitor.sh 
+pacman -Qe
+cat awkvars.out
+awk --help
+awk --dump-variables
+awk --dump-variables ''
+ls
+cat awkvars.out 
+rm -rf awkvars.out 
+cd 
+ls
+cd .dotfiles/.config/i3/
+ls
+vim config
+sudo pacman -S code
+sudo pacman -Sy code
+cd .dotfiles/
+git status
+cd scripts/
+ls
+backup.sh 
+cd 
+ls
+ls -A
+rm -rf .bashrc
+rm  .config/i3/config 
+cd .dotfiles/
+cd scripts/
+ls
+subl confilebackup.sh 
+ls
+link.sh 
+subl link
+subl link.sh 
+subl lwwinstall.sh
+atom lwwinstall.sh
+pacman -Qe
+pacman -Qe | awk '{ print $1}'
+pacman -Qe | awk '{ print $1}' > lwwinstall.sh
+ls
+subl lwwinstall.sh 
+atom lwwinstall.sh 
+atom lwwinstall.sh 
+cd ..
+ls
+git status
+git add $(ls -A)
+git status
+git commit -m "today"
+git push origin master
+cd .config/i3/config 
+ls
+atom .config/i3/config 
+pactl
+kmix
+ls
+cd .dotfiles/.config/
+l
+cd i3
+xrandr --current
+xrandr --listmonitors
+pacman -Qo .Xauthority 
+pacman -Qo ~/.config/i3/
+pacman -Qo ~/.config/i3/config 
+cd /etc/
+ls
+pacman -Qi kde
+pacman -Qi lf
+pacman -Qq
+pacman -Qe
+pacman --help
+man -Q --help
+man pacman -Q
+xrandr --listmonitors
+arandr
+# The middle button over a titlebar kills the window
+bindsym --release button2 kill
+# The middle button and a modifer over any part of the window kills the window
+bindsym --whole-window $mod+button2 kill
+# The right button toggles floating
+bindsym button3 floating toggle
+bindsym $mod+button3 floating toggle
+# The side buttons move the window around
+bindsym button9 move left
+bindsym button8 move right# The middle button over a titlebar kills the window
+bindsym --release button2 kill
+# The middle button and a modifer over any part of the window kills the window
+bindsym --whole-window $mod+button2 kill
+# The right button toggles floating
+bindsym button3 floating toggle
+bindsym $mod+button3 floating toggle
+# The side buttons move the window around
+bindsym button9 move left

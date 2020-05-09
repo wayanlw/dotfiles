@@ -15,3 +15,4 @@ for i in $bashfilelist; do
 	ln -sf $HOME/.dotfiles/$i $HOME/$i
 done
 source ~/.bashrc
+echo "exec i3" $HOME/.xinitrc
