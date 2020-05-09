@@ -12,3 +12,9 @@ export PS1="\[$(tput bold)\]\[\033[38;5;11m\]\[\033[48;5;17m\]\u\[$(tput sgr0)\]
 
 #add my scripts to the path
 PATH=$PATH:~/.dotfiles/scripts
+
+
+#lww Aliases
+alias brightness="xrandr --output VGA-1 --brightness "
+alias lcmd="cat ~/.dotfiles/lwwcommands"
+alias lwwdir="cd ~/.dotfiles/"

@@ -1,7 +1,7 @@
 alsa-utils
 arandr
 atom
-autoconf
+ddautoconf
 automake
 base
 binutils

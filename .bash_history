@@ -1,88 +1,3 @@
-xrandr --output VGA-1 --brightness .5
-xrandr --output VGA-1 --brightness .1
-xrandr --output VGA-1 --brightness 1
-xrandr --output VGA-1 --brightness .8
-xrandr --output VGA-1 --brightness .8
-xrandr
-cd .dotfiles/
-mkdir scripts
-vim brightness
-ps -aux | grep i3
-arandr
-arandr
-xrandr
-arandr
-xrandr
-xrandr --output VGA-1 --auto
-arandr
-nm-applet
-nm-applet
-locate nm-applet
-cd .config/i3
-ls
-vim config 
-ls
-cd config 
-ls
-cat config 
-ls -alt
-cat config 
-cd /home/suadmin/.dotfiles/i3
-rm -rf config 
-ls
-ls
-ls
-ls -a
-cd ..
-ls 
-cd i3
-ls
-ls
-$(find /home/<user>/.cache/yay -maxdepth 1 -type d | awk '{ print "-c " $1 }' | tail -n +2)
-$(find /home/<user>/.cache/yay -maxdepth 1 -type d | awk '{ print "-c " $1 }' | tail -n 2)
-$(find /home/suadmin/.cache/yay -maxdepth 1 -type d | awk '{ print "-c " $1 }' | tail -n 2)
-$(find /home/suadmin/.cache/yay -maxdepth 1 -type d | awk '{ print "-c " $1 }' | tail -n +2)
-$(find /home/suadmin/.cache/yay -maxdepth 1 -type d | aw
-find /home/suadmin/.cache/yay -maxdepth 1 -type d | awk '{ print "-c " $1 }' | tail -n 2
-find /home/suadmin/.cache/yay -maxdepth 1 -type d | awk '{ print "-c" $1 }' | tail -n 2
-find /home/suadmin/.cache/yay -maxdepth 1 -type d | awk '{ print "-c " $1 }' | tail -n 2
-find /home/suadmin/.cache/yay -maxdepth 1 -type d | awk '{ print "-c " $1 }' 
-cd ~/.cache/
-tree
-du -h .
-du 
-du -h ..
-cd..
-cd ..
-du .
-du -d
-du --help
-du -d 1
-du -d 2
-du -d 2 | grep .cache
-du -hd 2 | grep .cache
-rm -rf .cache
-ls
-du -hd 2 | grep .cache
-ls
-vim sylinkscript.sh 
-ls -al sylinkscript.sh 
-chmod +x sylinkscript.sh 
-./sylinkscript.sh 
-ls -alt
-vim sylinkscript.sh 
-ls -alt
-cd .dotfiles/
-ls
-rm -rf test.txt 
-ls
-vim sylinkscript.sh 
-cd 
-vim sylinkscript.sh 
-vim sylinkscript.sh 
-./sylinkscript.sh 
-ls -a $HOME 
-ls -a $HOME | grep .bash*
 ls -a $HOME | grep bash*
 ls -a $HOME | grep ^.bash*
 xrandr --ouput LVDS-1 --brightness 100
@@ -498,3 +413,88 @@ cat sylinkscript.sh
 ls -A
 pacman -S code
 sudo pacman -S atom
+apm install vim-mode-plus
+alsamixer
+conky
+cronie
+inetcat
+inetcat 8080
+inetutils
+cd /home/suadmin/
+ls
+cd .dotfiles/
+ls
+cd config 
+cd ..
+.
+cd .dotfiles/
+git commit
+git add *
+git commit *
+git commit -m 
+git commit -m "updated the i3"
+git remote -v
+git push origin master
+ls
+cd scripts/
+ls
+ls
+ls
+cd ..
+ls
+git add *
+git status
+ls .*
+ls 
+ls \.*
+ls
+git status
+git ls-files
+git ls-files --exclude-standard -oi
+git add $(ls -a)
+git ls-tree -r master --name-only
+git add $(ls -A)
+git commmit -m "my commit"
+git commit -m "my commit"
+git status
+git remote -v
+git push origin master
+cat .bashrc
+vim .bashrc
+ls
+ls -alt
+sh .bashrc
+vim .bashrc
+source bash
+source ~/.bash_profile 
+homemonitor.sh 
+homemonitor.sh 
+homemonitor.sh 
+homemonitor.sh 
+homemonitor.sh 
+homemonitor.sh 
+homemonitor.sh 
+homemonitor.sh 
+homemonitor.sh
+homemonitor.sh
+homemonitor.sh
+homemonitor.sh
+homemonitor.sh
+homemonitor.sh
+cd .dotfiles/scripts/
+ls
+cat link.sh 
+vim link.sh 
+cd ..
+cd .config/
+ls
+cd i3/
+ls
+vim config 
+cd ../..
+cd scripts/
+ls
+vim link.sh 
+ls
+ls -al
+apm install relative-numbers
