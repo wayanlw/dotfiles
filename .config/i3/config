@@ -87,11 +87,10 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-
-
-#split windows 
-bindsym $mod+z split h # split in horiZontal orientation
-bindsym $mod+v split v # split in vertical orientation
+# split in vertical orientation
+# split in horiZontal orientation
+bindsym $mod+z split h
+bindsym $mod+v split v 
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -192,14 +191,14 @@ bindsym $mod+r mode "resize"
 
 # ---- windows gaps ------##
 
-default_floating_border pixel 3 px
-gaps inner 5
-gaps outer 0
-
-bindsym $mod+x exec --no-startup-id rofi -show window
-
-bindsym $mod+p			gaps inner current plus 5
-bindsym $mod+Shift+p		gaps inner current minus 5
+#default_floating_border pixel 3 
+#gaps inner set 5
+#gaps outer set 0
+#
+#bindsym $mod+x exec --no-startup-id rofi -show window
+#
+#bindsym $mod+p			gaps inner current plus 5
+#bindsym $mod+Shift+p		gaps inner current minus 5
 
 
 #----- shift+m move the entire workspace to another monior. Be careful on the words that can be used. move workspace to output left|right|down|up|current|primary|<output>
@@ -262,13 +261,13 @@ bindsym button3 floating toggle
 
 
 #keybindings. mod+o then the key
-set $mode_launcher Launch: [f]irefox [t]hunderbird
+set $mode_launcher Launch: [f]irefox [n]autilus
 bindsym $mod+o mode "$mode_launcher"
 
 
 mode "$mode_launcher" {
-    bindsym f exec firefox ; mode "default"
-    bindsym t exec thunderbird; mode "default"
+    bindsym f exec --no-startup-id firefox ; mode "default"
+    bindsym n exec --no-startup-id nautilus; mode "default"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
@@ -310,8 +309,8 @@ bar {
         font pango:San Francisco Display Bold 9 
 	status_command i3status
 	position top
-        workspace_min_width 10
-	mode dock
+        #workspace_min_width 10
+	#mode dock
         colors {
                 background $bg-color
                 #separator #757575

@@ -33,3 +33,4 @@ rm .bash_history
 git commit
 git push origin master
 man i3
+sudo apt install i3status
