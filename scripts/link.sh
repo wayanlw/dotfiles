@@ -23,6 +23,7 @@ done
 
 
 ln -sf $HOME/.dotfiles/.Xresources $HOME/.Xresources
+ln -sf $HOME/.dotfiles/.vimrc $HOME/.vimrc
 
 
 
