@@ -70,9 +70,9 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
 # move focused window
@@ -87,11 +87,11 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-
-
+# split in vertical orientation
+# split in horiZontal orientation
 #split windows 
-bindsym $mod+z split h # split in horiZontal orientation
-bindsym $mod+v split v # split in vertical orientation
+bindsym $mod+z split h 
+bindsym $mod+v split v 
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -115,9 +115,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:Main "
-set $ws2 "2:WWW "
-set $ws3 "3"
+set $ws1 "1 Main "
+set $ws2 "2 WWW"
+set $ws3 "3 EDIT"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -180,9 +180,9 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
-}
+    }
 
-bindsym $mod+r mode "resize"
+    bindsym $mod+r mode "resize"
 
 ####################################################################################################################
 #Thunderboltz config
@@ -221,6 +221,8 @@ bindsym $mod+Shift+Tab workspace next
 
 #########make firefox always open in internet workspace
 assign [class="firefox"] $ws2
+assign [class="Subl"] $ws3
+
 
 ####################################################################################################################
 # Color Settings
@@ -239,7 +241,7 @@ client.focused          $bg-color           $focus-color       $text-color      
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
- 
+
 
 
 
@@ -285,8 +287,9 @@ force_display_urgency_hint 500 ms
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork 
 
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet 
+exec_always --no-startup-id nm-applet 
 
 #set the background wallpaper 
 exec_always --no-startup-id feh --bg-scale ~/.dotfiles/wallpaper/wallpaper.jpg 
@@ -307,18 +310,19 @@ exec_always xmodmap -e "keysym Caps_Lock = Escape"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        font pango:San Francisco Display Bold 9 
-	status_command i3status
-	position top
-        workspace_min_width 10
-	mode dock
-        colors {
-                background $bg-color
-                #separator #757575
-                #                  border             background         text
-                #focused_workspace  $bg-color          $bg-color          $text-color
-                inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-                urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+    font pango:San Francisco Display Bold 9 
+    status_command i3status
+    position top
+    workspace_min_width 10
+    tray_output primary
+    mode dock
+    colors {
+    background $bg-color
+        #separator #757575
+        #                  border             background         text
+        #focused_workspace  $bg-color          $bg-color          $text-color
+        inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+            }
+
         }
-        
-}

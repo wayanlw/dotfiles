@@ -1,0 +1,9 @@
+#lww Aliases
+alias brightness="xrandr --output VGA-1 --brightness "
+alias lcmd="cat ~/.dotfiles/lwwcommands"
+alias lwwdir="cd ~/.dotfiles/"
+
+function wttr(){ 
+        [[ $1 = "" ]] && curl wttr.in/?FA || curl wttr.in/$1?0FT && echo "hello"
+}
+
