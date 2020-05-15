@@ -16,6 +16,7 @@ file
 findutils
 firefox
 flex
+feh
 gawk
 gcc
 gettext
