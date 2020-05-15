@@ -33,6 +33,7 @@ rm .bash_history
 git commit
 git push origin master
 man i3
+<<<<<<< HEAD
 location i3blocks.conf
 sudo updatedb
 locate i3block
@@ -401,3 +402,6 @@ vim settings.ini
 homemonitor.sh 
 ll
 lf
+=======
+sudo apt install i3status
+>>>>>>> 0340b382043fb59bc53b2e24cc2bb3ef745382a7
