@@ -405,3 +405,70 @@ lf
 =======
 sudo apt install i3status
 >>>>>>> 0340b382043fb59bc53b2e24cc2bb3ef745382a7
+vim .config/i3/config
+      
+vim .config/i3/config
+i3msg reload
+i3_msg reload
+i3msg
+i3-msg reload
+xrandr
+xrandr | egrep vga
+pacman -S git
+sudo pacman -S git
+git clone https://github.com/wayanlw/.dotfiles
+cd .dotfiles/
+ls
+cd scripts/
+ls
+vim confilebackup.sh 
+sh backup.sh
+vim lwwinstall.sh 
+sudop pacman -Sy --needed - < lwwinstall.sh 
+sudo pacman -Sy --needed - < lwwinstall.sh 
+sh link.sh 
+xrandr
+arandr
+arandr
+sudo pacman -Sy arandr
+arandr
+terminator
+lwwdir 
+wttr
+weather
+weather home
+weather melbourne
+weather melbourne/noblepark
+weather vic3174
+weather vic 3174
+weather 3174
+weather melbourne
+kill -9 -1
+lwwdir
+cd scripts/
+ls
+cd ..
+ls
+cd wallpaper/
+feh wallpaper.jpg 
+cd 
+lwwdir
+ls
+cd scripts/
+vim lwwinstall.sh 
+sudo pacman -S - < lwwinstall.sh 
+vim lwwinstall.sh 
+sudo pacman -S - < lwwinstall.sh 
+sudo pacman -S - --needed < lwwinstall.sh 
+sxhkd
+cat lwwinstall.sh 
+less lwwinstall.sh 
+sudo pacman -Sy --needed - < lwwinstall.sh 
+sudo pacman -S feh
+kill -9 -1
+cd .dotfiles/.config/i3/config 
+vim .dotfiles/.config/i3/config 
+kill -9 -1
+start xfce4
+exe startxfce4
+exec startxfce4

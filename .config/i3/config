@@ -294,9 +294,10 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id feh --bg-scale ~/.dotfiles/wallpaper/wallpaper.jpg 
 
 #set caps_lock as escape
-exec_always xmodmap -e "keysym Caps_Lock = Escape" 
+exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" 
 
 
+exec --no-startup-id xrandr --output Virtual-1 --primary --mode 1360x768 --pos 0x0 --rotate normal --output Virtual-2 --off --output Virtual-3 --off --output Virtual-4 --off --output Virtual-5 --off --output Virtual-6 --off --output Virtual-7 --off --output Virtual-8 --off
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
