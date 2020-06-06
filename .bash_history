@@ -1,270 +1,3 @@
-lwwdir
-ls
-git add $(ls -A)
-ls
-ls -a
-cd .fonts/
-ls
-git -rm --cached .fonts/YosemiteSanFranciscoFont
-git rm --cached .fonts/YosemiteSanFranciscoFont
-cd ..
-git rm --cached .fonts/YosemiteSanFranciscoFont
-git rm -f --cached .fonts/YosemiteSanFranciscoFont
-ls
-ls -a
-cd .fonts/
-ls
-git add $(ls -A)
-cd ..
-git add $(ls -A)
-git rm - f--cached .fonts/YosemiteSanFranciscoFont
-git rm - f --cached .fonts/YosemiteSanFranciscoFont
-git rm -f --cached .fonts/YosemiteSanFranciscoFont
-git add $(ls -A)
-git status
-git commit
-git commit -m "i3 config"
-git push origin master
-cd 
-ls
-lwwdir
-ls -a
-rm .bash_history 
-git commit
-git push origin master
-man i3
-<<<<<<< HEAD
-location i3blocks.conf
-sudo updatedb
-locate i3block
-cd .config/i3blocks/
-ls
-vim config
-cd ..
-cd i3status/
-ls
-vim config
-sh gitScript.sh 
-sh gitScript.sh 
-sh gitScript.sh 
-cd .dotfiles/
-sh ../gitScript.sh 
-man i3status
-man i3blocks
-man i3status
-curl wittr.in
-curl wttr.in
-curl wttr.in/colombo
-curl wttr.in/3174
-curl wttr.in/help
-curl wttr.in/:help
-curl au.wttr
-curl wittr.in
-curl wttr.in
-curl wttr.in/Q
-curl wttr.in/:help
-curl wttr.in/0
-curl wttr.in/?0
-curl wttr.in/?1
-curl wttr.in/?A
- while true; do i3-msg reload; sleep 1; done
-curl wttr.in/india
-curl wttr.in/dubai
-lwwdir
-vim .bashrc
-homemonitor.sh 
-homemonitor.sh 
-xramdr
-xrandr --help
-xrandr -v
-xrandr --verbose
-xrandr --verbose | grep -i bright | awk '
-awk 'BEGIN {xrandr --verbose | grep -i bright} / print $2'
-awk 'BEGIN { xrandr --verbose | grep -i bright } / print $2'
-awk 'BEGIN { xrandr --verbose | grep -i bright } /print $2/'
-awk 'BEGIN { xrandr --verbose } /print $2/'
-awk 'BEGIN { xrandr --verbose | grep -i bright } /{print $2}/'
-awk 'BEGIN xrandr --verbose | grep -i bright /{print $2}/'
-awk 'BEGIN {xrandr --verbose | grep -i bright} /{print $2}/'
-xrandr --verbose | grep -i bright | awk '{print $2}'
-lwwdir
-git add $(ls -A)
-git commit
-git commit -m "changed monitr"
-git push origin master
-git push origin master
-git add $(ls -A)
-git commit -m "changed monitr"
-git push origin master
-git push origin master
-cd
-ls -alhTOe@
-ls -alhTOe
-ls -alhT
-ls -alhTOe
-ls -alhTOe10
-ls -alhTOe10
-ls -alhToe
-ls -alhT5
-ls -alhT5 | awk '{ print $5 print $7}'
-ls -alhT5 | awk '{ print$5 print$7}'
-ls -alhT5 | awk '{ print $5 print $7}'
-ls -alhT5 | awk '{ print $5, print $7}'
-ls -alhT5 | awk '{ print $5 $7}'
-ls -alhT5 | awk '{ print $5 $8}'
-ls -alhT5 | awk '{ print $5 $9}'
-ls -alhT5 | awk '{ print $5 /t $9}'
-ls -alhT5 | awk '{ print $5 \t $9}'
-ls -alhT5 | awk '{ print $5 /t $9}'
-ls -alhT5 | awk '{ print $5    $9}'
-ls -alhT5 | awk '{ print $5,$9}'
-ls -alhT5 | awk '{ printf "%-10s %s\n",$5,$9}'
-ls -alhT5 | awk '{ printf "%-50s %s\n",$5,$9}'
-ls -alhT5 | awk '{ printf "%50s %s\n",$5,$9}'
-ls -alhT5 | awk '{ printf "%-10s %s\n",$5,$9}'
-ls -alhT5 | awk '{ printf "%-10s %s\n",$9,$5}'
-ls -alhT5 | awk '{ printf "%-20s %s\n",$9,$5}'
-source .bashrc
-vim  .bashrc
-source .bashrc
-vim  .bashrc
-lwwdir
-ls
-ls -alt
-ll
-la
-vim .lwwbash_alias
-vim .lwwbash_alias 
-vim .lwwbash_alias 
-ls
-ls -a
-vim .bash_aliases 
-source .bashrc
-wttr 
-wttr 
-source .bashrc
-wttr 
-[ 1 =1 ] && curl wttr.com/melbourne
-[ 1 = 1 ] && curl wttr.com/melbourne
-[ 1 = 1 ] && curl wttr.com
-[ 1 = 1 ] && curl wttr.in
-source .bashrc
-wttr 
-wttr india
-source .bashrc
-wttr india
-wttr malabe
-curl wttr.in/:help
-source .bashrc
-wttr malabe
-wttr 
-wttr malabe
-wttr 
-source .bashrc
-wttr 
-curl wttr.in/:help
-wttr 
-source .bashrc
-wttr 
-less .barshrc
-less .bashrc
-vim .bashrc
-source .bashrc
-source .bashrc
-ll
-ls -alt
-source .bashrc
-ls -alt
-source .bashrc
-vim .bash_aliases 
-lwwdir
-ls
-cd scripts/
-ls
-cd ..
-ls
-ls -a
-mv .lwwbash_alias .bash_aliases
-source .bashrc
-brightness
-brightness 
-brightness .8
-brightness 1
-wttr home
-wttr
-wttr australia
-source .bashrc
-wttr australia
-wttr
-wttr
-source .bashrc
-wttr
-source .bashrc
-wttr
-source .bashrc
-wttr
-wttr
-source .bashrc
-wttr
-wttr
-wttr home
-wttr
-source .bashrc
-wttr
-wttr
-wttr
-wttr malabe
-wttr colombo
-wttr indnia
-wttr india
-pactl
-pulseaudio 
-pactl
-amixer
-pvolume
-alsamixer
-sudo pacman -S lightdm
-sudo pacman -S lightdm-gtk-greeter
-vim /etc/lightdm/lightdm.conf
-vim /etc/lightdm/lightdm.conf
-sudo vim /etc/lightdm/lightdm.conf
-sudo systemct enable lightdm
-sudo systemctl enable lightdm
-sudo systemctl disable sddm
-sudo systemctl enable lightdm
-dm-tool --help
-dm-tool lock
-sudo dm-tool lock
-sudo dm-tool list-seats
-sudo dm-tool switch-to-greeter
-pkill -9 -1
-kill -9 -1
-vim .xinitrc 
-sudo pacman -Q 
-sudo pacman -Q | grep i3
-homemonitor.sh 
-sudo pacman -Runs dwm suckless-tools
-sudo pacman -Runs dwm
-pacman -Qq suck
-pacman -Qq | grep suck
-pacman -Qq | light
-pacman -Qq | grep light
-pacman -Qq | grep sddm
-sudo pacman -Runs sddm
-cd /etc/lightdm/
-ls
-vim lightdm.conf 
-cd /usr/share/xsessions/
-ls
-yay -S lightdm-webkit2-greeter
-homemonitor.sh 
-weather
-wttr
-curl wttr.in
-locate xorg.conf
-htop
-htop
-sudo pacman -S htop
 egrep "Name|Handlers" /proc/bus/input/devices | egrep -B1 'Handlers.*mouse'
 cat /proc/bus/input/devices 
 cat /proc/bus/input/devices 
@@ -472,3 +205,296 @@ kill -9 -1
 start xfce4
 exe startxfce4
 exec startxfce4
+kill -9 -1
+ip addr
+ls
+ll
+ls -alt
+systemctl enable sddm
+kill -9 -1
+reboot
+pacman -Ss plasma
+pacman -Ss plasma-desktop
+pacman -Sy plasma-desktop
+sudo pacman -Sy plasma-desktop
+reboot
+sudo reboot
+xrandr
+sudo pacman -S arandr
+arandr
+arandr
+xrandr
+arandr
+sudo pacman -S firefox
+pacman -Sy pamac
+sudo pacman -Ss pamac
+yay -S mcmojave-kde-theme-git
+yay -S pamac
+pacman -Syy
+sudo pacman -Syy
+sudo pacman -Syu
+yay -S simplenote
+timdatectl 
+timedatectl 
+timedatectl set-timezone "Australia/Melbourne"
+timedatectl set-ntp true
+yay -S onenote
+pacman -S plasma-nm
+S
+sudo pacman -S plasma-nm
+nmapplet
+sudo pacman -S plasma-nm
+hktop
+htop
+pacman -S dolphin
+sudo pacman -S dolphin
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/breeze
+cd /etc/
+ls
+cd /usr/lib/sddm/sddm.conf.d/
+ls
+mkdir /etc/sddm.conf.d/; mv ./default.conf /etc/sddm.conf.d/
+sudo mkdir /etc/sddm.conf.d
+cp ./default.conf /etc/sddm.conf.d
+sudo cp ./default.conf /etc/sddm.conf.d
+cd /etc/sddm.conf.d/
+vim default.conf 
+pacman -S sddm-kcm
+sudo pacman -S sddm-kcm
+kill -9 -1
+arandr
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/maya
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/McMojave/
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/maldives/
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/breeze/
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/McMojave/
+cd /etc/sddm.conf.d/
+vim default.conf 
+sudo vim default.conf 
+kill -9 -1
+kill -9 -1
+cd /etc/sddm.conf.d/
+sudo vim default.conf 
+kill -9 -1
+sudo pacman -S dolphin
+dolphin
+xrandr
+arandr
+alsa mixer
+alsamixer
+sudo pacman -Sc
+sudo pacman -S pulseaudio pulseadio-alsa
+sudo pacman -S pulseaudio pulseaudio-alsa
+pacman -Qtm
+pacman -Qtn
+pacman -Qtem
+pacman -Qte
+pacman -Qe
+pacman -Qtem
+pacman --help
+man pacman
+man pacman
+sudo pacman -S kscreen
+kscreen
+kscreen
+kill -9 -1
+reboot
+cd .config/
+sudo pacman -Runs kscreen
+vim kscreenlockerrc 
+cd autostart-scripts/
+ls
+cd ..
+vim dolphinrc 
+ll
+vim kdeglobals 
+cd terminator/
+ls
+vim config 
+cat plasma-nm
+cd ..
+cat plasma-nm
+vim ksplashrc 
+man dolphin
+arandr
+cd /usr/share/ksplash/
+cd Themes/
+ls
+cd Classic/
+ls
+cd images
+cd ..
+sudo pacman -S ranger
+ranger
+sudo pacman -S feh
+ranger
+pacman -Sy sxiv
+sudo pacman -Sy sxiv
+ranger
+pacman -S rxvt-unicode
+sudo pacman -S rxvt-unicode
+rxvt
+urxvt
+sudo pacman -Runs urxvt
+sudo pacman -Runs rxvt
+sudo pacman -Runs rxvt-unicode
+pacman -Qdt
+pacman -Qdt
+pacman -Rs $(pacman -Qtdq)
+sudo pacman -Rs $(pacman -Qtdq)
+sudo pacman -S progress
+sudo pacman -S bash-completion
+sudo pacman -S bash-completion-extras
+sudo pacman -Ss bash-completion
+sudo pacman -S virtualbox
+sudo pacman -Runs krunner
+sudo pacman -Runs krun
+kill -9 -1
+arandr
+cd 
+cd /usr/share/xsessions/
+vim plasma.desktop 
+cd /etc/sddm.conf.d/
+vim default.conf 
+yay -S sddm-kcm
+sddm-kcm
+kcm
+pacman -Qem 
+pacman -Qen
+cat /etc/sddm.conf
+cd /etc/sddm.conf.d/
+ls
+cd /usr/share/sddm/
+cd themes/
+pacman -S systemsettings
+sudo pacman -S systemsettings
+reboot
+arandr
+virtualbox 
+sudo modprobe vboxdrv
+sudo /sbin/rcvboxdrv setup
+sudo pacman -S virtualbox-host-modules-arch
+sudo -Rs virtualbox-host-dkms
+sudo pacman -Rs virtualbox-host-dkms
+sudo pacman -Runss virtualbox-host-dkms
+sudo pacman -Runs virtualbox-host-dkms
+sudo pacman -S virtualbox-host-modules-arch
+sudo pacman -Runs virtualbox-host-dkms
+sudo pacman -S virtualbox-host-modules-arch
+sudo modprobe vboxdrv 
+virtualbox
+arandr
+sudo pacman -Sy kde-standard
+sudo pacman -Ss kde
+sudo pacman -Ss kde-standard
+sudo pacman -Ss kde standard
+sudo pacman -Ss kde-full
+sudo pacman -Ss kde-plasma
+sudo pacman -Ss plasma
+sudo pacman -Ss system-settings
+dnf list *plasma
+pacman -Qen
+pacman -Sy -needed plasma-desktop
+pacman -Sy --needed plasma-desktop
+sudo pacman -Sy --needed plasma-desktop
+sudp pacman -Sy plasma-meta
+sudo pacman -Sy --needed plasma-meta
+reboot
+ranger
+yay -S lf
+ranger
+xrdb -qiery -all
+xrdb -query -all
+vim .Xresources 
+vim .Xresources 
+sudo updatedb
+sudo pacman -S mlocate
+sudo updatedb
+locate Krohn
+locate Kornhite
+cd .local/
+cd share/
+plasmapkg2 -t kwinscript -r krohnkite
+vim .bashrc
+cd 
+vim .bashrc 
+source .bashrc
+cd .local/share/
+cd ..
+cd 
+rofi -show window
+rofi -run
+rofi -show run
+kill -9 -1
+reboot
+htop
+htop
+dhtop
+htop
+rofi -show drun
+sudo pacman -Sy bspwm
+sudo pacman -S kate
+bspwm
+locate bspwm
+sudo updatedb
+locate bspwm
+kill -9 -1
+kill -9 -1
+i3
+bspwm
+cd .config/kdei3/
+ls
+vim kdei3.conf
+ls -l
+chmod +x kdei3.conf
+ls -l
+kill -9 -1
+kill -9 -1
+htop
+kill -9 -1
+kill -9 -1
+kill -9 -1
+kill -9 -1
+cd .config/i3/
+ls
+vim config 
+kill -9 -1
+kill -9 -1
+kill -9 -1
+kill -9 -1
+reboot now
+sudo reboot now
+locate krohnkite
+rofi -show drun
+kill -9 -1
+arandr
+vim .dotfiles/.config/i3/config 
+vim .dotfiles/.config/i3/config 
+vim .vimrc
+vim .vimrc
+kate
+htop
+rofi -combi-modi window,drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
+rofi -combi-modi window,drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icon
+rofi -combi-modi window,drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
+sudo pacman -S thunar
+rofi -combi-modi window,drun -show combi -modi combi
+rofi -combi-modi drun,window -show combi -modi combi
+rofi -combi-modi window,drun -show combi -modi combi
+rofi -combi-modi window,run -show combi -modi combi
+rofi -show run
+rofi -show drun
+rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi
+rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
+rofi -show run -modi run -location 1 -width 100  -lines 2 -line-margin 0 -line-padding 1  -separator-style none -font "mono 10" -columns 9 -bw 0  -disable-history  -hide-scrollbar  -color-window "#222222, #222222, #b1b4b3"  -color-normal "#222222, #b1b4b3, #222222, #005577, #b1b4b3"  -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3"  -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3"  -kb-row-select "Tab" -kb-row-tab ""
+ rofi-theme-selector
+$ rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
+rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
+$XDG_USER_CONFIG_DIR
+cd $XDG_USER_CONFIG_DIR
+ls
+echo $XDG_USER_CONFIG_DIR
+cd /
+cd $XDG_USER_CONFIG_DIR
+echo $XDG_CONFIG_HOME
+echo $XDG_RUNTIME_DIR
