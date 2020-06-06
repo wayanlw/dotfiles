@@ -4,6 +4,7 @@ alias lcmd="cat ~/.dotfiles/lwwcommands"
 alias lwwdir="cd ~/.dotfiles/"
 alias ll="ls --human-readable --size -1 --classify"
 alias lla="ls -A --human-readable --size -1 --classify"
+alias inst="sudo pacman -Sy"
 
 function weather(){ 
         [[ $1 = "" ]] && curl wttr.in/?FA || curl wttr.in/$1?0FT 
