@@ -320,7 +320,7 @@ exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    font pango:San Francisco Display 9 
+    font pango:San Francisco Display 8 
     status_command i3status
     position top
     workspace_min_width 10
