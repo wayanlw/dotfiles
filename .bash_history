@@ -1,78 +1,3 @@
-egrep "Name|Handlers" /proc/bus/input/devices | egrep -B1 'Handlers.*mouse'
-cat /proc/bus/input/devices 
-cat /proc/bus/input/devices 
-egrep "Name|Handlers" /proc/bus/input/devices | egrep -B1 'Handlers.*mouse'
-git clone https://github.com/libratbag/piper.git
-cd piper/
-meson builddir --prefix=/usr/
-cd ..
-ls
-cd 
-ls
-ll
-lll
-llh
-lh
-ls
-ls
-ls -alt
-cat .bashrc
-lwwdir
-ls
-cd scripts/
-ls
-cd ..
-ls
-vim .bash_aliases 
-wttr
-source .bashrc
-weather
-weather home
-cat .bashrc
-sudo pacman -S piper
-alias lt='ls --human-readable --size -1 -S --classify'
-lt
-'ls -A --human-readable --size -1 -S --classify
-'
-ls -A --human-readable --size -1 -S --classify
-du -sh
-du -sh *
-du -sha *
-du -sh *
-du -sh *| sort -h
-ls -A --human-readable --size -1 -S --classify
-ls --human-readable --size -1 -S --classify
-ls --human-readable --size -1 --classify
-source .bashrc
-ll
-ll
-ll
-source .bashrc
-ll
-
-source .bashrc
-ll
-ll
-source .bashrc
-lla
-piper
-piper
-piper
- telnet towel.blinkenlights.nl 666
-grep -P
-man grep
-pacman -S bash_completion
-sudo pacman -S bash_completion
-MNT
-nt
-mnt
-mount
-source .bashrc
-bashreload
-du
-mnt
-mount | grep /dev/
-mount | grep ^/dev/
 bashreload 
 mount | grep ^/dev/
 mnt
@@ -498,3 +423,78 @@ cd /
 cd $XDG_USER_CONFIG_DIR
 echo $XDG_CONFIG_HOME
 echo $XDG_RUNTIME_DIR
+.config/
+lwwcmd
+c .dotfiles/
+lwwcmd
+lwwdir 
+source .bashrc
+install ttf-font-awesome
+install font-awesome
+source .bashrc
+install 
+install --help
+install font-awesome
+source .bashrc
+inst font-awesome
+sudo pacman -Ss awesome
+sudo pacman -Sy ttf-font-awesome
+yay -S ttf-ms-fonts
+lwwdir
+git commit
+git push origin master
+git push origin master
+git push origin master
+git commit -m test
+git add .bash_aliases .lwwbash_alias .vimrc .config/i3/config 
+git commit
+git commit
+git commit -m suday
+git push origin master
+git push origin master
+git push origin master
+git push origin master
+git add
+git add .
+git status
+git commit -v 2
+git commit -m 2
+git push origin master
+inst polybar
+inst blueman
+sudo systemctl start bluez
+inst bluez
+systemctl start bluez
+sudo systemctl start bluez
+pacman -Qen | grep bluez
+pacman -Qe | grep bluez
+pacman -Qq | grep bluez
+inst bluez-utils
+sudo systemctl start bluetooth
+blueman
+andr
+reboot now
+ls
+inst i3-gaps
+cd /usr/share/xsessions.
+cd /usr/share/xsessions/
+cp plasma.desktop plasma-i3.desktop
+sudo cp plasma.desktop plasma-i3.desktop
+kate plasma-i3.desktop 
+sudo kate plasma-i3.desktop 
+sudo vim plasma-i3.desktop 
+cd ~/.config/i3/
+ls
+vim config 
+kill -9 -1
+htop
+htop
+atop
+htop
+inst vscod
+kill -9 -1
+cd .config/i3/
+ls
+vim config 
+kill -9 -1
+kill -9 -1
