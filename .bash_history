@@ -1,45 +1,3 @@
-bashreload 
-mount | grep ^/dev/
-mnt
-bashreload
-cl ..
-cl suadmin/
-ls -F
-ls -AF
-bashreload
-cl .dotfiles/
-cd ..
-cd .dotfiles/
-cl ..
-bashreload
-cl .dotfiles/
-bashreload
-cl .dotfiles/
-cl ..
-cl .dotfiles/
-bashreload
-cl ..
-bashreload
-cl ..
-bashreload
-bashreload
-cl ..
-cl
-llh
-ll
-bashreload
-cl
-pwd
-bashreload
-cl
-bashreload
-cl
-cl
-sl .dotfiles/
-cl .dotfiles/
-bashreload
-cd /etc/
-cd 
 cl /etc/
 cd ..
 cl ..
@@ -498,3 +456,45 @@ ls
 vim config 
 kill -9 -1
 kill -9 -1
+yay -S onedrive
+yay -S onedrive
+onedrive
+onedrive --synchronize
+onedrive --help
+onedrive --display-sync-status
+sudo pacman -Runs onedrive
+yay -Runs onedrive
+yay -r onedrive
+pacman -Qen | grep onedrive
+pacman -Qq | grep onedrive
+vim .bashrc
+vim .bash_aliases 
+source .bashrc
+fpkg onedrive
+pacman -Runs - < $(fpkg onedrive)
+pacman -Runs onedrive-abraunegg
+sudo pacman -Runs onedrive-abraunegg
+inst bleachbit
+vim .bash_aliases 
+lwwdir
+git add $(ls -A)
+git commit
+git commit -m Monday
+git push origin master
+git status
+htop
+sncli
+sudo pacman -Syy
+sudo pacman -Su
+inst
+inst sncli
+yay -s sncli
+yay -s sncli
+sncli
+man sncli
+sudo updatedb
+touch .snclirc
+vim .snclirc
+sncli
+vim .snclirc
+sncli

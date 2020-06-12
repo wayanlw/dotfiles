@@ -240,7 +240,7 @@ assign [class="kate"] $ws3
 
 
 #----- focus doesnt follow the moust
-focus_follows_mouse no
+#focus_follows_mouse no
 
 
 ####################################################################################################################
