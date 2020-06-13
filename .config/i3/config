@@ -312,11 +312,13 @@ exec_always xrandr --output LVDS1 --mode 1366x768 --pos 277x1080 --rotate normal
 
 
 #start tint2
-exec_always killall tint2
-exec_always tint2 &
+#exec_always killall tint2
+#exec_always tint2 &
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,# and nm-applet is a desktop environment-independent system tray GUI for it.
+# starting NetworkManager nm-applet and volume control
 exec_always --no-startup-id nm-applet 
+#exec_always --no-startup-id kmix
+
 
 #set the background wallpaper 
 exec_always --no-startup-id feh --bg-scale ~/.dotfiles/wallpaper/wallpaper.jpg 

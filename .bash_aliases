@@ -7,8 +7,14 @@ alias lla="ls -A --human-readable --size -1 --classify"
 alias inst="sudo pacman -S"
 alias fpkg="pacman -Qq | grep"
 
+#check weather
 function weather(){ 
         [[ $1 = "" ]] && curl wttr.in/?FA || curl wttr.in/$1?0FT 
+}
+
+#check weather
+function cheat(){ 
+        [[ $1 = "" ]] && curl cheat.sh/ || curl cheat.sh/$1
 }
 
 # Reloads the bashrc file

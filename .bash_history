@@ -1,226 +1,3 @@
-cd .dotfiles/
-ls
-cd scripts/
-ls
-vim confilebackup.sh 
-sh backup.sh
-vim lwwinstall.sh 
-sudop pacman -Sy --needed - < lwwinstall.sh 
-sudo pacman -Sy --needed - < lwwinstall.sh 
-sh link.sh 
-xrandr
-arandr
-arandr
-sudo pacman -Sy arandr
-arandr
-terminator
-lwwdir 
-wttr
-weather
-weather home
-weather melbourne
-weather melbourne/noblepark
-weather vic3174
-weather vic 3174
-weather 3174
-weather melbourne
-kill -9 -1
-lwwdir
-cd scripts/
-ls
-cd ..
-ls
-cd wallpaper/
-feh wallpaper.jpg 
-cd 
-lwwdir
-ls
-cd scripts/
-vim lwwinstall.sh 
-sudo pacman -S - < lwwinstall.sh 
-vim lwwinstall.sh 
-sudo pacman -S - < lwwinstall.sh 
-sudo pacman -S - --needed < lwwinstall.sh 
-sxhkd
-cat lwwinstall.sh 
-less lwwinstall.sh 
-sudo pacman -Sy --needed - < lwwinstall.sh 
-sudo pacman -S feh
-kill -9 -1
-cd .dotfiles/.config/i3/config 
-vim .dotfiles/.config/i3/config 
-kill -9 -1
-start xfce4
-exe startxfce4
-exec startxfce4
-kill -9 -1
-ip addr
-ls
-ll
-ls -alt
-systemctl enable sddm
-kill -9 -1
-reboot
-pacman -Ss plasma
-pacman -Ss plasma-desktop
-pacman -Sy plasma-desktop
-sudo pacman -Sy plasma-desktop
-reboot
-sudo reboot
-xrandr
-sudo pacman -S arandr
-arandr
-arandr
-xrandr
-arandr
-sudo pacman -S firefox
-pacman -Sy pamac
-sudo pacman -Ss pamac
-yay -S mcmojave-kde-theme-git
-yay -S pamac
-pacman -Syy
-sudo pacman -Syy
-sudo pacman -Syu
-yay -S simplenote
-timdatectl 
-timedatectl 
-timedatectl set-timezone "Australia/Melbourne"
-timedatectl set-ntp true
-yay -S onenote
-pacman -S plasma-nm
-S
-sudo pacman -S plasma-nm
-nmapplet
-sudo pacman -S plasma-nm
-hktop
-htop
-pacman -S dolphin
-sudo pacman -S dolphin
-sddm-greeter --test-mode --theme /usr/share/sddm/themes/breeze
-cd /etc/
-ls
-cd /usr/lib/sddm/sddm.conf.d/
-ls
-mkdir /etc/sddm.conf.d/; mv ./default.conf /etc/sddm.conf.d/
-sudo mkdir /etc/sddm.conf.d
-cp ./default.conf /etc/sddm.conf.d
-sudo cp ./default.conf /etc/sddm.conf.d
-cd /etc/sddm.conf.d/
-vim default.conf 
-pacman -S sddm-kcm
-sudo pacman -S sddm-kcm
-kill -9 -1
-arandr
-sddm-greeter --test-mode --theme /usr/share/sddm/themes/maya
-sddm-greeter --test-mode --theme /usr/share/sddm/themes/McMojave/
-sddm-greeter --test-mode --theme /usr/share/sddm/themes/maldives/
-sddm-greeter --test-mode --theme /usr/share/sddm/themes/breeze/
-sddm-greeter --test-mode --theme /usr/share/sddm/themes/McMojave/
-cd /etc/sddm.conf.d/
-vim default.conf 
-sudo vim default.conf 
-kill -9 -1
-kill -9 -1
-cd /etc/sddm.conf.d/
-sudo vim default.conf 
-kill -9 -1
-sudo pacman -S dolphin
-dolphin
-xrandr
-arandr
-alsa mixer
-alsamixer
-sudo pacman -Sc
-sudo pacman -S pulseaudio pulseadio-alsa
-sudo pacman -S pulseaudio pulseaudio-alsa
-pacman -Qtm
-pacman -Qtn
-pacman -Qtem
-pacman -Qte
-pacman -Qe
-pacman -Qtem
-pacman --help
-man pacman
-man pacman
-sudo pacman -S kscreen
-kscreen
-kscreen
-kill -9 -1
-reboot
-cd .config/
-sudo pacman -Runs kscreen
-vim kscreenlockerrc 
-cd autostart-scripts/
-ls
-cd ..
-vim dolphinrc 
-ll
-vim kdeglobals 
-cd terminator/
-ls
-vim config 
-cat plasma-nm
-cd ..
-cat plasma-nm
-vim ksplashrc 
-man dolphin
-arandr
-cd /usr/share/ksplash/
-cd Themes/
-ls
-cd Classic/
-ls
-cd images
-cd ..
-sudo pacman -S ranger
-ranger
-sudo pacman -S feh
-ranger
-pacman -Sy sxiv
-sudo pacman -Sy sxiv
-ranger
-pacman -S rxvt-unicode
-sudo pacman -S rxvt-unicode
-rxvt
-urxvt
-sudo pacman -Runs urxvt
-sudo pacman -Runs rxvt
-sudo pacman -Runs rxvt-unicode
-pacman -Qdt
-pacman -Qdt
-pacman -Rs $(pacman -Qtdq)
-sudo pacman -Rs $(pacman -Qtdq)
-sudo pacman -S progress
-sudo pacman -S bash-completion
-sudo pacman -S bash-completion-extras
-sudo pacman -Ss bash-completion
-sudo pacman -S virtualbox
-sudo pacman -Runs krunner
-sudo pacman -Runs krun
-kill -9 -1
-arandr
-cd 
-cd /usr/share/xsessions/
-vim plasma.desktop 
-cd /etc/sddm.conf.d/
-vim default.conf 
-yay -S sddm-kcm
-sddm-kcm
-kcm
-pacman -Qem 
-pacman -Qen
-cat /etc/sddm.conf
-cd /etc/sddm.conf.d/
-ls
-cd /usr/share/sddm/
-cd themes/
-pacman -S systemsettings
-sudo pacman -S systemsettings
-reboot
-arandr
-virtualbox 
-sudo modprobe vboxdrv
-sudo /sbin/rcvboxdrv setup
 sudo pacman -S virtualbox-host-modules-arch
 sudo -Rs virtualbox-host-dkms
 sudo pacman -Rs virtualbox-host-dkms
@@ -498,3 +275,226 @@ python -u "/home/suadmin/Python/FirstProg.py"
 python -u "/home/suadmin/Python/FirstProg.py"
 python -u "/home/suadmin/Python/FirstProg.py"
 python -u "/home/suadmin/Python/FirstProg.py"
+cd .config/rofi/
+ls
+mv rofi.rasi config.rasi
+ls
+lla
+ls -alt
+rofi -show window
+rofi -config config.rasi -show window
+rofi -config ~/.dotfiles/.config/rofi/lwwrofi.rasi -show window
+inst nm-applet
+inst network-manager-applet
+nm-applet
+nm-applet
+inst nm-applet
+inst nmapplet
+locate applet
+locate nm-applet
+locate nmapplet
+tint2 -c /home/suadmin/.config/tint2/horizontal-text-only.tint2rc
+cd .dotfiles/
+cd .config/
+ls
+mkdir rofi
+curl https://gitlab.com/dwt1/dotfiles/-/raw/master/.config/rofi/themes/distrotube.rasi > lwwrofi.rasi
+vim lwwrofi.rasi 
+rofi -c lwwrofi.rasi 
+rofi -c lwwrofi.rasi -show window
+rofi -h
+rofi -h | grep config
+cd 
+cd .config/rofi
+cd .config/
+ls
+mkdir rofi
+ls
+cd rofi/
+cd 
+cd .dotfiles/.config/rofi/
+ls
+ls
+cd ..
+ls
+mv lwwrofi.rasi rofi/
+cd rofi/
+ln -sf lwwrofi.rasi ~/.config/rofi/rofi.rasi
+rofi -show window
+rofi -h | grep config
+killall tint2
+sudo userdel -rf test
+sncli
+:
+clear
+wal -vte -R
+wall -R
+wal -R
+cd .config/terminator/
+ls
+vim config 
+ls
+vimbak config
+vim ~/.bash_aliases 
+vimbk config 
+cd .config/terminator/
+ls
+vim config
+vim config
+cd 
+cd .dotfiles/wallpaper/
+ls
+wal -i wallpaper.jpg 
+color3
+echo color3
+echo $color3
+cd pictures/
+ls
+yay googlechrome
+cd .dotfiles/.config/sxhkd/
+ln -sf sxhkdrc ~/.config/sxhkd/sxhkdrc 
+ls
+vim sxhkdrc 
+ls -alt
+chmod +x sxhkdrc 
+ls -alt
+ls
+ln -sf ./sxhkdrc ~/.config/sxhkd/sxhkdrc 
+arandr
+cd .config/sxhkd/
+vim sxhkdrc 
+vim .config/sxhkd/sxhkdrc 
+vim .config/sxhkd/sxhkdrc 
+htop
+vim .dotfiles/.config/sxhkd/sxhkdrc 
+.config/bspwm/bspwmrc 
+:q
+.config/bspwm/bspwmrc 
+:q
+vim .dotfiles/.config/bspwm/bspwmrc 
+vim .dotfiles/.config/bspwm/bspwmrc 
+vim .config/sxhkd/sxhkdrc 
+vim .config/sxhkd/sxhkdrc 
+ls
+htop
+xrandr
+arandr
+xrandr --output LVDS1 --mode 1366x768 --pos 277x1080 --rotate normal --output DP1 --off --output HDMI1 --off --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+vim .config/bspwm/bspwmrc 
+arandr
+vim .config/i3/config 
+cat .config/i3/config 
+htop
+htop
+htop
+htop
+inst compton
+compton &
+cd 
+ls
+cd Downloads/
+ls
+git clone https://github.com/adi1090x/polybar-themes
+cd polybar-themes/
+cd polybar-1
+ls
+cd scripts/
+cd ..
+ls
+mkdir ~/.config/polybar
+cp -r * ~/.config/polybar
+~/.config/polybar/launch.sh 
+ls
+cd ~/.config/
+ls
+cd polybar/
+shh launch.sh 
+sh launch.sh 
+ls
+vim config.ini 
+cd ~/.dotfiles/
+ls
+ls -alt
+vim .vimrc 
+sh launch.sh 
+sh launch.sh 
+ls
+cd 
+cd Downloads/
+cd polybar-themes/
+cd polybar-1
+launch.sh
+sh launch.sh 
+rofi -no-lazy-grab -show drun -display-drun "Applications :" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 15 -padding 60 -width 30 -xoffset 10 -yoffset 40 -location 1 -fullscreen -columns 4 -show-icons -icon-theme "Papirus" \
+rofi -no-lazy-grab -show drun -display-drun "Applications :" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 15 -padding 60 -width 30 -xoffset 10 -yoffset 40 -location 1 -fullscreen -columns 4 -show-icons -icon-theme "Papirus"
+rofi -no-lazy-grab -show drun -display-drun "Applications :" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 15 -padding 60 -width 30 -xoffset 10 -yoffset 40 -location 1 -fullscreen -columns 4 -show-icons -icon-theme "Papirus"
+rofi -no-lazy-grab -show drun -display-drun "Applications :" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 15 -padding 60 -width 30 -xoffset 10 -yoffset 40 -location 1 -fullscreen -columns 4 -show-icons -icon-theme "Papirus" -font "Fantasque Sans Mono 10" -color-enabled true -color-window "$BACKGROUND,$BORDER,$SEPARATOR"
+rofi -no-lazy-grab -show drun -display-drun "Applications :" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 15 -padding 60 -width 30 -xoffset 10 -yoffset 40 -location 1 -fullscreen -columns 4 -show-icons -icon-theme "Papirus" -font "Fantasque Sans Mono 10" -color-enabled true
+ranger
+networkmanager_dmenu
+cd pictures/
+ls
+wal -i surface.jpg 
+inst polybar
+yay -S polybar
+yay -S polybar
+yay -S polybar
+killall polybar
+cd 
+cd Downloads/
+cd polybar-themes/
+cd ~/.local/share/
+mkdir fonts
+cd .dotfiles/.config/
+mkdir i3status
+cp /etc/i3status.conf ./config
+ls
+mv config i3status/
+cd i3status/
+vim config
+ln -sf ~/.dotfiles/.config/i3status/config ~/.config/i3status/config
+i3status
+i3status
+journalctl
+journalctl -r
+vim .vimrc 
+nmtui
+inst lxappearance
+locate i3status
+i3status
+kate /etc/i3status.conf 
+sudo kate /etc/i3status.conf 
+sudo vim /etc/i3status.conf 
+curl cheat.sh
+curl cheat.sh btrfs
+curl cheat.sh/btrfs
+curl cheat.sh/useradd
+curl cheat.sh/userdel
+weather
+vim .bash_aliases 
+source .bashrc
+cht man
+vim .bash_aliases 
+cheat bash
+cheat man
+inst fkill
+yay -S fkill
+inst --needed ttf-font-awesome
+cd .config/
+mkdir i3status
+cd i3status/
+vim config 
+kate config 
+inst dwm
+sudo pacman -Sy
+sudo pacman -Ss dwm
+yay -S dwm
+locate .xsession
+locate .xinit
+cd /usr/share/xsessions/
+cat ^
+cat *
+echo $shell
+echo $SHELL
+inst zsh zsh-completions
+zsh
