@@ -1,63 +1,3 @@
-sudo pacman -S virtualbox-host-modules-arch
-sudo -Rs virtualbox-host-dkms
-sudo pacman -Rs virtualbox-host-dkms
-sudo pacman -Runss virtualbox-host-dkms
-sudo pacman -Runs virtualbox-host-dkms
-sudo pacman -S virtualbox-host-modules-arch
-sudo pacman -Runs virtualbox-host-dkms
-sudo pacman -S virtualbox-host-modules-arch
-sudo modprobe vboxdrv 
-virtualbox
-arandr
-sudo pacman -Sy kde-standard
-sudo pacman -Ss kde
-sudo pacman -Ss kde-standard
-sudo pacman -Ss kde standard
-sudo pacman -Ss kde-full
-sudo pacman -Ss kde-plasma
-sudo pacman -Ss plasma
-sudo pacman -Ss system-settings
-dnf list *plasma
-pacman -Qen
-pacman -Sy -needed plasma-desktop
-pacman -Sy --needed plasma-desktop
-sudo pacman -Sy --needed plasma-desktop
-sudp pacman -Sy plasma-meta
-sudo pacman -Sy --needed plasma-meta
-reboot
-ranger
-yay -S lf
-ranger
-xrdb -qiery -all
-xrdb -query -all
-vim .Xresources 
-vim .Xresources 
-sudo updatedb
-sudo pacman -S mlocate
-sudo updatedb
-locate Krohn
-locate Kornhite
-cd .local/
-cd share/
-plasmapkg2 -t kwinscript -r krohnkite
-vim .bashrc
-cd 
-vim .bashrc 
-source .bashrc
-cd .local/share/
-cd ..
-cd 
-rofi -show window
-rofi -run
-rofi -show run
-kill -9 -1
-reboot
-htop
-htop
-dhtop
-htop
-rofi -show drun
-sudo pacman -Sy bspwm
 sudo pacman -S kate
 bspwm
 locate bspwm
@@ -498,3 +438,63 @@ echo $shell
 echo $SHELL
 inst zsh zsh-completions
 zsh
+echo $SHELL
+echo $TERMINAL
+terminal
+neofetch
+inst neofetch
+neofetch
+arandr
+cd Desktop/
+ls
+cd ..
+cd Downloads/
+cd ..
+lf
+ranger
+cd pictures/
+wal -i surface.jpg 
+cd pic
+cd pictures/
+wal -i surface.jpg 
+arandr
+htop
+ls
+ls
+arandr
+chi
+vim .dotfiles/.config/i3/config 
+vim .dotfiles/.config/i3/config 
+vim .dotfiles/.config/i3/config 
+inst clipster
+yay -S clipster
+yay -S roficlip
+roficlip
+clipster
+clipster -h
+clipster -c
+systemctl start clipste
+clipster -d
+clipster -d &
+clipster -c
+clipster -c
+clipster -h
+clipster -s
+[A
+[A
+clipster -s
+[A
+sudo pacman -Runs clipster rofi-clip
+sudo pacman -Runs clipster
+sudo pacman -Qdt
+sudo pacman -Runs roficlip
+pacman -Rns $(pacman -Qtdq)
+sudo pacman -Rns $(pacman -Qtdq)
+pacman -Qe
+pacman -Qen
+pacman -Qem
+yay -Runs clipster
+pacman -Qem
+sudo pacman -Syuu
+ls
+htop

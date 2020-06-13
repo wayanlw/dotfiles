@@ -307,17 +307,17 @@ force_display_urgency_hint 500 ms
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork 
 
 #xrandr change
-exec_always xrandr --output LVDS1 --mode 1366x768 --pos 277x1080 --rotate normal --output DP1 --off --output HDMI1 --off --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+exec_always --no-startup-id xrandr --output LVDS1 --mode 1366x768 --pos 277x1080 --rotate normal --output DP1 --off --output HDMI1 --off --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 
 
 #start tint2
-#exec_always killall tint2
-#exec_always tint2 &
+exec_always killall tint2
+exec_always tint2 &
 
 # starting NetworkManager nm-applet and volume control
 exec_always --no-startup-id nm-applet 
-#exec_always --no-startup-id kmix
+exec_always --no-startup-id kmix
 
 
 #set the background wallpaper 
