@@ -4,7 +4,8 @@ set ruler
 set ignorecase
 set hlsearch
 set incsearch
-
+set mouse=a
+set cusorline
 
 set showmatch
 set mat=2
@@ -27,10 +28,10 @@ map <silent> <leader><cr> :noh<cr>
 
 	"let mapleader = ","
 
-map i <Up>
-map j <Left>
-map k <Down>
-noremap h i
+"map i <Up>
+"map j <Left>
+"map k <Down>
+"noremap h i
 
 " Two semicolons are easy to type.
-imap ;; <Esc>
+imap jk <Esc>

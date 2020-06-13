@@ -1,5 +1,5 @@
 #lww Aliases
-alias brightness="xrandr --output VGA-1 --brightness "
+alias brightness="xrandr --output VGA1 --brightness "
 alias lcmd="cat ~/.dotfiles/lwwcommands"
 alias lwwdir="cd ~/.dotfiles/"
 alias ll="ls --human-readable --size -1 --classify"

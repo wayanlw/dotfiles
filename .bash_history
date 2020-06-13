@@ -1,38 +1,3 @@
-cl /etc/
-cd ..
-cl ..
-cl /etc/
-cl 
-cd 
-bashreload
-cd 
-cd .dotfiles/
-ls
-cd .do
-cd scripts/
-cd ..
-cd 
-piper
-cd ~/.config/gtk-3.0/
-vim settings.ini 
-homemonitor.sh 
-ll
-lf
-=======
-sudo apt install i3status
->>>>>>> 0340b382043fb59bc53b2e24cc2bb3ef745382a7
-vim .config/i3/config
-      
-vim .config/i3/config
-i3msg reload
-i3_msg reload
-i3msg
-i3-msg reload
-xrandr
-xrandr | egrep vga
-pacman -S git
-sudo pacman -S git
-git clone https://github.com/wayanlw/.dotfiles
 cd .dotfiles/
 ls
 cd scripts/
@@ -498,3 +463,38 @@ vim .snclirc
 sncli
 vim .snclirc
 sncli
+vim .dotfiles/.config/i3/config 
+vim .dotfiles/.config/i3/config 
+vim .dotfiles/.config/i3/config 
+vim .vimrc 
+inst chromium
+brightness 80
+vim .dotfiles/.bash_aliases 
+brightness 80
+source .bashrc
+brightness 80
+brightness 0
+brightness90
+sncli
+shutdown now
+kill -9 -1
+inst tint2
+tint2 &
+vim .vimrc 
+#
+vim .config/i3/config 
+sudo updatedb
+locate tint2rc
+rm -f .config/tint2/tint2rc
+htop
+inst code
+ env /bin/python /home/suadmin/.vscode-oss/extensions/ms-python.python-2020.5.86806/pythonFiles/lib/python/debugpy/no_wheels/debugpy/launcher 33489 -- /home/suadmin/Python/FirstProg.py 
+python -u "/home/suadmin/Python/FirstProg.py"
+python -u "/home/suadmin/Python/FirstProg.py"
+python -u "/home/suadmin/Python/FirstProg.py"
+python -u "/home/suadmin/Python/FirstProg.py"
+python -u "/home/suadmin/Python/FirstProg.py"
+python -u "/home/suadmin/Python/FirstProg.py"
+python -u "/home/suadmin/Python/FirstProg.py"
+python -u "/home/suadmin/Python/FirstProg.py"
+python -u "/home/suadmin/Python/FirstProg.py"
