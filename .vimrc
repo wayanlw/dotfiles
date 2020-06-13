@@ -5,7 +5,7 @@ set ignorecase
 set hlsearch
 set incsearch
 set mouse=a
-set cusorline
+set cursorline
 
 set showmatch
 set mat=2
@@ -33,5 +33,9 @@ map <silent> <leader><cr> :noh<cr>
 "map k <Down>
 "noremap h i
 
-" Two semicolons are easy to type.
+"Two semicolons are easy to type.
 imap jk <Esc>
+
+"powerline for vim
+let g:powerline_pycmd="py3"
+set laststatus=2
