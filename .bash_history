@@ -1,233 +1,3 @@
-sudo pacman -S kate
-bspwm
-locate bspwm
-sudo updatedb
-locate bspwm
-kill -9 -1
-kill -9 -1
-i3
-bspwm
-cd .config/kdei3/
-ls
-vim kdei3.conf
-ls -l
-chmod +x kdei3.conf
-ls -l
-kill -9 -1
-kill -9 -1
-htop
-kill -9 -1
-kill -9 -1
-kill -9 -1
-kill -9 -1
-cd .config/i3/
-ls
-vim config 
-kill -9 -1
-kill -9 -1
-kill -9 -1
-kill -9 -1
-reboot now
-sudo reboot now
-locate krohnkite
-rofi -show drun
-kill -9 -1
-arandr
-vim .dotfiles/.config/i3/config 
-vim .dotfiles/.config/i3/config 
-vim .vimrc
-vim .vimrc
-kate
-htop
-rofi -combi-modi window,drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
-rofi -combi-modi window,drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icon
-rofi -combi-modi window,drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
-sudo pacman -S thunar
-rofi -combi-modi window,drun -show combi -modi combi
-rofi -combi-modi drun,window -show combi -modi combi
-rofi -combi-modi window,drun -show combi -modi combi
-rofi -combi-modi window,run -show combi -modi combi
-rofi -show run
-rofi -show drun
-rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi
-rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
-rofi -show run -modi run -location 1 -width 100  -lines 2 -line-margin 0 -line-padding 1  -separator-style none -font "mono 10" -columns 9 -bw 0  -disable-history  -hide-scrollbar  -color-window "#222222, #222222, #b1b4b3"  -color-normal "#222222, #b1b4b3, #222222, #005577, #b1b4b3"  -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3"  -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3"  -kb-row-select "Tab" -kb-row-tab ""
- rofi-theme-selector
-$ rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
-rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
-$XDG_USER_CONFIG_DIR
-cd $XDG_USER_CONFIG_DIR
-ls
-echo $XDG_USER_CONFIG_DIR
-cd /
-cd $XDG_USER_CONFIG_DIR
-echo $XDG_CONFIG_HOME
-echo $XDG_RUNTIME_DIR
-.config/
-lwwcmd
-c .dotfiles/
-lwwcmd
-lwwdir 
-source .bashrc
-install ttf-font-awesome
-install font-awesome
-source .bashrc
-install 
-install --help
-install font-awesome
-source .bashrc
-inst font-awesome
-sudo pacman -Ss awesome
-sudo pacman -Sy ttf-font-awesome
-yay -S ttf-ms-fonts
-lwwdir
-git commit
-git push origin master
-git push origin master
-git push origin master
-git commit -m test
-git add .bash_aliases .lwwbash_alias .vimrc .config/i3/config 
-git commit
-git commit
-git commit -m suday
-git push origin master
-git push origin master
-git push origin master
-git push origin master
-git add
-git add .
-git status
-git commit -v 2
-git commit -m 2
-git push origin master
-inst polybar
-inst blueman
-sudo systemctl start bluez
-inst bluez
-systemctl start bluez
-sudo systemctl start bluez
-pacman -Qen | grep bluez
-pacman -Qe | grep bluez
-pacman -Qq | grep bluez
-inst bluez-utils
-sudo systemctl start bluetooth
-blueman
-andr
-reboot now
-ls
-inst i3-gaps
-cd /usr/share/xsessions.
-cd /usr/share/xsessions/
-cp plasma.desktop plasma-i3.desktop
-sudo cp plasma.desktop plasma-i3.desktop
-kate plasma-i3.desktop 
-sudo kate plasma-i3.desktop 
-sudo vim plasma-i3.desktop 
-cd ~/.config/i3/
-ls
-vim config 
-kill -9 -1
-htop
-htop
-atop
-htop
-inst vscod
-kill -9 -1
-cd .config/i3/
-ls
-vim config 
-kill -9 -1
-kill -9 -1
-yay -S onedrive
-yay -S onedrive
-onedrive
-onedrive --synchronize
-onedrive --help
-onedrive --display-sync-status
-sudo pacman -Runs onedrive
-yay -Runs onedrive
-yay -r onedrive
-pacman -Qen | grep onedrive
-pacman -Qq | grep onedrive
-vim .bashrc
-vim .bash_aliases 
-source .bashrc
-fpkg onedrive
-pacman -Runs - < $(fpkg onedrive)
-pacman -Runs onedrive-abraunegg
-sudo pacman -Runs onedrive-abraunegg
-inst bleachbit
-vim .bash_aliases 
-lwwdir
-git add $(ls -A)
-git commit
-git commit -m Monday
-git push origin master
-git status
-htop
-sncli
-sudo pacman -Syy
-sudo pacman -Su
-inst
-inst sncli
-yay -s sncli
-yay -s sncli
-sncli
-man sncli
-sudo updatedb
-touch .snclirc
-vim .snclirc
-sncli
-vim .snclirc
-sncli
-vim .dotfiles/.config/i3/config 
-vim .dotfiles/.config/i3/config 
-vim .dotfiles/.config/i3/config 
-vim .vimrc 
-inst chromium
-brightness 80
-vim .dotfiles/.bash_aliases 
-brightness 80
-source .bashrc
-brightness 80
-brightness 0
-brightness90
-sncli
-shutdown now
-kill -9 -1
-inst tint2
-tint2 &
-vim .vimrc 
-#
-vim .config/i3/config 
-sudo updatedb
-locate tint2rc
-rm -f .config/tint2/tint2rc
-htop
-inst code
- env /bin/python /home/suadmin/.vscode-oss/extensions/ms-python.python-2020.5.86806/pythonFiles/lib/python/debugpy/no_wheels/debugpy/launcher 33489 -- /home/suadmin/Python/FirstProg.py 
-python -u "/home/suadmin/Python/FirstProg.py"
-python -u "/home/suadmin/Python/FirstProg.py"
-python -u "/home/suadmin/Python/FirstProg.py"
-python -u "/home/suadmin/Python/FirstProg.py"
-python -u "/home/suadmin/Python/FirstProg.py"
-python -u "/home/suadmin/Python/FirstProg.py"
-python -u "/home/suadmin/Python/FirstProg.py"
-python -u "/home/suadmin/Python/FirstProg.py"
-python -u "/home/suadmin/Python/FirstProg.py"
-cd .config/rofi/
-ls
-mv rofi.rasi config.rasi
-ls
-lla
-ls -alt
-rofi -show window
-rofi -config config.rasi -show window
-rofi -config ~/.dotfiles/.config/rofi/lwwrofi.rasi -show window
-inst nm-applet
-inst network-manager-applet
-nm-applet
-nm-applet
 inst nm-applet
 inst nmapplet
 locate applet
@@ -497,4 +267,234 @@ yay -Runs clipster
 pacman -Qem
 sudo pacman -Syuu
 ls
+htop
+lwwdir 
+sh gitScript.sh 
+code
+cd pictures/
+wal -i surface.jpg 
+wal -i surface.jpg 
+htop
+kill tint2
+killall tint2
+code .dotfiles/.config/i3/config 
+cd .config/i3
+ls
+ls -alt
+ notify-send
+ notify-send test
+pacman -S dunst
+alttab -d 1
+xdotool keyup alt
+cat /var/log/Xorg.0.log
+code .dotfiles/.config/i3/config 
+alttab -d 1
+cd .config
+ls
+git add 
+cd ..
+cd .dotfiles/
+gid add 
+git status
+git add .config/i3/config 
+git commit
+git commit -m "manjaro"
+git push 
+git push 
+pacman -S dunst
+sudo pacman -S dunst
+notify-send test
+dunst
+htop
+pacman -Syyu
+sudo pacman -Syyu
+sudo pacman -Syyu
+y
+y
+sudo pacman -Syy
+ping 10.0.5.
+ping 10.0.5.2
+ping 10.0.2.15
+ipaddr
+ip addr
+pkill virtualbox
+ps -eaf | grep vbox
+ps -eaf | grep box
+pkill VirtualBox
+ip addr
+ip link set enp4s0 up
+sudo ip link set enp4s0 up
+ip addr
+sudo ip link set 2 up
+sudo ip link set enp4s0 up
+sudo ip link status enp4s0
+ip link show dev enp4s0
+sudo ip link set enp4s0 down
+sudo ip link set enp4s0 up
+ip link show dev enp4s0
+sudo pacman -Syy shotcut
+sudo pacman -Syy shotcut
+sudo pacman -Syyu
+cd /var/cache/pacman/pkg/
+rm -rf /var/cache/pacman/pkg/*
+sudo rm -rf /var/cache/pacman/pkg/*
+sudo pacman -Syyu
+pacman-key --refresh-keys
+sudo pacman-key --refresh-keys
+ sudo pacman-key --init
+sudo pacman-key --populate
+sudo pacman-key --refresh-keys
+sudo pacman -Syyu
+sudo pacman -Ss kden
+sudo pacman -Sy kdenlive
+sudo pacman -Syyu 
+.fzf
+pacman -S fzf
+sudo pacman -S fzf
+fzf
+pacman -Q | fzf
+pacman -Ss shotcut
+sudo pacman -Sy shotcut
+pacman -Qen
+pacman -Qsn
+pacman -Q --help
+pacman -Ql kdenlive
+fzf
+fzf .
+ff
+vim .bashrc 
+sudo pacman -Sy davinci
+sudo pacman -Runs davinci-resolve
+sudo pacman -S fsearch
+yay -S fsearch
+yay -S fsearch-git
+fsearch
+yay -S davinci-resolve
+yay -S davinci-resolve
+yay -S davinci-resolve
+sudo vim /etc/pacman.conf 
+yay -S davinci-resolve
+sudo pacman -Syy
+yay -S davinci-resolve
+sudo pacman -Syyu
+yay -S davinci-resolve
+sudo vim /etc/pacman.conf 
+sudo pacman -S lib32-libpng12
+sudo vim /etc/pacman.conf 
+sudo pacman -Syyu
+sudo pacman -S lib32-libpng12
+sudo pacman -S lib32-libpng12
+sudo vim /etc/pacman.conf 
+fg
+sudo pacman -Syyu
+sudo pacman -S lib32-libpng12
+yay -S davinci-resolve
+yay -S davinci-resolve
+man zathura
+zathura --help
+man zathura
+inst zathura-pdf-poppler
+tabbed 
+inst tabbed
+yay -S tabbed
+man tabbed
+tabbed zathura
+tabbed zathura
+sudo pacman -Runs zathura*
+sudo pacman -Runs zathura
+pacman -Q | grep zathura
+sudo pacman -Runs zathura zathura-pdf-poppler
+pacman -Q | grep zathura
+inst mupdf
+inst gimp
+sudo pacman -S vlc
+inst mpv
+inst imagemagick
+inst sxiv
+inst zathura
+pkill kdenlive
+htop
+yay -S ttf-ms-fonts
+pkill chromium
+pkill firefox
+dmenu
+dmenu-run
+dmenu run
+drun
+dmenu --help
+dmenu -l 10
+man dmenu
+dmenu
+dmenu -p
+pacman -S youtube-dl
+sudo pacman -S youtube-dl
+cd .config/
+ls
+cd /etc/
+sudo updatedb
+locate youtube-dl.conf
+locate youtube-dl
+vim youtube-dl.conf
+sudo vim youtube-dl.conf
+youtube-dl https://www.youtube.com/watch?v=rjacJY1DogU
+pkill chromium
+pkill chromium
+htop
+pkill kdenlive
+bash "/home/suadmin/.dotfiles/.config/i3/config"
+inst brave
+sudo pacman -Ss brave
+pacman -Ss brave
+sudo pacman -Runs firefox
+pacman -Q | dmenu
+pacman -Q | dmenu
+dmenu_run
+pacman -S gnome-keyring-daemon
+sudo pacman -S gnome-keyring-daemon
+yay -S gnome-keyring-daemon
+yay -S awesome rofi picom i3lock-fancy xclip ttf-roboto gnome-polkit materia-gtk-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager -y
+pacman -S awesome picon i3lock-fancy xclip ttf-roboto 
+sudo pacman -S awesome picon i3lock-fancy xclip ttf-roboto 
+sudo pacman -S awesome picom xclip ttf-roboto 
+yay -S gnome-polkit materia-gtk-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager -y
+pacman -S gnome-polkit
+sudo pacman -S gnome-polkit
+yay -S gnome-polkit
+yay -S awesome rofi picom i3lock-fancy xclip ttf-roboto gnome-polkit materia-gtk-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager -y
+pacman -Q | grep awesome
+git clone https://github.com/PapyElGringo/material-awesome.git ~/.config/awesome
+man alttab
+man picom
+man alttab
+echo run | dmenu -fn 10x20 | exec bash -s
+run | dmenu -fn 10x20 | exec bash -s
+echo run | dmenu -fn 10x20 | exec bash -s
+dmenu_run  
+dmenu_run  -fn 10x20
+dmenu_run  
+sudo pacman -S autokey
+yay -S autokey
+ 
+autokey-run 
+git clone https://github.com/madslundt/keybindings/tree/master/linux/autokey ~/Downloads/
+git clone https://github.com/madslundt/keybindings/tree/master/linux/autokey ~/.config/autokey/data
+git clone https://github.com/madslundt/keybindings.git
+ls
+cd Downloads/
+cd 
+ls
+cd .config/
+mkdir autokey
+cd autokey/
+ls
+mkdir data
+git status
+cd .config/
+cd ..
+ls -alt
+cd .dotfiles/
+git status
+$ mkdir -p ~/.config/awesome/
+mkdir -p ~/.config/awesome/
+cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
 htop
