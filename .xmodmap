@@ -1,0 +1,13 @@
+keycode 66 = Mode_switch
+keysym l = l L Right
+keysym k = k K Down 
+keysym j = j J Left 
+keysym u = u U Prior
+keysym h = h H Home
+keysym i = i I Up 
+keysym o = o O Next
+keysym p = p P End
+keysym n = n N BackSpace
+keysym q = q Q Escape
+keysym Tab = Tab ISO_Left_Tab Shift_L 
+
