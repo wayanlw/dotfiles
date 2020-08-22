@@ -4,11 +4,13 @@ keysym k = k K Down
 keysym j = j J Left 
 keysym u = u U Prior
 keysym h = h H Home
+keysym y = y Y Home
 keysym i = i I Up 
 keysym o = o O Next
 keysym p = p P End
 keysym n = n N BackSpace
 keysym m = m M Delete
-keysym q = q Q Escape
+keysym e = e E Escape
 keysym Tab = Tab ISO_Left_Tab Shift_L 
-
+keysym semicolon = semicolon colon colon
+keysym exclam = exclam 1 exclam

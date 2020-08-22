@@ -1,49 +1,3 @@
-sudo vim /etc/i3status.conf 
-curl cheat.sh
-curl cheat.sh btrfs
-curl cheat.sh/btrfs
-curl cheat.sh/useradd
-curl cheat.sh/userdel
-weather
-vim .bash_aliases 
-source .bashrc
-cht man
-vim .bash_aliases 
-cheat bash
-cheat man
-inst fkill
-yay -S fkill
-inst --needed ttf-font-awesome
-cd .config/
-mkdir i3status
-cd i3status/
-vim config 
-kate config 
-inst dwm
-sudo pacman -Sy
-sudo pacman -Ss dwm
-yay -S dwm
-locate .xsession
-locate .xinit
-cd /usr/share/xsessions/
-cat ^
-cat *
-echo $shell
-echo $SHELL
-inst zsh zsh-completions
-zsh
-echo $SHELL
-echo $TERMINAL
-terminal
-neofetch
-inst neofetch
-neofetch
-arandr
-cd Desktop/
-ls
-cd ..
-cd Downloads/
-cd ..
 lf
 ranger
 cd pictures/
@@ -498,3 +452,49 @@ vim .xmodmap
 cat .xmodmap 
 cat .bashrc
 which xsel
+man dmenu
+vim .config/i3/config 
+xsel -o | dmenu -p Calculate: | xargs echo | calc -p | xargs dmenu -p
+cheat xsel
+cheat rofi
+printf "Choice1\nChoice2\nChoice3" | rofi -dmenu
+ls
+lla
+ll | rofi
+ll | dmenu
+man dmenu
+ll | dmenu -l 10
+dmenu_run
+dmenu_run -l 10
+dmenu_run -li 10
+dmenu_run -l -i 10
+dmenu_run -il  10
+dmenu_run -i -l 10
+dmenu -i -l 10
+dmenu_run -i -l 10
+dmenu_run -i -l 10
+dmenu_desktop -i -l 10
+dmenu_path | dmenu -nb '#303030' -nf '#8f8f8f' -sb '#303030' -sf '#e0e0e0'
+dmenu_path
+man dmenu_path
+which dmenu_path 
+cheat dmenu_path
+lwwdir
+git status
+rm -rf test 
+git commit 
+git commit -a
+git commit -a
+git commit -a
+git add 
+ls
+bash gitScript.sh 
+vim gitScript.sh 
+xev
+xmodmap .xmodmap 
+xmodmap .xmodmap 
+xmodmap .xmodmap 
+xmodmap .xmodmap 
+xmodmap .xmodmap 
+xmodmap .xmodmap 
+xmodmap -pke  | fzf
