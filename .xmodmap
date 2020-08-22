@@ -8,6 +8,7 @@ keysym i = i I Up
 keysym o = o O Next
 keysym p = p P End
 keysym n = n N BackSpace
+keysym m = m M Delete
 keysym q = q Q Escape
 keysym Tab = Tab ISO_Left_Tab Shift_L 
 

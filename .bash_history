@@ -1,179 +1,3 @@
-inst nm-applet
-inst nmapplet
-locate applet
-locate nm-applet
-locate nmapplet
-tint2 -c /home/suadmin/.config/tint2/horizontal-text-only.tint2rc
-cd .dotfiles/
-cd .config/
-ls
-mkdir rofi
-curl https://gitlab.com/dwt1/dotfiles/-/raw/master/.config/rofi/themes/distrotube.rasi > lwwrofi.rasi
-vim lwwrofi.rasi 
-rofi -c lwwrofi.rasi 
-rofi -c lwwrofi.rasi -show window
-rofi -h
-rofi -h | grep config
-cd 
-cd .config/rofi
-cd .config/
-ls
-mkdir rofi
-ls
-cd rofi/
-cd 
-cd .dotfiles/.config/rofi/
-ls
-ls
-cd ..
-ls
-mv lwwrofi.rasi rofi/
-cd rofi/
-ln -sf lwwrofi.rasi ~/.config/rofi/rofi.rasi
-rofi -show window
-rofi -h | grep config
-killall tint2
-sudo userdel -rf test
-sncli
-:
-clear
-wal -vte -R
-wall -R
-wal -R
-cd .config/terminator/
-ls
-vim config 
-ls
-vimbak config
-vim ~/.bash_aliases 
-vimbk config 
-cd .config/terminator/
-ls
-vim config
-vim config
-cd 
-cd .dotfiles/wallpaper/
-ls
-wal -i wallpaper.jpg 
-color3
-echo color3
-echo $color3
-cd pictures/
-ls
-yay googlechrome
-cd .dotfiles/.config/sxhkd/
-ln -sf sxhkdrc ~/.config/sxhkd/sxhkdrc 
-ls
-vim sxhkdrc 
-ls -alt
-chmod +x sxhkdrc 
-ls -alt
-ls
-ln -sf ./sxhkdrc ~/.config/sxhkd/sxhkdrc 
-arandr
-cd .config/sxhkd/
-vim sxhkdrc 
-vim .config/sxhkd/sxhkdrc 
-vim .config/sxhkd/sxhkdrc 
-htop
-vim .dotfiles/.config/sxhkd/sxhkdrc 
-.config/bspwm/bspwmrc 
-:q
-.config/bspwm/bspwmrc 
-:q
-vim .dotfiles/.config/bspwm/bspwmrc 
-vim .dotfiles/.config/bspwm/bspwmrc 
-vim .config/sxhkd/sxhkdrc 
-vim .config/sxhkd/sxhkdrc 
-ls
-htop
-xrandr
-arandr
-xrandr --output LVDS1 --mode 1366x768 --pos 277x1080 --rotate normal --output DP1 --off --output HDMI1 --off --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
-vim .config/bspwm/bspwmrc 
-arandr
-vim .config/i3/config 
-cat .config/i3/config 
-htop
-htop
-htop
-htop
-inst compton
-compton &
-cd 
-ls
-cd Downloads/
-ls
-git clone https://github.com/adi1090x/polybar-themes
-cd polybar-themes/
-cd polybar-1
-ls
-cd scripts/
-cd ..
-ls
-mkdir ~/.config/polybar
-cp -r * ~/.config/polybar
-~/.config/polybar/launch.sh 
-ls
-cd ~/.config/
-ls
-cd polybar/
-shh launch.sh 
-sh launch.sh 
-ls
-vim config.ini 
-cd ~/.dotfiles/
-ls
-ls -alt
-vim .vimrc 
-sh launch.sh 
-sh launch.sh 
-ls
-cd 
-cd Downloads/
-cd polybar-themes/
-cd polybar-1
-launch.sh
-sh launch.sh 
-rofi -no-lazy-grab -show drun -display-drun "Applications :" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 15 -padding 60 -width 30 -xoffset 10 -yoffset 40 -location 1 -fullscreen -columns 4 -show-icons -icon-theme "Papirus" \
-rofi -no-lazy-grab -show drun -display-drun "Applications :" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 15 -padding 60 -width 30 -xoffset 10 -yoffset 40 -location 1 -fullscreen -columns 4 -show-icons -icon-theme "Papirus"
-rofi -no-lazy-grab -show drun -display-drun "Applications :" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 15 -padding 60 -width 30 -xoffset 10 -yoffset 40 -location 1 -fullscreen -columns 4 -show-icons -icon-theme "Papirus"
-rofi -no-lazy-grab -show drun -display-drun "Applications :" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 15 -padding 60 -width 30 -xoffset 10 -yoffset 40 -location 1 -fullscreen -columns 4 -show-icons -icon-theme "Papirus" -font "Fantasque Sans Mono 10" -color-enabled true -color-window "$BACKGROUND,$BORDER,$SEPARATOR"
-rofi -no-lazy-grab -show drun -display-drun "Applications :" -drun-display-format "{name}" -hide-scrollbar true -bw 0 -lines 10 -line-padding 15 -padding 60 -width 30 -xoffset 10 -yoffset 40 -location 1 -fullscreen -columns 4 -show-icons -icon-theme "Papirus" -font "Fantasque Sans Mono 10" -color-enabled true
-ranger
-networkmanager_dmenu
-cd pictures/
-ls
-wal -i surface.jpg 
-inst polybar
-yay -S polybar
-yay -S polybar
-yay -S polybar
-killall polybar
-cd 
-cd Downloads/
-cd polybar-themes/
-cd ~/.local/share/
-mkdir fonts
-cd .dotfiles/.config/
-mkdir i3status
-cp /etc/i3status.conf ./config
-ls
-mv config i3status/
-cd i3status/
-vim config
-ln -sf ~/.dotfiles/.config/i3status/config ~/.config/i3status/config
-i3status
-i3status
-journalctl
-journalctl -r
-vim .vimrc 
-nmtui
-inst lxappearance
-locate i3status
-i3status
-kate /etc/i3status.conf 
-sudo kate /etc/i3status.conf 
 sudo vim /etc/i3status.conf 
 curl cheat.sh
 curl cheat.sh btrfs
@@ -498,3 +322,179 @@ $ mkdir -p ~/.config/awesome/
 mkdir -p ~/.config/awesome/
 cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
 htop
+htop
+inst nitrogen
+ls
+cd pictures/
+cd Pic
+..
+cd ..
+cd Pictures/
+ls
+ranger
+weather
+cd .dotfiles/
+ls
+cat lwwcommands 
+lcmd
+cat sxhkdrc 
+cat gitScript.sh 
+cd scripts/
+cat lwwappslist.txt 
+pacman -Qq
+pacman -Qq | less
+pacman -Qq | fzf
+echo alttab-git > lwwappslist.txt 
+cat lwwappslist.txt 
+git pull
+git checkout master
+git pull origin master
+git pull rebase
+
+git pull --ff
+cat lwwappslist.txt 
+git pull origin master
+git pull master
+git pull origin
+git pull --rebase origin
+git stash
+git pull --rebase origin
+cat lwwappslist.txt 
+echo alttab-git >> lwwappslist.txt 
+cat lwwappslist.txt 
+cd ..
+ls
+lla
+vim .bash_aliases 
+cl
+ls
+cd .dotfiles/
+lla
+cat .bashrc
+vim .bash_aliases 
+cd .config/ranger/
+ls
+ll
+ls -alt
+fzf 
+fzf /
+find /
+find / | fzf
+cp -i /usr/share/doc/ranger/config/rc.conf ~/.config/ranger/
+sncli
+cd 
+lwwdir 
+lla
+cd .config/
+cd i3
+vim config 
+IIIi
+vim .config/i3/config 
+vim .config/i3/config 
+feh --bg-scale --randomize ~/Pictures/wallpapers
+feh --bg-scale --randomize ~/Pictures/wallpapers/*
+pcmanfm
+inst pcmanfm
+pcmanfm
+lsblk
+mount
+vim .config/i3/config 
+fg
+htop
+ls
+cd Music
+ls
+youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=KxwUy2S2n-Q
+ls
+ls
+ll
+cd /home/suadmin/Videos/
+ls
+pwd
+inst pv
+pv
+ls
+cd Pictures/
+ls
+mkdir wallpapers
+git clone https://gitlab.com/dwt1/wallpapers.git
+ls
+cd wallpapers/
+ls
+ll
+git clone https://gitlab.com/dwt1/wallpapers.git
+ls
+ll
+git clone https://gitlab.com/dwt1/wallpapers.git
+pkill fsearch
+homemonitor.sh 
+xrandr
+lwwdir 
+cd scripts/
+vim homemonitor.sh 
+homemonitor.sh 
+vim homemonitor.sh 
+sncli
+sncli
+sncli
+xmodmap -pke
+xmodmap -pke | fzf
+lwwdir 
+vim .xmodmap 
+xmodmap .xmodmap 
+man i3status
+htop
+cd .config/i3
+ls
+cd ..
+ls
+cd i3status/
+vim config 
+lwwdir 
+vim .xmodmap
+xmodmap .xmodmap 
+vim homemonitor.sh 
+vim .xmodmap
+xmodmap .xmodmap 
+vim .xmodmap
+cd scripts/
+vim link_install.sh 
+bash ./link_install.sh 
+cd 
+lla
+lwwdir 
+lla
+cd scripts/
+vim link_install.sh 
+cd ..
+vim .bashrc 
+lla
+vim .bash_profile 
+vim .bashrc
+cd scripts/
+bash ./link_install.sh 
+cd  
+lwwdir 
+git status
+git add .xmodmap 
+git commit
+git commit -m xmodmap
+git push origin master
+lwwdir
+xmodmap .xmodmap 
+xmodmap .xmodmap 
+xmodmap .xmodmap 
+xmodmap .xmodmap 
+killalll xmodmap
+vim test
+touch test
+xmodmap test
+xmodmap .xmodmap 
+xmodmap -pke
+xmodmap -pke|fzf
+cd 
+lla
+vim .xmodmap 
+cat .xmodmap 
+cat .bashrc
+which xsel

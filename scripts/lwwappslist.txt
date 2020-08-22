@@ -41,3 +41,4 @@ powerline
 powerline-vim
 powerline-fonts
 tint2
+alttab-git

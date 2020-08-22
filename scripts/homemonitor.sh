@@ -23,8 +23,8 @@
     #    { 0.78988728,  0.86491137,  1.00000000, }, /* 10000K */
     #    { 0.77442176,  0.85453121,  1.00000000, },
 
-    monitor_P="LVDS-1"
-    monitor_S="VGA-1"
+    monitor_P="LVDS1"
+    monitor_S="VGA1"
 
 
     # hp home laptop setup
