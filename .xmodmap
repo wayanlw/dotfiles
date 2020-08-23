@@ -13,4 +13,4 @@ keysym m = m M Delete
 keysym e = e E Escape
 keysym Tab = Tab ISO_Left_Tab Shift_L 
 keysym semicolon = semicolon colon colon
-keysym exclam = exclam 1 exclam
+keysym exclam = 1 exclam exclam
