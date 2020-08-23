@@ -28,19 +28,25 @@ function vimbk() {
     vim $1
 }
 
-# Make some of the file manipulation programs verbose
+
+
 alias mv="mv -v"
 alias rm="rm -vi"
-alias cp="cp -v"
-
-# Prints disk usage in human readable form
+alias cp="cp -vi"
+alias more=less
 alias du="du -sh *| sort -h"
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
 
-# GREP Motifications
+
+alias i3config='vim ~/.config/i3/config'
+alias vif='vim $(find . -maxdepth 4 -type f | ff)'
+alias ff='fzf --height 50% -m --layout=reverse --border'
+alias cdf='cd $(find . -maxdepth 4 -type d 2>/dev/null | ff)'
+alias cdr='cd $(find / -maxdepth 4 -type d 2>/dev/null | ff)'
+
 alias grep="grep --color=auto"
-
 alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-
 alias cd="cl"
 
 function cl() {
@@ -53,3 +59,5 @@ function cl() {
     # use your preferred ls command
         ls -F --color=auto
 }
+
+
