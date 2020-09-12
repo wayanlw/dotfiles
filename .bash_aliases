@@ -5,6 +5,8 @@ alias lwwdir="cd ~/.dotfiles/"
 alias ll="ls --human-readable --size -1 --classify"
 alias lla="ls -A --human-readable --size -1 --classify"
 alias inst="sudo pacman -S"
+alias uninst="sudo pacman -Runs"
+
 alias cleanpac="sudo pacman -Runs $(pacman -Qqdt)"
 alias fpkg="pacman -Qq | grep"
 alias i3config="vim ~/.config/i3/config"

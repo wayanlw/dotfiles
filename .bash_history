@@ -1,288 +1,3 @@
-cd ..
-cd Pictures/
-ls
-ranger
-weather
-cd .dotfiles/
-ls
-cat lwwcommands 
-lcmd
-cat sxhkdrc 
-cat gitScript.sh 
-cd scripts/
-cat lwwappslist.txt 
-pacman -Qq
-pacman -Qq | less
-pacman -Qq | fzf
-echo alttab-git > lwwappslist.txt 
-cat lwwappslist.txt 
-git pull
-git checkout master
-git pull origin master
-git pull rebase
-
-git pull --ff
-cat lwwappslist.txt 
-git pull origin master
-git pull master
-git pull origin
-git pull --rebase origin
-git stash
-git pull --rebase origin
-cat lwwappslist.txt 
-echo alttab-git >> lwwappslist.txt 
-cat lwwappslist.txt 
-cd ..
-ls
-lla
-vim .bash_aliases 
-cl
-ls
-cd .dotfiles/
-lla
-cat .bashrc
-vim .bash_aliases 
-cd .config/ranger/
-ls
-ll
-ls -alt
-fzf 
-fzf /
-find /
-find / | fzf
-cp -i /usr/share/doc/ranger/config/rc.conf ~/.config/ranger/
-sncli
-cd 
-lwwdir 
-lla
-cd .config/
-cd i3
-vim config 
-IIIi
-vim .config/i3/config 
-vim .config/i3/config 
-feh --bg-scale --randomize ~/Pictures/wallpapers
-feh --bg-scale --randomize ~/Pictures/wallpapers/*
-pcmanfm
-inst pcmanfm
-pcmanfm
-lsblk
-mount
-vim .config/i3/config 
-fg
-htop
-ls
-cd Music
-ls
-youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=KxwUy2S2n-Q
-ls
-ls
-ll
-cd /home/suadmin/Videos/
-ls
-pwd
-inst pv
-pv
-ls
-cd Pictures/
-ls
-mkdir wallpapers
-git clone https://gitlab.com/dwt1/wallpapers.git
-ls
-cd wallpapers/
-ls
-ll
-git clone https://gitlab.com/dwt1/wallpapers.git
-ls
-ll
-git clone https://gitlab.com/dwt1/wallpapers.git
-pkill fsearch
-homemonitor.sh 
-xrandr
-lwwdir 
-cd scripts/
-vim homemonitor.sh 
-homemonitor.sh 
-vim homemonitor.sh 
-sncli
-sncli
-sncli
-xmodmap -pke
-xmodmap -pke | fzf
-lwwdir 
-vim .xmodmap 
-xmodmap .xmodmap 
-man i3status
-htop
-cd .config/i3
-ls
-cd ..
-ls
-cd i3status/
-vim config 
-lwwdir 
-vim .xmodmap
-xmodmap .xmodmap 
-vim homemonitor.sh 
-vim .xmodmap
-xmodmap .xmodmap 
-vim .xmodmap
-cd scripts/
-vim link_install.sh 
-bash ./link_install.sh 
-cd 
-lla
-lwwdir 
-lla
-cd scripts/
-vim link_install.sh 
-cd ..
-vim .bashrc 
-lla
-vim .bash_profile 
-vim .bashrc
-cd scripts/
-bash ./link_install.sh 
-cd  
-lwwdir 
-git status
-git add .xmodmap 
-git commit
-git commit -m xmodmap
-git push origin master
-lwwdir
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-killalll xmodmap
-vim test
-touch test
-xmodmap test
-xmodmap .xmodmap 
-xmodmap -pke
-xmodmap -pke|fzf
-cd 
-lla
-vim .xmodmap 
-cat .xmodmap 
-cat .bashrc
-which xsel
-man dmenu
-vim .config/i3/config 
-xsel -o | dmenu -p Calculate: | xargs echo | calc -p | xargs dmenu -p
-cheat xsel
-cheat rofi
-printf "Choice1\nChoice2\nChoice3" | rofi -dmenu
-ls
-lla
-ll | rofi
-ll | dmenu
-man dmenu
-ll | dmenu -l 10
-dmenu_run
-dmenu_run -l 10
-dmenu_run -li 10
-dmenu_run -l -i 10
-dmenu_run -il  10
-dmenu_run -i -l 10
-dmenu -i -l 10
-dmenu_run -i -l 10
-dmenu_run -i -l 10
-dmenu_desktop -i -l 10
-dmenu_path | dmenu -nb '#303030' -nf '#8f8f8f' -sb '#303030' -sf '#e0e0e0'
-dmenu_path
-man dmenu_path
-which dmenu_path 
-cheat dmenu_path
-lwwdir
-git status
-rm -rf test 
-git commit 
-git commit -a
-git commit -a
-git commit -a
-git add 
-ls
-bash gitScript.sh 
-vim gitScript.sh 
-xev
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap -pke  | fzf
-setxkbmap 
-xmodmap .xmodmap 
-vim .xmodmap 
-lwwdir 
-bash gitScript.sh 
-git config --global credential.helper store
-bash gitScript.sh 
-bash gitScript.sh 
-setxbmap
-setxkbmap 
-vim .xmodmap 
-xmodmap .xmodmap 
-ls
-lwwdir 
-cd scripts/
-vim setKeyBindings.sh
-lwwdir 
-cd scripts/
-ls
-vim link_install.sh 
-cat link_install.sh 
-cat link_install.sh | grep xmod
-smcli
-sncli
-sncli
-sncli
-sudo pacman -Runs pcmanfm
-pacman -Qedt
-pacman -qedt
-pacman -Qdtq
-pkill xfce4-panel
-pkill xfce4-panel
-picom
-sudo pacman -Ss xfce-panel
-pacman -Ss xfce-panel
-pacman -ss xfce-panel
-pacman -s xfce-panel
-pacman -Ss xfce
-pacman -Ss xfce4-panel
-pacman -S xfce4-panel
-sudo pacman -S xfce4-panel
-xmodmap .xmodmap 
-cd Videos/
-youtube-dl https://www.youtube.com/watch?v=26aeOf9truM
-cd Videos/
-youtube-dl https://www.youtube.com/watch?v=pVHo5DVwY1E
-youtube-dl https://www.youtube.com/watch?v=INKezYK302E
-pkill tint2
-pkill xfce4-panel
-homemonitor.sh 
-exit
-arnadr
-arandr
-cd .config/
-cd sxhkd/
-vim sxhkdrc 
-xmodmap .xmodmap 
-sudo pacman -S gimp
-sudo pacman -Sy gimp
-sudo pacman -Syy gimp
-sudo pacman -Sy poppler-at5
-sudo pacman -Sy poppler-qt5
-sudo pacman -Sy gimp
-youtube-dl https://www.youtube.com/watch?v=NQdbhsEjkFM
-i3config
-i3config
-source .bashrc
-vim .bashrc
-vim .bash_aliases 
 source .bashrc
 i3config 
 sudo pacman -S mupdf
@@ -498,3 +213,288 @@ cd /etc/i3/
 ls
 vim config
 i3config
+i3config
+lwwdir
+bash gitScript.sh 
+sudo pacman -S pavucontrol
+pavucontrol
+sudo pacman -S pa-applet
+yay -S pa-applet
+sudo pacman -S pasystray
+pasystray &
+sudo pacman -Runs pasystray
+cd
+locate picom
+vim /etc/xdg/picom.conf
+vim /etc/xdg/picom.conf.example 
+i3config
+vim .vimrc 
+locate vimrc
+cd .dotfiles/
+cat .vimrc 
+:q
+ln -sf ./.vimrc ~/.vimrc
+vim .vimrc 
+cd
+source .vimrc
+ls -alt
+.dotfiles/
+cd .dotfiles/
+vim .vimrc 
+cp .vimrc .vimrc.bak
+ls a
+lla
+ll
+la
+lla
+ln -sf .vimrc ~/.vimrc
+cd 
+lla
+ls -alt
+ln -sf ~/.dotfiles/.vimrc ~/.vimrc
+lla
+ls -alt
+source .vimrc
+vim .vimrc
+yay -s pywal
+yay -s pywal
+wal --help
+wal -i ~/Pictures/wallpapers/wallpapers/0010.jpg 
+vim .vimrc 
+sudo pacman -S dwm
+yay -S dwm
+sudo updatedb
+locate config.def.h
+locate config.h
+locate config.h dwm
+locate dwm
+locate dwm
+vim .bash_aliases 
+find .
+find . -depth 1
+find . -d 1
+find --help
+find . -maxdepth 1
+find . -maxdepth 2
+find . -maxdepth 2 |fzf
+find . -maxdepth 3 |fzf
+find / | fzf
+find / | fzf
+timeshift
+timeshift-gtk
+sudo timeshift-gtk
+locate timesift backup
+cd /timeshift/
+cd snapshots
+rm -rf 2020-09-12_12-25-11/
+sudo rm -rf 2020-09-12_12-25-11/
+ls
+cd ..
+cd snapshots-daily/
+cd ..
+cd
+cd .config/
+locate dwm
+cd /usr/share/doc/dwm/
+cat README 
+locate dwm
+mkdir ~/.config/dwm
+cd 
+cd .config/
+cd dwm
+locate dwm
+cd ~/.cache/yay/dwm/
+cd ..
+mv dwm/* ~/.config/dwm/
+cd 
+cd .config/dwm/
+ls
+locate config.def.h
+cp config.h config.def.h
+ls
+sudo make clean install
+make clean install
+ls
+tar -xzvf dwm-6.2.tar.gz 
+cd dwm-6.2/
+make clean install 
+kill -9 -1
+locate config.def.h
+locate config.h
+locate config.h | fzf
+vim /home/suadmin/.cache/yay/dwm/config.h
+locate config.h | fzf
+sudo updatedb
+locate config.h | fzf
+vim /home/suadmin/.cache/yay/dwm/config.h
+locate config.h | fzf
+vim /home/suadmin/.config/dwm/config.h
+cd .config/
+cd dwm/
+ls
+cd dwm-6.2/
+cd ..
+ls
+sudo make clean install
+cd dwm-6.2/
+sudo make clean install
+vim config.def.h 
+sudo make clean install
+cd .config/
+cd dwm/
+cd dwm-6.2/
+cp config.def.h config.h 
+sudo make clean install
+vim .config/dwm/config.def.h 
+cd .config/dwm/
+mv dwm-6.2 ./..
+ls
+cd ..
+rm -rf dwm
+mv dwm-6.2/ dwm
+cd dwm/
+vim config.def.h 
+cd .config/dwm/
+cp config.def.h config.h 
+sudo make clean install
+cd .config/dwm/
+vim config.def.h 
+cd .config/dwm/
+cp config.h config.h.bak
+cp config.def.h config.h
+sudo make clean install
+vim .config/dwm/
+cd .config/dwm/
+vim config.def.h 
+htop
+kill -9 -1
+i3config
+pacman -Runs st
+sudo pacman -Runs st
+locate st
+locate st | grep st
+sudo pacman -Runs suckless-tools
+pacman -Qq
+pacman -Qq |fzf
+pacman -Runs st
+sudo pacman -Runs st
+wal -i Pictures/wallpapers/wallpapers/0100.jpg 
+sudo pacman -Runs st
+sudo pacman -Runs suckless-tools
+pacman -Qq |fzf
+sudo pacman -Runs dwm
+pacclean
+cleanpac
+pacman -Qdt
+git clone https://github.com/LukeSmithxyz/st
+cd st
+sudo make install
+wal -i Pictures/wallpapers/wallpapers/0100.jpg 
+sudo pacman -Runs st
+cd st/
+sudo make clean install
+sudo pacman -Runs st
+sudo pacman -Runs startup-notification n
+sudo pacman -Rns st
+sudo make unisntall
+sudo make uninstall
+i3config 
+i3cnofig
+i3cnofig
+i3config
+sudo pacman -S i3exit
+sudo pacman -S i3-exit
+yay -S i3exit
+sudo pacman -S morc_menu
+sudo pacman -S morc
+sudo pacman -Ss morc
+yay -S morc_menu
+sudo pacman -S morc_menu
+code /home/suadmin/.config/i3/config
+cp /usr/share/dunst/dunstrc ~/.config/dunst/dunstrc
+mkdir ~/.config/dunst/
+cp /usr/share/dunst/dunstrc ~/.config/dunst/dunstrc
+dunst
+dunst test
+dustify dunst
+dunstify dunst
+cd .config/dunst/
+vim dunstrc 
+dunsttify
+dunstify
+dunstify test
+dust test
+dunst
+man dustify
+man dunst
+dunst %a
+pkill dunst
+dunst test
+dunst &
+dunst
+dunstctl
+dunstctl history-pop
+dunstctl close-all
+notify-send test
+blueman-applet
+sudo pacman -S pulseaudio-bluetooth
+pulseaudio -k # kills and restarts pulseaudio
+pavucontrol
+sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
+vimbk
+sudo vimbk /usr/share/X11/xorg.conf.d/40-libinput.conf
+vimbk /usr/share/X11/xorg.conf.d/40-libinput.conf
+cd /usr/share/X11/xorg.conf.d/
+vim .bashrc
+sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
+cd 
+ls
+vim .bashrc 
+vim .bash_aliases 
+i3config
+vim .xmodmap 
+xmodmap .xmodmap 
+kdfa skjdf;aklsjd;fkljakdsjf;kE
+xmodmap -pke | fzf
+yay -S surf
+cd .config/
+cd dwm/
+sudo make install config.h 
+kill -9 -1
+yay -S dwm
+kill -9 -1
+xrandr 
+sudo pacman -S arandr
+arandr
+cd .config/dwm/
+vim config.def.h 
+cp config.def.h config.h
+sudo make clean install
+vim .config/dwm/
+cd .config/dwm/
+vim config.h
+cp config.def.h config.h
+sudo make clean install
+cd .config/dwm/
+vim config.def.h 
+cp config.def.h config.h
+sudo make clean install
+cd .config/dwm/
+vim config.def.h 
+cp config.def.h config.h
+sudo make clean install
+cd Pictures/wallpapers/wallpapers/
+wal -i 0001.jpg 
+wal -i 0001.jpg 
+cd Pictures/wallpapers/wallpapers/
+wal -i 0001.jpg 
+picom 
+i3config
+///  1 exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
+  1 exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
+feh --bg-scale --randomize ~/Pictures/wallpapers/*
+i3config
+weather
+date
+sudo pacman -S blueman
+sudo systemctl start bluetooth.service
