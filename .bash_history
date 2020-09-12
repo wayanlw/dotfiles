@@ -1,225 +1,3 @@
-lf
-ranger
-cd pictures/
-wal -i surface.jpg 
-cd pic
-cd pictures/
-wal -i surface.jpg 
-arandr
-htop
-ls
-ls
-arandr
-chi
-vim .dotfiles/.config/i3/config 
-vim .dotfiles/.config/i3/config 
-vim .dotfiles/.config/i3/config 
-inst clipster
-yay -S clipster
-yay -S roficlip
-roficlip
-clipster
-clipster -h
-clipster -c
-systemctl start clipste
-clipster -d
-clipster -d &
-clipster -c
-clipster -c
-clipster -h
-clipster -s
-[A
-[A
-clipster -s
-[A
-sudo pacman -Runs clipster rofi-clip
-sudo pacman -Runs clipster
-sudo pacman -Qdt
-sudo pacman -Runs roficlip
-pacman -Rns $(pacman -Qtdq)
-sudo pacman -Rns $(pacman -Qtdq)
-pacman -Qe
-pacman -Qen
-pacman -Qem
-yay -Runs clipster
-pacman -Qem
-sudo pacman -Syuu
-ls
-htop
-lwwdir 
-sh gitScript.sh 
-code
-cd pictures/
-wal -i surface.jpg 
-wal -i surface.jpg 
-htop
-kill tint2
-killall tint2
-code .dotfiles/.config/i3/config 
-cd .config/i3
-ls
-ls -alt
- notify-send
- notify-send test
-pacman -S dunst
-alttab -d 1
-xdotool keyup alt
-cat /var/log/Xorg.0.log
-code .dotfiles/.config/i3/config 
-alttab -d 1
-cd .config
-ls
-git add 
-cd ..
-cd .dotfiles/
-gid add 
-git status
-git add .config/i3/config 
-git commit
-git commit -m "manjaro"
-git push 
-git push 
-pacman -S dunst
-sudo pacman -S dunst
-notify-send test
-dunst
-htop
-pacman -Syyu
-sudo pacman -Syyu
-sudo pacman -Syyu
-y
-y
-sudo pacman -Syy
-ping 10.0.5.
-ping 10.0.5.2
-ping 10.0.2.15
-ipaddr
-ip addr
-pkill virtualbox
-ps -eaf | grep vbox
-ps -eaf | grep box
-pkill VirtualBox
-ip addr
-ip link set enp4s0 up
-sudo ip link set enp4s0 up
-ip addr
-sudo ip link set 2 up
-sudo ip link set enp4s0 up
-sudo ip link status enp4s0
-ip link show dev enp4s0
-sudo ip link set enp4s0 down
-sudo ip link set enp4s0 up
-ip link show dev enp4s0
-sudo pacman -Syy shotcut
-sudo pacman -Syy shotcut
-sudo pacman -Syyu
-cd /var/cache/pacman/pkg/
-rm -rf /var/cache/pacman/pkg/*
-sudo rm -rf /var/cache/pacman/pkg/*
-sudo pacman -Syyu
-pacman-key --refresh-keys
-sudo pacman-key --refresh-keys
- sudo pacman-key --init
-sudo pacman-key --populate
-sudo pacman-key --refresh-keys
-sudo pacman -Syyu
-sudo pacman -Ss kden
-sudo pacman -Sy kdenlive
-sudo pacman -Syyu 
-.fzf
-pacman -S fzf
-sudo pacman -S fzf
-fzf
-pacman -Q | fzf
-pacman -Ss shotcut
-sudo pacman -Sy shotcut
-pacman -Qen
-pacman -Qsn
-pacman -Q --help
-pacman -Ql kdenlive
-fzf
-fzf .
-ff
-vim .bashrc 
-sudo pacman -Sy davinci
-sudo pacman -Runs davinci-resolve
-sudo pacman -S fsearch
-yay -S fsearch
-yay -S fsearch-git
-fsearch
-yay -S davinci-resolve
-yay -S davinci-resolve
-yay -S davinci-resolve
-sudo vim /etc/pacman.conf 
-yay -S davinci-resolve
-sudo pacman -Syy
-yay -S davinci-resolve
-sudo pacman -Syyu
-yay -S davinci-resolve
-sudo vim /etc/pacman.conf 
-sudo pacman -S lib32-libpng12
-sudo vim /etc/pacman.conf 
-sudo pacman -Syyu
-sudo pacman -S lib32-libpng12
-sudo pacman -S lib32-libpng12
-sudo vim /etc/pacman.conf 
-fg
-sudo pacman -Syyu
-sudo pacman -S lib32-libpng12
-yay -S davinci-resolve
-yay -S davinci-resolve
-man zathura
-zathura --help
-man zathura
-inst zathura-pdf-poppler
-tabbed 
-inst tabbed
-yay -S tabbed
-man tabbed
-tabbed zathura
-tabbed zathura
-sudo pacman -Runs zathura*
-sudo pacman -Runs zathura
-pacman -Q | grep zathura
-sudo pacman -Runs zathura zathura-pdf-poppler
-pacman -Q | grep zathura
-inst mupdf
-inst gimp
-sudo pacman -S vlc
-inst mpv
-inst imagemagick
-inst sxiv
-inst zathura
-pkill kdenlive
-htop
-yay -S ttf-ms-fonts
-pkill chromium
-pkill firefox
-dmenu
-dmenu-run
-dmenu run
-drun
-dmenu --help
-dmenu -l 10
-man dmenu
-dmenu
-dmenu -p
-pacman -S youtube-dl
-sudo pacman -S youtube-dl
-cd .config/
-ls
-cd /etc/
-sudo updatedb
-locate youtube-dl.conf
-locate youtube-dl
-vim youtube-dl.conf
-sudo vim youtube-dl.conf
-youtube-dl https://www.youtube.com/watch?v=rjacJY1DogU
-pkill chromium
-pkill chromium
-htop
-pkill kdenlive
-bash "/home/suadmin/.dotfiles/.config/i3/config"
 inst brave
 sudo pacman -Ss brave
 pacman -Ss brave
@@ -498,3 +276,225 @@ xmodmap .xmodmap
 xmodmap .xmodmap 
 xmodmap .xmodmap 
 xmodmap -pke  | fzf
+setxkbmap 
+xmodmap .xmodmap 
+vim .xmodmap 
+lwwdir 
+bash gitScript.sh 
+git config --global credential.helper store
+bash gitScript.sh 
+bash gitScript.sh 
+setxbmap
+setxkbmap 
+vim .xmodmap 
+xmodmap .xmodmap 
+ls
+lwwdir 
+cd scripts/
+vim setKeyBindings.sh
+lwwdir 
+cd scripts/
+ls
+vim link_install.sh 
+cat link_install.sh 
+cat link_install.sh | grep xmod
+smcli
+sncli
+sncli
+sncli
+sudo pacman -Runs pcmanfm
+pacman -Qedt
+pacman -qedt
+pacman -Qdtq
+pkill xfce4-panel
+pkill xfce4-panel
+picom
+sudo pacman -Ss xfce-panel
+pacman -Ss xfce-panel
+pacman -ss xfce-panel
+pacman -s xfce-panel
+pacman -Ss xfce
+pacman -Ss xfce4-panel
+pacman -S xfce4-panel
+sudo pacman -S xfce4-panel
+xmodmap .xmodmap 
+cd Videos/
+youtube-dl https://www.youtube.com/watch?v=26aeOf9truM
+cd Videos/
+youtube-dl https://www.youtube.com/watch?v=pVHo5DVwY1E
+youtube-dl https://www.youtube.com/watch?v=INKezYK302E
+pkill tint2
+pkill xfce4-panel
+homemonitor.sh 
+exit
+arnadr
+arandr
+cd .config/
+cd sxhkd/
+vim sxhkdrc 
+xmodmap .xmodmap 
+sudo pacman -S gimp
+sudo pacman -Sy gimp
+sudo pacman -Syy gimp
+sudo pacman -Sy poppler-at5
+sudo pacman -Sy poppler-qt5
+sudo pacman -Sy gimp
+youtube-dl https://www.youtube.com/watch?v=NQdbhsEjkFM
+i3config
+i3config
+source .bashrc
+vim .bashrc
+vim .bash_aliases 
+source .bashrc
+i3config 
+sudo pacman -S mupdf
+sudo pacman -S zathura
+sudo pacman -Runs zathura
+cd .config/awesome/
+ls
+vim rc.lua 
+code rc.lua
+home
+homemonitor.sh 
+i3config 
+i3config 
+htop
+sudo pamac-manager
+sudo pacman -Syyu
+sudo reboot
+sudo pacman -S terminator
+pacman --help | grep force
+man pacman 
+sudo pacman -S --overwrite terminator
+sudo pacman ---overwrite -S terminator
+sudo pacman --overwrite -S terminator
+sudo pacman -S alacritty
+sudo pacman -S terminator
+chromium
+sudo pacman -S chromium
+sudo pacman -Runs firefox
+sudo pamac-manager
+pacman -S pamac
+xmodmap -pke
+xmodmap -pke | fzf
+ls
+ps -eaf
+sudo pacman -S pamac
+yay -S pamac
+yay -S pamac
+sudo pamac
+sudo pamac-manager
+ps -eaf
+ps -eaf
+ls
+ls -eaf
+ll
+lla
+e a specified command plus arguments
+#
+#    The `command` field must be a map containing a `program` string and an
+#    `args` array of command line parameter strings. For example
+startx
+pavucontrol
+pkill pamac-manager
+sudo pkill pamac-manager
+Disk space to be recovered: 488.8MB
+sudo updatedb
+locate alacrity conf
+locate alacrity
+locate alacritty
+cheat alacrity
+cheat alacritty
+mkdir .config/alacritty
+cd .config/
+cd alacritty/
+vim /usr/share/doc/alacritty/example/alacritty.yml
+locate alacritty.yml
+cp /usr/share/doc/alacritty/example/alacritty.yml ~/.config/alacritty/
+ls
+vim alacritty.yml 
+pacman -S code
+sudo pacman -S code
+code alacritty.yml 
+sudo reboot
+startx
+sudo pacman -S sddm
+sudo pacman -S lightdm
+vim /etc/lightdm/lightdm.conf 
+sudo vim /etc/lightdm/lightdm.conf 
+sudo systemctl start lightdm.service 
+arandr
+sudo vim /etc/lightdm/lightdm.conf 
+startx
+startx
+inst lightdm-gtk-greeter
+sudo vim /etc/lightdm/lightdm
+sudo vim /etc/lightdm/lightdm.conf 
+sudo reboot
+pkill pamac-manager
+sudo pkill pamac-manager
+sudo pacman -S dolphin
+sudo pamac-manager 
+sudo pacman -S lxpolkit
+sudo pacman -S polkit
+sudo pacman -S lxsession
+lxpolkit
+lxpolkit &
+i3config
+sudo pacman -S crontab
+sudo pacman -S cronie
+head /var/log/pacman
+sudo head /var/log/pacman
+sudo head /var/log/pacman.log 
+sudo pacman -Runs powerline
+vim .bashrc
+pacman -S mpv
+sudo pacman -S mpv
+vim .config/tint2/tint2rc
+sudo pacman -S gimp
+sudo pamac-manager
+cd /usr/share/xsessions/
+ls
+less plasma-i3.desktop 
+rm -rf plasma-i3.desktop 
+sudo rm -rf plasma-i3.desktop 
+inst kdenlive
+sudo pacman -Ss olive
+yay -Ss olive
+yay -S olive
+shutdown
+shutdown now
+dmenu_recency
+pacman -S dmenu-manjaro
+sudo pacman -S dmenu-manjaro
+yay -S dmenu-manjaro
+dmenu-frecency
+yay -S dmenu-frecency
+dmenu_recency
+dmenu_frecency
+dmenu_run
+dmenu_frecency_run
+yay -Runs dmenu-frecency
+pacman -Runs dmenu-frecency-git 
+sudo pacman -Runs dmenu-frecency-git 
+pacman -Qedt
+pacman -Qdt
+sudo pacman -Runs $(pacman -Qdt)
+sudo pacman -Runs $(pacman -Qqdt)
+sudo pacman -S awesome 
+kill -9 -1
+cd .config/awesome/
+vim rc.lua
+exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
+feh --bg-scale --randomize ~/Pictures/wallpapers/*
+vim .config/awesome/rc.lua 
+alttab
+alttab -N 1
+alttab -n 1
+alttab -d 1
+i3config
+htop
+code .config/awesome/rc.lua 
+locate rc.lua
+vim /etc/xdg/awesome/rc.lua 
+alttab -d 1 &
