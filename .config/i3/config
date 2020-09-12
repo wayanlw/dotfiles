@@ -287,13 +287,13 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 ####################################################################################################################
 
 # The middle button over a titlebar kills the window
-bindsym --release button3 kill
+bindsym --release button2 kill
 #The middle button and a modifer over any part of the window kills the window
-bindsym --whole-window $mod+button3 kill
+bindsym --whole-window $mod+button2 kill
 
-# The right button toggles floating
-bindsym button2 floating toggle
-bindsym --whole-window $mod+button2 floating toggle
+## The right button toggles floating
+bindsym button3 floating toggle
+#bindsym --whole-window $mod+button3 floating toggle
 
 
 

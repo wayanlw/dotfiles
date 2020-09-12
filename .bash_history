@@ -1,65 +1,3 @@
-inst brave
-sudo pacman -Ss brave
-pacman -Ss brave
-sudo pacman -Runs firefox
-pacman -Q | dmenu
-pacman -Q | dmenu
-dmenu_run
-pacman -S gnome-keyring-daemon
-sudo pacman -S gnome-keyring-daemon
-yay -S gnome-keyring-daemon
-yay -S awesome rofi picom i3lock-fancy xclip ttf-roboto gnome-polkit materia-gtk-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager -y
-pacman -S awesome picon i3lock-fancy xclip ttf-roboto 
-sudo pacman -S awesome picon i3lock-fancy xclip ttf-roboto 
-sudo pacman -S awesome picom xclip ttf-roboto 
-yay -S gnome-polkit materia-gtk-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager -y
-pacman -S gnome-polkit
-sudo pacman -S gnome-polkit
-yay -S gnome-polkit
-yay -S awesome rofi picom i3lock-fancy xclip ttf-roboto gnome-polkit materia-gtk-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager -y
-pacman -Q | grep awesome
-git clone https://github.com/PapyElGringo/material-awesome.git ~/.config/awesome
-man alttab
-man picom
-man alttab
-echo run | dmenu -fn 10x20 | exec bash -s
-run | dmenu -fn 10x20 | exec bash -s
-echo run | dmenu -fn 10x20 | exec bash -s
-dmenu_run  
-dmenu_run  -fn 10x20
-dmenu_run  
-sudo pacman -S autokey
-yay -S autokey
- 
-autokey-run 
-git clone https://github.com/madslundt/keybindings/tree/master/linux/autokey ~/Downloads/
-git clone https://github.com/madslundt/keybindings/tree/master/linux/autokey ~/.config/autokey/data
-git clone https://github.com/madslundt/keybindings.git
-ls
-cd Downloads/
-cd 
-ls
-cd .config/
-mkdir autokey
-cd autokey/
-ls
-mkdir data
-git status
-cd .config/
-cd ..
-ls -alt
-cd .dotfiles/
-git status
-$ mkdir -p ~/.config/awesome/
-mkdir -p ~/.config/awesome/
-cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
-htop
-htop
-inst nitrogen
-ls
-cd pictures/
-cd Pic
-..
 cd ..
 cd Pictures/
 ls
@@ -498,3 +436,65 @@ code .config/awesome/rc.lua
 locate rc.lua
 vim /etc/xdg/awesome/rc.lua 
 alttab -d 1 &
+vim .bashrc
+vim .bash_aliases 
+libinput list-devices
+xinput list
+jcode /usr/share/X11/xorg.conf.d/40-libinput.conf 
+code /usr/share/X11/xorg.conf.d/40-libinput.conf 
+sudo pacman -S lxinput
+sudo pacman -Sxfce4-settings
+sudo pacman -Sxfce4-settings
+sudo pacman -S xfce4-settings
+sudo xfce4-settings-manager
+sudo xfce4-settings-manager
+xfce4-settings-manager
+su -i
+su 
+sudo pacman -Runs xfce4-settings
+sudo pacman -Runs $(pacman -Qqdt)
+sudo pacman -Runs $(pacman -Qqdt)
+sudo pacman -S gnome-tweaks
+gnome-tweaks
+sudo pacman -Runs gnome-tweaks
+vim .bash_aliases
+cd .config
+lwwdir 
+bash gitScript.sh 
+bash gitScript.sh 
+git push -f origin master
+source .bashrc
+cleanpac
+inst xf86-input-synaptics
+vim /etc/X11/xorg.conf.d/50-synaptics.conf
+cd /etc/X11/xorg.conf.d/
+ls
+ll
+vim .bashrc
+cd
+vim .bashrc 
+vim .bash_aliases 
+cd
+cd /etc/X11/xorg.conf.d/
+cd ..
+cd xorg.conf.d/
+ls
+ls -alt
+sudo updatedb
+locate synaptics.conf
+vim /usr/share/X11/xorg.conf.d/70-synaptics.conf
+inst synaptiks
+yay -S synaptiks
+sudo pacman -Runs xf86-input-synaptics 
+i3config
+i3config
+locate i3config
+sudo updatedb
+locate i3 config
+locate i3
+cd .config/i3
+locate config | fzf
+cd /etc/i3/
+ls
+vim config
+i3config
