@@ -1,131 +1,3 @@
-source .bashrc
-i3config 
-sudo pacman -S mupdf
-sudo pacman -S zathura
-sudo pacman -Runs zathura
-cd .config/awesome/
-ls
-vim rc.lua 
-code rc.lua
-home
-homemonitor.sh 
-i3config 
-i3config 
-htop
-sudo pamac-manager
-sudo pacman -Syyu
-sudo reboot
-sudo pacman -S terminator
-pacman --help | grep force
-man pacman 
-sudo pacman -S --overwrite terminator
-sudo pacman ---overwrite -S terminator
-sudo pacman --overwrite -S terminator
-sudo pacman -S alacritty
-sudo pacman -S terminator
-chromium
-sudo pacman -S chromium
-sudo pacman -Runs firefox
-sudo pamac-manager
-pacman -S pamac
-xmodmap -pke
-xmodmap -pke | fzf
-ls
-ps -eaf
-sudo pacman -S pamac
-yay -S pamac
-yay -S pamac
-sudo pamac
-sudo pamac-manager
-ps -eaf
-ps -eaf
-ls
-ls -eaf
-ll
-lla
-e a specified command plus arguments
-#
-#    The `command` field must be a map containing a `program` string and an
-#    `args` array of command line parameter strings. For example
-startx
-pavucontrol
-pkill pamac-manager
-sudo pkill pamac-manager
-Disk space to be recovered: 488.8MB
-sudo updatedb
-locate alacrity conf
-locate alacrity
-locate alacritty
-cheat alacrity
-cheat alacritty
-mkdir .config/alacritty
-cd .config/
-cd alacritty/
-vim /usr/share/doc/alacritty/example/alacritty.yml
-locate alacritty.yml
-cp /usr/share/doc/alacritty/example/alacritty.yml ~/.config/alacritty/
-ls
-vim alacritty.yml 
-pacman -S code
-sudo pacman -S code
-code alacritty.yml 
-sudo reboot
-startx
-sudo pacman -S sddm
-sudo pacman -S lightdm
-vim /etc/lightdm/lightdm.conf 
-sudo vim /etc/lightdm/lightdm.conf 
-sudo systemctl start lightdm.service 
-arandr
-sudo vim /etc/lightdm/lightdm.conf 
-startx
-startx
-inst lightdm-gtk-greeter
-sudo vim /etc/lightdm/lightdm
-sudo vim /etc/lightdm/lightdm.conf 
-sudo reboot
-pkill pamac-manager
-sudo pkill pamac-manager
-sudo pacman -S dolphin
-sudo pamac-manager 
-sudo pacman -S lxpolkit
-sudo pacman -S polkit
-sudo pacman -S lxsession
-lxpolkit
-lxpolkit &
-i3config
-sudo pacman -S crontab
-sudo pacman -S cronie
-head /var/log/pacman
-sudo head /var/log/pacman
-sudo head /var/log/pacman.log 
-sudo pacman -Runs powerline
-vim .bashrc
-pacman -S mpv
-sudo pacman -S mpv
-vim .config/tint2/tint2rc
-sudo pacman -S gimp
-sudo pamac-manager
-cd /usr/share/xsessions/
-ls
-less plasma-i3.desktop 
-rm -rf plasma-i3.desktop 
-sudo rm -rf plasma-i3.desktop 
-inst kdenlive
-sudo pacman -Ss olive
-yay -Ss olive
-yay -S olive
-shutdown
-shutdown now
-dmenu_recency
-pacman -S dmenu-manjaro
-sudo pacman -S dmenu-manjaro
-yay -S dmenu-manjaro
-dmenu-frecency
-yay -S dmenu-frecency
-dmenu_recency
-dmenu_frecency
-dmenu_run
 dmenu_frecency_run
 yay -Runs dmenu-frecency
 pacman -Runs dmenu-frecency-git 
@@ -498,3 +370,131 @@ weather
 date
 sudo pacman -S blueman
 sudo systemctl start bluetooth.service
+vim .bashrc 
+vim .bash_aliases 
+source .bashrc
+cd .dotfiles/
+git
+bash gitScript.sh 
+inst pulseaudio-alsa
+inst pasystray
+sudo pacman -Runs pasystray
+yay -S volctl
+htop
+vim .bashrc
+cd .dotfiles/
+cd scripts/
+bash homemonitor.sh 
+lxqt-panel 
+pkill lxqt-panel 
+lxqt-panel 
+inst lxappearance
+uninst oxygen-icons
+sudo pacman -Sy arc-gtk-theme
+inst nerd-fonts
+pkill tint2
+i3config
+man surf
+uninst dwm
+lxqt-panel 
+sudo pacman -S oxygen-icons
+rm -rf /var/lib/pacman/db.lck 
+sudo rm -rf /var/lib/pacman/db.lck 
+sudo pacman -S oxygen-icons
+lxqt-panel 
+locate firefox
+xsetroot -xcf /usr/share/icons/whiteglass/cursors/left_ptr 32
+cd /usr/share/icons/
+cd default/
+vim index.theme 
+cd ..
+cd breeze
+vim index.theme 
+yay -Ss cursor
+pacman -Ss cursor
+inst xcursor-neutral
+pkill lxqt-panel
+tint2 &
+pkill tint2
+pkill tint2
+alsamixer
+source .bashrc
+strace -T -f -o bash.strace bash
+mv .bashrc .bashrc.bak
+lla
+mv .bashrc.bak .bashrc
+exit
+exit
+exit
+inst strace
+echo exit | strace bash -li
+echo exit | strace bash -li |& grep  '^open'
+shopt
+shopt | fzf
+echo exit | strace bash -li |& grep  '^open'
+cat /etc/profile
+cat /etc/profile.d/
+cd /etc/profile.d/
+source .bashrc
+source .bashrcexit
+exit
+exit
+strace --help
+strace -T
+strace -T bash
+strace -T -f bash 
+strace -T -f -o bash.strace bash 
+cat bash.strace 
+cat bash.strace | grep '^open'
+cat bash.strace |& grep '^open'
+echo exit | strace bash -Tli |& grep  '^open'
+echo exit | strace bash -li |& grep  '^open'
+echo exit
+pkill bash
+kill -9 -1
+vim .bashrc
+source .bashrc
+pacman -S powerline
+sudo pacman -S powerline
+uninst powerline
+vim .bashrc
+vim .bash_aliases 
+vim .vimrc 
+vim .bashrc
+kill -9 -1
+echo $SHELL
+inst zsh
+zsh
+echo $SHELL
+chsh -s /usr/bin/zsh suadmin
+chsh -s /usr/bin/zsh suadmin
+chsh -s /usr/bin/zsh
+usermod -s /bin/zsh 
+usermod -s /usr/bin/zsh 
+usermod -s /usr/bin/zsh suadmin
+echo $SHELL
+sudo usermod -s /usr/bin/zsh suadmin
+sudo vipw
+sudo vim /etc/passwd
+echo $SHELL
+kill -9 -1
+zsh
+exi
+exit
+zsh-newuser-install
+exit
+cd
+vim .zshrc 
+sudo vim .zshrc 
+cd .dotfiles/
+vim .zshrc 
+cd
+vim .oh-my-zsh/
+cd .oh-my-zsh/
+cd ..
+ll
+lla
+lla | egrep "."
+lla | egrep "\."
+lla | egrep "\.*"
+exit

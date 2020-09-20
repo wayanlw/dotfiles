@@ -355,14 +355,14 @@ exec_always --no-startup-id xrandr --output LVDS1 --mode 1366x768 --pos 277x1080
 
 
 
-#start tint2
-exec_always --no-startup-id pkill tint2; sleep 1; tint2
+#start lxqt-panel
+exec_always --no-startup-id pkill lxqt-panel; sleep 1; lxqt-panel;
+exec_always --no-startup-id lxpolkit &
 exec_always --no-startup-id alttab -d 1
 
 
 # starting NetworkManager nm-applet and volume control
 exec_always --no-startup-id nm-applet 
-exec_always --no-startup-id kmix
 
 
 #set the background wallpaper 
@@ -371,7 +371,6 @@ exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
 
 #start picom
 exec_always --no-startup-id picom -b
-exec_always --no-startup-id lxpolkit &
 
 
 #set caps_lock as escape

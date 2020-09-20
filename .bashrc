@@ -10,7 +10,7 @@ PS1='[\u@\h \W]\$ '
 
 
 #add my scripts to the path
-PATH=$PATH:~/.dotfiles/scripts
+#PATH=$PATH:~/.dotfiles/scripts
 
 
 #lww Aliases file
@@ -21,5 +21,5 @@ PATH=$PATH:~/.dotfiles/scripts
 #POWERLINE_BASH_SELECT=1
 #. /usr/share/powerline/bindings/bash/powerline.sh
 
-[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+[ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
