@@ -1,29 +1,33 @@
-#lww Aliases
-alias brightness="xrandr --output VGA1 --brightness "
-alias lcmd="cat ~/.dotfiles/lwwcommands"
-alias lwwdir="cd ~/.dotfiles/"
-alias ll="ls --human-readable --size -1 --classify"
-alias lla="ls -A --human-readable --size -1 --classify"
-alias inst="sudo pacman -S"
-alias uninst="sudo pacman -Runs"
-alias cleanpac="sudo pacman -Runs $(pacman -Qqdt)"
-alias fpkg="pacman -Qq | grep"
-alias i3config="vim ~/.config/i3/config"
-alias bashreload="source ~/.bashrc && echo Bash config reloaded"
 
-alias mv="mv -v"
-alias rm="rm -vi"
-alias cp="cp -v"
 
-alias du="du -sh *| sort -h"
+#
+# .bash_alisasses
+#
 
-alias grep="grep --color=auto"
+alias brightness='xrandr --output VGA1 --brightness 0.8'
+alias lcmd='cat ~/.dotfiles/lwwcommands'
+alias lwwdir='cd ~/.dotfiles/'
+alias ll='ls --human-readable --size -1 --classify'
+alias lla='ls -A --human-readable --size -1 --classify'
+alias inst='sudo pacman -S'
+alias uninst='sudo pacman -Runs'
+alias pacclean='sudo pacman -Runs $(pacman -Qqdt)'
+alias pacsearch='pacman -Ss'
+alias fs='find ~ | fzf'
+alias paclist='pacman -Qq | fzf'
+alias fpkg='pacman -Qq | grep'
+alias i3config='vim ~/.config/i3/config'
+alias bashreload='source ~/.bashrc && echo Bash config reloaded'
+
+alias mv='mv -v'
+alias rm='rm -vi'
+alias cp='cp -v'
+
+alias du='du -sh *| sort -h'
+
 alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-alias cd="cl"
-
-
-
-
+alias grep='grep --color=auto'
+alias cd='cl'
 
 
 

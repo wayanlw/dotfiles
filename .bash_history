@@ -1,351 +1,3 @@
-dmenu_frecency_run
-yay -Runs dmenu-frecency
-pacman -Runs dmenu-frecency-git 
-sudo pacman -Runs dmenu-frecency-git 
-pacman -Qedt
-pacman -Qdt
-sudo pacman -Runs $(pacman -Qdt)
-sudo pacman -Runs $(pacman -Qqdt)
-sudo pacman -S awesome 
-kill -9 -1
-cd .config/awesome/
-vim rc.lua
-exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
-feh --bg-scale --randomize ~/Pictures/wallpapers/*
-vim .config/awesome/rc.lua 
-alttab
-alttab -N 1
-alttab -n 1
-alttab -d 1
-i3config
-htop
-code .config/awesome/rc.lua 
-locate rc.lua
-vim /etc/xdg/awesome/rc.lua 
-alttab -d 1 &
-vim .bashrc
-vim .bash_aliases 
-libinput list-devices
-xinput list
-jcode /usr/share/X11/xorg.conf.d/40-libinput.conf 
-code /usr/share/X11/xorg.conf.d/40-libinput.conf 
-sudo pacman -S lxinput
-sudo pacman -Sxfce4-settings
-sudo pacman -Sxfce4-settings
-sudo pacman -S xfce4-settings
-sudo xfce4-settings-manager
-sudo xfce4-settings-manager
-xfce4-settings-manager
-su -i
-su 
-sudo pacman -Runs xfce4-settings
-sudo pacman -Runs $(pacman -Qqdt)
-sudo pacman -Runs $(pacman -Qqdt)
-sudo pacman -S gnome-tweaks
-gnome-tweaks
-sudo pacman -Runs gnome-tweaks
-vim .bash_aliases
-cd .config
-lwwdir 
-bash gitScript.sh 
-bash gitScript.sh 
-git push -f origin master
-source .bashrc
-cleanpac
-inst xf86-input-synaptics
-vim /etc/X11/xorg.conf.d/50-synaptics.conf
-cd /etc/X11/xorg.conf.d/
-ls
-ll
-vim .bashrc
-cd
-vim .bashrc 
-vim .bash_aliases 
-cd
-cd /etc/X11/xorg.conf.d/
-cd ..
-cd xorg.conf.d/
-ls
-ls -alt
-sudo updatedb
-locate synaptics.conf
-vim /usr/share/X11/xorg.conf.d/70-synaptics.conf
-inst synaptiks
-yay -S synaptiks
-sudo pacman -Runs xf86-input-synaptics 
-i3config
-i3config
-locate i3config
-sudo updatedb
-locate i3 config
-locate i3
-cd .config/i3
-locate config | fzf
-cd /etc/i3/
-ls
-vim config
-i3config
-i3config
-lwwdir
-bash gitScript.sh 
-sudo pacman -S pavucontrol
-pavucontrol
-sudo pacman -S pa-applet
-yay -S pa-applet
-sudo pacman -S pasystray
-pasystray &
-sudo pacman -Runs pasystray
-cd
-locate picom
-vim /etc/xdg/picom.conf
-vim /etc/xdg/picom.conf.example 
-i3config
-vim .vimrc 
-locate vimrc
-cd .dotfiles/
-cat .vimrc 
-:q
-ln -sf ./.vimrc ~/.vimrc
-vim .vimrc 
-cd
-source .vimrc
-ls -alt
-.dotfiles/
-cd .dotfiles/
-vim .vimrc 
-cp .vimrc .vimrc.bak
-ls a
-lla
-ll
-la
-lla
-ln -sf .vimrc ~/.vimrc
-cd 
-lla
-ls -alt
-ln -sf ~/.dotfiles/.vimrc ~/.vimrc
-lla
-ls -alt
-source .vimrc
-vim .vimrc
-yay -s pywal
-yay -s pywal
-wal --help
-wal -i ~/Pictures/wallpapers/wallpapers/0010.jpg 
-vim .vimrc 
-sudo pacman -S dwm
-yay -S dwm
-sudo updatedb
-locate config.def.h
-locate config.h
-locate config.h dwm
-locate dwm
-locate dwm
-vim .bash_aliases 
-find .
-find . -depth 1
-find . -d 1
-find --help
-find . -maxdepth 1
-find . -maxdepth 2
-find . -maxdepth 2 |fzf
-find . -maxdepth 3 |fzf
-find / | fzf
-find / | fzf
-timeshift
-timeshift-gtk
-sudo timeshift-gtk
-locate timesift backup
-cd /timeshift/
-cd snapshots
-rm -rf 2020-09-12_12-25-11/
-sudo rm -rf 2020-09-12_12-25-11/
-ls
-cd ..
-cd snapshots-daily/
-cd ..
-cd
-cd .config/
-locate dwm
-cd /usr/share/doc/dwm/
-cat README 
-locate dwm
-mkdir ~/.config/dwm
-cd 
-cd .config/
-cd dwm
-locate dwm
-cd ~/.cache/yay/dwm/
-cd ..
-mv dwm/* ~/.config/dwm/
-cd 
-cd .config/dwm/
-ls
-locate config.def.h
-cp config.h config.def.h
-ls
-sudo make clean install
-make clean install
-ls
-tar -xzvf dwm-6.2.tar.gz 
-cd dwm-6.2/
-make clean install 
-kill -9 -1
-locate config.def.h
-locate config.h
-locate config.h | fzf
-vim /home/suadmin/.cache/yay/dwm/config.h
-locate config.h | fzf
-sudo updatedb
-locate config.h | fzf
-vim /home/suadmin/.cache/yay/dwm/config.h
-locate config.h | fzf
-vim /home/suadmin/.config/dwm/config.h
-cd .config/
-cd dwm/
-ls
-cd dwm-6.2/
-cd ..
-ls
-sudo make clean install
-cd dwm-6.2/
-sudo make clean install
-vim config.def.h 
-sudo make clean install
-cd .config/
-cd dwm/
-cd dwm-6.2/
-cp config.def.h config.h 
-sudo make clean install
-vim .config/dwm/config.def.h 
-cd .config/dwm/
-mv dwm-6.2 ./..
-ls
-cd ..
-rm -rf dwm
-mv dwm-6.2/ dwm
-cd dwm/
-vim config.def.h 
-cd .config/dwm/
-cp config.def.h config.h 
-sudo make clean install
-cd .config/dwm/
-vim config.def.h 
-cd .config/dwm/
-cp config.h config.h.bak
-cp config.def.h config.h
-sudo make clean install
-vim .config/dwm/
-cd .config/dwm/
-vim config.def.h 
-htop
-kill -9 -1
-i3config
-pacman -Runs st
-sudo pacman -Runs st
-locate st
-locate st | grep st
-sudo pacman -Runs suckless-tools
-pacman -Qq
-pacman -Qq |fzf
-pacman -Runs st
-sudo pacman -Runs st
-wal -i Pictures/wallpapers/wallpapers/0100.jpg 
-sudo pacman -Runs st
-sudo pacman -Runs suckless-tools
-pacman -Qq |fzf
-sudo pacman -Runs dwm
-pacclean
-cleanpac
-pacman -Qdt
-git clone https://github.com/LukeSmithxyz/st
-cd st
-sudo make install
-wal -i Pictures/wallpapers/wallpapers/0100.jpg 
-sudo pacman -Runs st
-cd st/
-sudo make clean install
-sudo pacman -Runs st
-sudo pacman -Runs startup-notification n
-sudo pacman -Rns st
-sudo make unisntall
-sudo make uninstall
-i3config 
-i3cnofig
-i3cnofig
-i3config
-sudo pacman -S i3exit
-sudo pacman -S i3-exit
-yay -S i3exit
-sudo pacman -S morc_menu
-sudo pacman -S morc
-sudo pacman -Ss morc
-yay -S morc_menu
-sudo pacman -S morc_menu
-code /home/suadmin/.config/i3/config
-cp /usr/share/dunst/dunstrc ~/.config/dunst/dunstrc
-mkdir ~/.config/dunst/
-cp /usr/share/dunst/dunstrc ~/.config/dunst/dunstrc
-dunst
-dunst test
-dustify dunst
-dunstify dunst
-cd .config/dunst/
-vim dunstrc 
-dunsttify
-dunstify
-dunstify test
-dust test
-dunst
-man dustify
-man dunst
-dunst %a
-pkill dunst
-dunst test
-dunst &
-dunst
-dunstctl
-dunstctl history-pop
-dunstctl close-all
-notify-send test
-blueman-applet
-sudo pacman -S pulseaudio-bluetooth
-pulseaudio -k # kills and restarts pulseaudio
-pavucontrol
-sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
-vimbk
-sudo vimbk /usr/share/X11/xorg.conf.d/40-libinput.conf
-vimbk /usr/share/X11/xorg.conf.d/40-libinput.conf
-cd /usr/share/X11/xorg.conf.d/
-vim .bashrc
-sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
-cd 
-ls
-vim .bashrc 
-vim .bash_aliases 
-i3config
-vim .xmodmap 
-xmodmap .xmodmap 
-kdfa skjdf;aklsjd;fkljakdsjf;kE
-xmodmap -pke | fzf
-yay -S surf
-cd .config/
-cd dwm/
-sudo make install config.h 
-kill -9 -1
-yay -S dwm
-kill -9 -1
-xrandr 
-sudo pacman -S arandr
-arandr
-cd .config/dwm/
-vim config.def.h 
-cp config.def.h config.h
-sudo make clean install
-vim .config/dwm/
-cd .config/dwm/
-vim config.h
-cp config.def.h config.h
 sudo make clean install
 cd .config/dwm/
 vim config.def.h 
@@ -498,3 +150,351 @@ lla | egrep "."
 lla | egrep "\."
 lla | egrep "\.*"
 exit
+ls
+chsh -s /usr/bin/zsh 
+kill -9 -1
+uninst zsh
+sudo updatedb
+locate zsh
+rm -rf /usr/share/zsh
+sudo rm -rf /usr/share/zsh
+sudo updatedb
+locat zsh
+locate zsh
+cleanpac 
+sudo rm -rf /usr/lib/zsh
+sudo updatedb
+locate zsh
+sudo rm -rf /etc/zsh
+rm -rf .zsh*
+sudo udpatedb
+sudo updatedb
+locate zsh
+rm -rf /usr/bin/zsh /usr/bin/zsh-5.8 
+sudo rm -rf /usr/bin/zsh /usr/bin/zsh-5.8 
+sudo updatedb
+locate zsh
+sudo pacman -S zsh
+sudo pacman -S zsh
+chsh -s zsh
+echo $SHELL
+chsh -s /usr/bin/zsh
+echo $SHELL
+chsh -s /usr/bin/zsh
+ls
+lscpu
+lslocks
+ps -tulpn
+htop
+lsmem
+python 
+python --version
+uname -r
+uname -a
+listapps.sh 
+lsdf ajksfd alksdf 
+
+uninst surf
+uninst tabbed
+listapps.sh 
+pacclean
+uninst zsh-syntax-highlighting
+locate zsh
+rm -rf /usr/share/zsh/*
+sudo rm -rf /usr/share/zsh/*
+sudo updatedb
+locate zsh
+zsh
+pacman -Runs zsh
+sudo pacman -Runs zsh
+reboot
+vim .vimrc
+cd .config/alacritty/
+vim alacritty.yml 
+cat alacritty.yml | grep -ve ^#
+vim alacritty.yml 
+vim .vimrc
+mv .vimrc .vimrcbak
+lla
+lla | fzf
+vim .viminfo
+vim .vimrcbak 
+mv .vimrcbak .vimrc
+vim .vimrc 
+vim .vimrc 
+lwwdir 
+cd scripts/
+cd ..
+vim .bash_aliases 
+vim .bash_aliases 
+inst sxhkd
+cd .config/
+cd 
+cd .config/sxhkd/
+vim sxhkdrc 
+cd ..
+cd tint2/
+vim tint2rc
+polybar 
+cd
+cd .config/polybar/
+ls
+./launch.sh 
+vim config.ini 
+polybar main
+polybar --help
+uninst polybar
+yay -S polybar-git
+sudo updatedb
+locate polybar
+timshift -list
+timeshift
+sudo timeshift --list
+locate timeshift
+cd /var/log/timeshift/
+locate polybar
+cd /timeshift/
+cd snapshots
+ls
+cd 2020-09-06_11-08-39/
+vim exclude.list 
+timeshift
+timeshift --list-shapshots
+sudo timeshift --list-shapshots
+sudo timeshift --list-shapshots
+sudo timeshift --list
+zsh
+sudo pacman -Runs zsh
+paclist
+pacman -Runs zsh
+sudo pacman -Runs zsh
+sudo pacman -Rns zsh
+sudo pacman -Rns zsh-completions zsh
+listapps.sh 
+pacclean
+pacman -Qqdt
+uninst olive
+uninst menumaker
+paclist
+clear
+ls
+dd
+ds
+cd -
+ll
+ll
+lla
+du
+lwwdir 
+vim lwwcommands 
+inst xrvt-unicode
+pacman -Ss xrvt
+pacman -Ss rvt
+pacman -Ss
+pacman -Ss st
+pacman -Ss rxvt
+inst rxvt-unicode
+pacman -Ss dash-to-panel
+pacman -Ss dash
+inst lxpanel
+pkill lxpanel
+uninst lxpanel
+pacclean
+inst xfce4-panel
+inst perlpanel
+yay -S perlpanel-git
+inst cairo-dock
+pkill cairo-dock
+uninst cairo-dock
+inst xfce4-panel
+inst polybar
+pacman -Ss polybar
+pacman -Ss poly
+pacman -Ss poly |fzf
+inst polybar-git
+yay -S polybar-git
+locate polybar
+pkill xfce4-panel
+uninst xfce4-panel
+sudo pacman -Rns rxvt-unicode
+vim /etc/pacman.conf
+pacman -S steam
+inst steam
+sudo pacman -Sy
+inst steam
+lspci -v
+$ lspci -v | grep -A1 -e VGA -e 3D
+$ lspci -v | grep -A1 -e VGA 
+lspci -v | grep -A1 -e VGA -e 3D
+pacman -Ss xf86-video
+mnt
+lsblk
+cd /mnt/
+ls
+cd windows
+ls
+cd ..
+cd windows
+cd
+cd /mnt/windows2/
+l
+ll
+ls
+cd /windows10/
+ls
+cd 
+cd /
+ls
+cd windows10/
+lla
+cd 
+homemonitor.sh 
+cd /windows10/
+ls
+cd ..
+cd /mnt/
+ls
+cd windows
+ls
+lla
+cd 
+cd /mnt/
+lla
+mount
+mount -l
+ls -al /mnt/
+mount 
+lsblk
+cd /run/media/suadmin/
+ls
+cd A2EECDADEECD7A55/
+lla
+cd Windows/
+cd Fonts/
+cd ..
+mkdir /usr/share/fonts/WindowsFonts
+sudo mkdir /usr/share/fonts/WindowsFonts
+cp Fonts/* /usr/share/fonts/WindowsFonts/
+sudo cp Fonts/* /usr/share/fonts/WindowsFonts/
+ls
+cd /usr/share/fonts/
+ls
+chmod 644 ./WindowsFonts/
+sudo chmod 644 ./WindowsFonts/
+fc-cache --force
+fc-cache --help
+fc-cache -fv
+steam
+bash norc
+bash --norc
+bash
+hostname
+echo $hostname
+echo $HOSTNAME
+vimgolf
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_al
+    iases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME
+    iases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_al
+    iases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_al
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
+strace
+stract --t bash
+stract -tt bash
+strace -tt bash
+strace -tt bash | grep access
+strace -tt -fo strace.log bash | grep access
+cat strace.log 
+cd /private
+script -t script.log 2>script.tim -c 'bash -x -c "
+    for ((i=3;i--;));do sleep .1;done
+
+    for ((i=2;i--;)) ;do
+        tar -cf /tmp/test.tar -C / bin
+        gzip /tmp/test.tar
+        rm /tmp/test.tar.gz
+    done
+"'
+ls -l script.*
+sudo updatedb
+sudo updatedb
+sudo updatedb
+strace -tt -fo strace.log bash | grep access
+strace -tt -fo strace.log bash
+sudo strace -tt -fo strace.log bash
+sudo -Rns bash-completion
+exit
+exit
+exit
+strace -tt
+strace -tt bash
+exit
+echo exit | strace bash -li |& grep '^open'
+echo exit | strace -tt bash -li |& grep '^open'
+echo exit | strace bash -li |& grep '^open'
+echo exit | strace bash -li |& grep '^open'
+sudo strace -tt -fo strace.log bash
+exit
+exit
+echo exit | strace bash -li |& grep '^open'
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+echo exit | strace -tt bash -li |& grep '^open'
+echo exit | strace -tt -fo strace.log bash
+cat strace.log 
+cat strace.log | grep open
+echo exit | strace bash -li |& grep '^open'
+echo exit | strace -tt -fo strace.log bash -li
+cat strace.log | grep open
+cat .bash_history 
+cat strace.log | grep open
+echo exit | strace bash -li |& grep '^open'
+echo exit | strace -t bash -li |& grep '^open'
+echo exit | strace  bash -li |& grep '^open'
+echo exit | strace -tt -fo strace.log bash -li |& grep '^open'
+cat strace.log | grep open
+strace -tt -fo strace.log bash
+cat strace.log | grep open
+echo exit | strace bash -li |& grep '^open'
+exit
+echo exit | strace bash -li |& grep '^open'
+vim .bash_profile 
+vim .bashrc
+sourche .bashrc
+source .bashrc
+vim .bashrc
+exit
+exit
+bash -v
+vim .bash_aliases 
+vim .bashrc
+source .bashrc
+vim .bashrc
+source .bashrc
+vim .bashrc
+source .bashrc
+echo exit | strace bash -li |& grep '^open'
+vim .bash_prori
+vim .bash_profile 
+vim .bashrc
+echo exit | strace bash -li |& grep '^open'
+vim .bash_aliases 
+echo exit | bash -v
+echo exit | bash -v
+bash -v
+source .bashrc
+bash -v
+ls
+source
+source bashrc
+source .bashrc
+xrandr --output LVDS1 --brightness 0.8
+xrandr --output LVDS1 --brightness 0.7
+source .bashrc

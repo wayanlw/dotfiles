@@ -41,6 +41,7 @@ for_window [window_type="dialog"] floating enable, border none
 for_window [window_type="menu"] floating enable, border none
 
 
+
 # >>> focus on urgent window
 for_window [urgent=latest] focus
 
@@ -214,6 +215,9 @@ mode "resize" {
 ####################################################################################################################
 
 
+# >>> Disable titlebars for all windows
+for_window [class="^.*"] border pixel 2
+new_window 1pixel
 
 # ---- windows gaps ------##
 
@@ -269,20 +273,20 @@ assign [class="kdenlive"] $ws6
 ####################################################################################################################
 
 set $bg-color            #2f343f
-set $focus-color         #05668d
+set $focus-color         #f29111
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 # window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $focus-color       $text-color          #00ff00
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+#                       border               background         text                 indicator
+client.focused          $urgent-bg-color     $focus-color       $text-color          #00ff00
+client.unfocused        $inactive-bg-color   $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color   $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           $urgent-bg-color     $urgent-bg-color   $text-color          #00ff00
 
-
+#before changing the border of the client focuessed was $bg-color #05668d
 
 ####################################################################################################################
 #Mouse Configurations
@@ -302,10 +306,10 @@ bindsym button3 floating toggle
 
 
 #keybindings. mod+o then the key
-set $mode_launcher Launch: [f]irefox [d]olphin
+set $mode_launcher Launch: [c]hromium [d]olphin
 bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
-    bindsym f exec --no-startup-id firefox ; mode "default"
+    bindsym c exec --no-startup-id chromium ; mode "default"
     bindsym d exec --no-startup-id dolphin; mode "default"
 
     bindsym Escape mode "default"
@@ -356,7 +360,8 @@ exec_always --no-startup-id xrandr --output LVDS1 --mode 1366x768 --pos 277x1080
 
 
 #start lxqt-panel
-exec_always --no-startup-id pkill lxqt-panel; sleep 1; lxqt-panel;
+#exec_always --no-startup-id pkill lxqt-panel; sleep 1; lxqt-panel;
+exec_always --no-startup-id pkill tint2; sleep 1; tint2;
 exec_always --no-startup-id lxpolkit &
 exec_always --no-startup-id alttab -d 1
 
