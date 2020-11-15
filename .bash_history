@@ -1,123 +1,3 @@
-sudo make clean install
-cd .config/dwm/
-vim config.def.h 
-cp config.def.h config.h
-sudo make clean install
-cd .config/dwm/
-vim config.def.h 
-cp config.def.h config.h
-sudo make clean install
-cd Pictures/wallpapers/wallpapers/
-wal -i 0001.jpg 
-wal -i 0001.jpg 
-cd Pictures/wallpapers/wallpapers/
-wal -i 0001.jpg 
-picom 
-i3config
-///  1 exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
-  1 exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
-feh --bg-scale --randomize ~/Pictures/wallpapers/*
-i3config
-weather
-date
-sudo pacman -S blueman
-sudo systemctl start bluetooth.service
-vim .bashrc 
-vim .bash_aliases 
-source .bashrc
-cd .dotfiles/
-git
-bash gitScript.sh 
-inst pulseaudio-alsa
-inst pasystray
-sudo pacman -Runs pasystray
-yay -S volctl
-htop
-vim .bashrc
-cd .dotfiles/
-cd scripts/
-bash homemonitor.sh 
-lxqt-panel 
-pkill lxqt-panel 
-lxqt-panel 
-inst lxappearance
-uninst oxygen-icons
-sudo pacman -Sy arc-gtk-theme
-inst nerd-fonts
-pkill tint2
-i3config
-man surf
-uninst dwm
-lxqt-panel 
-sudo pacman -S oxygen-icons
-rm -rf /var/lib/pacman/db.lck 
-sudo rm -rf /var/lib/pacman/db.lck 
-sudo pacman -S oxygen-icons
-lxqt-panel 
-locate firefox
-xsetroot -xcf /usr/share/icons/whiteglass/cursors/left_ptr 32
-cd /usr/share/icons/
-cd default/
-vim index.theme 
-cd ..
-cd breeze
-vim index.theme 
-yay -Ss cursor
-pacman -Ss cursor
-inst xcursor-neutral
-pkill lxqt-panel
-tint2 &
-pkill tint2
-pkill tint2
-alsamixer
-source .bashrc
-strace -T -f -o bash.strace bash
-mv .bashrc .bashrc.bak
-lla
-mv .bashrc.bak .bashrc
-exit
-exit
-exit
-inst strace
-echo exit | strace bash -li
-echo exit | strace bash -li |& grep  '^open'
-shopt
-shopt | fzf
-echo exit | strace bash -li |& grep  '^open'
-cat /etc/profile
-cat /etc/profile.d/
-cd /etc/profile.d/
-source .bashrc
-source .bashrcexit
-exit
-exit
-strace --help
-strace -T
-strace -T bash
-strace -T -f bash 
-strace -T -f -o bash.strace bash 
-cat bash.strace 
-cat bash.strace | grep '^open'
-cat bash.strace |& grep '^open'
-echo exit | strace bash -Tli |& grep  '^open'
-echo exit | strace bash -li |& grep  '^open'
-echo exit
-pkill bash
-kill -9 -1
-vim .bashrc
-source .bashrc
-pacman -S powerline
-sudo pacman -S powerline
-uninst powerline
-vim .bashrc
-vim .bash_aliases 
-vim .vimrc 
-vim .bashrc
-kill -9 -1
-echo $SHELL
-inst zsh
-zsh
-echo $SHELL
 chsh -s /usr/bin/zsh suadmin
 chsh -s /usr/bin/zsh suadmin
 chsh -s /usr/bin/zsh
@@ -498,3 +378,123 @@ source .bashrc
 xrandr --output LVDS1 --brightness 0.8
 xrandr --output LVDS1 --brightness 0.7
 source .bashrc
+xrandr --output LVDS1 --brightness 0.8
+xrandr --output LVDS1 --brightness 0.5
+source .bashrc
+xrandr --output LVDS1 --brightness 1
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+mnt
+alias mnt='mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort'
+alias mnt='mount | awk -F' ' "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | egrep ^/dev/ | sort'
+alias mnt='mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort'
+alias mnt='mount | awk -F' ' "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | egrep ^/dev/ | sort'
+alias mnt='mount | awk -F" " "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | egrep ^/dev/ | sort'
+mnt
+mount | grep -E ^/dev | column -t
+mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort
+alias mnt = 'mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort'
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+mnt
+unalias mnt
+mnt
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+mnt
+time alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+cat .bash_aliases 
+alias brightness="xrandr --output VGA1 --brightness 0.8"
+alias lcmd='cat ~/.dotfiles/lwwcommands'
+alias lwwdir='cd ~/.dotfiles/'
+alias ll='ls --human-readable --size -1 --classify'
+alias lla='ls -A --human-readable --size -1 --classify'
+alias inst='sudo pacman -S'
+alias uninst='sudo pacman -Runs'
+alias pacclean='sudo pacman -Runs $(pacman -Qqdt)'
+alias pacsearch='pacman -Ss'
+alias fs='find ~ | fzf'
+alias paclist='pacman -Qq | fzf'
+alias fpkg='pacman -Qq | grep'
+alias i3config='vim ~/.config/i3/config'
+alias bashreload='source ~/.bashrc && echo Bash config reloaded'
+time alias fs='find ~ | fzf'
+time alias fs="find ~ | fzf"
+unalias fs
+time alias fs="find ~ | fzf"
+unalias *
+ll
+time alias fs="find ~ | fzf"
+vim .bash_aliases 
+cd .dotfiles/
+cd scripts/
+cd ..
+lla
+bash ./gitScript.sh 
+bash -v
+vim .bash_aliases 
+source .bashrc
+vim .bash_aliasses
+vim .bash_aliass
+vim .bash_aliases 
+vim .bash_aliases 
+vim .bash_aliases 
+alsamixer
+cd /proc/
+cat cpuinfo 
+yay -S proton
+pacman -S wine
+sudo pacman -S wine
+yay -S proton
+yay -S proton
+ps
+ps -eaf | code
+ps -eaf | grep code
+ps -eaf | grep gordon
+pkill steam
+ps -eaf | grep steam
+kill -9 -1
+source .bashrc
+brightness 
+vim .bash_aliases 
+vim .bash_aliases 
+pacman -Sy plasma-desktop
+vim .bashrc
+source .bashrc
+vim .bash_aliases 
+source .bashrc
+brightness 1
+brightness 0.8
+xrandr --output LVDS1 --brightness 1
+xrandr --output LVDS1 --brightness 0.5
+source .bashrc 
+brightness 
+source .bash
+source .bashrc
+brightness 
+xrandr --output LVDS1 --brightness 0.5
+kill -9 -1
+pkill steam
+nm-applet 
+networkctl 
+NetworkManager
+sudo NetworkManager
+inst plasma-nm
+uninst plasma-desktop
+pacclean 
+sudo updatedb
+locate plasma
+rm -rf /usr/share/plasma/
+sudo rm -rf /usr/share/plasma/
+sudo updatedb
+locate plasma
+locate plasma | less
+sudo pacman -Sy --reinstall dolphin
+sudo pacman -Sy dolphin --reinstall
+sudo pacman -Sy dolphin
+dolphin 
+kill -9 -1
+pkill picom
+pacman -R dolphin

@@ -4,7 +4,8 @@
 # .bash_alisasses
 #
 
-alias brightness='xrandr --output VGA1 --brightness 0.8'
+alias brightness="xrandr --output VGA1 --brightness"
+#alias brightness="xrandr --output LVDS1 --brightness"
 alias lcmd='cat ~/.dotfiles/lwwcommands'
 alias lwwdir='cd ~/.dotfiles/'
 alias ll='ls --human-readable --size -1 --classify'

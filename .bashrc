@@ -14,7 +14,7 @@ PS1='[\u@\h \W]\$ '
 
 
 #lww Aliases file
-#[ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
 
 if [ -e $HOME/.bash_aliases ];then
     source $HOME/.bash_aliases
