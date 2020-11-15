@@ -19,6 +19,7 @@ alias paclist='pacman -Qq | fzf'
 alias fpkg='pacman -Qq | grep'
 alias i3config='vim ~/.config/i3/config'
 alias bashreload='source ~/.bashrc && echo Bash config reloaded'
+alias rm='mv -t /root/MyTrash/'
 
 alias mv='mv -v'
 alias rm='rm -vi'
