@@ -1,17 +1,24 @@
 keycode 66 = Mode_switch
 keysym l = l L Right
+keysym i = i I Up 
 keysym k = k K Down 
 keysym j = j J Left 
-keysym u = u U Prior
-keysym h = h H Home
+
+
 keysym y = y Y Home
-keysym i = i I Up 
-keysym o = o O Next
 keysym p = p P End
+
+keysym o = o O Next
+keysym u = u U Prior
+
 keysym n = n N BackSpace
-keysym m = m M Delete
+keysym b = b B BackSpace
+
+keysym m = comma less Delete
+keysym v = v V Delete
+
 keysym q = q Q Escape
-keysym e = e E Return
+keysym x = x X Return
 keysym Tab = Tab ISO_Left_Tab Shift_L 
 keysym semicolon = semicolon colon colon
 keysym exclam = 1 exclam exclam
