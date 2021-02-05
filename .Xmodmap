@@ -14,7 +14,7 @@ keysym u = u U Prior
 keysym n = n N BackSpace
 keysym b = b B BackSpace
 
-keysym m = comma less Delete
+keysym m = m M Delete
 keysym v = v V Delete
 
 keysym q = q Q Escape
