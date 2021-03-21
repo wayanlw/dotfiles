@@ -1,5 +1,7 @@
+
 " Numbering
 set number "display line numbers
+nmap <leader>w :w!<cr>
 set relativenumber "display relative line numbers
 
 set mouse=a
@@ -16,75 +18,51 @@ nmap <silent> <leader><cr> :noh<cr>
 
 
 
+inoremap <special> jk <ESC>
+
+
+" my previous ijkl mapping -- not used anymore 
 "map i <Up>
 "map j <Left>
 "map k <Down>
 "noremap h i
 
-" tab command shortcuts
 
+" tab command shortcuts
 map <Tab> <C-W>w
 map <Bar> <C-W>n<C-W>H<C-W><Right>
 map -     <C-W>s<C-W><Down>
 
-
-" Fast saving
+" Fast saving and quitting
 nmap <leader>w :w!<cr>
+nmap <leader>q :q!<cr>
+nmap <leader>wq :wq!<cr>
 
-" :W sudo saves the file
-" (useful for handling the permission-denied error)
+" :W sudo saves the file " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
-
-" stop
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
-
-" Turn on the Wild menu
-set wildmenu
-
-"Always show current position
-set ruler
-"Always show cursor line
-set cursorline
-
-
-" Height of the command bar
-set cmdheight=1
-
-" A buffer becomes hidden when it is abandoned
-set hid
+set so=7 " Set 7 lines to the cursor - when moving vertically using j/k
+set wildmenu " Turn on the Wild menu
+set ruler "Always show current position
+set cursorline "Always show cursor line
+set cmdheight=1 " Height of the command bar
+set hid " A buffer becomes hidden when it is abandoned
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-
-"ignore the case when searching
-set ignorecase
-
-" When searching try to be smart about cases
-set smartcase
-
-" Highlight search results
-set hlsearch
-
-" Makes search act like search in modern browsers
-set incsearch
-
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
-
-" For regular expressions turn magic on
-set magic
-
-" Show matching brackets when text indicator is over them
-set showmatch
-" How many tenths of a second to blink when matching brackets
-set mat=2
+set ignorecase "ignore the case when searching
+set smartcase " When searching try to be smart about cases
+set hlsearch " Highlight search results
+set incsearch " Makes search act like search in modern browsers
+set lazyredraw " Don't redraw while executing macros (good performance config)
+set magic " For regular expressions turn magic on
+set showmatch " Show matching brackets when text indicator is over them
+set mat=2 " How many tenths of a second to blink when matching brackets
 
 " No annoying sound on errors
 set noerrorbells
@@ -92,51 +70,44 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Add a bit extra margin to the left
-set foldcolumn=1
+set foldcolumn=1 " Add a bit extra margin to the left
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable
+syntax enable " Enable syntax highlighting
 
-" " Enable 256 colors palette in Gnome Terminal
-" if $COLORTERM == 'gnome-terminal'
-"     set t_Co=256
-" endif
+" Enable 256 colors palette in Gnome Terminal
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
 
-" try
-"     colorscheme desert
-" catch
-" endtry
+try
+    colorscheme desert
+catch
+endtry
 
-" set background=dark
+set background=dark
 
-" " Set extra options when running in GUI mode
-" if has("gui_running")
-"     set guioptions-=T
-"     set guioptions-=e
-"     set t_Co=256
-"     set guitablabel=%M\ %t
-" endif
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guioptions-=T
+    set guioptions-=e
+    set t_Co=256
+    set guitablabel=%M\ %t
+endif
 
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+set encoding=utf8 " Set utf8 as standard encoding and en_US as the standard language
 
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
+set ffs=unix,dos,mac " Use Unix as the standard file type
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabs ;)
-set smarttab
+set expandtab " Use spaces instead of tabs
+set smarttab " Be smart when using tabs ;)
 
 " 1 tab == 4 spaces
 set shiftwidth=4
@@ -215,3 +186,23 @@ map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pluggins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }    "On-demand loading
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "Plugin outside ~/.vim/plugged with post-update hook
+Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'https://github.com/tpope/vim-surround'
+
+call plug#end()
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pluggins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+

@@ -1,76 +1,3 @@
-pkill lxpanel
-uninst lxpanel
-pacclean
-inst xfce4-panel
-inst perlpanel
-yay -S perlpanel-git
-inst cairo-dock
-pkill cairo-dock
-uninst cairo-dock
-inst xfce4-panel
-inst polybar
-pacman -Ss polybar
-pacman -Ss poly
-pacman -Ss poly |fzf
-inst polybar-git
-yay -S polybar-git
-locate polybar
-pkill xfce4-panel
-uninst xfce4-panel
-sudo pacman -Rns rxvt-unicode
-vim /etc/pacman.conf
-pacman -S steam
-inst steam
-sudo pacman -Sy
-inst steam
-lspci -v
-$ lspci -v | grep -A1 -e VGA -e 3D
-$ lspci -v | grep -A1 -e VGA 
-lspci -v | grep -A1 -e VGA -e 3D
-pacman -Ss xf86-video
-mnt
-lsblk
-cd /mnt/
-ls
-cd windows
-ls
-cd ..
-cd windows
-cd
-cd /mnt/windows2/
-l
-ll
-ls
-cd /windows10/
-ls
-cd 
-cd /
-ls
-cd windows10/
-lla
-cd 
-homemonitor.sh 
-cd /windows10/
-ls
-cd ..
-cd /mnt/
-ls
-cd windows
-ls
-lla
-cd 
-cd /mnt/
-lla
-mount
-mount -l
-ls -al /mnt/
-mount 
-lsblk
-cd /run/media/suadmin/
-ls
-cd A2EECDADEECD7A55/
-lla
-cd Windows/
 cd Fonts/
 cd ..
 mkdir /usr/share/fonts/WindowsFonts
@@ -498,3 +425,76 @@ sudop pacman -Runs steam
 sudo pacman -Runs steam
 pacman -Qen
 zsh
+i3-dump-log 
+i3-dump-log | head 10
+i3-dump-log | head -c 10
+i3-dump-log | head -l 10
+head --help
+i3-dump-log | head -n 10
+i3-dump-log | head -n 10,30
+i3-dump-log | head -n 30
+vim .i3/config 
+xmodmap .Xmodmap 
+vim .bashrc
+xmodmap -pke
+setxbmap
+setxkbmap 
+source .bashrc 
+cd .config/
+brave
+alacritty 
+cd ..
+rm -rf st-0.8.3
+rm -rf st-0.8.3.tar.gz 
+ls
+rm -rf dwm-6.2
+sudo pacman -Runs dwm
+cd .config/dmenu-recent/
+lla
+vim terminal
+vim terminal_hold 
+vim background 
+vim terminal
+ll
+lla
+cd 
+vim .bashrc 
+vim .bashrc 
+sudo pacman -Runs dwm
+sudo pacman -Syu dwm
+history
+history | grep dwm
+sudo updatedb
+locate dwm
+rm -rf /home/suadmin/dwm-6.2.tar.gz 
+lla
+sudo pacman -Runs openbox
+sudhh[Bo pacman -Qqdt
+pacclean 
+locate xsession
+sudo pacman -Runs bspwm LXDE openbox
+sudo pacman -Runs bspwm
+sudo pacman -Runs openbox
+locate openbox
+bash /usr/bin/opnbox
+cd /usr/bin
+sudo updatedb
+locate openbox
+cd /usr/bin/
+bash ./openbox
+sudo pacman -Sy brave
+sudo pacman -Runs chromium
+pacclean 
+sudo pacman -Runs brave
+yay -S brave
+acpi
+acpi -i -b
+upower
+upower -i
+chsh suadmin
+shell
+echo $SHELL
+chsh suadmin
+sudo chsh suadmin 
+sudo chsh suadmin 
+source .zshrc 

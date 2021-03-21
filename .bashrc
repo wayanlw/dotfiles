@@ -57,3 +57,5 @@ ex ()
 
 # temp alias for vimgolf 
 alias vimgolf='/home/suadmin/.gem/ruby/2.7.0/bin/vimgolf'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
