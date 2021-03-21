@@ -1,26 +1,50 @@
-#lww Aliases
-alias brightness="xrandr --output VGA1 --brightness "
-alias lcmd="cat ~/.dotfiles/lwwcommands"
-alias lwwdir="cd ~/.dotfiles/"
-alias ll="ls --human-readable --size -1 --classify"
-alias lla="ls -A --human-readable --size -1 --classify"
-alias inst="sudo pacman -S"
-alias fpkg="pacman -Qq | grep"
 
-#check weather
+
+#
+# .bash_alisasses
+#
+
+alias brightness="xrandr --output VGA1 --brightness"
+#alias brightness="xrandr --output LVDS1 --brightness"
+alias lcmd='cat ~/.dotfiles/lwwcommands'
+alias lwwdir='cd ~/.dotfiles/'
+alias ll='ls --human-readable --size -1 --classify'
+alias lla='ls -A --human-readable --size -1 --classify'
+alias inst='sudo pacman -S'
+alias uninst='sudo pacman -Runs'
+alias pacclean='sudo pacman -Runs $(pacman -Qqdt)'
+alias pacsearch='pacman -Ss'
+alias fs='find ~ | fzf'
+alias paclist='pacman -Qq | fzf'
+alias fpkg='pacman -Qq | grep'
+alias i3config='vim ~/.config/i3/config'
+alias bashreload='source ~/.bashrc && echo Bash config reloaded'
+alias rm='mv -t /root/MyTrash/'
+
+alias mv='mv -v'
+alias rm='rm -vi'
+alias cp='cp -v'
+
+alias du='du -sh *| sort -h'
+
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias grep='grep --color=auto'
+alias cd='cl'
+
+
+
+#---------------------------------check weather
 function weather(){ 
         [[ $1 = "" ]] && curl wttr.in/?FA || curl wttr.in/$1?0FT 
 }
 
-#check weather
+#---------------------------------heck weather
 function cheat(){ 
         [[ $1 = "" ]] && curl cheat.sh/ || curl cheat.sh/$1
 }
 
-# Reloads the bashrc file
-alias bashreload="source ~/.bashrc && echo Bash config reloaded"
 
-# Open nano and make backup of original file. Useful for config files and things you don't want to edit the original
+#---------------------------------Open nano and make backup of original file. Useful for config files and things you don't want to edit the original
 function vimbk() {
     echo "You are making a copy of $1 before you open it. Press enter to continue."
     read nul
@@ -28,6 +52,7 @@ function vimbk() {
     vim $1
 }
 
+<<<<<<< HEAD
 
 
 alias mv="mv -v"
@@ -49,6 +74,9 @@ alias grep="grep --color=auto"
 alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
 alias cd="cl"
 
+=======
+#---------------------------------  Prints the ls command when cd
+>>>>>>> 32771924106b92cef364cd079fdeddf5d328e408
 function cl() {
     DIR="$*";
         # if no DIR given, go home

@@ -10,17 +10,20 @@ PS1='[\u@\h \W]\$ '
 
 
 #add my scripts to the path
-PATH=$PATH:~/.dotfiles/scripts
+#PATH=$PATH:~/.dotfiles/scripts
 
 
 #lww Aliases file
 [ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
 
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bindings/bash/powerline.sh
+if [ -e $HOME/.bash_aliases ];then
+    source $HOME/.bash_aliases
+else 
+    ln -sf $HOME/.dotfiles/.bash_aliases 
+    $HOME/.bash_aliases && source $HOME/.bash_aliases
+fi
 
+<<<<<<< HEAD
 [[ -f ~/.xmodmap ]] && xmodmap ~/.xmodmap
 
 #
@@ -48,4 +51,12 @@ ex ()
   fi
 }
 
+=======
+#powerline-daemon -q
+#POWERLINE_BASH_CONTINUATION=1
+#POWERLINE_BASH_SELECT=1
+#. /usr/share/powerline/bindings/bash/powerline.sh
+>>>>>>> 32771924106b92cef364cd079fdeddf5d328e408
 
+# temp alias for vimgolf 
+alias vimgolf='/home/suadmin/.gem/ruby/2.7.0/bin/vimgolf'

