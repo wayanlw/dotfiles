@@ -52,8 +52,6 @@ function vimbk() {
     vim $1
 }
 
-<<<<<<< HEAD
-
 
 alias mv="mv -v"
 alias rm="rm -vi"
@@ -72,11 +70,9 @@ alias cdr='cd $(find / -maxdepth 4 -type d 2>/dev/null | ff)'
 
 alias grep="grep --color=auto"
 alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-alias cd="cl"
+#alias cd="cl"
 
-=======
 #---------------------------------  Prints the ls command when cd
->>>>>>> 32771924106b92cef364cd079fdeddf5d328e408
 function cl() {
     DIR="$*";
         # if no DIR given, go home

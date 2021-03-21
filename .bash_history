@@ -1,42 +1,3 @@
-timeshift
-timeshift --list-shapshots
-sudo timeshift --list-shapshots
-sudo timeshift --list-shapshots
-sudo timeshift --list
-zsh
-sudo pacman -Runs zsh
-paclist
-pacman -Runs zsh
-sudo pacman -Runs zsh
-sudo pacman -Rns zsh
-sudo pacman -Rns zsh-completions zsh
-listapps.sh 
-pacclean
-pacman -Qqdt
-uninst olive
-uninst menumaker
-paclist
-clear
-ls
-dd
-ds
-cd -
-ll
-ll
-lla
-du
-lwwdir 
-vim lwwcommands 
-inst xrvt-unicode
-pacman -Ss xrvt
-pacman -Ss rvt
-pacman -Ss
-pacman -Ss st
-pacman -Ss rxvt
-inst rxvt-unicode
-pacman -Ss dash-to-panel
-pacman -Ss dash
-inst lxpanel
 pkill lxpanel
 uninst lxpanel
 pacclean
@@ -498,3 +459,42 @@ ls
 pkill tint2
 pkill lxpanel
 lxpanel
+ls
+cd .dotfiles/
+ll
+lla
+cd .dotfiles/
+source .bashrc
+vim .bashrc 
+source .bashrc
+vim .bash_aliases 
+source .bashrc
+vim .basrc
+vim .bashrc
+source .bashrc
+cd .dotfiles/
+cd zshconfig/
+lla
+vim .zshrc 
+vim .bashrc
+ls -alt | grep bash
+lwwdir 
+vim .bashrcc
+vim .bashrc
+vim .vimrc
+c
+cd
+ls -alt 
+ls -alt | grep vim
+vim .vim
+lwwdir 
+ln -sf ~/.dotfiles/.vimrc ~/.vimrc
+cd 
+vim .vimrc
+sudo pacman -Syyu
+sudo pacman -Ss epic
+sudop pacman -Runs staem
+sudop pacman -Runs steam
+sudo pacman -Runs steam
+pacman -Qen
+zsh
