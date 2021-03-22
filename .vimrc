@@ -188,21 +188,84 @@ map <leader>sa zg
 map <leader>s? z=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Pluggins
+" => Plugin Section
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }    "On-demand loading
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "Plugin outside ~/.vim/plugged with post-update hook
-Plug 'https://github.com/kien/ctrlp.vim'
-Plug 'https://github.com/tpope/vim-surround'
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('C:\Users\auwwaya\AppData\Local\nvim\plugged')
+
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/fzf', { 'dir': 'C:\Users\auwwaya\.fzf', 'do': './install --all' }
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'https://github.com/tpope/vim-surround.git'
+Plug 'https://github.com/preservim/nerdcommenter.git'
+Plug 'https://github.com/bagrat/vim-buffet.git'
+Plug 'https://github.com/neoclide/coc.nvim'
+
+
+"Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+"
+"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+
 
 call plug#end()
 
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Pluggins
+" => Nerd Tree 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeWinPos = "right"
+let NERDTreeShowHidden=0
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark<Space>
+map <leader>nf :NERDTreeFind<cr>
+
+nmap <leader>n :NERDTreeToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree commenter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" <leader> cc will comment the selection or the line
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => FZF
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>f :FZF<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim-Buffet
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"Mappings for switching buffers
+nmap <leader>1 <Plug>BuffetSwitch(1)
+nmap <leader>2 <Plug>BuffetSwitch(2)
+nmap <leader>3 <Plug>BuffetSwitch(3)
+nmap <leader>4 <Plug>BuffetSwitch(4)
+nmap <leader>5 <Plug>BuffetSwitch(5)
+nmap <leader>6 <Plug>BuffetSwitch(6)
+nmap <leader>7 <Plug>BuffetSwitch(7)
+nmap <leader>8 <Plug>BuffetSwitch(8)
+nmap <leader>9 <Plug>BuffetSwitch(9)
+nmap <leader>0 <Plug>BuffetSwitch(10)
 
+"moving between tabs
+noremap <Tab> :bn<CR>
+noremap <S-Tab> :bp<CR>
+noremap <Leader><Tab> :Bw<CR>
+noremap <Leader><S-Tab> :Bw!<CR>
+noremap <C-t> :tabnew split<CR>
 
+" Note: Make sure the function is defined before `vim-buffet` is loaded.
+function! g:BuffetSetCustomColors()
+  hi! BuffetCurrentBuffer cterm=NONE ctermbg=5 ctermfg=8 guibg=#00FF00 guifg=#000000
+endfunction
