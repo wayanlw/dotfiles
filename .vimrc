@@ -1,7 +1,5 @@
-
 " Numbering
 set number "display line numbers
-nmap <leader>w :w!<cr>
 set relativenumber "display relative line numbers
 
 set mouse=a
@@ -10,23 +8,18 @@ set mouse=a
 set showmatch
 set mat=2
 
-"let mapleader = ","
 let mapleader = " "
 
 "Disable highlight when <leader><cr> is pressed
 nmap <silent> <leader><cr> :noh<cr>
 
 
-
-inoremap <special> jk <ESC>
-
-
-" my previous ijkl mapping -- not used anymore 
 "map i <Up>
 "map j <Left>
 "map k <Down>
 "noremap h i
 
+inoremap <special> jk <ESC>
 
 " tab command shortcuts
 map <Tab> <C-W>w
@@ -35,11 +28,30 @@ map -     <C-W>s<C-W><Down>
 
 " Fast saving and quitting
 nmap <leader>w :w!<cr>
-nmap <leader>q :q!<cr>
 nmap <leader>wq :wq!<cr>
+nmap <leader>q :q!<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Moving around, tabs, windows and buffers
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 " :W sudo saves the file " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+" Remap VIM 0 to first non-blank character
+map 0 ^
+
+" Move a line of text using ALT+[jk] or Command+[jk] on mac
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -51,7 +63,6 @@ set ruler "Always show current position
 set cursorline "Always show cursor line
 set cmdheight=1 " Height of the command bar
 set hid " A buffer becomes hidden when it is abandoned
-
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -131,14 +142,6 @@ set wrap "Wrap lines
 " vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 
 
 """"""""""""""""""""""""""""""
@@ -156,14 +159,7 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
-map 0 ^
 
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
@@ -219,7 +215,7 @@ call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Nerd Tree 
+" => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
@@ -235,6 +231,8 @@ nmap <leader>n :NERDTreeToggle<cr>
 " => Nerd Tree commenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " <leader> cc will comment the selection or the line
+
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
