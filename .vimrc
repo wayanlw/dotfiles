@@ -190,16 +190,16 @@ map <leader>s? z=
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('C:\Users\auwwaya\AppData\Local\nvim\plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/fzf', { 'dir': 'C:\Users\auwwaya\.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/preservim/nerdcommenter.git'
 Plug 'https://github.com/bagrat/vim-buffet.git'
-Plug 'https://github.com/neoclide/coc.nvim'
+"Plug 'https://github.com/neoclide/coc.nvim'
 
 
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'

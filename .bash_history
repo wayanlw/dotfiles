@@ -1,109 +1,3 @@
-cd Fonts/
-cd ..
-mkdir /usr/share/fonts/WindowsFonts
-sudo mkdir /usr/share/fonts/WindowsFonts
-cp Fonts/* /usr/share/fonts/WindowsFonts/
-sudo cp Fonts/* /usr/share/fonts/WindowsFonts/
-ls
-cd /usr/share/fonts/
-ls
-chmod 644 ./WindowsFonts/
-sudo chmod 644 ./WindowsFonts/
-fc-cache --force
-fc-cache --help
-fc-cache -fv
-steam
-bash norc
-bash --norc
-bash
-hostname
-echo $hostname
-echo $HOSTNAME
-vimgolf
-[ -e $HOME/.bash_aliases ] && source $HOME/.bash_al
-    iases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME
-    iases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME
-[ -e $HOME/.bash_aliases ] && source $HOME/.bash_al
-    iases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME
-[ -e $HOME/.bash_aliases ] && source $HOME/.bash_al
-[ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
-[ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
-strace
-stract --t bash
-stract -tt bash
-strace -tt bash
-strace -tt bash | grep access
-strace -tt -fo strace.log bash | grep access
-cat strace.log 
-cd /private
-script -t script.log 2>script.tim -c 'bash -x -c "
-    for ((i=3;i--;));do sleep .1;done
-
-    for ((i=2;i--;)) ;do
-        tar -cf /tmp/test.tar -C / bin
-        gzip /tmp/test.tar
-        rm /tmp/test.tar.gz
-    done
-"'
-ls -l script.*
-sudo updatedb
-sudo updatedb
-sudo updatedb
-strace -tt -fo strace.log bash | grep access
-strace -tt -fo strace.log bash
-sudo strace -tt -fo strace.log bash
-sudo -Rns bash-completion
-exit
-exit
-exit
-strace -tt
-strace -tt bash
-exit
-echo exit | strace bash -li |& grep '^open'
-echo exit | strace -tt bash -li |& grep '^open'
-echo exit | strace bash -li |& grep '^open'
-echo exit | strace bash -li |& grep '^open'
-sudo strace -tt -fo strace.log bash
-exit
-exit
-echo exit | strace bash -li |& grep '^open'
-exit
-exit
-exit
-exit
-exit
-exit
-exit
-echo exit | strace -tt bash -li |& grep '^open'
-echo exit | strace -tt -fo strace.log bash
-cat strace.log 
-cat strace.log | grep open
-echo exit | strace bash -li |& grep '^open'
-echo exit | strace -tt -fo strace.log bash -li
-cat strace.log | grep open
-cat .bash_history 
-cat strace.log | grep open
-echo exit | strace bash -li |& grep '^open'
-echo exit | strace -t bash -li |& grep '^open'
-echo exit | strace  bash -li |& grep '^open'
-echo exit | strace -tt -fo strace.log bash -li |& grep '^open'
-cat strace.log | grep open
-strace -tt -fo strace.log bash
-cat strace.log | grep open
-echo exit | strace bash -li |& grep '^open'
-exit
-echo exit | strace bash -li |& grep '^open'
-vim .bash_profile 
-vim .bashrc
-sourche .bashrc
-source .bashrc
-vim .bashrc
-exit
-exit
-bash -v
-vim .bash_aliases 
-vim .bashrc
-source .bashrc
 vim .bashrc
 source .bashrc
 vim .bashrc
@@ -498,3 +392,109 @@ chsh suadmin
 sudo chsh suadmin 
 sudo chsh suadmin 
 source .zshrc 
+inst brave
+sudo pacman -Sy brave
+pacman -Ss brave
+yay -S brave
+yay -S brave
+cd .dotfiles/
+git pull
+git remote -v
+git pull origin master
+git fetch
+git pull origin master
+git diff .bash_aliases
+git diff .bashrc
+gitdiff .config/i3/config 
+git diff .config/i3/config 
+cat .config/i3/config
+cat .config/i3/config | grep firefox
+git diff .config/i3/config 
+git pull --force
+git fetch
+git reset --hard origin/master
+git status
+git pull
+cd 
+ls -alt
+vim test
+[200~curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim~
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim~
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ls
+cd .vim/autoload/
+ls
+vim 
+vim 
+vim 
+ls
+cd C\:Usersauwwaya
+cd ..
+cd autoload/
+cd C\:Usersauwwaya.fzf/
+cd ..
+rm -rf C\:Usersauwwaya.fzf/
+vim
+ls
+cd C\:Usersauwwaya.fzf/
+ls
+cd ..
+rm -rv C\:Usersauwwaya*
+ls
+rm -rf C\:Usersauwwaya*
+ls
+ls
+cd ..
+ls
+cd 
+ls
+cd Backups
+cd ..
+rm -rf Backups
+sudo rm -rf Backups
+ls
+cd l
+cd 1
+lla
+cat 1
+rm -rf 1
+ls
+cd opt/
+ls
+ll
+cd ..
+rm -rf opt
+cd ipad
+ls
+ls
+lla
+cd ..
+rm -rf ipad
+cd Music/
+ls
+cd ..
+rm -rf Music/ Templates/ C\:UsersauwwayaAppDataLocalnvimplugged/
+ls
+cd Public/
+ls
+cd ..
+cd YoutubeVideos/
+ls
+cd New/
+ls
+ffmpeg VID_20200905_1
+   q
+vim .vimrc
+vim
+vim
+vim .vimrc
+vim
+vim .vimrc
+vim .vimrc
+vim .vimrc
+chsh suadmin
+vim .vimrc
+vim .bashrc
+echo $SHELL
+chsh
+kill -9 -1
