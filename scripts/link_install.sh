@@ -31,7 +31,7 @@ done
 ln -sf $HOME/.dotfiles/.Xresources $HOME/.Xresources
 ln -sf $HOME/.dotfiles/.vimrc $HOME/.vimrc
 ln -sf $HOME/.dotfiles/.vim $HOME/.vimrc
-ln -sf $HOME/.dotfiles/.xmodmap $HOME/.xmodmap
+ln -sf $HOME/.dotfiles/.Xmodmap $HOME/.Xmodmap
 
 
 echo "Linking the .fonts directory"
