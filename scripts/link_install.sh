@@ -28,10 +28,12 @@ done
 
 
 #linking other dotfiles
-ln -sf $HOME/.dotfiles/.Xresources $HOME/.Xresources
-ln -sf $HOME/.dotfiles/.vimrc $HOME/.vimrc
-ln -sf $HOME/.dotfiles/.vim $HOME/.vimrc
-ln -sf $HOME/.dotfiles/.Xmodmap $HOME/.Xmodmap
+echo "Linking dot files"
+[[ -f $HOME/.dotfiles/.Xresources ]] && ln -sf $HOME/.dotfiles/.Xresources $HOME/.Xresources && echo "####### .Xresources linked" || echo ".Xresources not available in ~/.dotfiles"
+[[ -f $HOME/.dotfiles/.vimrc ]] && ln -sf $HOME/.dotfiles/.vimrc $HOME/.vimrc && echo "####### .vimrc linked" || echo ".vimrc not available in ~/.dotfiles"
+[[ -f $HOME/.dotfiles/.Xresources ]] && ln -sf $HOME/.dotfiles/.Xmodmap $HOME/.Xmodmap && echo "####### .Xmodmap linked" || echo ".Xmodmap not available in ~/.dotfiles"
+
+
 
 
 echo "Linking the .fonts directory"
@@ -44,5 +46,4 @@ source ~/.bashrc
 
 #adding i3 to xinitrc
 echo "exec i3" >> $HOME/.xinitrc
-
 
