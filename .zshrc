@@ -107,6 +107,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #PATH=$PATH:$HOME/.dotfiles/scripts
 
-#[ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
+[[ -e $HOME/.bash_aliases ]] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
 
-#[ -f $HOME/.Xmodmap ] && xmodmap $HOME/.Xmodmap
+[[ -f $HOME/.Xmodmap ]] && xmodmap $HOME/.Xmodmap
