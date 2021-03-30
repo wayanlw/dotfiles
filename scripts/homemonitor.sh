@@ -39,7 +39,7 @@
     }
 
     MonitorSetup(){
-        PS3="Selet the monitor setup?"  
+        PS3="Select the monitor setup?"  
         options=("Laptop" "MultiMon" "Quit")
         select opt in "${options[@]}"
         do

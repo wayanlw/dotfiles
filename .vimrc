@@ -94,12 +94,11 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
+
 try
-    colorscheme desert
-catch
+    colorscheme desert 
 endtry
 
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -200,6 +199,7 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/preservim/nerdcommenter.git'
 Plug 'https://github.com/bagrat/vim-buffet.git'
 "Plug 'https://github.com/neoclide/coc.nvim'
+Plug 'vim-airline/vim-airline'
 
 
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -236,6 +236,10 @@ nmap <leader>n :NERDTreeToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " <leader> cc will comment the selection or the line
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Airline 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
 
 
 
