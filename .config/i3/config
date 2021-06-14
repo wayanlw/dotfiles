@@ -222,13 +222,13 @@ new_window 1pixel
 # ---- windows gaps ------##
 
 #default_floating_border pixel 3 
-#gaps inner 5
-#gaps outer 0
+gaps inner 5
+gaps outer 0
 
 
 #
-#bindsym $mod+g			gaps inner current plus 5
-#bindsym $mod+Shift+g		gaps inner current minus 5
+bindsym $mod+g			gaps inner current plus 5
+bindsym $mod+Shift+g		gaps inner current minus 5
 
 # ---- Running Rofi ---------##
 bindsym $mod+z exec --no-startup-id rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons

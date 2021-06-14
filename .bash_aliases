@@ -14,8 +14,9 @@ alias inst='sudo pacman -S'
 alias uninst='sudo pacman -Runs'
 alias pacclean='sudo pacman -Runs $(pacman -Qqdt)'
 alias pacsearch='pacman -Ss'
-alias fs='find ~ | fzf'
 alias paclist='pacman -Qq | fzf'
+alias paco='ls -ltr /var/lib/pacman/local'
+alias fs='find ~ | fzf'
 alias fpkg='pacman -Qq | grep'
 alias i3config='vim ~/.config/i3/config'
 alias bashreload='source ~/.bashrc && echo Bash config reloaded'
@@ -31,6 +32,12 @@ alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | eg
 alias grep='grep --color=auto'
 alias cd='cl'
 
+
+#--------------------------------- find with locate
+function fnd(){
+    locate $1 | fzf
+
+}
 
 
 #---------------------------------check weather
@@ -84,7 +91,7 @@ function cl() {
         ls -F --color=auto
 }
 
-funcion cpcd(){
+function cpcd(){
     if [ -d "$2" ]; then
         ### Take action if $DIR exists ###
         echo "${2} exists and copying now"

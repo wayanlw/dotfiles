@@ -1,156 +1,3 @@
-vim .bashrc
-source .bashrc
-vim .bashrc
-source .bashrc
-echo exit | strace bash -li |& grep '^open'
-vim .bash_prori
-vim .bash_profile 
-vim .bashrc
-echo exit | strace bash -li |& grep '^open'
-vim .bash_aliases 
-echo exit | bash -v
-echo exit | bash -v
-bash -v
-source .bashrc
-bash -v
-ls
-source
-source bashrc
-source .bashrc
-xrandr --output LVDS1 --brightness 0.8
-xrandr --output LVDS1 --brightness 0.7
-source .bashrc
-xrandr --output LVDS1 --brightness 0.8
-xrandr --output LVDS1 --brightness 0.5
-source .bashrc
-xrandr --output LVDS1 --brightness 1
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-mnt
-alias mnt='mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort'
-alias mnt='mount | awk -F' ' "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | egrep ^/dev/ | sort'
-alias mnt='mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort'
-alias mnt='mount | awk -F' ' "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | egrep ^/dev/ | sort'
-alias mnt='mount | awk -F" " "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | egrep ^/dev/ | sort'
-mnt
-mount | grep -E ^/dev | column -t
-mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort
-alias mnt = 'mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort'
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-mnt
-unalias mnt
-mnt
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-mnt
-time alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-cat .bash_aliases 
-alias brightness="xrandr --output VGA1 --brightness 0.8"
-alias lcmd='cat ~/.dotfiles/lwwcommands'
-alias lwwdir='cd ~/.dotfiles/'
-alias ll='ls --human-readable --size -1 --classify'
-alias lla='ls -A --human-readable --size -1 --classify'
-alias inst='sudo pacman -S'
-alias uninst='sudo pacman -Runs'
-alias pacclean='sudo pacman -Runs $(pacman -Qqdt)'
-alias pacsearch='pacman -Ss'
-alias fs='find ~ | fzf'
-alias paclist='pacman -Qq | fzf'
-alias fpkg='pacman -Qq | grep'
-alias i3config='vim ~/.config/i3/config'
-alias bashreload='source ~/.bashrc && echo Bash config reloaded'
-time alias fs='find ~ | fzf'
-time alias fs="find ~ | fzf"
-unalias fs
-time alias fs="find ~ | fzf"
-unalias *
-ll
-time alias fs="find ~ | fzf"
-vim .bash_aliases 
-cd .dotfiles/
-cd scripts/
-cd ..
-lla
-bash ./gitScript.sh 
-bash -v
-vim .bash_aliases 
-source .bashrc
-vim .bash_aliasses
-vim .bash_aliass
-vim .bash_aliases 
-vim .bash_aliases 
-vim .bash_aliases 
-alsamixer
-cd /proc/
-cat cpuinfo 
-yay -S proton
-pacman -S wine
-sudo pacman -S wine
-yay -S proton
-yay -S proton
-ps
-ps -eaf | code
-ps -eaf | grep code
-ps -eaf | grep gordon
-pkill steam
-ps -eaf | grep steam
-kill -9 -1
-source .bashrc
-brightness 
-vim .bash_aliases 
-vim .bash_aliases 
-pacman -Sy plasma-desktop
-vim .bashrc
-source .bashrc
-vim .bash_aliases 
-source .bashrc
-brightness 1
-brightness 0.8
-xrandr --output LVDS1 --brightness 1
-xrandr --output LVDS1 --brightness 0.5
-source .bashrc 
-brightness 
-source .bash
-source .bashrc
-brightness 
-xrandr --output LVDS1 --brightness 0.5
-kill -9 -1
-pkill steam
-nm-applet 
-networkctl 
-NetworkManager
-sudo NetworkManager
-inst plasma-nm
-uninst plasma-desktop
-pacclean 
-sudo updatedb
-locate plasma
-rm -rf /usr/share/plasma/
-sudo rm -rf /usr/share/plasma/
-sudo updatedb
-locate plasma
-locate plasma | less
-sudo pacman -Sy --reinstall dolphin
-sudo pacman -Sy dolphin --reinstall
-sudo pacman -Sy dolphin
-dolphin 
-kill -9 -1
-pkill picom
-pacman -R dolphin
-htop
-cd .dotfiles/
-git pull
-git config pull.rebase true
-git pull
-git config pull.ff only
-git pull
-git fetch
-git status
-git pull
-git stash
 git status
 git pull
 git status
@@ -497,4 +344,157 @@ vim .vimrc
 vim .bashrc
 echo $SHELL
 chsh
+kill -9 -1
+sudoers
+sudo
+sudo pacman -Sy
+vim sudoers
+su -
+sudo pacman -S
+alias inst="sudo pacman -S"
+inst git
+git clone https://github.com/wayanlw/.dotfiles
+cd .dotfiles/
+ls
+cd scripts/
+ls
+vim link_install.sh 
+vim lwwappslist.txt 
+vim link_install.sh 
+./link_install.sh 
+vim .bash_aliases 
+pacman -S paru
+sudo pacman -S pary
+sudo pacman -S paru
+
+inst brave
+vim .bash_aliases 
+vim .config/i3/config 
+vim .config/i3/config 
+pacman -Ss brave
+sudo pacman -S --needed base-devel
+git clone https://aur/archlinux.org/paru.git
+git clone https://aur.archlinux.org/paru.git
+cd paru
+mkpkg -si
+makepkg -si
+pary -S brave
+paru -S brave
+brave
+paru -S brave
+paru -S brave
+paru -Sy brave
+sudo pacman -Sy dmenu
+paru -Ss dmenu
+[200~curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim~
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim~
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim
+cd
+rm -rf paru
+ls
+paru 
+paru --help
+paru -c
+paru -c
+paru --help
+pacman -S altab
+sudo pacman -S altab
+paru pacman -S altab
+alttab
+paru -S alttab
+paru -Syy alttab
+paru -Ss alt
+paru -Ss alttab
+paru -Ss alttab-git
+paru -S alttab-git
+sudo vim /etc/paru.conf 
+paru -Ss test
+sudo vim /etc/paru.conf 
+paru -Ss test
+sudo vim /etc/paru.conf 
+paru -Ss test
+paru --help | grep color
+paru --help
+sudo vim /etc/paru.conf 
+paru --help
+paru -Ss test
+man paru
+sudo vim /etc/paru.conf 
+vim /etc/pacman.conf 
+paru -Ss test
+cp [200~curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+cd .config/
+mkdir alacritty
+cp /usr/share/doc/alacritty/example/alacritty.yml ./alacritty/
+ls
+cd alacritty/
+ls
+vim alacritty.yml 
+ls
+ls
+arandr 
+inst arandr
+inst lxpanel
+ls
+vim .config/alacritty/
+vim .config/alacritty/
+inst vscode
+inst geany
+.
+ls
+cd .config/alacritty/
+ls
+geany alacritty.yml 
+inst feh
+git clone https://gitlab.com/dwt1/wallpapers.git
+inst lxpolkit
+vim /etc/pacman.
+vim /etc/pacman.conf 
+ls
+mv wallpapers/ Pictures/
+ls
+cd Pictures/
+ls
+inst lxpolkit
+paru lxpolkit
+pary -Ss lxpolkit
+paru -Ss lxpolkit
+paru -S lxpolkit-git
+paru -S lxpolkit-git
+pacman -Ss lxpolkit
+pacman -Ss polkit
+pacman -S pamac
+sudo pacman -S pamac
+inst rofi
+vim .config/i3/config 
+inst htop
+htop
+inst pamac
+pacs 
+cat .bash_aliases 
+ls
+cl
+cl Downloads/
+weather
+pacclean 
+cat .bash_aliases 
+cd ..
+cd ..
+cat .bash_aliases 
+cd suadmin/
+cat .bash_aliases 
+fs
+fs ma 
+fs man
+fs D
+source .bashrc 
+lwwdir 
+inst zsh
+chsh 
+zsh
+sudo chsh suadmin
+grep zsh /etc/shells~
+grep zsh /etc/shells
+chsh -s $(which zsh)
 kill -9 -1
