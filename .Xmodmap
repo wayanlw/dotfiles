@@ -14,7 +14,7 @@ keysym u = u U Prior
 keysym n = n N BackSpace
 keysym b = b B BackSpace
 
-keysym m = m M Delete
+keysym comma = comma less Delete
 keysym v = v V Delete
 
 keysym q = q Q Escape
@@ -34,3 +34,6 @@ keysym slash = slash question Return
 !
 !! Set mod3 to capslock
 !add mod3 = Hyper_L
+!-------------------instructions
+!to list all the keys available
+!xmodmap -pke | fzf
