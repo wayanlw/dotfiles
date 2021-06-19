@@ -41,7 +41,10 @@ pacman -S --noconfirm  \
 		os-prober \
 		ntfs-3g \
 		mlocate \
-		git
+		git \
+		xdg-user-dirs \
+		xdg-utils \
+		arandr
 
 #install yay	
 pacman -S --needed git base-devel
@@ -58,17 +61,19 @@ pacman -S --noconfirm --needed xf86-video-vesa
 		
 grub-install --target=i386-pc /dev/sdX # replace sdx with your disk name, not the partition
 grub-mkconfig -o /boot/grub/grub.cfg
+echo "GRUB_DISABLE_OS_PROBER=false" >> etc/default/grub
+updat-grub
 
 useradd -mG wheel suadmin
-echo suadmin:password | chpasswd
-usermod -aG libvert suadmin
+echo suadmin:laka | chpasswd
+#usermod -aG libvert suadmin
 echo "suadmin ALL=(ALL) ALL" >> /etc/sudoers.d/suadmin
 
 printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m"
 	
 		
-pacman -S --noconfirm --needed  \
-		grub \		networkmanager \		network-manager-applet \		dialog \		wpa_supplicant \		mtools \		dosfstools \		reflector \		base-devel \		linux-headers \		avahi \		xdg-user-dirs \		xdg-utils \		gvfs \		gvfs-smb \		nfs-utils \		inetutils \		dnsutils \		bluez \		bluez-utils \		cups \		hplip \		alsa-utils \		pulseaudio \		bash-completion \		openssh \		rsync \		reflector \		acpi \		acpi_call \		tlp \		virt-manager \		qemu \		qemu-arch-extra \		edk2-ovmf \		bridge-utils \		dnsmasq \		vde2 \		openbsd-netcat \		iptables-nft \		ipset \		firewalld \		flatpak \		sof-firmware \		nss-mdns \		acpid \		os-prober \		ntfs-3g \		terminus-font
+#pacman -S --noconfirm --needed  \
+		#grub \		#networkmanager \		#network-manager-applet \		#dialog \		#wpa_supplicant \		#mtools \		#dosfstools \		#reflector \		#base-devel \		#linux-headers \		#avahi \		#xdg-user-dirs \		#xdg-utils \		#gvfs \		#gvfs-smb \		#nfs-utils \		#inetutils \		#dnsutils \		#bluez \		#bluez-utils \		#cups \		#hplip \		#alsa-utils \		#pulseaudio \		#bash-completion \		#openssh \		#rsync \		#reflector \		#acpi \		#acpi_call \		#tlp \		#virt-manager \		#qemu \		#qemu-arch-extra \		#edk2-ovmf \		#bridge-utils \		#dnsmasq \		#vde2 \		#openbsd-netcat \		#iptables-nft \		#ipset \		#firewalld \		#flatpak \		#sof-firmware \		#nss-mdns \		#acpid \		#os-prober \		#ntfs-3g \		#terminus-font
 
 systemctl enable NetworkManager
 systemctl enable bluetooth

@@ -21,11 +21,13 @@ sudo pacman -S --noconfirm --needed \
 		rofi \
 		htop \
 		chromium \
-		ttf-roboto\
-		tex-gyre-fonts\
-		ttf-ubuntu-font-family\
-		ttf-anonymous-pro\
-		ttf-cascadia-code\
+		ttf-roboto \
+		tex-gyre-fonts \
+		ttf-ubuntu-font-family \
+		ttf-anonymous-pro \
+		ttf-cascadia-code \
+		xdg-user-dirs \ 
+		xdg-utils
 		
 #yay -S --noconfirm \
 #		autokey-gtk \
