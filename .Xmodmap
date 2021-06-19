@@ -38,3 +38,5 @@ keysym slash = slash question Return
 !-------------------instructions
 !to list all the keys available
 !xmodmap -pke | fzf
+!to reset the keymap
+!setxkbmap
