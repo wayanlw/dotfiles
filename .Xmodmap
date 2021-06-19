@@ -24,6 +24,7 @@ keysym semicolon = semicolon colon colon
 keysym exclam = 1 exclam exclam
 keysym slash = slash question Return
 
+!pointer = 1 2 3 4 5 6 7 5 6 10 11 12
 ! ---------- To replace the capslock key with hyper key --------------
 !! Unmap capslock
 !clear Lock

@@ -1,0 +1,23 @@
+# Reload functions
+# for this to work the system should have xdotool installed. sudo pacman -S xdotool
+super + Escape
+	"$XDG_CONFIG_HOME"/sxhkd/functions
+
+super + r
+    pkill sxhkd && sxhkd &
+
+alt + shift + 1
+    /bin/xdotool getactivewindow windowsize 100% 93% windowmove 0 0
+
+alt + shift + 2
+    /bin/xdotool getactivewindow windowsize 50% 93% windowmove 0 0
+
+alt + shift + 3
+    /bin/xdotool getactivewindow windowsize 50% 93% windowmove 50% 0
+
+alt + shift + q
+#    xdotool windowkill `xdotool getactivewindow`
+    /bin/xdotool getactivewindow windowkill
+
+alt + c
+    xdotool key --delay 0 --clearmodifiers "ctrl+c"
