@@ -27,7 +27,8 @@ sudo pacman -S --noconfirm --needed \
 		ttf-anonymous-pro \
 		ttf-cascadia-code \
 		xdg-user-dirs \
-		xdg-utils
+		xdg-utils \
+		fzf
 		
 #yay -S --noconfirm \
 #		autokey-gtk \

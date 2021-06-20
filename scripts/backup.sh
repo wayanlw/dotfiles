@@ -10,7 +10,7 @@ then
 	echo "Moving ...."
 	[ -d ~/lwwbackups ] || mkdir ~/lwwbackups
 
-	subs=`ls -a ~ | grep .bash`
+	subs=$(ls -a ~ | grep .bash)
 	echo $subs
 	for i in $subs ; do
 		cp ~/$i ~/lwwbackups/$i
@@ -21,9 +21,8 @@ then
 fi
 
 
-
 #delete files older than x minutes 
-echo "Your lwwbackup folder contains `ls -a | wc -l` files. "
+echo "Your lwwbackup folder contains $(ls -a | wc -l) files. "
 read -p "Do you want to delete some files? [y/N]:  " -n 1 -r rep1 
 echo
 if [[ $rep1 =~ ^[Yy]$ ]]

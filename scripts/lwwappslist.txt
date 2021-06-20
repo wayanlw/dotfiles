@@ -1,11 +1,17 @@
+
+
+alacritty
 alsa-plugins
 alsa-utils
+alttab-git
 arandr
 curl
 dmenu
 dolphin
-firefox
 feh
+firefox
+fzf
+geany
 i3
 i3-gaps
 i3blocks
@@ -14,6 +20,7 @@ i3status
 man
 mlocate
 mobile-broadband-provider-info
+mpv
 networkmanager
 noto-fonts
 p7zip
@@ -26,19 +33,12 @@ rofi
 rsync
 run-parts
 sudo
-subl
 sxhkd
 sxiv
+tint2
 tree
-terminator
 vim
 wget
 which
 xorg-server
 xorg-xinit
-#powerline related
-powerline
-powerline-vim
-powerline-fonts
-tint2
-alttab-git
