@@ -31,9 +31,7 @@ done
 echo "Linking dot files"
 [[ -f $HOME/.dotfiles/.Xresources ]] && ln -sf $HOME/.dotfiles/.Xresources $HOME/.Xresources && echo "####### .Xresources linked" || echo ".Xresources not available in ~/.dotfiles"
 [[ -f $HOME/.dotfiles/.vimrc ]] && ln -sf $HOME/.dotfiles/.vimrc $HOME/.vimrc && echo "####### .vimrc linked" || echo ".vimrc not available in ~/.dotfiles"
-[[ -f $HOME/.dotfiles/.Xresources ]] && ln -sf $HOME/.dotfiles/.Xmodmap $HOME/.Xmodmap && echo "####### .Xmodmap linked" || echo ".Xmodmap not available in ~/.dotfiles"
-
-
+[[ -f $HOME/.dotfiles/.Xmodmap ]] && ln -sf $HOME/.dotfiles/.Xmodmap $HOME/.Xmodmap && echo "####### .Xmodmap linked" || echo ".Xmodmap not available in ~/.dotfiles"
 
 
 echo "Linking the .fonts directory"
