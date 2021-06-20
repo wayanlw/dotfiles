@@ -5,7 +5,6 @@ hwclock --systohc
 sed -i '177s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
-echo "KEYMAP=de_CH-latin1" >> /etc/vconsole.conf
 echo "arch" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
@@ -19,7 +18,7 @@ sudo hwclock --systohc
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
 
-pacman -S --noconfirm  \
+pacman -S --noconfirm  --needed \
 		grub \
 		networkmanager \
 		network-manager-applet \
@@ -65,7 +64,7 @@ echo "GRUB_DISABLE_OS_PROBER=false" >> etc/default/grub
 updat-grub
 
 useradd -mG wheel suadmin
-echo suadmin:laka | chpasswd
+echo suadmin:password | chpasswd
 #usermod -aG libvert suadmin
 echo "suadmin ALL=(ALL) ALL" >> /etc/sudoers.d/suadmin
 
@@ -73,7 +72,55 @@ printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m"
 	
 		
 #pacman -S --noconfirm --needed  \
-		#grub \		#networkmanager \		#network-manager-applet \		#dialog \		#wpa_supplicant \		#mtools \		#dosfstools \		#reflector \		#base-devel \		#linux-headers \		#avahi \		#xdg-user-dirs \		#xdg-utils \		#gvfs \		#gvfs-smb \		#nfs-utils \		#inetutils \		#dnsutils \		#bluez \		#bluez-utils \		#cups \		#hplip \		#alsa-utils \		#pulseaudio \		#bash-completion \		#openssh \		#rsync \		#reflector \		#acpi \		#acpi_call \		#tlp \		#virt-manager \		#qemu \		#qemu-arch-extra \		#edk2-ovmf \		#bridge-utils \		#dnsmasq \		#vde2 \		#openbsd-netcat \		#iptables-nft \		#ipset \		#firewalld \		#flatpak \		#sof-firmware \		#nss-mdns \		#acpid \		#os-prober \		#ntfs-3g \		#terminus-font
+		#grub \
+		#networkmanager \
+		#network-manager-applet \
+		#dialog \
+		#wpa_supplicant \
+		#mtools \
+		#dosfstools \
+		#reflector \
+		#base-devel \
+		#linux-headers \
+		#avahi \
+		#xdg-user-dirs \
+		#xdg-utils \
+		#gvfs \
+		#gvfs-smb \
+		#nfs-utils \
+		#inetutils \
+		#dnsutils \
+		#bluez \
+		#bluez-utils \
+		#cups \
+		#hplip \
+		#alsa-utils \
+		#pulseaudio \
+		#bash-completion \
+		#openssh \
+		#rsync \
+		#reflector \
+		#acpi \
+		#acpi_call \
+		#tlp \
+		#virt-manager \
+		#qemu \
+		#qemu-arch-extra \
+		#edk2-ovmf \
+		#bridge-utils \
+		#dnsmasq \
+		#vde2 \
+		#openbsd-netcat \
+		#iptables-nft \
+		#ipset \
+		#firewalld \
+		#flatpak \
+		#sof-firmware \
+		#nss-mdns \
+		#acpid \
+		#os-prober \
+		#ntfs-3g \
+		#terminus-font
 
 systemctl enable NetworkManager
 systemctl enable bluetooth
