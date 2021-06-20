@@ -26,7 +26,7 @@ sudo pacman -S --noconfirm --needed \
 		ttf-ubuntu-font-family \
 		ttf-anonymous-pro \
 		ttf-cascadia-code \
-		xdg-user-dirs \ 
+		xdg-user-dirs \
 		xdg-utils
 		
 #yay -S --noconfirm \
