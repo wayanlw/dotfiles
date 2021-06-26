@@ -1,3 +1,5 @@
+# Replaces the CapsLock key with the hyper key. 
+# Then it can be used in combination with other keys for remapping via AutoKey
 
 clear Lock
 remove mod4 = Hyper_L
