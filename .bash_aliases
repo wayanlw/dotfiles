@@ -6,7 +6,7 @@
 
 alias brightness="xrandr --output VGA1 --brightness"
 #alias brightness="xrandr --output LVDS1 --brightness"
-alias lcmd='cat $HOME/.dotfiles/lwwcommands'
+alias lcmd="cat $HOME/.bash_aliases| grep alias | grep -v '^#' | sed  's/^\w*\ *//'"
 alias lwwdir='cd $HOME/.dotfiles/'
 alias ll='ls --human-readable --size -1 --classify'
 alias lla='ls -A --human-readable --size -1 --classify'
