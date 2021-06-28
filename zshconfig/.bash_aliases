@@ -1,1 +1,0 @@
-/home/suadmin/.dotfiles/.bash_aliases

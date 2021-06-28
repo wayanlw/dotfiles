@@ -6,8 +6,8 @@
 
 alias brightness="xrandr --output VGA1 --brightness"
 #alias brightness="xrandr --output LVDS1 --brightness"
-alias lcmd='cat ~/.dotfiles/lwwcommands'
-alias lwwdir='cd ~/.dotfiles/'
+alias lcmd='cat $HOME/.dotfiles/lwwcommands'
+alias lwwdir='cd $HOME/.dotfiles/'
 alias ll='ls --human-readable --size -1 --classify'
 alias lla='ls -A --human-readable --size -1 --classify'
 alias inst='sudo pacman -S'
@@ -26,27 +26,44 @@ alias mv='mv -v'
 alias rm='rm -vi'
 alias cp='cp -v'
 
+
+alias more=less
 alias du='du -sh *| sort -h'
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+
 
 alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
 alias grep='grep --color=auto'
 alias cd='cl'
 
 
+alias i3config='vim ~/.config/i3/config'
+alias vif='vim $(find . -maxdepth 4 -type f | ff)'
+alias ff='fzf --height 50% -m --layout=reverse --border'
+alias cdf='cd $(find . -maxdepth 4 -type d 2>/dev/null | ff)'
+alias cdr='cd $(find / -maxdepth 4 -type d 2>/dev/null | ff)'
+
+alias grep="grep --color=auto"
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+#alias cd="cl"
+
+# ---------------------------------------------------------------------------- #
+#                                   FUNCTIONS                                  #
+# ---------------------------------------------------------------------------- #
+
 #--------------------------------- find with locate
 function fnd(){
     locate $1 | fzf
-
 }
 
-
 #---------------------------------check weather
-function weather(){ 
-        [[ $1 = "" ]] && curl wttr.in/?FA || curl wttr.in/$1?0FT 
+function weather(){
+        [[ $1 = "" ]] && curl wttr.in/?FA || curl wttr.in/$1?0FT
 }
 
 #---------------------------------heck weather
-function cheat(){ 
+function cheat(){
         [[ $1 = "" ]] && curl cheat.sh/ || curl cheat.sh/$1
 }
 
@@ -60,25 +77,6 @@ function vimbk() {
 }
 
 
-alias mv="mv -v"
-alias rm="rm -vi"
-alias cp="cp -vi"
-alias more=less
-alias du="du -sh *| sort -h"
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-
-
-alias i3config='vim ~/.config/i3/config'
-alias vif='vim $(find . -maxdepth 4 -type f | ff)'
-alias ff='fzf --height 50% -m --layout=reverse --border'
-alias cdf='cd $(find . -maxdepth 4 -type d 2>/dev/null | ff)'
-alias cdr='cd $(find / -maxdepth 4 -type d 2>/dev/null | ff)'
-
-alias grep="grep --color=auto"
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-#alias cd="cl"
-
 #---------------------------------  Prints the ls command when cd
 function cl() {
     DIR="$*";
@@ -90,6 +88,7 @@ function cl() {
     # use your preferred ls command
         ls -F --color=auto
 }
+
 
 function cpcd(){
     if [ -d "$2" ]; then
