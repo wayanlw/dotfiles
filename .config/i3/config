@@ -103,14 +103,14 @@ bindsym $mod+Return exec --no-startup-id alacritty
 
 
 # --------------- kill window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c kill
 
 # --------------- dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -l 15
+bindsym $mod+z exec --no-startup-id dmenu_run -i -l 15
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop    # this only displays the startmenu items
 
 # --------------- rofi
-bindsym $mod+z exec --no-startup-id rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
+bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 bindsym $mod+q exec --no-startup-id rofi -show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 
 
@@ -294,7 +294,7 @@ bindsym $mod+Ctrl+j workspace prev
 # ---------------------------------------------------------------------------- #
 
 # ----------reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+q reload
 
 # ----------restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
@@ -389,12 +389,12 @@ bindsym button3 floating toggle
 #                  LAUNCHER : keybindings. mod+o then the key                  #
 
 # ---------------------------------------------------------------------------- #
-set $mode_launcher Launch: [c]hromium [d]olphin
+set $mode_launcher Launch: [b]rowser [f]ileManager
 bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
 
-    bindsym c exec --no-startup-id chromium ; mode "default"
-    bindsym d exec --no-startup-id dolphin; mode "default"
+    bindsym b exec --no-startup-id brave ; mode "default"
+    bindsym f exec --no-startup-id pcmanfm; mode "default"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
