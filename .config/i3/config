@@ -110,7 +110,7 @@ bindsym $mod+Shift+Return exec $term -e tmux
 
 # --------------- kill window
 bindsym $mod+Shift+c kill
-bindsym $mod+$ctrl+c focus parent,kill  #kill entire workspace
+bindsym $mod+$ctrl+c focus parent,kill
 
 # --------------- dmenu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -l 15
