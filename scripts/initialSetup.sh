@@ -16,9 +16,9 @@ sudo pacman -Sy --needed \
         fzf \
         geany \
         i3-gaps \
-        i3status \
         i3lock \
         i3status \
+        lxappearance \
         man \
         mlocate \
         mpv \

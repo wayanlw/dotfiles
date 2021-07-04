@@ -234,7 +234,7 @@ nmap <leader>n :NERDTreeToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree commenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" <leader> cc will comment the selection or the line
+"<leader> cc "will comment the selection or the line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline 

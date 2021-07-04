@@ -97,7 +97,7 @@ function cpcd(){
         cp -v $1 $2
         else
         ###  Control will jump here if $DIR does NOT exists ###
-        echo "Error: ${2} not found. Creating directories now."
+        echo " ${2} not found. Creating directories now."
         mkdir -p $2
         cp -v $1 $2
     fi

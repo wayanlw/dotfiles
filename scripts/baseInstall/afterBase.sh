@@ -17,6 +17,7 @@ sudo pacman -S --noconfirm --needed \
 		i3-gaps \
 		ttf-dejavu \
 		i3status \
+        i3lock \
 		dmenu \
 		rofi \
 		htop \
@@ -28,7 +29,13 @@ sudo pacman -S --noconfirm --needed \
 		ttf-cascadia-code \
 		xdg-user-dirs \
 		xdg-utils \
-		fzf
+		fzf \
+        pcmanfm \
+        ranger \
+        lxappearance \
+        arc-gtk-theme \
+        ttf-font-awesome
+
 		
 #install yay	
 pacman -S --needed git base-devel
