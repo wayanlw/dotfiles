@@ -109,8 +109,8 @@ bindsym $mod+Shift+Return exec $term -e tmux
 
 
 # --------------- kill window
-bindsym $mod+Shift+c kill
-bindsym $mod+$ctrl+c focus parent,kill
+bindsym $mod+Shift+q kill
+bindsym $mod+$ctrl+q focus parent,kill
 
 # --------------- dmenu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -l 15
@@ -302,7 +302,7 @@ bindsym $mod+Ctrl+j workspace prev
 # ---------------------------------------------------------------------------- #
 
 # ----------reload the configuration file
-bindsym $mod+Shift+q reload
+bindsym $mod+Shift+c reload
 
 # ----------restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart

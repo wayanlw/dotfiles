@@ -30,6 +30,8 @@ sudo pacman -S --noconfirm --needed \
 		xdg-user-dirs \
 		xdg-utils \
 		fzf \
+        polkit \
+        lxsession \
         pcmanfm \
         ranger \
         lxappearance \
