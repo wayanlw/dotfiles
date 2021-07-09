@@ -511,6 +511,7 @@ bar {
 # ---------------------------------------------------------------------------- #
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id autokey-gtk 
 exec_always --no-startup-id pkill volumeicon; sleep 1; volumeicon;
 exec_always --no-startup-id nm-applet
 
@@ -521,7 +522,6 @@ exec_always --no-startup-id lxpolkit &
 exec_always --no-startup-id alttab -d 1
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
-exec_always --no-startup-id autokey-gtk 
 exec_always xmodmap ~/.Xmodmap
 
 #exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
