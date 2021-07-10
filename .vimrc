@@ -5,7 +5,7 @@ set relativenumber "display relative line numbers
 set mouse=a
 
 
-set showmatch
+
 set mat=2
 
 let mapleader = " "
@@ -31,7 +31,13 @@ nmap <leader>w :w!<cr>
 nmap <leader>wq :wq!<cr>
 nmap <leader>q :q!<cr>
 
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 
+vmap <leader>c "+y
+vmap <leader>v "+p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -1,4 +1,42 @@
-clear Lock
-remove mod4 = Hyper_L
-keycode 66 = Hyper_L
-add Lock = Hyper_L
+keycode 66 = Mode_switch
+keysym l = l L Right
+keysym i = i I Up 
+keysym k = k K Down 
+keysym j = j J Left 
+
+
+keysym y = y Y Home
+keysym p = p P End
+
+keysym o = o O Next
+keysym u = u U Prior
+
+keysym n = n N BackSpace
+keysym b = b B BackSpace
+
+keysym comma = comma less Delete
+keysym v = v V Delete
+
+keysym q = q Q Escape
+keysym x = x X Return
+keysym Tab = Tab ISO_Left_Tab Shift_L 
+keysym semicolon = semicolon colon colon
+keysym exclam = 1 exclam exclam
+keysym slash = slash question Return
+
+!pointer = 1 2 3 4 5 6 7 5 6 10 11 12
+! ---------- To replace the capslock key with hyper key --------------
+!! Unmap capslock
+!clear Lock
+!keycode 66 = Hyper_L
+!
+!! Leave mod4 as windows key _only_
+!remove mod4 = Hyper_L
+!
+!! Set mod3 to capslock
+!add mod3 = Hyper_L
+!-------------------instructions
+!to list all the keys available
+!xmodmap -pke | fzf
+!to reset the keymap
+!setxkbmap
