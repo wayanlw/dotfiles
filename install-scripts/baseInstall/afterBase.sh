@@ -21,7 +21,7 @@ sudo pacman -S --noconfirm --needed \
 		dmenu \
 		rofi \
 		htop \
-		chromium \
+		firefox \
 		ttf-roboto \
 		tex-gyre-fonts \
 		ttf-ubuntu-font-family \
