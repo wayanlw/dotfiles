@@ -60,6 +60,11 @@ function fnd(){
     locate $1 | fzf
 }
 
+#preview and edit a file in a given path using vim
+function vil(){
+    find $1 -maxdepth 4 -type f | fzf --height 50% --reverse --border --preview "cat {}" --bind "enter:execute(vim {})"
+}
+
 #---------------------------------check weather
 function weather(){
         [[ $1 = "" ]] && curl wttr.in/?FA || curl wttr.in/$1?0FT
