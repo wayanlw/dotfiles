@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "Dir Other C+End",
+    "description": "Dir Other C+S+End",
     "store": {},
     "modes": [
         3
@@ -21,7 +21,7 @@
         "modifiers": [
             "<hyper>"
         ],
-        "hotKey": "6"
+        "hotKey": "0"
     },
     "filter": {
         "regex": null,

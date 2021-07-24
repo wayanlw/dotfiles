@@ -20,7 +20,7 @@ Alt=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
 
-hc keybind $Mod-Shift-e quit
+#hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
@@ -40,18 +40,18 @@ hc keybind $Mod-i     focus up
 hc keybind $Mod-l     focus right
 
 # moving clients in tiling and floating mode
-# hc keybind $Mod-Shift-Left  shift left
-# hc keybind $Mod-Shift-Down  shift down
-# hc keybind $Mod-Shift-Up    shift up
-# hc keybind $Mod-Shift-Right shift right
-hc keybind $Mod-Shift-Left or / shift left / \
-    chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
-hc keybind $Mod-Shift-Down  or / shift down / \
-    chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
-hc keybind $Mod-Shift-Up    or / shift up / \
-    chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
-hc keybind $Mod-Shift-Right or / shift right / \
-    chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
+hc keybind $Mod-Shift-Left  shift left
+hc keybind $Mod-Shift-Down  shift down
+hc keybind $Mod-Shift-Up    shift up
+hc keybind $Mod-Shift-Right shift right
+#hc keybind $Mod-Shift-Left or / shift left / \
+#    chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
+#hc keybind $Mod-Shift-Down  or / shift down / \
+#    chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
+#hc keybind $Mod-Shift-Up    or / shift up / \
+#    chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
+#hc keybind $Mod-Shift-Right or / shift right / \
+#    chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
 hc keybind $Mod-Shift-j     shift left
 hc keybind $Mod-Shift-k     shift down
 hc keybind $Mod-Shift-i     shift up
@@ -63,10 +63,9 @@ hc keybind $Mod-Shift-l     shift right
 #hc keybind $Mod-o       split   right   0.5
 
 # ww : if the frame has one or no window, close the window and remove the frame 
-hc keybind $Mod-n or , and . compare tags.focus.curframe_wcount lt 1 . remove , close 
-#hc keybind $Mod-n or , and . compare tags.focus.curframe_wcount lt 2 . close . remove , close 
-#hc keybind $Mod-n and . compare tags.focus.curframe_wcount lt 2 . chain , close , remove 
-#hc keybind $Mod-b and . compare tags.focus.curframe_wcount gt 2 . close
+hc keybind $Mod-n close_or_remove
+hc keybind $Mod-Shift-n close_and_remove
+# I previously used this : hc keybind $Mod-n or , and . compare tags.focus.curframe_wcount lt 1 . remove , close 
 
 hc keybind $Mod-b spawn notify-send "test"
 
@@ -145,6 +144,7 @@ hc keybind $Mod-space                                                           
             or , and . compare tags.focus.curframe_wcount = 2                   \
                      . cycle_layout +1 vertical horizontal max vertical grid    \
                , cycle_layout +1
+hc keybind $Mod-h cycle_layout +1 horizontal max horizontal
 
 # mouse
 hc mouseunbind --all
@@ -157,6 +157,8 @@ hc keybind $Mod-m   cycle_monitor
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-c cycle
+hc keybind $Mod-x cycle_frame
+
 #hc keybind $Mod-i jumpto urgent
 
 # theme
@@ -165,7 +167,7 @@ hc attr theme.floating.reset 1
 hc set frame_border_active_color '#222222cc'
 hc set frame_border_normal_color '#101010cc'
 hc set frame_bg_normal_color '#565656aa'
-hc set frame_bg_active_color '#FB8C00'
+hc set frame_bg_active_color '#345F0Cef'
 # hc set frame_bg_active_color '#345F0Caa'
 hc set frame_border_width 1
 hc set always_show_frame on
@@ -177,7 +179,7 @@ hc attr theme.title_height 0 #15 ; removes the window titles. default was 15
 hc attr theme.title_font 'Dejavu Sans:pixelsize=12'  # example using Xft
 # hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
 hc attr theme.padding_top 2  # space below the title's baseline (i.e. text depth)
-hc attr theme.active.color '#345F0Cef'
+hc attr theme.active.color '#FB8C00'
 hc attr theme.title_color '#ffffff'
 hc attr theme.normal.color '#323232dd'
 hc attr theme.urgent.color '#7811A1dd'
@@ -210,7 +212,7 @@ hc unrule -F
 #hc rule class=XTerm tag=3 # move all xterms to tag 3
 hc rule focus=on # normally focus new clients
 hc rule floatplacement=smart
-hc set swap_monitors_to_get_tag 1
+#hc set swap_monitors_to_get_tag 0
 #hc rule focus=off # normally do not focus new clients
 # give focus to most common terminals
 #hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
@@ -245,4 +247,3 @@ lxpolkit &
 pkill tint2; sleep 1;tint2 &
 nm-applet &
 feh --bg-scale --randomize ~/Pictures/wallpapers/*
-xrandr --output LVDS-1 --mode 1366x768 --pos 387x1080 --rotate normal --output VGA-1 --off --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off
