@@ -24,11 +24,21 @@ alias fpkg='pacman -Qq | grep'
 alias i3config='vim ~/.config/i3/config'
 alias bashreload='source ~/.bashrc && echo Bash config reloaded'
 alias rm='mv -t /root/MyTrash/'
+alias hbc='vim ~/.config/herbstluftwm/autostart'
+
+alias dl='cd ~/Downloads'
+alias cfg='cd ~/.config'
+
+alias download='aria2c -x 16 -s 16' # x - number of connections per server, s - splits
+
+
 
 alias mv='mv -v'
 alias rm='rm -vi'
 alias cp='cp -v'
 
+alias dl='cd ~/Downloads'
+alias cf='cd ~/.config'
 
 alias more=less
 alias du='du -sh *| sort -h'
