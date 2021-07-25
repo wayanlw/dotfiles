@@ -49,6 +49,7 @@ for_window [window_type="menu"] floating enable, border none
 #exec --no-startup-id wmctrl -c Plasma
 #for_window [title="Desktop — Plasma"] kill, floating enable, border none
 
+#for_window [class="xfce4*"] floating enable; border none
 
 
 
@@ -64,8 +65,8 @@ for_window [window_type="menu"] floating enable, border none
 #default_floating_border normal
 
 # --------------- Disable titlebars for all windows
-#for_window [class="^.*"] border pixel 2
-#new_window 1pixel
+for_window [class="^.*"] border pixel 2
+new_window 1pixel
 
 # --------------- Hide borders
 #hide_edge_borders none
@@ -77,11 +78,11 @@ bindsym $mod+g gaps inner current plus 5
 bindsym $mod+Shift+g gaps inner current minus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-# smart_gaps on
+#smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-# smart_borders on
+#smart_borders on
 
 # ---------------------------------------------------------------------------- #
 #                                     FONTS                                    #
@@ -116,16 +117,23 @@ bindsym $mod+$ctrl+q focus parent,kill
 bindsym $mod+d exec --no-startup-id dmenu_run -i -l 15
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop    # this only displays the startmenu items
 
+# --------------- clipmenu
+bindsym $ctrl+$alt+v exec --no-startup-id clipmenu
+
 # --------------- rofi
 bindsym $mod+z exec --no-startup-id rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 bindsym $mod+q exec --no-startup-id rofi -show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 
+# --------------- run-or-raise
+bindsym $mod+shift+f exec --no-startup-id wmctrl -x -a $browser || $browser
+bindsym $mod+shift+x exec --no-startup-id wmctrl -x -a $filemgr || $filemgr
 
 # ---------------------------------------------------------------------------- #
 #                                    Sounds                                   #
 # ---------------------------------------------------------------------------- #
 
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+#bindsym $mod+Ctrl+m exec pavucontrol
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -138,8 +146,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # --------------- Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 
 
@@ -153,7 +161,6 @@ bindsym $mod+k focus down
 bindsym $mod+i focus up
 bindsym $mod+l focus right
 
-# ----------alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -165,7 +172,6 @@ bindsym $mod+Shift+k move down
 bindsym $mod+Shift+i move up
 bindsym $mod+Shift+l move right
 
-# ----------alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -173,7 +179,7 @@ bindsym $mod+Shift+Right move right
 
 # ----------workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
+bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # ----------Move workspace up and down
@@ -184,13 +190,10 @@ bindsym $mod+Shift+less move workspace to output up
 bindsym $mod+m move container to output down
 #bindsym $mod+shift+m move container to output up
 
-# ----------switch between the current and the previously focused one
-bindsym $mod+Tab workspace back_and_forth
-
 # ----------split orientation
 default_orientation auto
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+o split h
+bindsym $mod+u split v
 bindsym $mod+t split toggle
 
 # ----------toggle fullscreen mode for the focused container
@@ -210,15 +213,13 @@ bindsym $mod+space focus mode_toggle
 # ----------toggle sticky
 bindsym $mod+Shift+s sticky toggle
 
-# ----------focus the parent container
+# ----------focus the parent|child container
 bindsym $mod+p focus parent
+bindsym $mod+shift+p focus child
 
-# ----------move the currently focused window to the scratchpad
+# ---------- Scratch Pad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
-
-# ----------focus the child container
-#bindsym $mod+d focus child
 
 # ----------delay the disapearance of highlighting for a urgency window
 force_display_urgency_hint 500 ms
@@ -233,10 +234,10 @@ force_display_urgency_hint 500 ms
 # ----------Define names for default workspaces for which we configure key bindings later on. We use variables to avoid repeating the names in multiple places.
 set $ws1 "1 "
 set $ws2 "2 "
-set $ws3 "3 "
+set $ws3 "3 "
 set $ws4 "4 "
 set $ws5 "5 "
-set $ws6 "6 "
+set $ws6 "6 "
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -280,18 +281,18 @@ bindsym $mod+Ctrl+6 move container to workspace number $ws6
 
 
 # ----------switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
+#for_window [urgent="latest"] focus
+focus_on_window_activation focus
 
 # ----------cycle through the workspaces
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+l workspace next
 bindsym $mod+Ctrl+j workspace prev
 
-# ----------Default Workspaces for APPS
-#assign [class="firefox"] $ws2
-#assign [class="Chromium"] $ws2
-#assign [class="Subl"] $ws3
-#assign [class="kate"] $ws3
+# ----------Default Workspaces for APPS. To find the class name use `xprop`. its case-sensitive
+assign [class="Brave-browser"] $ws2
+assign [class="Subl"] $ws3
+#assign [class="Alacritty"] $ws3
 #assign [class="kdenlive"] $ws6
 
 
@@ -415,7 +416,7 @@ bindsym button3 floating toggle
 
 # ---------------------------------------------------------------------------- #
 set $mode_launcher Launch: [b]rowser [f]ileManager
-bindsym $mod+o mode "$mode_launcher"
+bindsym $mod+v mode "$mode_launcher"
 mode "$mode_launcher" {
 
     bindsym b exec --no-startup-id $browser ; mode "default"
@@ -457,6 +458,7 @@ bar {
     #status_command i3blocks -c ~/.dotfiles/.config/i3blocks/i3blocks.conf
     i3bar_command i3bar
     status_command i3status
+	tray_output none
     font pango:San Francisco Display 9
     position top
     mode dock
@@ -512,12 +514,13 @@ bar {
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id autokey-gtk 
+exec --no-startup-id pkill tint2; sleep 1; tint2;
+exec --no-startup-id clipmenud
 exec_always --no-startup-id pkill volumeicon; sleep 1; volumeicon;
 exec_always --no-startup-id nm-applet
 
 
 exec_always --no-startup-id xrandr --output LVDS-1 --mode 1366x768 --pos 387x1080 --rotate normal --output VGA-1 --off --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off
-exec_always --no-startup-id pkill tint2; sleep 1; tint2;
 exec_always --no-startup-id lxpolkit &
 exec_always --no-startup-id alttab -d 1
 exec_always --no-startup-id picom -b
@@ -527,8 +530,9 @@ exec_always xmodmap ~/.Xmodmap
 #exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
 #exec_always --no-startup-id pkill lxqt-panel; sleep 1; lxqt-panel;
 #exec_always --no-startup-id pkill lxpanel; sleep 1; lxpanel;
+#exec_always --no-startup-id pkill tint2; sleep 1; tint2;
 
-
+#exec --no-startup-id xfce4-panel 
 
 
 
