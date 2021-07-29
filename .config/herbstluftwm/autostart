@@ -24,7 +24,7 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
-hc keybind $Mod-d spawn "dmenu_run"
+hc keybind $Mod-d spawn dmenu_run -i -l 10
 hc keybind $Mod-q spawn rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 hc keybind $Mod-z spawn rofi -show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 
@@ -46,28 +46,28 @@ hc keybind $Mod-Shift-Up    shift up
 hc keybind $Mod-Shift-Right shift right
 
 #moving clients in multi monitor
-hc keybind $Mod-Shift-Left or / shift left / \
-    chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
-hc keybind $Mod-Shift-Down  or / shift down / \
-    chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
-hc keybind $Mod-Shift-Up    or / shift up / \
-    chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
-hc keybind $Mod-Shift-Right or / shift right / \
-    chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
-# hc keybind $Mod-Shift-j     shift left
-# hc keybind $Mod-Shift-k     shift down
-# hc keybind $Mod-Shift-i     shift up
-# hc keybind $Mod-Shift-l     shift right
+#hc keybind $Mod-Shift-Left or / shift left / \
+#    chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
+#hc keybind $Mod-Shift-Down  or / shift down / \
+#    chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
+#hc keybind $Mod-Shift-Up    or / shift up / \
+#    chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
+#hc keybind $Mod-Shift-Right or / shift right / \
+#    chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
+hc keybind $Mod-Shift-j     shift left
+hc keybind $Mod-Shift-k     shift down
+hc keybind $Mod-Shift-i     shift up
+hc keybind $Mod-Shift-l     shift right
 
 # splitting frames
 # default: create an empty frame at the specified direction
 #hc keybind $Mod-u       split   bottom  0.5
 #hc keybind $Mod-o       split   right   0.5
 
-# ww : if the frame has one or no window, close the window and remove the frame 
+# ww : if the frame has one or no window, close the window and remove the frame
 hc keybind $Mod-n close_or_remove
 hc keybind $Mod-Shift-n close_and_remove
-# I previously used this : hc keybind $Mod-n or , and . compare tags.focus.curframe_wcount lt 1 . remove , close 
+# I previously used this : hc keybind $Mod-n or , and . compare tags.focus.curframe_wcount lt 1 . remove , close
 
 
 # ww: create an empty frame at the specified direction and focus on that
@@ -81,10 +81,14 @@ hc keybind $Mod-Shift-o chain , split right 0.5 , shift right
 hc keybind $Mod-Shift-y chain , split top 0.5 , shift up
 hc keybind $Mod-Shift-p chain , split left 0.5 , shift left
 # ww: Focus Monitors
-hc keybind Control-$Alt-i focus_monitor -u
-hc keybind Control-$Alt-j focus_monitor -r
-hc keybind Control-$Alt-l focus_monitor -l
-hc keybind Control-$Alt-k focus_monitor -d
+hc keybind Shift-$Alt-i focus_monitor -u
+hc keybind Shift-$Alt-j focus_monitor -r
+hc keybind Shift-$Alt-l focus_monitor -l
+hc keybind Shift-$Alt-k focus_monitor -d
+# ww: Lock Monitor
+hc keybind $Mod-0 chain . lock_tag . spawn notify-send 'monitor locked'
+hc keybind $Mod-Shift-0 chain . unlock_tag . spawn notify-send 'monitor unlocked'
+
 
 
 # let the current frame explode into subframes
@@ -102,8 +106,10 @@ hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
 hc keybind $Mod-Shift-space floating toggle
+
 # tags
 tag_names=( {1..5} )
+#tag_names=(Main, Second)
 tag_keys=( {1..5} 0 )
 
 hc rename default "${tag_names[0]}" || true
@@ -134,7 +140,7 @@ hc keybind $Mod-p pseudotile toggle
 # I.e. if there are two windows within a frame, the grid layout is skipped.
 hc keybind $Mod-space                                                           \
             or , and . compare tags.focus.curframe_wcount = 2                   \
-                     . cycle_layout +1 vertical horizontal max vertical grid    \
+                     . cycle_layout +1 horizontal vertical max vertical grid    \
                , cycle_layout +1
 hc keybind $Mod-h cycle_layout +1 horizontal max horizontal
 
@@ -203,7 +209,7 @@ hc unrule -F
 #hc rule class=XTerm tag=3 # move all xterms to tag 3
 hc rule focus=on # normally focus new clients
 hc rule floatplacement=smart
-#hc set swap_monitors_to_get_tag 0
+hc set swap_monitors_to_get_tag 1
 #hc rule focus=off # normally do not focus new clients
 # give focus to most common terminals
 #hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
