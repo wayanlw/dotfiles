@@ -20,6 +20,7 @@ nmap <silent> <leader><cr> :noh<cr>
 "noremap h i
 
 inoremap <special> jk <ESC>
+inoremap <special> jj <cr>
 
 " tab command shortcuts
 map <Tab> <C-W>w

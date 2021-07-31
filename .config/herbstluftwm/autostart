@@ -19,11 +19,13 @@ hc keyunbind --all
 Alt=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
+hc set default_frame_layout horizontal
 
 #hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close_or_remove
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Shift-Return spawn alacritty -e tmux # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-d spawn dmenu_run -i -l 10
 hc keybind $Mod-q spawn rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 hc keybind $Mod-z spawn rofi -show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
@@ -65,7 +67,7 @@ hc keybind $Mod-Shift-l     shift right
 #hc keybind $Mod-o       split   right   0.5
 
 # ww : if the frame has one or no window, close the window and remove the frame
-hc keybind $Mod-Shift-n close_and_remove
+hc keybind $Mod-n close_and_remove
 # I previously used this : hc keybind $Mod-n or , and . compare tags.focus.curframe_wcount lt 1 . remove , close
 
 
@@ -139,7 +141,7 @@ hc keybind $Mod-p pseudotile toggle
 # I.e. if there are two windows within a frame, the grid layout is skipped.
 hc keybind $Mod-space                                                           \
             or , and . compare tags.focus.curframe_wcount = 2                   \
-                     . cycle_layout +1 vertical horizontal max vertical grid    \
+                     . cycle_layout +1 horizontal vertical  horizontal max grid    \
                , cycle_layout +1
 hc keybind $Mod-h cycle_layout +1 horizontal max horizontal
 
@@ -242,4 +244,5 @@ alttab -d 1 &
 lxpolkit &
 pkill tint2; sleep 1;tint2 &
 nm-applet &
-feh --bg-scale --randomize ~/Pictures/wallpapers/*
+#feh --bg-scale --randomize ~/Pictures/wallpapers/*
+
