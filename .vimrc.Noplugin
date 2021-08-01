@@ -1,19 +1,34 @@
 "Sets the Color Scheme
-colorscheme koehler
-"colorscheme desert 
+colorscheme murphy
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => abbreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 abbr src source $MYVIMRC
 
-" Edit vimr configuration file
+"" no one is really happy until you have this shortcuts
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
+
+" Edit vimrc configuration file
 nnoremap <Leader>ve :e $MYVIMRC<CR>
 " " Reload vimr configuration file
 nnoremap <Leader>r :source ~/.vimrc<CR>
 
 " Set the Leader key
 let mapleader = " "
+
+" Mouse settings
+set mouse=a
+set mousemodel=popup
 
 " Set Numbering
 set number
@@ -33,7 +48,7 @@ set splitright "creates the new split at bottom
 "moving between tabs
 noremap <leader><Tab> :bn<CR>
 noremap <C-S-Tab> :bp<CR>
-noremap <C-t> :tabnew <CR>
+noremap <leader><t> :tabnew <CR>
 
 " Fast saving and quitting
 nmap <leader>w :w!<cr>
@@ -82,7 +97,14 @@ set mat=2 " How many tenths of a second to blink when matching brackets
 set noerrorbells
 set novisualbell
 
-set foldcolumn=1 " Add a bit extra margin to the left
+"Instead of failing a command because of unsaved changes, instead raise a  dialogue asking if you wish to save changed files
+set confirm
+
+" Add a bit extra margin to the left
+set foldcolumn=1 
+
+"Set the command window height to 2 lines, to avoid many cases of having to press <Enter> to continue 
+set cmdheight=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -102,9 +124,12 @@ set shiftwidth=4
 set tabstop=4
 
 " Indenting
-set ai "Auto indent
-set si "Smart indent
+set autoindent "Auto indent
+set smartindent "Smart indent
 set wrap "Wrap lines
+
+" Allow backspacing over autoindent, line breaks and start of insert action
+set backspace=indent,eol,start
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -118,12 +143,13 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " => Status line
 """"""""""""""""""""""""""""""
 " Always show the status line
-let g:powerline_pycmd="py3"
 set laststatus=2
 
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"jet &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
