@@ -58,10 +58,10 @@ pacman -S --noconfirm --needed xf86-video-vesa
 # pacman -S --noconfirm xf86-video-amdgpu
 # pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
 		
-grub-install --target=i386-pc /dev/sdX # replace sdx with your disk name, not the partition
+grub-install --target=i386-pc /dev/sda # replace sdx with your disk name, not the partition
 grub-mkconfig -o /boot/grub/grub.cfg
 echo "GRUB_DISABLE_OS_PROBER=false" >> etc/default/grub
-updat-grub
+update-grub
 
 useradd -mG wheel suadmin
 echo suadmin:password | chpasswd
