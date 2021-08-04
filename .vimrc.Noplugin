@@ -69,7 +69,7 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
-set so=7 
+set scrolloff=7 
 
 " Turn on the Wild menu
 set wildmenu 
@@ -77,9 +77,10 @@ set wildmenu
 " Show the line and column number of the cursor position, separated by a comma.
 set ruler 
 
-"Ajways sh w cursor line
-set cursorline 
-
+" Enables Cursorline when in Escape mode and enables it in insert mode
+" set cursorline " This always enables the Cursor Line
+autocmd InsertEnter,InsertLeave * set cul!
+ 
 " searching
 set ignorecase "ignore the case when searching
 set smartcase " When searching try to be smart about cases
