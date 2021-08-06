@@ -342,6 +342,8 @@ mode "$mode_system" {
 #                                RESIZE WINDOWS                                #
 
 # ---------------------------------------------------------------------------- #
+bindsym $ctrl+$mod+u resize shrink width 5 px or 5 ppt
+bindsym $ctrl+$mod+o resize grow width 5 px or 5 ppt
 
 bindsym $mod+r mode "resize"
 mode "resize" {
