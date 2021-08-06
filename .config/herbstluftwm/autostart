@@ -245,4 +245,4 @@ lxpolkit &
 pkill tint2; sleep 1;tint2 &
 nm-applet &
 #feh --bg-scale --randomize ~/Pictures/wallpapers/*
-
+variety &
