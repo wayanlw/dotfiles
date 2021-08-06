@@ -31,7 +31,7 @@ alias cfg='cd ~/.config'
 
 alias download='aria2c -x 16 -s 16' # x - number of connections per server, s - splits
 
-
+alias gpush='sh ~/.dotfiles/gitScript.sh'
 
 alias mv='mv -v'
 alias rm='rm -vi'
