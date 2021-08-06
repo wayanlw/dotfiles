@@ -1,0 +1,175 @@
+"Sets the Color Scheme
+colorscheme murphy
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => abbreviations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+abbr src source $MYVIMRC
+
+"" no one is really happy until you have this shortcuts
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
+
+" Edit vimrc configuration file
+nnoremap <Leader>ve :e $MYVIMRC<CR>
+" " Reload vimr configuration file
+nnoremap <Leader>r :source ~/.vimrc<CR>
+
+" Set the Leader key
+let mapleader = " "
+
+" Mouse settings
+set mouse=a
+set mousemodel=popup
+
+" Set Numbering
+set number
+set relativenumber
+
+" map Escape and Enter
+inoremap <special> jk <ESC>
+inoremap <special> jj <cr>
+
+"Splits
+noremap <Tab> <C-W>w
+map <Bar> <C-W>v<C-W>H<C-W><Right>
+map -    <C-W>s<C-W><Down>
+set splitbelow "creates the new split on right
+set splitright "creates the new split at bottom 
+
+"moving between tabs
+noremap <leader><Tab> :bn<CR>
+noremap <C-S-Tab> :bp<CR>
+noremap <leader><t> :tabnew <CR>
+
+" Fast saving and quitting
+nmap <leader>w :w!<cr>
+nmap <leader>wq :wq!<cr>
+nmap <leader>e :q!<cr>
+
+" Smart way to move between windows
+"map <C-k> <C-W>j
+"map <C-i> <C-W>k
+"map <C-j> <C-W>h
+"map <C-l> <C-W>l
+
+
+" :W sudo saves the file " (useful for handling the permission-denied error)
+command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM user interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set 7 lines to the cursor - when moving vertically using j/k
+set scrolloff=7 
+
+" Turn on the Wild menu
+set wildmenu 
+
+" Show the line and column number of the cursor position, separated by a comma.
+set ruler 
+
+" Enables Cursorline when in Escape mode and enables it in insert mode
+" set cursorline " This always enables the Cursor Line
+autocmd InsertEnter,InsertLeave * set cul!
+ 
+" searching
+set ignorecase "ignore the case when searching
+set smartcase " When searching try to be smart about cases
+set hlsearch " Highlight search results
+set incsearch " Makes search act like search in modern browsers
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw 
+
+" highlight matching brackets 
+set showmatch " Show matching brackets when text indicator is over them
+set mat=2 " How many tenths of a second to blink when matching brackets
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+
+"Instead of failing a command because of unsaved changes, instead raise a  dialogue asking if you wish to save changed files
+set confirm
+
+" Add a bit extra margin to the left
+set foldcolumn=1 
+
+"Set the command window height to 2 lines, to avoid many cases of having to press <Enter> to continue 
+set cmdheight=2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable " Enable syntax highlighting
+set ffs=unix,dos,mac " Use Unix as the standard file type
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set expandtab " Use spaces instead of tabs
+set smarttab " Be smart when using tabs ;)
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Indenting
+set autoindent "Auto indent
+set smartindent "Smart indent
+set wrap "Wrap lines
+
+" Allow backspacing over autoindent, line breaks and start of insert action
+set backspace=indent,eol,start
+
+""""""""""""""""""""""""""""""
+" => Visual mode related
+""""""""""""""""""""""""""""""
+" Visual mode pressing * or # searches for the current selection
+vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+
+
+""""""""""""""""""""""""""""""
+" => Status line
+""""""""""""""""""""""""""""""
+" Always show the status line
+set laststatus=2
+
+"jet &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
+
+" Shortcuts using <leader>
+map <leader>sn ]s " go to next error
+map <leader>sp [s " Go to previous Error
+map <leader>sa zg " add to dictionary
+map <leader>s? z= " Spelling Suggestions
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" make vim OK to not compatible with vi
+set nocompatible
+
+"fuzzy file finding
+filetype plugin on " enables fuzzy finding plugin built-in to vim
+set path+=** " activates subdirectory search. originally it searches current director 
+
