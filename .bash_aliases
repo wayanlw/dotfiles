@@ -26,12 +26,23 @@ alias bashreload='source ~/.bashrc && echo Bash config reloaded'
 alias rm='mv -t /root/MyTrash/'
 alias hbc='vim ~/.config/herbstluftwm/autostart'
 
+#setting keyboard layouts with the first 3 letters
+alias asd='setxkbmap us -variant colemak'
+alias ars='setxkbmap us'
+
+#changing folders
 alias dl='cd ~/Downloads'
 alias cfg='cd ~/.config'
 
+# Downloading with aria2c
 alias download='aria2c -x 16 -s 16' # x - number of connections per server, s - splits
 
-alias gpush='sh ~/.dotfiles/gitScript.sh'
+# Git Commands
+function gpush(){
+    git add $(ls -A)
+    git commit -m "$(date)"
+    git push origin master
+}
 
 alias mv='mv -v'
 alias rm='rm -vi'
