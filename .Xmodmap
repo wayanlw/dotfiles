@@ -24,6 +24,14 @@ keysym semicolon = semicolon colon colon
 keysym exclam = 1 exclam exclam
 keysym slash = slash question Return
 
+!! Swapping Control and Alt Keys
+clear control
+clear mod1
+keycode 37 = Alt_L Meta_L
+keycode 64 = Control_L
+add control = Control_L Control_R
+add mod1 = Alt_L Meta_L
+
 !pointer = 1 2 3 4 5 6 7 5 6 10 11 12
 ! ---------- To replace the capslock key with hyper key --------------
 !! Unmap capslock
