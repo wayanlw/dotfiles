@@ -5,18 +5,18 @@
     "modes": [
         1
     ],
-    "usageCount": 0,
+    "usageCount": 22,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
     "abbreviation": {
         "abbreviations": [
-            "jk"
+            "j;"
         ],
         "backspace": true,
         "ignoreCase": true,
         "immediate": true,
-        "triggerInside": false,
+        "triggerInside": true,
         "wordChars": "[\\w]"
     },
     "hotkey": {

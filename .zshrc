@@ -110,6 +110,8 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -f $HOME/.Xmodmap ]] && xmodmap $HOME/.Xmodmap
 
+#vim keybindings in zsh terminal
+bindkey -v
 
 ## autoexpanding aliases 
 # blank aliases
