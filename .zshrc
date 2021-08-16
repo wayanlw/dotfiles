@@ -113,7 +113,7 @@ source $ZSH/oh-my-zsh.sh
 #vim keybindings in zsh terminal
 bindkey -v
 
-## autoexpanding aliases 
+## autoexpanding aliases
 # blank aliases
 typeset -a baliases
 baliases=()
@@ -153,8 +153,6 @@ bindkey " " expand-alias-space
 bindkey -M isearch " " magic-space
 
 # command aliases
-alias jj='java -jar'
-alias mcp='mvn clean package'
 alias inst='sudo pacman -Sy'
 
 # blank aliases, without trailing whitespace
