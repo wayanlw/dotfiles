@@ -5,6 +5,7 @@ if [[ $# -eq 1 ]]; then
 else
     items=`find ~ -maxdepth 1 -mindepth 1 -type d`
     items+=`find ~/.config -maxdepth 1 -mindepth 1 -type d`
+    items+=`find ~/.dotfiles -type d`
     items+=("$HOME/.dotfiles")
     #items+=("$HOME/ansible")
     #items+=`find ~/personal -maxdepth 1 -mindepth 1 -type d`
