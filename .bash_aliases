@@ -147,5 +147,5 @@ do
    i+=1
 done
 
-xdg-open "http://www.google.com/search?q=$q"
+xdg-open "http://www.google.com/search?q=$q" >/dev/null 2>&1
 }

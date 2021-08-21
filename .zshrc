@@ -72,9 +72,11 @@ ZSH_THEME="af-magic"
 plugins=(
     git
     history-substring-search
+    dirhistory
     colored-man-pages
     zsh-autosuggestions
     zsh-syntax-highlighting
+    z
 )
 
 source $ZSH/oh-my-zsh.sh
