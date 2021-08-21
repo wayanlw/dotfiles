@@ -270,12 +270,12 @@ bindsym $mod+Shift+6 move container to workspace number $ws6;workspace $ws6
 # bindsym $mod+Shift+0 move container to workspace number $ws10;workspace $ws10
 
 # ----------Move to workspace with focused container
-bindsym $mod+Ctrl+1 move container to workspace number $ws1
-bindsym $mod+Ctrl+2 move container to workspace number $ws2
-bindsym $mod+Ctrl+3 move container to workspace number $ws3
-bindsym $mod+Ctrl+4 move container to workspace number $ws4
-bindsym $mod+Ctrl+5 move container to workspace number $ws5
-bindsym $mod+Ctrl+6 move container to workspace number $ws6
+bindsym $mod+$ctrl+1 move container to workspace number $ws1
+bindsym $mod+$ctrl+2 move container to workspace number $ws2
+bindsym $mod+$ctrl+3 move container to workspace number $ws3
+bindsym $mod+$ctrl+4 move container to workspace number $ws4
+bindsym $mod+$ctrl+5 move container to workspace number $ws5
+bindsym $mod+$ctrl+6 move container to workspace number $ws6
 # bindsym $mod+Ctrl+7 move container to workspace number $ws7
 # bindsym $mod+Ctrl+8 move container to workspace number $ws8
 # bindsym $mod+Ctrl+9 move container to workspace number $ws9
@@ -288,8 +288,8 @@ focus_on_window_activation focus
 
 # ----------cycle through the workspaces
 #navigate workspaces next / previous
-bindsym $mod+Ctrl+l workspace next
-bindsym $mod+Ctrl+j workspace prev
+bindsym $mod+$ctrl+l workspace next
+bindsym $mod+$ctrl+j workspace prev
 
 # ----------Default Workspaces for APPS. To find the class name use `xprop`. its case-sensitive
 assign [class="Brave-browser"] $ws2
