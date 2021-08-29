@@ -74,6 +74,7 @@ plugins=(
     history-substring-search
     dirhistory
     colored-man-pages
+    web-search
     zsh-autosuggestions
     zsh-syntax-highlighting
     z

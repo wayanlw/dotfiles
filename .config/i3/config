@@ -13,6 +13,7 @@ set $ctrl Control
 set $term alacritty
 set $browser brave
 set $filemgr pcmanfm
+set $code code
 
 # ---------------------------------------------------------------------------- #
 #                       Avoid tiling for non-Plasma stuff                      #
@@ -109,8 +110,14 @@ bindsym $mod+Return exec --no-startup-id $term
 bindsym $mod+Shift+Return exec $term -e tmux
 
 # --------------- switchr
-bindsym $mod+Shift+d exec $term -e sh ~/.dotfiles/bin/switchr.sh
+bindsym $mod+Shift+t exec $term -e sh ~/.dotfiles/bin/switchr.sh
 
+# --------------- run-or-raise
+bindsym $mod+shift+f exec --no-startup-id wmctrl -x -a $browser || $browser
+bindsym $mod+shift+x exec --no-startup-id wmctrl -x -a $filemgr || $filemgr
+bindsym $mod+shift+d exec --no-startup-id wmctrl -x -a $code || $code
+bindsym $mod+shift+a exec --no-startup-id wmctrl -x -a $term || $term
+#
 # --------------- kill window
 bindsym $mod+Shift+q kill
 bindsym $mod+$ctrl+q focus parent,kill
@@ -126,9 +133,6 @@ bindsym $ctrl+$alt+v exec --no-startup-id clipmenu
 bindsym $mod+z exec --no-startup-id rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 bindsym $mod+q exec --no-startup-id rofi -show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 
-# --------------- run-or-raise
-bindsym $mod+shift+f exec --no-startup-id wmctrl -x -a $browser || $browser
-bindsym $mod+shift+x exec --no-startup-id wmctrl -x -a $filemgr || $filemgr
 
 # ---------------------------------------------------------------------------- #
 #                                    Sounds                                   #
@@ -292,6 +296,11 @@ focus_on_window_activation focus
 #navigate workspaces next / previous
 bindsym $mod+$ctrl+l workspace next
 bindsym $mod+$ctrl+j workspace prev
+bindsym $alt+l workspace next
+bindsym $alt+j workspace prev
+
+bindsym $alt+shift+l move container to workspace next; workspace next 
+bindsym $alt+shift+j move container to workspace prev; workspace prev
 
 # ----------Default Workspaces for APPS. To find the class name use `xprop`. its case-sensitive
 assign [class="Brave-browser"] $ws2
