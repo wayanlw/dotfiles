@@ -23,7 +23,7 @@ inoremap <special> jk <ESC>
 inoremap <special> jj <cr>
 
 " tab command shortcuts
-map <Tab> <C-W>w
+"map <Tab> <C-W>w
 map <Bar> <C-W>n<C-W>H<C-W><Right>
 map -     <C-W>s<C-W><Down>
 

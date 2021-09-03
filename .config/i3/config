@@ -296,8 +296,8 @@ focus_on_window_activation focus
 #navigate workspaces next / previous
 bindsym $mod+$ctrl+l workspace next
 bindsym $mod+$ctrl+j workspace prev
-bindsym $alt+l workspace next
-bindsym $alt+j workspace prev
+bindsym $alt+$ctrl+l workspace next
+bindsym $alt+$ctrl+j workspace prev
 
 bindsym $alt+shift+l move container to workspace next; workspace next 
 bindsym $alt+shift+j move container to workspace prev; workspace prev
