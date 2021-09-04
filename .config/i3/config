@@ -158,7 +158,7 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness 
 
 
 # ---------------------------------------------------------------------------- #
-#                                    WINDOWS                                   #
+#                         WINDOWS (Containers)                                 #
 # ---------------------------------------------------------------------------- #
 
 # ----------change focus
@@ -183,16 +183,6 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# ----------workspace back and forth (with/without active container)
-# when the same workspace key is pressed it switches to the previous workspace
-workspace_auto_back_and_forth yes
-
-bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
-
-# ----------Move workspace up and down
-bindsym $mod+Shift+m move workspace to output down
-bindsym $mod+Shift+less move workspace to output up
 
 # ----------move the container to the other monior.
 bindsym $mod+m move container to output down
@@ -275,7 +265,7 @@ bindsym $mod+Shift+6 move container to workspace number $ws6;workspace $ws6
 # bindsym $mod+Shift+9 move container to workspace number $ws9;workspace $ws9
 # bindsym $mod+Shift+0 move container to workspace number $ws10;workspace $ws10
 
-# ----------Move to workspace with focused container
+# ----------Move focused container to workspace and switch to it
 bindsym $mod+$ctrl+1 move container to workspace number $ws1
 bindsym $mod+$ctrl+2 move container to workspace number $ws2
 bindsym $mod+$ctrl+3 move container to workspace number $ws3
@@ -293,12 +283,24 @@ bindsym $mod+$ctrl+6 move container to workspace number $ws6
 focus_on_window_activation focus
 
 # ----------cycle through the workspaces
-#navigate workspaces next / previous
+#navigate workspaces next / previous (with/without container)
 bindsym $mod+$ctrl+l workspace next
 bindsym $mod+$ctrl+j workspace prev
 
 bindsym $alt+shift+l move container to workspace next; workspace next 
 bindsym $alt+shift+j move container to workspace prev; workspace prev
+
+# --------- Workpace switching back and forth
+# when the same workspace key is pressed it switches to the previous workspace
+#workspace_auto_back_and_forth yes
+
+# ----------workspace back and forth (with/without active container)
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
+
+# ----------Move workspace up and down
+bindsym $mod+Shift+m move workspace to output down
+bindsym $mod+Shift+less move workspace to output up
 
 # ----------Default Workspaces for APPS. To find the class name use `xprop`. its case-sensitive
 assign [class="Brave-browser"] $ws2
