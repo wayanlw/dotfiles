@@ -284,11 +284,11 @@ focus_on_window_activation focus
 
 # ----------cycle through the workspaces
 #navigate workspaces next / previous (with/without container)
-bindsym $mod+$ctrl+l workspace next
-bindsym $mod+$ctrl+j workspace prev
+bindsym $mod+period workspace next
+bindsym $mod+comma workspace prev
 
-bindsym $alt+shift+l move container to workspace next; workspace next 
-bindsym $alt+shift+j move container to workspace prev; workspace prev
+bindsym $mod+shift+period move container to workspace next; workspace next 
+bindsym $mod+shift+comma move container to workspace prev; workspace prev
 
 # --------- Workpace switching back and forth
 # when the same workspace key is pressed it switches to the previous workspace
