@@ -23,7 +23,7 @@ hc set default_frame_layout horizontal
 
 #hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
-hc keybind $Mod-Shift-q close_or_remove
+hc keybind $Mod-Shift-q close_or_remove # Closes the focused window or removes the current frame if no window is focused
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-Shift-Return spawn alacritty -e tmux # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-d spawn dmenu_run -i -l 10
@@ -72,15 +72,15 @@ hc keybind $Mod-n close_and_remove
 
 
 # ww: create an empty frame at the specified direction and focus on that
-hc keybind $Mod-u chain , split   bottom  0.5 , focus down
-hc keybind $Mod-o chain , split   right   0.5 , focus right
-hc keybind $Mod-y chain , split   top  0.5 , focus up
-hc keybind $Mod-p chain , split   left  0.5 , focus left
+hc keybind $Mod-u chain , split   bottom  0.5 , focus -e down
+hc keybind $Mod-o chain , split   right   0.5 , focus -e right
+hc keybind $Mod-y chain , split   top  0.5 , focus -e up
+hc keybind $Mod-p chain , split   left  0.5 , focus -e left
 # ww : shift + u/o to create a frame and move the current window to it.
-hc keybind $Mod-Shift-u chain , split bottom 0.5 , shift down
-hc keybind $Mod-Shift-o chain , split right 0.5 , shift right
-hc keybind $Mod-Shift-y chain , split top 0.5 , shift up
-hc keybind $Mod-Shift-p chain , split left 0.5 , shift left
+hc keybind $Mod-Shift-u chain , split bottom 0.5 , shift -e down
+hc keybind $Mod-Shift-o chain , split right 0.5 , shift -e right
+hc keybind $Mod-Shift-y chain , split top 0.5 , shift -e up
+hc keybind $Mod-Shift-p chain , split left 0.5 , shift -e left
 # ww: Focus Monitors
 hc keybind Shift-$Alt-i focus_monitor -u
 hc keybind Shift-$Alt-j focus_monitor -r
@@ -171,7 +171,7 @@ hc set frame_border_width 1
 hc set always_show_frame on
 hc set frame_bg_transparent on
 hc set frame_transparent_width 5
-hc set frame_gap 4
+hc set frame_gap 3
 
 hc attr theme.title_height 0 #15 ; removes the window titles. default was 15
 hc attr theme.title_font 'Dejavu Sans:pixelsize=12'  # example using Xft
