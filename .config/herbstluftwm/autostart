@@ -20,6 +20,7 @@ Alt=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 browser=brave
 filemgr=pcmanfm
+term=alacritty
 
 hc set default_frame_layout horizontal
 
@@ -28,11 +29,15 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close_or_remove # Closes the focused window or removes the current frame if no window is focused
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-Shift-Return spawn alacritty -e tmux # use your $TERMINAL with xterm as fallback
+hc keybind $Mod+Shift+t spawn $term -e sh ~/.dotfiles/bin/switchr.sh
 hc keybind $Mod-d spawn dmenu_run -i -l 10
 hc keybind $Mod-q spawn rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 hc keybind $Mod-z spawn rofi -show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
-hc keybind $Mod-Shift-a spawn wmctrl -x -a $browser
-hc keybind $Mod-Shift-s spawn wmctrl -x -a $filemgr
+hc keybind $Mod-Shift-a spawn bash -c 'wmctrl -x -a brave || brave && herbstclient jumpto urgent' 
+hc keybind $Mod-Shift-s spawn bash -c 'wmctrl -x -a pcmanfm || pcmanfm && herbstclient jumpto urgent' 
+
+
+#hc keybind $Mod-Shift-s spawn wmctrl -x -a $filemgr
 
 # basic movement in tiling and floating mode
 # focusing clients - $mod+arrows | $mod+capsy
