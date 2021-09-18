@@ -33,11 +33,10 @@ hc keybind $Mod+Shift+t spawn $term -e sh ~/.dotfiles/bin/switchr.sh
 hc keybind $Mod-d spawn dmenu_run -i -l 10
 hc keybind $Mod-q spawn rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 hc keybind $Mod-z spawn rofi -show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
+
+# open or raise
 hc keybind $Mod-Shift-a spawn bash -c 'wmctrl -x -a brave || brave && herbstclient jumpto urgent' 
-hc keybind $Mod-Shift-s spawn bash -c 'wmctrl -x -a pcmanfm || pcmanfm && herbstclient jumpto urgent' 
-
-
-#hc keybind $Mod-Shift-s spawn wmctrl -x -a $filemgr
+hc keybind $Mod-Shift-x spawn bash -c 'wmctrl -x -a pcmanfm || pcmanfm && herbstclient jumpto urgent' 
 
 # basic movement in tiling and floating mode
 # focusing clients - $mod+arrows | $mod+capsy
@@ -65,10 +64,13 @@ hc keybind $Mod-Shift-Right shift right
 #    chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
 #hc keybind $Mod-Shift-Right or / shift right / \
 #    chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
-hc keybind $Mod-Shift-j     shift left
-hc keybind $Mod-Shift-k     shift down
-hc keybind $Mod-Shift-i     shift up
-hc keybind $Mod-Shift-l     shift right
+hc keybind $Mod-Shift-j  shift left
+hc keybind $Mod-Shift-k  shift down
+hc keybind $Mod-Shift-i  shift up
+hc keybind $Mod-Shift-l  shift right
+
+# move the window to the adjacent frame and close the current frame 
+hc keybind $Mod-Shift-d or , and . compare tags.focus.curframe_wcount lt 2 . remove , shift left
 
 # splitting frames
 # default: create an empty frame at the specified direction
