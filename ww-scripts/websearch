@@ -7,7 +7,7 @@ yt_url='https://www.youtube.com/results?search_query='
 
 
 #QUERY=$(echo '' | dmenu -p "Search:" -fn "-xos4-terminus-medium-r-*-*-14-*" -b)
-QUERY=$(echo '' | dmenu -p "Search:")
+QUERY=$(echo -e "g - google\ngi - google images\nddg - duckduckgo\nu - youtube" | dmenu -l 4 -p "Search: ")
 FIRSTWORD=$(echo $QUERY | cut  -d " " -f1)
 SEARCH_ITEM=$(echo $QUERY | awk 'NF{$1=x; sub(/^ /,x)}1')
 if [ -n "$QUERY" ]; then
@@ -21,7 +21,7 @@ if [ -n "$QUERY" ]; then
     "ddg")
         xdg-open "${ddg_url}${SEARCH_ITEM}" 2>/dev/null
         break;;
-    "y")
+    "u")
         xdg-open "${yt_url}${SEARCH_ITEM}" 2>/dev/null
         break;;
     *)
