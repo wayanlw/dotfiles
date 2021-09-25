@@ -2,5 +2,6 @@
 
 cd ~/.dotfiles
 git add $(ls -A)
-git commit -m "$(date)"
+read -p "[+] enter your commit message: " COMMIT
+git commit -m "$COMMIT"
 git push origin master
