@@ -154,11 +154,11 @@ hc keybind $Mod-t pseudotile toggle
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
-hc keybind $Mod-space                                                           \
+hc keybind $Mod-h                                                           \
             or , and . compare tags.focus.curframe_wcount = 2                   \
                      . cycle_layout +1 horizontal vertical  horizontal max grid    \
                , cycle_layout +1
-hc keybind $Mod-h cycle_layout +1 horizontal max horizontal
+hc keybind $Mod-space cycle_layout +1 grid max grid
 
 # mouse
 hc mouseunbind --all
@@ -167,11 +167,13 @@ hc mousebind $Mod-Button2 zoom
 hc mousebind $Mod-Button3 resize
 
 # focus
-hc keybind $Mod-m   cycle_monitor
-hc keybind $Mod-Tab         cycle_all +1
-hc keybind $Mod-Shift-Tab   cycle_all -1
-hc keybind $Mod-c cycle
-hc keybind $Mod-x cycle_frame
+hc keybind $Mod-m cycle_monitor             #cycle monitor
+hc keybind $Mod-v cycle_all +1
+hc keybind $Mod-Shift-v cycle_all -1
+hc keybind $Mod-c cycle                     # cycle the windows within frame
+hc keybind $Mod-x cycle_frame               # cycle the frame
+hc keybind $Mod-Tab use_previous              # toggle previous tag 
+
 #hc keybind $Mod-i jumpto urgent
 
 # theme
@@ -223,6 +225,7 @@ hc set focus_follows_mouse 1
 # rules
 hc unrule -F
 #hc rule class=XTerm tag=3 # move all xterms to tag 3
+hc rule class=Brave-browser tag=2
 hc rule focus=on # normally focus new clients
 hc rule floatplacement=center
 hc set swap_monitors_to_get_tag 1
@@ -253,8 +256,10 @@ for monitor in $(hc list_monitors | cut -d: -f1) ; do
 done
 
 
+notify-send "just before "
 ####### autostarts ##################
-$HOME/.dotfiles/.config/ww-autostart.sh
+~/.dotfiles/.config/ww-autostart.sh
+notify-send "end of hbc"
 #xmodmap ~/.Xmodmap
 #pkill autokey-gtk; sleep 1; autokey-gtk &
 #alttab -d 1 &

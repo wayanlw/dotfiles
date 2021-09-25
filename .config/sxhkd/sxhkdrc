@@ -58,6 +58,11 @@ ctrl + alt + v
 super + shift + s
     flameshot gui
 
+# --------------- app launcher
+super + w; {b,a,c}
+    {brave,alacritty,code}
+
+
 #sometimes this workes
 #~alt + c
 #    xdotool key --clearmodifiers ctrl+c
