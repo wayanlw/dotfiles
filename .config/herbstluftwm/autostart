@@ -22,7 +22,7 @@ browser=brave
 filemgr=pcmanfm
 term=alacritty
 
-hc set default_frame_layout max # max
+hc set default_frame_layout horizontal # max
 
 #hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
@@ -101,8 +101,6 @@ hc keybind Shift-$Alt-k focus_monitor -d
 hc keybind $Mod-0 chain . lock_tag . spawn notify-send 'monitor locked'
 hc keybind $Mod-Shift-0 chain . unlock_tag . spawn notify-send 'monitor unlocked'
 
-
-
 # let the current frame explode into subframes
 hc keybind $Mod-Control-space split explode
 
@@ -119,7 +117,7 @@ hc keybind $Mod-Control-Right   resize right +$resizestep
 
 hc keybind $Mod-Shift-space floating toggle
 
-# tags
+## ----------------------- tags
 tag_names=( {1..5} )
 #tag_names=(Main, Second)
 tag_keys=( {1..5} 0 )
@@ -139,44 +137,57 @@ done
 hc keybind $Mod-period use_index +1 --skip-visible
 hc keybind $Mod-comma  use_index -1 --skip-visible
 
-# move window to next/previous tag
-hc keybind $Mod-Shift-period move_index +1 --skip-visible
-hc keybind $Mod-Shift-comma move_index -1 --skip-visible
+# move window to next/previous tag with the window
+hc keybind $Mod-Shift-period chain . move_index +1 --skip-visible . use_index +1 --skip-visible
+hc keybind $Mod-Shift-comma chain . move_index -1 --skip-visible . use_index -1 --skip-visible
 
-# layouting
-hc keybind $Mod-r remove
+# move window to next/previous tag without the window
+hc keybind $Mod-Control-period chain . move_index +1 --skip-visible
+hc keybind $Mod-Control-comma move_index -1 --skip-visible
+
+##----------------------- layouting
+hc keybind $Mod-r remove # remove the frame 
 hc keybind $Mod-s floating toggle
 hc keybind $Mod-f fullscreen toggle
 hc keybind $Mod-Shift-f set_attr clients.focus.floating toggle
+hc keybind $Mod-t pseudotile toggle
+
+##----------------------- minimizing | maximizing 
 hc keybind $Mod-Shift-m set_attr clients.focus.minimized true
 hc keybind $Mod-Control-m jumpto last-minimized
-hc keybind $Mod-t pseudotile toggle
+
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
-hc keybind $Mod-h                                                           \
-            or , and . compare tags.focus.curframe_wcount = 2                   \
-                     . cycle_layout +1 horizontal vertical  horizontal max grid    \
-               , cycle_layout +1
+
+# This is the original. When there is more than 2 windows go through all. 
+# Else horizonal and vertical only 
+#hc keybind $Mod-h                                                           \
+#            or , and . compare tags.focus.curframe_wcount = 2                   \
+#                     . cycle_layout +1 horizontal vertical  horizontal max grid    \
+#               , cycle_layout +1
+hc keybind $Mod-h cycle_layout +1 horizontal vertical
+hc keybind $Mod-x set_layout max
+hc keybind $Mod-v set_layout horizontal
 hc keybind $Mod-space cycle_layout +1 grid max grid
 
-# mouse
+## -----------------------  mouse
 hc mouseunbind --all
 hc mousebind $Mod-Button1 move
 hc mousebind $Mod-Button2 zoom
 hc mousebind $Mod-Button3 resize
 
-# focus
-hc keybind $Mod-m cycle_monitor             #cycle monitor
-hc keybind $Mod-v cycle_all +1
-hc keybind $Mod-Shift-v cycle_all -1
-hc keybind $Mod-c cycle                     # cycle the windows within frame
-hc keybind $Mod-x cycle_frame               # cycle the frame
-hc keybind $Mod-Tab use_previous              # toggle previous tag 
-
+## -----------------------  focus
+hc keybind $Mod-BackSpace cycle_monitor             # cycle monitor
+hc keybind $Mod-Tab cycle                           # cycle windows within frame
+hc keybind $Mod-grave use_previous                  # cycle previous tag 
+#hc keybind $Mod-x cycle_frame                      # cycle the frame in the same tag
+#hc keybind $Mod-v cycle_all +1                     # cycle all windows in the current tag 
+#hc keybind $Mod-Shift-v cycle_all -1               # cycle all windows in the current tag 
 #hc keybind $Mod-i jumpto urgent
 
-# theme
+
+## -----------------------  theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
 hc set frame_border_active_color '#222222cc'
@@ -188,7 +199,7 @@ hc set frame_border_width 1
 hc set always_show_frame on
 hc set frame_bg_transparent on
 hc set frame_transparent_width 5
-hc set frame_gap 3
+hc set frame_gap 4
 
 hc attr theme.title_height 0 #15 ; removes the window titles. default was 15
 hc attr theme.title_font 'Dejavu Sans:pixelsize=12'  # example using Xft
@@ -222,16 +233,18 @@ hc set smart_window_surroundings off
 hc set smart_frame_surroundings on
 hc set mouse_recenter_gap 0
 hc set focus_follows_mouse 1
-# rules
+
+
+## -----------------------  rules
 hc unrule -F
-#hc rule class=XTerm tag=3 # move all xterms to tag 3
-hc rule class=Brave-browser tag=2
+# hc rule class=XTerm tag=3 # move all xterms to tag 3
+hc rule class=Brave-browser tag=2 # move all brave to tag 3
 hc rule focus=on # normally focus new clients
-hc rule floatplacement=center
+hc rule floatplacement=center # float placement center
 hc set swap_monitors_to_get_tag 1
-#hc rule focus=off # normally do not focus new clients
+# hc rule focus=off # normally do not focus new clients
 # give focus to most common terminals
-#hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
+# hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
@@ -242,12 +255,12 @@ hc set tree_style '╾│ ├└╼─┐'
 hc unlock
 
 # do multi monitor setup here, e.g.:
-#hc set_monitors 1280x1024+0+0 1280x1024+1280+0
-#hc set_monitors 1366x745+0+0
+# hc set_monitors 1280x1024+0+0 1280x1024+1280+0
+# hc set_monitors 1366x745+0+0
 # or simply:
 hc detect_monitors
 
-# find the panel
+## --------- find the panel
 panel=~/.config/herbstluftwm/panel.sh
 [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
 for monitor in $(hc list_monitors | cut -d: -f1) ; do
@@ -255,11 +268,10 @@ for monitor in $(hc list_monitors | cut -d: -f1) ; do
     "$panel" "$monitor" &
 done
 
-
-notify-send "just before "
-####### autostarts ##################
+## --------- autostarts
 ~/.dotfiles/.config/ww-autostart.sh
-notify-send "end of hbc"
+notify-send "Window Manger loading complete"
+
 #xmodmap ~/.Xmodmap
 #pkill autokey-gtk; sleep 1; autokey-gtk &
 #alttab -d 1 &
