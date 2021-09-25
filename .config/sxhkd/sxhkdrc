@@ -1,31 +1,36 @@
 #
 # wm independent hotkeys
 #
+# --------------- Launchers
+alt + d 
+    dmenu_run -i -l 10
 
-# terminal emulator
+# rofi commands
+alt + {q,z}
+    rofi -{combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
+
+# --------------- terminal emulator
 alt + Return
     alacritty
 
 alt + shift + Return
     alacritty -e tmux
 
-# program launcher
+# --------------- program launcher
 
-# make sxhkd reload its configuration files:
+# --------------- make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#rofi commands
-alt + {q,z}
-    rofi -{combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
 	
-# kill window 
+# --------------- kill window 
 alt + shift + q
-    xkill 
+    wmctrl -c :ACTIVE:
+    #xkill 
 
 # --------------- switchr
 alt + shift + t
-    alacritty -e sh ~/.dotfiles/bin/switchr.sh
+    alacritty -e sh ~/.dotfiles/ww-scripts/switchr.sh
 
 # --------------- run-or-raise
 alt + shift + f
@@ -42,11 +47,16 @@ alt + shift + a
 
 
 # --------------- websearch  
-super+s ~/.dotfiles/ww-scripts/websearch.sh && wmctrl -x -a chromium
+super + s 
+    ~/.dotfiles/ww-scripts/websearch.sh && wmctrl -x -a brave
 
 # --------------- clipmenu
 ctrl + alt + v
     clipmenu
+
+# --------------- screenshot with flameshot
+super + shift + s
+    flameshot gui
 
 #sometimes this workes
 #~alt + c

@@ -254,7 +254,7 @@ done
 
 
 ####### autostarts ##################
-sh $HOME/.dotfiles/.config/ww-autostart.sh
+$HOME/.dotfiles/.config/ww-autostart.sh
 #xmodmap ~/.Xmodmap
 #pkill autokey-gtk; sleep 1; autokey-gtk &
 #alttab -d 1 &

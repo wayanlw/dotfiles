@@ -280,7 +280,7 @@ bindsym $mod+$Ctrl+9 move container to workspace number $ws9
 
 
 # ----------switch to workspace with urgent window automatically
-#for_window [urgent="latest"] focus
+for_window [urgent="latest"] focus
 focus_on_window_activation focus
 
 # ----------cycle through the workspaces
@@ -306,7 +306,7 @@ bindsym $mod+Shift+less move workspace to output up
 # ----------Default Workspaces for APPS. To find the class name use `xprop`. its case-sensitive
 assign [class="Brave-browser"] $ws2
 assign [class="Subl"] $ws3
-#assign [class="Alacritty"] $ws3
+assign [class="Alacritty"] $ws1
 #assign [class="kdenlive"] $ws6
 
 
@@ -339,7 +339,8 @@ mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym e exec --no-startup-id $term -e kill -9 -1 
+    #bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
@@ -509,12 +510,12 @@ exec_always --no-startup-id picom -b
 #--- the required ones from below was moved to the ww-autorun.sh file
 exec --no-startup-id clipmenud
 exec --no-startup-id autokey-gtk 
-exec --no-startup-id xfce4-panel 
+#exec --no-startup-id xfce4-panel 
 
- exec_always --no-startup-id lxpolkit &
- exec_always --no-startup-id alttab -d 1
- exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
- exec_always xmodmap ~/.Xmodmap
+exec_always --no-startup-id lxpolkit &
+exec_always --no-startup-id alttab -d 1
+exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
+exec_always xmodmap ~/.Xmodmap
 # exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
 # exec_always --no-startup-id pkill lxqt-panel; sleep 1; lxqt-panel;
 # exec_always --no-startup-id pkill lxpanel; sleep 1; lxpanel;
