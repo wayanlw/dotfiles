@@ -254,11 +254,12 @@ done
 
 
 ####### autostarts ##################
-xmodmap ~/.Xmodmap
-pkill autokey-gtk; sleep 1; autokey-gtk &
-alttab -d 1 &
-lxpolkit &
-pkill tint2; sleep 1;tint2 &
-nm-applet &
-#feh --bg-scale --randomize ~/Pictures/wallpapers/*
-variety &
+sh $HOME/.dotfiles/.config/ww-autostart.sh
+#xmodmap ~/.Xmodmap
+#pkill autokey-gtk; sleep 1; autokey-gtk &
+#alttab -d 1 &
+#lxpolkit &
+#pkill tint2; sleep 1;tint2 &
+#nm-applet &
+##feh --bg-scale --randomize ~/Pictures/wallpapers/*
+#variety &
