@@ -233,6 +233,7 @@ hc set smart_window_surroundings off
 hc set smart_frame_surroundings on
 hc set mouse_recenter_gap 0
 hc set focus_follows_mouse 1
+hc set focus_crosses_monitor_boundaries on
 
 
 ## -----------------------  rules
