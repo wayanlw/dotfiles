@@ -59,10 +59,11 @@ super + shift + s
     flameshot gui
 
 # --------------- app launcher
-super + w; {b,a,c}
-    {bave || wmctrl -x -a brave, \
-    alacritty, \
-    code}
+super + w; {b,t,c,n}
+    {wmctrl -x -a brave || brave,\
+    alacritty,\
+    wmctrl -x -a code || code,\
+    wmctrl -x -a notepadqq || notepadqq}
 
 
 

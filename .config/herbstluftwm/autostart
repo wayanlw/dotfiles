@@ -22,7 +22,7 @@ browser=brave
 filemgr=pcmanfm
 term=alacritty
 
-hc set default_frame_layout horizontal # max
+hc set default_frame_layout max # max
 
 #hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
@@ -167,9 +167,9 @@ hc keybind $Mod-Control-m jumpto last-minimized
 #                     . cycle_layout +1 horizontal vertical  horizontal max grid    \
 #               , cycle_layout +1
 hc keybind $Mod-h cycle_layout +1 horizontal vertical
-hc keybind $Mod-x set_layout max
-hc keybind $Mod-v set_layout horizontal
 hc keybind $Mod-space cycle_layout +1 grid max grid
+hc keybind $Mod-v set_layout horizontal
+hc keybind $Mod-x set_layout max
 
 ## -----------------------  mouse
 hc mouseunbind --all
