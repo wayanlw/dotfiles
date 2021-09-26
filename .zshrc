@@ -109,12 +109,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #PATH=$PATH:$HOME/.dotfiles/scripts
 
+#vim keybindings in zsh terminal. This has to be done before the other keymap commands. Else others will stop working.
+bindkey -v
+
 [[ -e $HOME/.bash_aliases ]] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
+
+source /usr/share/fzf/key-bindings.zsh
 
 [[ -f $HOME/.Xmodmap ]] && xmodmap $HOME/.Xmodmap
 
-#vim keybindings in zsh terminal
-bindkey -v
 
 ### autoexpanding aliases
 ## blank aliases

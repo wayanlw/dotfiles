@@ -16,6 +16,8 @@ set $filemgr pcmanfm
 set $code code
 
 workspace_layout tabbed
+# wrapping focussing yes|no|force|workspace
+focus_wrapping no 
 
 # ---------------------------------------------------------------------------- #
 #                       Avoid tiling for non-Plasma stuff                      #

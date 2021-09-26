@@ -19,7 +19,7 @@ alt + shift + Return
 # --------------- program launcher
 
 # --------------- make sxhkd reload its configuration files:
-super + Escape
+alt + Escape
 	notify-send "Reloading sxhkd"; pkill -USR1 -x sxhkd
 
 	
@@ -47,7 +47,7 @@ alt + shift + a
 
 
 # --------------- websearch  
-super + s 
+alt + s 
     ~/.dotfiles/ww-scripts/websearch.sh && wmctrl -x -a brave
 
 # --------------- clipmenu
@@ -55,11 +55,11 @@ ctrl + alt + v
     clipmenu
 
 # --------------- screenshot with flameshot
-super + shift + s
+alt + shift + s
     flameshot gui
 
 # --------------- app launcher
-super + w; {b,t,c,n}
+alt + w; {b,t,c,n}
     {wmctrl -x -a brave || brave,\
     alacritty,\
     wmctrl -x -a code || code,\
