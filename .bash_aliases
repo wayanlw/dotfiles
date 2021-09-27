@@ -93,8 +93,21 @@ function vil(){
 }
 
 #---------------------------------check weather
+
+#View options:
+#0                       # only current weather
+#1                       # current weather + today's forecast
+#2                       # current weather + today's + tomorrow's forecast
+#A                       # ignore User-Agent and force ANSI output format (terminal)
+#F                       # do not show the "Follow" line
+#n                       # narrow version (only day and night)
+#q                       # quiet version (no "Weather report" text)
+#Q                       # superquiet version (no "Weather report", no city name)
+#T                       # switch terminal sequences off (no colors)
+#example curl "wttr.in/Paris?0pq&lang=fr"
+
 function weather(){
-        [[ $1 = "" ]] && curl wttr.in/?FA || curl wttr.in/$1?0FT
+        [[ $1 = "" ]] && curl 'wttr.in/?FA' || curl "wttr.in/$1?0FT"
 }
 
 #---------------------------------heck weather

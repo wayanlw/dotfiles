@@ -309,7 +309,7 @@ bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace bac
 
 # ----------Move workspace up and down
 bindsym $mod+Shift+m move workspace to output down
-bindsym $mod+Shift+less move workspace to output up
+# bindsym $mod+Shift+less move workspace to output up
 
 # ----------Default Workspaces for APPS. To find the class name use `xprop`. its case-sensitive
 assign [class="Brave-browser"] $ws2
@@ -511,6 +511,7 @@ bar {
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id pkill tint2; sleep 1; tint2;
 exec_always --no-startup-id picom -b
+exec --no-startup-id sxhkd&
 
 # run the ww-autorun.sh file
 #exec_always --no-startup-id ~/.dotfiles/.config/ww-autorun.sh
