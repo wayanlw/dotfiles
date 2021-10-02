@@ -176,20 +176,84 @@ font:
 draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
+ 
+# Oxide colors
 colors:
-  # Default colors
   primary:
-    background: '0x282c34'
-    foreground: '0xbbc2cf'
+    background: '#212121'
+    foreground: '#c0c5ce'
+    bright_foreground: '#f3f4f5'
 
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not
-    # present. If the bright foreground color is not set, or
-    # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
-    # color will be used.
-    #dim_foreground: '#828482'
-    #bright_foreground: '#eaeaea'
+  cursor:
+    text: '#212121'
+    cursor: '#c0c5ce'
+
+  normal:
+    black:   '#212121'
+    red:     '#e57373'
+    green:   '#a6bc69'
+    yellow:  '#fac863'
+    blue:    '#6699cc'
+    magenta: '#c594c5'
+    cyan:    '#5fb3b3'
+    white:   '#c0c5ce'
+
+  bright:
+    black:   '#5c5c5c'
+    red:     '#e57373'
+    green:   '#a6bc69'
+    yellow:  '#fac863'
+    blue:    '#6699cc'
+    magenta: '#c594c5'
+    cyan:    '#5fb3b3'
+    white:   '#f3f4f5'
+
+  # (Solarized Colors)
+  #colors:
+  #  # Default colors
+  #  primary:
+  #    background: '0x002635'
+  #    foreground: '0xe6e6dc'
+  #
+  #  # Normal colors
+  #  normal:
+  #    black:   '0x00384d'
+  #    red:     '0xc43061'
+  #    green:   '0x7fc06e'
+  #    yellow:  '0xf08e48'
+  #    blue:    '0x1c8db2'
+  #    magenta: '0xc694ff'
+  #    cyan:    '0x00cccc'
+  #    white:   '0x77929e'
+  #
+  #  # Bright colors
+  #  bright:
+  #    black:   '0x517f8d'
+  #    red:     '0xff5a67'
+  #    green:   '0x9cf087'
+  #    yellow:  '0xffcc1b'
+  #    blue:    '0x7eb2dd'
+  #    magenta: '0xfb94ff'
+  #    cyan:    '0x00ffff'
+  #    white:   '0xb7cff9'
+  #
+  #  cursor:
+  #    text: "0x002635"
+  #    cursor: "0xffcc1b"
+    #colors:
+    #  # Default colors
+    #  primary:
+    #    background: '0x282c34'
+    #    foreground: '0xbbc2cf'
+
+  # Bright and dim foreground colors
+  #
+  # The dimmed foreground color is calculated automatically if it is not
+  # present. If the bright foreground color is not set, or
+  # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
+  # color will be used.
+  #dim_foreground: '#828482'
+  #bright_foreground: '#eaeaea'
 
   # Cursor colors
   #

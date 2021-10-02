@@ -17,7 +17,7 @@ set $code code
 
 workspace_layout tabbed
 # wrapping focussing yes|no|force|workspace
-focus_wrapping no 
+focus_wrapping no
 
 # ---------------------------------------------------------------------------- #
 #                       Avoid tiling for non-Plasma stuff                      #
@@ -66,7 +66,7 @@ for_window [window_type="menu"] floating enable, border none
 
 
 # --------------- Configure border style <normal|1pixel|pixel xx|none|pixel>
-#default_border pixel 2 
+#default_border pixel 2
 #default_floating_border normal
 
 # --------------- Disable titlebars for all windows
@@ -132,12 +132,12 @@ bindsym $mod+shift+x exec --no-startup-id wmctrl -x -a $filemgr || $filemgr
 # bindsym $mod+shift+a exec --no-startup-id wmctrl -x -a $term || $term
 #
 
-# --------------- websearch  
+# --------------- websearch
 bindsym $mod+s exec --no-startup-id ~/.dotfiles/ww-scripts/websearch.sh && wmctrl -x -a $browser
 
 
 # --------------- clipmenu
-bindsym $ctrl+$alt+v exec --no-startup-id clipmenu
+bindsym $ctrl+Shift+v exec --no-startup-id clipmenu
 
 # --------------- rofi
 bindsym $mod+z exec --no-startup-id rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
@@ -296,7 +296,7 @@ bindsym $mod+comma workspace prev
 bindsym $mod+$ctrl+period move container to workspace next
 bindsym $mod+$ctrl+comma move container to workspace prev
 
-bindsym $mod+shift+period move container to workspace next; workspace next 
+bindsym $mod+shift+period move container to workspace next; workspace next
 bindsym $mod+shift+comma move container to workspace prev; workspace prev
 
 # --------- Workpace switching back and forth
@@ -347,7 +347,7 @@ mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id $term -e kill -9 -1 
+    bindsym e exec --no-startup-id $term -e kill -9 -1
     #bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
@@ -458,49 +458,49 @@ mode "$mode_launcher" {
 
 #                                    COLORS                                    #
 
-# ---------------------------------------------------------------------------- #
-set $bg-color            #2f343f
-set $focus-color         #f29111
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
-
-# window colors
-#                       border               background         text                 indicator
-client.focused          $urgent-bg-color     $focus-color       $text-color          #00ff00
-client.unfocused        $inactive-bg-color   $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color   $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color     $urgent-bg-color   $text-color          #00ff00
+## ---------------------------------------------------------------------------- #
+#set $bg-color            #2f343f
+#set $focus-color         #f29111
+#set $inactive-bg-color   #2f343f
+#set $text-color          #f3f4f5
+#set $inactive-text-color #676E7D
+#set $urgent-bg-color     #E53935
+#
+## window colors
+##                       border               background         text                 indicator
+#client.focused          $urgent-bg-color     $focus-color       $text-color          #00ff00
+#client.unfocused        $inactive-bg-color   $inactive-bg-color $inactive-text-color #00ff00
+#client.focused_inactive $inactive-bg-color   $inactive-bg-color $inactive-text-color #00ff00
+#client.urgent           $urgent-bg-color     $urgent-bg-color   $text-color          #00ff00
 
 
 # ---------------------------------------------------------------------------- #
 #                                     BAR                                      #
 # ---------------------------------------------------------------------------- #
 
-bar {
-
-    #status_command i3blocks -c ~/.dotfiles/.config/i3blocks/i3blocks.conf
-    i3bar_command i3bar
-    status_command i3status
-	#tray_output none
-    font pango:San Francisco Display 9
-    position top
-    mode dock
-    colors {
-
-        background $bg-color
-        statusline #F9FAF9
-        separator  #454947
-
-        #                  border             background         text
-        #focused_workspace  #F9FAF9 #16a085 #292F34
-        inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-
-    }
-
-}
+#bar {
+#
+#    #status_command i3blocks -c ~/.dotfiles/.config/i3blocks/i3blocks.conf
+#    i3bar_command i3bar
+#    status_command i3status
+#	#tray_output none
+#    font pango:San Francisco Display 9
+#    position top
+#    mode dock
+#    colors {
+#
+#        background $bg-color
+#        statusline #F9FAF9
+#        separator  #454947
+#
+#        #                  border             background         text
+#        #focused_workspace  #F9FAF9 #16a085 #292F34
+#        inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#
+#    }
+#
+#}
 
 # ---------------------------------------------------------------------------- #
 
@@ -518,8 +518,8 @@ exec --no-startup-id sxhkd&
 
 #--- the required ones from below was moved to the ww-autorun.sh file
 exec --no-startup-id clipmenud
-exec --no-startup-id autokey-gtk 
-#exec --no-startup-id xfce4-panel 
+exec --no-startup-id autokey-gtk
+#exec --no-startup-id xfce4-panel
 
 exec_always --no-startup-id lxpolkit &
 exec_always --no-startup-id alttab -d 1
@@ -534,3 +534,65 @@ exec_always xmodmap ~/.Xmodmap
 
 
 
+
+#######
+#THEME#
+#######
+
+# set primary gruvbox colorscheme colors
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+
+# font used by i3 for titles and bars
+font pango:Hack 8
+
+#start of bar section
+bar {
+
+    status_command i3status
+	#tray_output none
+    font pango:San Francisco Display 7.5
+    position top
+	separator_symbol " << "
+    mode dock
+#    position bottom
+#    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    colors {
+        # bar background color
+        background $bg
+        # text color used for blocks that do not have a color specified.
+        statusline $yellow
+        # workspaces section
+        #                    border  	backgr. 	text
+		focused_workspace    $aqua		$aqua		$darkgray
+        inactive_workspace   $darkgray	$darkgray	$yellow
+        active_workspace     $darkgray	$darkgray	$yellow
+        urgent_workspace     $red 		$red 		$bg
+    }
+}
+#end of bar section
+
+#start of window title bars & borders section
+
+# green gruvbox
+# class                 border		|backgr		|text		|indicator	|child_border
+client.focused          $green		$green		$darkgray	$purple		$green
+client.focused_inactive $darkgray	$darkgray	$yellow		$purple		$darkgray
+client.unfocused        $darkgray	$darkgray	$yellow		$purple		$darkgray
+client.urgent           $red		$red		$white		$reload		$red
+
+# blue gruvbox
+# class                 border|backgr|text|indicator|child_border
+#client.focused          $blue $blue $darkgray $purple $blue
+#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+#client.urgent           $red $red $white $red $red
+
+#end of window title bars & borders section
