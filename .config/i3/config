@@ -128,8 +128,8 @@ bindsym $mod+Shift+t exec $term -e sh ~/.dotfiles/ww-scripts/switchr.sh
 # --------------- run-or-raise
 bindsym $mod+shift+f exec --no-startup-id wmctrl -x -a $browser || $browser
 bindsym $mod+shift+x exec --no-startup-id wmctrl -x -a $filemgr || $filemgr
-bindsym $mod+shift+d exec --no-startup-id wmctrl -x -a $code || $code
-bindsym $mod+shift+a exec --no-startup-id wmctrl -x -a $term || $term
+# bindsym $mod+shift+d exec --no-startup-id wmctrl -x -a $code || $code
+# bindsym $mod+shift+a exec --no-startup-id wmctrl -x -a $term || $term
 #
 
 # --------------- websearch  
