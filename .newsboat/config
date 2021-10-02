@@ -14,11 +14,12 @@
 
 show-read-feeds no
 feed-sort-order unreadarticlecount-asc
+openbrowser-and-mark-jumps-to-next-unread no
 
-color info default default reverse
-color listnormal_unread yellow default
-color listfocus blue default reverse bold
-color listfocus_unread blue default reverse bold
+#color info default default reverse
+#color listnormal_unread yellow default
+#color listfocus blue default reverse bold
+#color listfocus_unread blue default reverse bold
 
 text-width 80
 
@@ -28,18 +29,6 @@ text-width 80
 goto-next-feed no
 
 browser "brave %u"
-
-#bind-key j down feedlist
-#bind-key k up feedlist
-#bind-key j next articlelist
-#bind-key k prev articlelist
-#bind-key J next-feed articlelist
-#bind-key K prev-feed articlelist
-#bind-key j down article
-#bind-key k up article
-#bind-key h quit
-#bind-key l open
-bind-key O open-in-browser-noninteractively
 
 # unbind keys
 unbind-key ENTER
@@ -66,8 +55,8 @@ bind-key g home
 bind-key G end
 bind-key i sort
 bind-key I rev-sort
-bind-key O open-in-browser-noninteractively
-
+bind-key o open-in-browser-and-mark-read
+bind-key O open-in-browser
 
 # -- bookmarks -----------------------------------------------------------------
 
@@ -78,7 +67,6 @@ bookmark-autopilot yes
 
 # -- misc ----------------------------------------------------------------------
 
-#unbind-key C feedlist
 confirm-exit no
 
 # solarized
@@ -94,4 +82,3 @@ color article            default    default
 # highlights
 #highlight-article "https?://[^ ]+" red default
 #highlight-article "^(Title):.*$" blue default
-#highlight-article "unread == \"yes\"" red blank

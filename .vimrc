@@ -22,8 +22,8 @@ inoremap <special> jk <ESC>
 inoremap <special> jj <cr>
 
 "" use alt j and k to jump 10 lines
-nmap <leader>j 10j
-nmap <M-k> 10k
+noremap <M-j> 10j
+noremap <M-k> 10k
 
 "" copy to the end of the line
 nnoremap Y y$
@@ -77,8 +77,8 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 map 0 ^
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
+"nmap <M-j> mz:m+<cr>`z
+"nmap <M-k> mz:m-2<cr>`z
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -5,11 +5,14 @@
 #
 
 alias brightness="xrandr --output VGA1 --brightness"
-#alias brightness="xrandr --output LVDS1 --brightness"
 alias lcmd="cat $HOME/.bash_aliases| grep alias | grep -v '^#' | sed  's/^\w*\ *//'"
 alias lwwdir='cd $HOME/.dotfiles/'
 alias ll='ls --human-readable --size -1 --classify'
 alias lla='ls -A --human-readable --size -1 --classify'
+alias rm='mv -t /root/MyTrash/'
+
+
+alias findpkg='pacman -Qq | grep'
 alias paci='sudo pacman -S'
 alias pacu='sudo pacman -Runs'
 alias pacs='pacman -Ss'
@@ -18,23 +21,15 @@ alias paclist="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bi
 alias pacorder='ls -ltr /var/lib/pacman/local'
 alias pacall="pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse --bind 'ctrl-i:execute(sudo pacman -S {})+abort,enter:execute(pacman -Si {} | less)'"
 alias yayall="yay -Slq | fzf --preview 'yay -Si {}' --layout=reverse --bind 'ctrl-i:execute(yay -S {})+abort,enter:execute(yay -Si {} | less)'"
-# Press F1 to open the file with less without leaving fzf
-# Press CTRL-Y to copy the line to clipboard and aborts fzf (requires pbcopy)
-#fzf --bind 'f1:execute(less -f {}),ctrl-y:execute-silent(echo {} | pbcopy)+abort'
-
 alias yayi='yay -S'
-alias yayu='yay -Runs'
 alias yays='yay -Ss'
-alias fs='find ~ | fzf'
-alias fpkg='pacman -Qq | grep'
-alias i3config='vim ~/.config/i3/config'
-alias bashreload='source ~/.bashrc && echo Bash config reloaded'
-alias rm='mv -t /root/MyTrash/'
-alias hbc='vim ~/.config/herbstluftwm/autostart'
+alias yayu='yay -Runs'
 
-#setting keyboard layouts with the first 3 letters
-alias asd='setxkbmap us -variant colemak'
+alias hbc='vim ~/.config/herbstluftwm/autostart'
+alias i3config='vim ~/.config/i3/config'
+
 alias ars='setxkbmap us'
+alias asd='setxkbmap us -variant colemak'
 
 #changing folders
 alias dl='cd ~/Downloads'
@@ -50,33 +45,19 @@ function gpush(){
     git push origin master
 }
 
-alias mv='mv -v'
-alias rm='rm -vi'
-alias cp='cp -v'
-
-alias dl='cd ~/Downloads'
-alias cf='cd ~/.config'
-
-alias more=less
-#alias du='du -sh *| sort -h'
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-
-
-alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-alias grep='grep --color=auto'
 alias cd='cl'
-
-
-alias i3config='vim ~/.config/i3/config'
-alias vif='vim $(find . -maxdepth 4 -type f | ff)'
-alias ff='fzf --height 50% -m --layout=reverse --border'
 alias cdf='cd $(find . -maxdepth 4 -type d 2>/dev/null | ff)'
 alias cdr='cd $(find / -maxdepth 4 -type d 2>/dev/null | ff)'
+alias ff='fzf --height 50% -m --layout=reverse --border'
+alias vif='vim $(find . -maxdepth 4 -type f | ff)'
 
 alias grep="grep --color=auto"
+
 alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
-#alias cd="cl"
+
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -vi'
 
 # ---------------------------------------------------------------------------- #
 #                                   FUNCTIONS                                  #
@@ -92,31 +73,17 @@ function vil(){
     find $1 -maxdepth 4 -type f 2>/dev/null| fzf --height 50% --reverse --border --preview "cat {}" --bind "enter:execute(vim {})"
 }
 
-#---------------------------------check weather
-
-#View options:
-#0                       # only current weather
-#1                       # current weather + today's forecast
-#2                       # current weather + today's + tomorrow's forecast
-#A                       # ignore User-Agent and force ANSI output format (terminal)
-#F                       # do not show the "Follow" line
-#n                       # narrow version (only day and night)
-#q                       # quiet version (no "Weather report" text)
-#Q                       # superquiet version (no "Weather report", no city name)
-#T                       # switch terminal sequences off (no colors)
-#example curl "wttr.in/Paris?0pq&lang=fr"
 
 function weather(){
         [[ $1 = "" ]] && curl 'wttr.in/?FA' || curl "wttr.in/$1?0FT"
 }
 
-#---------------------------------heck weather
 function cheat(){
         [[ $1 = "" ]] && curl cheat.sh/ || curl cheat.sh/$1
 }
 
 
-#---------------------------------Open nano and make backup of original file. Useful for config files and things you don't want to edit the original
+# Open nano and make backup of original file. Useful for config files and things you don't want to edit the original
 function vimbk() {
     echo "You are making a copy of $1 before you open it. Press enter to continue."
     read nul
@@ -124,8 +91,21 @@ function vimbk() {
     vim $1
 }
 
+# search and watch youtube videos from terminal youtube Video | Youtube Audio
+function uv(){
+    link=$(ytfzf -L -t --thumbnail-quality=0 "'$*'")
+    echo -n $link | xclip -sel clip 
+    mpv --ytdl-format='bestvideo[height<=?480]+bestaudio' $link > /dev/null 2>&1
 
-#---------------------------------  Prints the ls command when cd
+}
+function ua(){
+    link=$(ytfzf -L -t --thumbnail-quality=0 "'$*'")
+    echo -n $link | xclip -sel clip 
+    mpv --ytdl-format='bestaudio' $link > /dev/null 2>&1 &
+
+}
+
+# Prints the ls command when cd
 function cl() {
     DIR="$*";
         # if no DIR given, go home
