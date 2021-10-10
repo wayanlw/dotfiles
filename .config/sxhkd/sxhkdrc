@@ -66,6 +66,9 @@ alt + w; {b,t,c,n}
     wmctrl -x -a notepadqq || notepadqq}
 
 
+# --------------- dmenu process killer  
+alt + shift + p
+    kill -15 $(ps -u $USER -o pid,%mem,%cpu,comm | sort -b -k2 -r | sed -n '1!p' | dmenu -i -l 10 | awk '{print $1}')
 
 #sometimes this workes
 #~alt + c

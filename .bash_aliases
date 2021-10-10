@@ -95,14 +95,14 @@ function vimbk() {
 function uv(){
     link=$(ytfzf -L -t --thumbnail-quality=0 "'$*'")
     echo -n $link | xclip -sel clip 
-    mpv --ytdl-format='bestvideo[height<=?480]+bestaudio' $link > /dev/null 2>&1
+    mpv --ytdl-format='bestvideo[height<=?720]+bestaudio' $link > /dev/null 2>&1
 
 }
 function ua(){
     link=$(ytfzf -L -t --thumbnail-quality=0 "'$*'")
     echo -n $link | xclip -sel clip 
     mpv --ytdl-format='bestaudio' $link > /dev/null 2>&1 &
-
+    echo "[+] To stop playing in background enter 'pkill mpv'"
 }
 
 # Prints the ls command when cd
