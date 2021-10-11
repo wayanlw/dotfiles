@@ -196,8 +196,9 @@ set laststatus=2
 
 "let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-""let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
@@ -244,7 +245,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'https://github.com/easymotion/vim-easymotion.git'
 
-    "Plug 'https://github.com/morhetz/gruvbox'
+    Plug 'https://github.com/morhetz/gruvbox'
     "Plug 'https://github.com/bagrat/vim-buffet.git'
     "Plug 'https://github.com/neoclide/coc.nvim'
     "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -281,5 +282,5 @@ nmap <leader>fh :FZF ~<cr>
 " => gruvbox activation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "endfunction
-"colorscheme gruvbox
+colorscheme gruvbox
 "set background=dark

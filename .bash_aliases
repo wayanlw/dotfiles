@@ -48,6 +48,10 @@ function gpush(){
 alias cd='cl'
 alias cdf='cd $(find . -maxdepth 4 -type d 2>/dev/null | ff)'
 alias cdr='cd $(find / -maxdepth 4 -type d 2>/dev/null | ff)'
+alias .='cd ..'
+alias ..='cd ../..'
+alias ...='cd ../../..'
+
 alias ff='fzf --height 50% -m --layout=reverse --border'
 alias vif='vim $(find . -maxdepth 4 -type f | ff)'
 
