@@ -1,7 +1,6 @@
 #!/bin/bash
 clipmenud &
 dunst &
-lxpolkit &
 alttab -d 1 &
 nm-applet &
 pkill volumeicon; sleep 1; volumeicon &
