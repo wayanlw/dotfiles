@@ -232,7 +232,8 @@ bindsym $mod+minus scratchpad show
 # ----------delay the disapearance of highlighting for a urgency window
 force_display_urgency_hint 500 ms
 
-
+# ----------bring any container to current workspace with rofi
+bindsym $mod+b exec --no-startup-id i3-msg "[id=$(wmctrl -l | rofi -dmenu -i -p "window" | cut -d" " -f1)] move container to workspace current"
 # ---------------------------------------------------------------------------- #
 
 #                                  WORKSPACES                                  #
