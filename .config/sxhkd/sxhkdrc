@@ -47,6 +47,14 @@ alt + shift + d
 alt + shift + a
     wmctrl -x -a alacritty || alacritty
 	
+# --------------- app launcher
+alt + w; {b,t,c,n,f}
+    {wmctrl -x -a brave || brave,\
+    alacritty,\
+    wmctrl -x -a code || code,\
+    wmctrl -x -a notepadqq || notepadqq,\
+    wmctrl -x -a fsearch || fsearch}
+
 # --------------- websearch  
 alt + s 
     ~/.dotfiles/ww-scripts/websearch.sh && wmctrl -x -a brave
@@ -59,30 +67,48 @@ ctrl + alt + v
 alt + shift + s
     flameshot gui
 
-# --------------- app launcher
-alt + w; {b,t,c,n,f}
-    {wmctrl -x -a brave || brave,\
-    alacritty,\
-    wmctrl -x -a code || code,\
-    wmctrl -x -a notepadqq || notepadqq,\
-    wmctrl -x -a fsearch || fsearch}
-
-
-
-alt + w; {b,t,c,n}
 
 # --------------- dmenu process killer  
 alt + shift + p
     kill -15 $(ps -u $USER -o pid,%mem,%cpu,comm | sort -b -k2 -r | sed -n '1!p' | dmenu -i -l 10 | awk '{print $1}')
 
-#sometimes this workes
-#~alt + c
-#    xdotool key --clearmodifiers ctrl+c
+# -------------------------------------------------------------------
+#                               Open Box
+# -------------------------------------------------------------------
+super + shift + r
+	notify-send "Reloading sxhkd"; pkill -USR1 -x sxhkd
 #
-#~alt + b
-#    xdotool key --clearmodifiers ctrl+l
+# --------------- Window Management
+# resize window
+alt + shift + {w,e,r,4}
+    ~/.dotfiles/ww-scripts/windowplace.sh {1,2,3,4}
 
 
+# switch desktops
+alt + {1,2,3,4} 
+    wmctrl -s {0,1,2,3}
+
+# go to previous next desktop
+alt + {comma,period} 
+    xdotool set_desktop --relative {-- -1,1}
+
+# resize window
+alt + shift + {comma,period}
+    ~/.dotfiles/ww-scripts/takeToNext.sh {"prev","next"}
+
+# switching desktops with windows
+alt + shift + 1
+    wmctrl -r :ACTIVE: -t 0; wmctrl -s 0
+alt + shift + 2
+    wmctrl -r :ACTIVE: -t 1; wmctrl -s 1
+alt + shift + 3
+    wmctrl -r :ACTIVE: -t 2; wmctrl -s 2
+alt + shift + 4
+    wmctrl -r :ACTIVE: -t 3; wmctrl -s 3
+
+#bring window to current dekstop
+alt + b
+    ~/.dotfiles/ww-scripts/bringHere.sh
 #
 #
 ## quit/restart bspwm

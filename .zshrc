@@ -118,7 +118,6 @@ source /usr/share/fzf/key-bindings.zsh
 
 [[ -f $HOME/.Xmodmap ]] && xmodmap $HOME/.Xmodmap
 
-
 ### autoexpanding aliases
 ## blank aliases
 #typeset -a baliases

@@ -229,8 +229,8 @@ hc attr theme.background_color '#141414'
 
 hc set window_gap 0 # gap between windows in the same frame 
 hc set frame_padding 0
-hc set smart_window_surroundings on
-hc set smart_frame_surroundings on
+hc set smart_window_surroundings off
+hc set smart_frame_surroundings off
 hc set mouse_recenter_gap 0
 hc set focus_follows_mouse 1
 hc set focus_crosses_monitor_boundaries on
