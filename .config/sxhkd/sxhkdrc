@@ -26,7 +26,9 @@ alt + Escape
 # --------------- kill window 
 alt + shift + q
     wmctrl -c :ACTIVE:
-    #xkill 
+
+ctrl + alt + q
+    xkill 
 
 # --------------- switchr
 alt + shift + t
@@ -44,8 +46,7 @@ alt + shift + d
 
 alt + shift + a
     wmctrl -x -a alacritty || alacritty
-
-
+	
 # --------------- websearch  
 alt + s 
     ~/.dotfiles/ww-scripts/websearch.sh && wmctrl -x -a brave
@@ -59,12 +60,16 @@ alt + shift + s
     flameshot gui
 
 # --------------- app launcher
-alt + w; {b,t,c,n}
+alt + w; {b,t,c,n,f}
     {wmctrl -x -a brave || brave,\
     alacritty,\
     wmctrl -x -a code || code,\
-    wmctrl -x -a notepadqq || notepadqq}
+    wmctrl -x -a notepadqq || notepadqq,\
+    wmctrl -x -a fsearch || fsearch}
 
+
+
+alt + w; {b,t,c,n}
 
 # --------------- dmenu process killer  
 alt + shift + p

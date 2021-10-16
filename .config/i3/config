@@ -15,8 +15,11 @@ set $browser brave
 set $filemgr pcmanfm
 set $code code
 
+# default window lauout
 # workspace_layout tabbed
-# wrapping focussing yes|no|force|workspace
+
+ 
+# wrapping focussing 
 focus_wrapping no
 
 # ---------------------------------------------------------------------------- #
@@ -29,6 +32,7 @@ for_window [window_role="Preferences"] floating enable, border none
 for_window [window_role="About"] floating enable, border none
 for_window [window_type="dialog"] floating enable, border nonRe
 for_window [window_type="menu"] floating enable, border none
+
 
 # ---------------------------------------------------------------------------- #
 #                                Plasma Section                                #
@@ -56,7 +60,10 @@ for_window [window_type="menu"] floating enable, border none
 
 #for_window [class="xfce4*"] floating enable; border none
 
-
+#----------- All floating mode
+#for_window [class="^.*"] floating enable 
+bindsym $alt+u floating enable, resize set 49 ppt 96 ppt, move position 0 ppt 0 px
+bindsym $alt+o floating enable, resize set 50 ppt 96 ppt, move position 50 ppt 0 ppt 
 
 # ---------------------------------------------------------------------------- #
 

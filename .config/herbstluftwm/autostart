@@ -201,7 +201,7 @@ hc set frame_bg_transparent on
 hc set frame_transparent_width 3
 hc set frame_gap 3
 
-hc attr theme.title_height 0 #15 ; removes the window titles. default was 15
+hc attr theme.title_height 0 #15 # removes the window titles. default was 15
 hc attr theme.title_font 'Dejavu Sans:pixelsize=12'  # example using Xft
 # hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
 #hc attr theme.padding_top 0  # space below the title's baseline (i.e. text depth)
@@ -229,7 +229,7 @@ hc attr theme.background_color '#141414'
 
 hc set window_gap 0 # gap between windows in the same frame 
 hc set frame_padding 0
-hc set smart_window_surroundings off
+hc set smart_window_surroundings on
 hc set smart_frame_surroundings on
 hc set mouse_recenter_gap 0
 hc set focus_follows_mouse 1
