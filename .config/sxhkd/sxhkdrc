@@ -46,6 +46,9 @@ alt + shift + d
 
 alt + shift + a
     wmctrl -x -a alacritty || alacritty
+
+super + z
+    wmctrl -x -a fsearch || fsearch
 	
 # --------------- app launcher
 alt + w; {b,t,c,n,f}
@@ -80,8 +83,9 @@ super + shift + r
 #
 # --------------- Window Management
 # resize window
-alt + shift + {w,e,r,4}
-    ~/.dotfiles/ww-scripts/windowplace.sh {1,2,3,4}
+# if the monitor configuration changes need to chanege the parametrs in ~/.dotfiles/ww-scripts/windowplace-multi.sh
+alt + shift + {w,e,r,5,6,7,8}
+    ~/.dotfiles/ww-scripts/windowplace-multi.sh {1,2,3,4,5,6,7}
 
 
 # switch desktops
@@ -95,6 +99,9 @@ alt + {comma,period}
 # resize window
 alt + shift + {comma,period}
     ~/.dotfiles/ww-scripts/takeToNext.sh {"prev","next"}
+
+alt + ctrl + {comma,period}
+    ~/.dotfiles/ww-scripts/takeToNext.sh {"prev-noSwitch","next-noSwitch"}
 
 # switching desktops with windows
 alt + shift + 1

@@ -9,6 +9,10 @@ case $1 in
         wmctrl -r :ACTIVE: -t $nxtDesktop; wmctrl -s $nxtDesktop;;
     "prev")
         wmctrl -r :ACTIVE: -t $prevDesktop; wmctrl -s $prevDesktop;; 
+    "next-noSwitch")
+        wmctrl -r :ACTIVE: -t $nxtDesktop;;
+    "prev-noSwitch")
+        wmctrl -r :ACTIVE: -t $prevDesktop;; 
     *)
         exit;;
 esac
