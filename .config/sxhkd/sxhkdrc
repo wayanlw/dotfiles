@@ -41,11 +41,14 @@ alt + shift + f
 alt + shift + x
     wmctrl -x -a pcmanfm || pcmanfm 
 
-alt + shift + d
-    wmctrl -x -a $code || $code
+# alt + shift + d
+#     wmctrl -x -a $code || $code
 
 alt + shift + a
     wmctrl -x -a alacritty || alacritty
+
+alt + shift + d
+    xdg-open "https://google.com/search?q=$(xsel)"
 
 super + z
     wmctrl -x -a fsearch || fsearch
