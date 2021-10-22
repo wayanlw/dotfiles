@@ -16,12 +16,12 @@ newPosY=$((screenHeight/2-height/2))
 taskbar=50
 
 # primary monitor
-w1=1920
-h1=1080
+w2=1920
+h2=1080
 
 # seconday monitor
-w2=1366
-h2=768
+w1=1366
+h1=768
 
 # offset
 xP=333

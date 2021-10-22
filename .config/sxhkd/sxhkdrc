@@ -2,11 +2,11 @@
 # wm independent hotkeys
 #
 # --------------- Launchers
-alt + d 
+alt + space
     dmenu_run -i -l 10
 
 # rofi commands
-alt + {q,z}
+alt + {shift+space,z}
     rofi -{combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
 
 # --------------- terminal emulator

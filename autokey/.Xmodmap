@@ -3,6 +3,9 @@ remove mod4 = Hyper_L
 keycode 66 = Hyper_L
 add Lock = Hyper_L
 
+! this is to map the Alt_GR to Control_L. But didnt work
+! keycode 108 = Control_L
+!
 ! ---- Swap Contrl and Alt in the XOrg
 !clear control
 !clear mod1
