@@ -41,12 +41,10 @@
       },
       {
         "direct": "U",
-        "action": "I_search",
-        "moreDes": "Use %name to search the image",
-        "moreIsearch": "sgoogleimage",
-        "moreTarget": "newfront",
-        "morePosition": "chrome",
-        "morePinned": "unpinned"
+        "action": "G_close",
+        "moreCloseurl": "chrome://newtab/",
+        "moreClosesel": "chrome",
+        "moreCloseopts": "close"
       }
     ],
     "imgfirst": "none",
@@ -127,8 +125,11 @@
         "whitelist": []
       },
       {
-        "action": "G_down",
         "direct": "D",
+        "action": "G_close",
+        "moreCloseurl": "chrome://newtab/",
+        "moreClosesel": "chrome",
+        "moreCloseopts": "close",
         "whitelist": []
       },
       {
