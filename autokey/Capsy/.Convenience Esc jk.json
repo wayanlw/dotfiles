@@ -1,0 +1,32 @@
+{
+    "usageCount": 70, 
+    "omitTrigger": false, 
+    "prompt": false, 
+    "description": "Convenience Esc jk", 
+    "abbreviation": {
+        "wordChars": "[\\w]", 
+        "abbreviations": [
+            "jk"
+        ], 
+        "immediate": true, 
+        "ignoreCase": false, 
+        "backspace": true, 
+        "triggerInside": true
+    }, 
+    "hotkey": {
+        "hotKey": "q", 
+        "modifiers": [
+            "<hyper>"
+        ]
+    }, 
+    "modes": [
+        1
+    ], 
+    "showInTrayMenu": false, 
+    "filter": {
+        "regex": null, 
+        "isRecursive": false
+    }, 
+    "type": "script", 
+    "store": {}
+}

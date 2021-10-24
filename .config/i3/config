@@ -4,23 +4,28 @@
 
 # ---------------------------------------------------------------------------- #
 
+# ---------------------------------------------------------------------------- #
+#                            Defaults and Variables                            #
+# ---------------------------------------------------------------------------- #
 
 # ---------- Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 set $alt Mod1
 set $ctrl Control
 
-set $term alacritty
-set $browser brave
+# ---------- Defualt Programs
+set $term kitty
+set $browser brave-browser
 set $filemgr pcmanfm
 set $code code
 
-# default window lauout
+# ---------- Defualt window layout
+default window lauout
 # workspace_layout tabbed
 
- 
-# wrapping focussing 
+### turn-off wrapping focussing (wont come from last $ws to first $ws)
 focus_wrapping no
+
 
 # ---------------------------------------------------------------------------- #
 #                       Avoid tiling for non-Plasma stuff                      #
@@ -40,30 +45,31 @@ for_window [window_type="menu"] floating enable, border none
 #           Avoids tiling popups, dropdown windows from plasma
 # ---------------------------------------------------------------------------- #
 
-#for_window [title="Desktop — Plasma"] kill; floating enable; border none
-#for_window [class="plasmashell"] floating enable;
-#for_window [class="Plasma"] floating enable; border none
-#for_window [title="plasma-desktop"] floating enable; border none
-#for_window [title="win7"] floating enable; border none
-#for_window [class="krunner"] floating enable; border none
-#for_window [class="Kmix"] floating enable; border none
-#for_window [class="Klipper"] floating enable; border none
-#for_window [class="Plasmoidviewer"] floating enable; border none
-#for_window [class="(?i)*nextcloud*"] floating disable
-#for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
-#no_focus [class="plasmashell" window_type="notification"]
-#
-# ---------- Tries to kill the wallpaper set by Plasma
-# ---------- (it takes up the entire workspace and hides everythiing)
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
+no_focus [class="plasmashell" window_type="notification"]
+
+### Tries to kill the wallpaper set by Plasma(it takes up the entire workspace and hides everything)
 #exec --no-startup-id wmctrl -c Plasma
-#for_window [title="Desktop — Plasma"] kill, floating enable, border none
 
-#for_window [class="xfce4*"] floating enable; border none
+### XFCE Windows as popups
+for_window [title="Desktop — Plasma"] kill, floating enable, border none
+for_window [class="xfce4*"] floating enable; border none
 
-#----------- All floating mode
-#for_window [class="^.*"] floating enable 
+# ----------------------------- All floating mode ---------------------------- #
+### Floating mode for all windows and easily place them left and right side of the window
+#for_window [class="^.*"] floating enable
 bindsym $alt+u floating enable, resize set 49 ppt 96 ppt, move position 0 ppt 0 px
-bindsym $alt+o floating enable, resize set 50 ppt 96 ppt, move position 50 ppt 0 ppt 
+bindsym $alt+o floating enable, resize set 50 ppt 96 ppt, move position 50 ppt 0 ppt
 
 # ---------------------------------------------------------------------------- #
 
@@ -84,10 +90,10 @@ new_window 1pixel
 #hide_edge_borders none
 
 # --------------- GAPS
-gaps inner 5
-gaps outer 0
-bindsym $mod+g gaps inner current plus 5
-bindsym $mod+Shift+g gaps inner current minus 5
+# gaps outer 0
+# gaps inner 5
+# bindsym $mod+g gaps inner current plus 5
+# bindsym $mod+Shift+g gaps inner current minus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
 #smart_gaps on
@@ -110,9 +116,7 @@ font pango:System San Francisco Display Display Regular 8
 
 
 # ---------------------------------------------------------------------------- #
-
 #                                   SHORTCUTS                                  #
-
 # ---------------------------------------------------------------------------- #
 
 # --------------- kill window
@@ -120,27 +124,37 @@ bindsym $mod+Shift+q kill
 bindsym $mod+n kill
 bindsym $mod+$ctrl+q focus parent,kill
 
+# ----------reload the configuration file
+bindsym $mod+Shift+c reload
+
+# ----------restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# ----------exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
 # --------------- dmenu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -l 15
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop    # this only displays the startmenu items
+##-- this only displays the startmenu items
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # --------------- terminal
 #bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+Return exec --no-startup-id $term
 bindsym $mod+Shift+Return exec $term -e tmux
 
-# --------------- switchr
-bindsym $mod+Shift+t exec $term -e sh ~/.dotfiles/ww-scripts/switchr.sh
+# --------------- switchr(this was implemented with sxhkdrc)
+# bindsym $mod+Shift+t exec $term -e sh ~/.dotfiles/ww-scripts/switchr.sh
 
-# --------------- run-or-raise
-bindsym $mod+shift+f exec --no-startup-id wmctrl -x -a $browser || $browser
-bindsym $mod+shift+x exec --no-startup-id wmctrl -x -a $filemgr || $filemgr
+# --------------- run-or-raise (this was implemented with sxhkdrc)
+# bindsym $mod+shift+f exec --no-startup-id wmctrl -x -a $browser || $browser
+# bindsym $mod+shift+x exec --no-startup-id wmctrl -x -a $filemgr || $filemgr
 # bindsym $mod+shift+d exec --no-startup-id wmctrl -x -a $code || $code
 # bindsym $mod+shift+a exec --no-startup-id wmctrl -x -a $term || $term
 #
 
-# --------------- websearch
-bindsym $mod+s exec --no-startup-id ~/.dotfiles/ww-scripts/websearch.sh && wmctrl -x -a $browser
+# --------------- websearch (this was implemented with sxhkdrc)
+# bindsym $mod+s exec --no-startup-id ~/.dotfiles/ww-scripts/websearch.sh && wmctrl -x -a $browser
 
 
 # --------------- clipmenu
@@ -152,7 +166,7 @@ bindsym $mod+q exec --no-startup-id rofi -show window -theme solarized -font "ha
 
 
 # ---------------------------------------------------------------------------- #
-#                                    Sounds                                   #
+#                             SOUND ADJ | VOLUME MENU                          #
 # ---------------------------------------------------------------------------- #
 
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
@@ -168,11 +182,25 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+
+# --------------- Volume Adjustment Menu
+set $audiomenu "volume:  [+]10%  [-]10%  [m]ute  [r]eset"
+bindsym $mod+a         mode $audiomenu
+
+mode $audiomenu {
+    bindsym r             exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 100%
+    bindsym plus          exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+    bindsym KP_Add        exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+    bindsym minus         exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+    bindsym KP_Subtract   exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+    bindsym m             exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym Return        mode "default"
+    bindsym Escape        mode "default"
+}
+
 # --------------- Screen brightness controls
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
-
-
 
 # ---------------------------------------------------------------------------- #
 #                         WINDOWS (Containers)                                 #
@@ -200,10 +228,6 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-
-# ----------move the container to the other monior.
-bindsym $mod+m move container to output down
-#bindsym $mod+shift+m move container to output up
 
 # ----------split orientation
 default_orientation auto
@@ -315,37 +339,24 @@ bindsym $mod+shift+comma move container to workspace prev; workspace prev
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
-# ----------Move workspace up and down
-bindsym $mod+Shift+m move workspace to output down
-# bindsym $mod+Shift+less move workspace to output up
-
 # ----------Default Workspaces for APPS. To find the class name use `xprop`. its case-sensitive
 assign [class="Brave-browser"] $ws2
 assign [class="Subl"] $ws3
 # assign [class="Alacritty"] $ws1
 #assign [class="kdenlive"] $ws6
 
-
 # ---------------------------------------------------------------------------- #
-
-#                              i3 Reload, Restart                              #
-
+#                  Move Container | Workspace between Monitors                 #
 # ---------------------------------------------------------------------------- #
+bindsym $mod+Shift+m move workspace to output down
+# bindsym $mod+Shift+less move workspace to output up
 
-# ----------reload the configuration file
-bindsym $mod+Shift+c reload
-
-# ----------restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-
-# ----------exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+m move container to output down
+#bindsym $mod+shift+m move container to output up
 
 
 # ---------------------------------------------------------------------------- #
-
 #                                   SHUTDOWN                                   #
-
 # ---------------------------------------------------------------------------- #
 
 # ----------Set shut down, restart and locking features
@@ -367,68 +378,45 @@ mode "$mode_system" {
 }
 
 # ---------------------------------------------------------------------------- #
-
 #                                RESIZE WINDOWS                                #
-
 # ---------------------------------------------------------------------------- #
 bindsym $ctrl+$mod+u resize shrink width 5 px or 5 ppt
 bindsym $ctrl+$mod+o resize grow width 5 px or 5 ppt
 
 bindsym $mod+r mode "resize"
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+	# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym i resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
+	# Pressing left will shrink the window’s width.
+	# Pressing right will grow the window’s width.
+	# Pressing up will shrink the window’s height.
+	# Pressing down will grow the window’s height.
+	bindsym j resize shrink width 5 px or 5 ppt
+	bindsym k resize grow height 5 px or 5 ppt
+	bindsym i resize shrink height 5 px or 5 ppt
+	bindsym l resize grow width 5 px or 5 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
+	# same bindings, but for the arrow keys
+	bindsym Left resize shrink width 5 px or 5 ppt
+	bindsym Down resize grow height 5 px or 5 ppt
+	bindsym Up resize shrink height 5 px or 5 ppt
+	bindsym Right resize grow width 5 px or 5 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-    }
-
-
-# ---------------------------------------------------------------------------- #
-
-#                                VOLUME ADJUST                                 #
-
-# ---------------------------------------------------------------------------- #
-set $audiomenu "volume:  [+]10%  [-]10%  [m]ute  [r]eset"
-bindsym $mod+a         mode $audiomenu
-
-mode $audiomenu {
-    bindsym r             exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 100%
-    bindsym plus          exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-    bindsym KP_Add        exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-    bindsym minus         exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
-    bindsym KP_Subtract   exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
-    bindsym m             exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-    bindsym Return        mode "default"
-    bindsym Escape        mode "default"
+	# back to normal: Enter or Escape or $mod+r
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
+
 # ---------------------------------------------------------------------------- #
-
 #                      MOUSE: mouse related configurations                     #
-
 # ---------------------------------------------------------------------------- #
 
 # ---------- Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# ----------focus doesnt follow the mouse
+# ----------focus doesnt follow the mouse (If no have to click to activate)
 # focus_follows_mouse no
 
 # The middle button over a titlebar kills the window
@@ -441,12 +429,8 @@ bindsym --whole-window $mod+button2 kill
 bindsym button3 floating toggle
 #bindsym --whole-window $mod+button3 floating toggle
 
-
-
 # ---------------------------------------------------------------------------- #
-
 #                  LAUNCHER : keybindings. mod+o then the key                  #
-
 # ---------------------------------------------------------------------------- #
 set $mode_launcher Launch: [b]rowser [f]ileManager
 bindsym $mod+v mode "$mode_launcher"
@@ -461,12 +445,10 @@ mode "$mode_launcher" {
 }
 
 
-
+# ---------------------------------------------------------------------------- #
+#                                    COLORS                                    #
 # ---------------------------------------------------------------------------- #
 
-#                                    COLORS                                    #
-
-## ---------------------------------------------------------------------------- #
 #set $bg-color            #2f343f
 #set $focus-color         #f29111
 #set $inactive-bg-color   #2f343f
@@ -510,58 +492,25 @@ mode "$mode_launcher" {
 #
 #}
 
-# ---------------------------------------------------------------------------- #
-
-#                                 START-UP APPS                                #
-
-# ---------------------------------------------------------------------------- #
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id pkill tint2; sleep 1; tint2;
-exec_always --no-startup-id picom -b
-exec --no-startup-id sxhkd&
-
-# run the ww-autorun.sh file
-#exec_always --no-startup-id ~/.dotfiles/.config/ww-autorun.sh
-
-#--- the required ones from below was moved to the ww-autorun.sh file
-exec --no-startup-id clipmenud
-exec --no-startup-id autokey-gtk
-#exec --no-startup-id xfce4-panel
-
-exec_always --no-startup-id lxpolkit &
-exec_always --no-startup-id alttab -d 1
-exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
-exec_always xmodmap ~/.Xmodmap
-# exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
-# exec_always --no-startup-id pkill lxqt-panel; sleep 1; lxqt-panel;
-# exec_always --no-startup-id pkill lxpanel; sleep 1; lxpanel;
-# exec_always --no-startup-id pkill tint2; sleep 1; tint2;
-# exec_always --no-startup-id pkill volumeicon; sleep 1; volumeicon;
-# exec_always --no-startup-id nm-applet
-
-
-
 
 #######
 #THEME#
 #######
 
 # set primary gruvbox colorscheme colors
-set $bg #282828
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
-set $gray #a89984
+set $bg       #282828
+set $red      #cc241d
+set $green    #98971a
+set $yellow   #d79921
+set $blue     #458588
+set $purple   #b16286
+set $aqua     #689d68
+set $gray     #a89984
 set $darkgray #1d2021
 
 # font used by i3 for titles and bars
 font pango:Hack 8
 
-#start of bar section
 bar {
 
     status_command i3status
@@ -585,9 +534,8 @@ bar {
         urgent_workspace     $red 		$red 		$bg
     }
 }
-#end of bar section
 
-#start of window title bars & borders section
+# --------------- start of window title bars & borders section
 
 # green gruvbox
 # class                 border		|backgr		|text		|indicator	|child_border
@@ -597,10 +545,37 @@ client.unfocused        $darkgray	$darkgray	$yellow		$purple		$darkgray
 client.urgent           $red		$red		$white		$reload		$red
 
 # blue gruvbox
-# class                 border|backgr|text|indicator|child_border
-#client.focused          $blue $blue $darkgray $purple $blue
-#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
-#client.urgent           $red $red $white $red $red
+# class						border		backgr		text		indicator	child_border
+#client.focused           	$blue  		$blue  		$darkgray  	$purple		$blue
+#client.focused_inactive  	$darkgray  	$darkgray  	$yellow  	$purple		$darkgray
+#client.unfocused         	$darkgray  	$darkgray  	$yellow  	$purple		$darkgray
+#client.urgent            	$red  		$red  		$white  	$red  		$red
 
-#end of window title bars & borders section
+
+
+# ---------------------------------------------------------------------------- #
+#                                 START-UP APPS                                #
+# ---------------------------------------------------------------------------- #
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the # screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id pkill tint2; sleep 1; tint2;
+exec --no-startup-id sxhkd&
+exec --no-startup-id clipmenud
+exec --no-startup-id autokey-gtk
+
+# run the ww-autorun.sh file
+#exec_always --no-startup-id ~/.dotfiles/.config/ww-autorun.sh
+
+#--- the required ones from below was moved to the ww-autorun.sh file
+exec_always --no-startup-id picom -b
+exec_always --no-startup-id lxpolkit &
+exec_always --no-startup-id alttab -d 1
+exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
+# exec_always xmodmap ~/.Xmodmap
+#exec --no-startup-id xfce4-panel
+# exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
+# exec_always --no-startup-id pkill lxqt-panel; sleep 1; lxqt-panel;
+# exec_always --no-startup-id pkill lxpanel; sleep 1; lxpanel;
+# exec_always --no-startup-id pkill volumeicon; sleep 1; volumeicon;
+# exec_always --no-startup-id nm-applet
+
