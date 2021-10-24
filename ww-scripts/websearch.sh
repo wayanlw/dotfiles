@@ -11,7 +11,7 @@ QUERY=$(echo -e "g - google\ngi - google images\nddg - duckduckgo\nu - youtube\n
 FIRSTWORD=$(echo $QUERY | cut  -d " " -f1)
 SEARCH_ITEM=$(echo $QUERY | awk 'NF{$1=x; sub(/^ /,x)}1')
 if [ -n "$QUERY" ]; then
-    case $FIRSTWORD in 
+    case $FIRSTWORD in
     "g")
         xdg-open "${g_url}${SEARCH_ITEM}" 2>/dev/null
         break;;
@@ -26,18 +26,21 @@ if [ -n "$QUERY" ]; then
         break;;
     "uv")
         link=$(ytfzf -DL ${SEARCH_ITEM})
-        echo -n $link | xclip -sel clip 
+        echo -n $link | xclip -sel clip
+        pkill mpv
         mpv --ytdl-format='bestvideo[height<=?480]+bestaudio' $link > /dev/null 2>&1
         break;;
     "ua")
         link=$(ytfzf -DL ${SEARCH_ITEM})
-        echo -n $link | xclip -sel clip 
+        echo -n $link | xclip -sel clip
+        pkill mpv
         mpv --ytdl-format='bestaudio' $link > /dev/null 2>&1
         break;;
     "uh")
         notify-send test
         link=$(ytfzf -HDL)
-        echo -n $link | xclip -sel clip 
+        echo -n $link | xclip -sel clip
+        pkill mpv
         mpv --ytdl-format='bestvideo[height<=?480]+bestaudio' $link > /dev/null 2>&1
         break;;
     *)
