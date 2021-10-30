@@ -8,7 +8,8 @@ feh --bg-scale --randomize ~/Pictures/wallpapers/*
 sxhkd -c ~/.dotfiles/.config/sxhkd/sxhkdrc &
 pkill tint2; sleep 1;tint2 &
 
-#runs the Linux Capsy
+sh -c "rclone --vfs-cache-mode writes mount onedrive:Notes ~/Onedrive"
+NoteNotess#runs the Linux Capsy
 setxkbmap
 xmodmap ~/.Xmodmap
 autokey-gtk &

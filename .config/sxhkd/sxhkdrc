@@ -19,8 +19,8 @@ alt + {z,shift+space}
 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
 
 # ───────────────────────────── terminal emulator ──────────────────────────── #
-alt + Return
-    kitty
+# alt + Return
+#     kitty
 
 alt + shift + Return
     kitty -e tmux
