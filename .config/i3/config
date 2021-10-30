@@ -556,7 +556,7 @@ client.urgent           $red		$red		$white		$reload		$red
 # ---------------------------------------------------------------------------- #
 #                                 START-UP APPS                                #
 # ---------------------------------------------------------------------------- #
-# # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the # screen before suspend. Use loginctl lock-session to lock your screen.
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # exec --no-startup-id pkill tint2; sleep 1; tint2;
 # exec --no-startup-id sxhkd&
@@ -564,15 +564,15 @@ client.urgent           $red		$red		$white		$reload		$red
 # exec --no-startup-id autokey-gtk
 
 # run the ww-autorun.sh file
-exec_always --no-startup-id ~/.dotfiles/.config/ww-autorun.sh
+exec_always --no-startup-id ~/.dotfiles/.config/ww-autostart.sh
 
-## --- the required ones from below was moved to the ww-autorun.sh file
+#--- the required ones from below was moved to the ww-autorun.sh file
 # exec_always --no-startup-id picom -b
 # exec_always --no-startup-id lxpolkit &
 # exec_always --no-startup-id alttab -d 1
 # exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
 # exec_always xmodmap ~/.Xmodmap
-#exec --no-startup-id xfce4-panel
+# exec --no-startup-id xfce4-panel
 # exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
 # exec_always --no-startup-id pkill lxqt-panel; sleep 1; lxqt-panel;
 # exec_always --no-startup-id pkill lxpanel; sleep 1; lxpanel;

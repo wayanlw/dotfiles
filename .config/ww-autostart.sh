@@ -8,8 +8,7 @@ feh --bg-scale --randomize ~/Pictures/wallpapers/*
 sxhkd -c ~/.dotfiles/.config/sxhkd/sxhkdrc &
 pkill tint2; sleep 1;tint2 &
 
-sh -c "rclone --vfs-cache-mode writes mount onedrive:Notes ~/Onedrive"
-NoteNotess#runs the Linux Capsy
+#runs the Linux Capsy
 setxkbmap
 xmodmap ~/.Xmodmap
 autokey-gtk &
@@ -19,5 +18,12 @@ lxpolkit &
 
 # dex is a autorun runner and craetor
 # dex -ae i3
+
+# Setup onedrive sync with rclone tool
+if [ -d ~/Onedrive ]
+then
+	sh -c "rclone --vfs-cache-mode writes mount onedrive:Notes ~/Onedrive"
+fi
+
 
 notify-send "autostart.sh completed"
