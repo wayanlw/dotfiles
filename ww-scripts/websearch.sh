@@ -44,7 +44,9 @@ if [ -n "$QUERY" ]; then
         mpv --ytdl-format='bestvideo[height<=?480]+bestaudio' $link > /dev/null 2>&1
         break;;
     *)
-        notify-send "invalid option";;
+        xdg-open "${g_url}${QUERY}" 2>/dev/null
+        break;;
+        # notify-send "invalid option";;
     esac
         #xdg-open "${URL}${QUERY}" 2> /dev/null
         #exec i3-msg [class="^Firefox$"] focus

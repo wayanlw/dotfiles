@@ -10,17 +10,17 @@ alt + Escape
 	notify-send "Reloading sxhkd"; pkill -USR1 -x sxhkd
 
 # ───────────────────────────────── Launchers ──────────────────────────────── #
-alt + space
+alt + d
     dmenu_run -i -l 10
 
 # ─────────────────────────────── rofi Comamnds ────────────────────────────── #
-alt + {z,shift+space}
+alt + {space, shift+space}
     rofi -{combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,\
 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
 
 # ───────────────────────────── terminal emulator ──────────────────────────── #
-# alt + Return
-#     kitty
+alt + Return
+    kitty
 
 alt + shift + Return
     kitty -e tmux
@@ -44,19 +44,22 @@ alt + shift + f
 alt + shift + t
     wmctrl -x -a kitty || kitty
 
-# alt + shift + c
-#     wmctrl -x -a $code || $code
+alt + shift + c
+    wmctrl -x -a code || code
 
 alt + shift + x
     wmctrl -x -a pcmanfm || pcmanfm
 
 # ------- screenshot with flameshot
-alt + shift + s
+ctrl + shift + z
     flameshot gui
 
-super + z
+alt + z
     wmctrl -x -a fsearch || fsearch
 
+#-------- clipmenu
+ctrl + alt + v
+	clipmenu
 
 #-------- Multi key option for launcher ---------
 
@@ -71,7 +74,7 @@ alt + w; {f,t,c,n,s}
 # Can search the selected text via the default browser.
 # Dependancy xsel (sudo apt install xsel)
 
-alt + shift + d
+super + shift + s
     xdg-open "https://google.com/search?q=$(xsel)"
 
 # ───────────────────────────── Dmenu web search ───────────────────────────── #
@@ -81,8 +84,8 @@ alt + shift + d
 # uv - video option for ua
 # uh - Same as above two. but searches the history
 
-alt + s
-    ~/.dotfiles/ww-scripts/websearch.sh && wmctrl -x -a brave
+super + s
+    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a brave
 
 
 # ──────────────────────────────── tmux-switch ─────────────────────────────── #
