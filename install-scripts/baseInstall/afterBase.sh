@@ -2,8 +2,8 @@ echo "Setting timedatectl..."
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 
-echo "Setting up reflector..."
-sudo reflector -c Australia -a 12 --sort rate --save /etc/pacman.d/mirrorlist
+# echo "Setting up reflector..."
+# sudo reflector -c Australia -a 12 --sort rate --save /etc/pacman.d/mirrorlist
 
 
 echo "installing packages..."
@@ -38,8 +38,8 @@ sudo pacman -S --noconfirm --needed \
         arc-gtk-theme \
         ttf-font-awesome
 
-		
-#install yay	
+
+#install yay
 pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -49,7 +49,7 @@ cd
 #yay -S --noconfirm \
 #		autokey-gtk \
 #		alttab-git
-		
+
 echo "enabling lightdm..."
 sudo systemctl enable lightdm
 

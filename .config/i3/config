@@ -20,7 +20,7 @@ set $filemgr pcmanfm
 set $code code
 
 # ---------- Defualt window layout
-default window lauout
+default window layout
 # workspace_layout tabbed
 
 ### turn-off wrapping focussing (wont come from last $ws to first $ws)

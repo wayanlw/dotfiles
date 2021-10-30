@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ln -sf /usr/share/zoneinfo/Europe/Zurich /etc/localtime
+ln -sf /usr/share/zoneinfo/Australia/Melbourne /etc/localtime
 hwclock --systohc
 sed -i '177s/.//' /etc/locale.gen
 locale-gen
@@ -45,19 +45,12 @@ pacman -S --noconfirm  --needed \
 		xdg-utils \
 		arandr
 
-#install yay	
-pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd
-
 #video Drivers
 pacman -S --noconfirm --needed xf86-video
 pacman -S --noconfirm --needed xf86-video-vesa
 # pacman -S --noconfirm xf86-video-amdgpu
 # pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
-		
+
 grub-install --target=i386-pc /dev/sda # replace sdx with your disk name, not the partition
 grub-mkconfig -o /boot/grub/grub.cfg
 echo "GRUB_DISABLE_OS_PROBER=false" >> etc/default/grub
@@ -69,8 +62,8 @@ echo suadmin:password | chpasswd
 echo "suadmin ALL=(ALL) ALL" >> /etc/sudoers.d/suadmin
 
 printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m"
-	
-		
+
+
 #pacman -S --noconfirm --needed  \
 		#grub \
 		#networkmanager \

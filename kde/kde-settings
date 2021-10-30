@@ -1,9 +1,0 @@
-explorer meta + e
-browser meta + b
-dmenu_run
-
-
-
-
-#### Autostart
-run .dotfiles/kde/austart as a starup script
