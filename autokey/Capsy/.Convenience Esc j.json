@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "Esc",
+    "description": "Convenience Esc j;",
     "store": {},
     "modes": [
         1
     ],
-    "usageCount": 22,
+    "usageCount": 24,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,

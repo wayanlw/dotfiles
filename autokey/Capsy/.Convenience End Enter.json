@@ -1,29 +1,27 @@
 {
     "type": "script",
-    "description": "Convenience Esc jk",
+    "description": "Convenience End Enter",
     "store": {},
     "modes": [
-        1
+        3
     ],
-    "usageCount": 71,
+    "usageCount": 12,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
     "abbreviation": {
-        "abbreviations": [
-            "jk"
-        ],
+        "abbreviations": [],
         "backspace": true,
         "ignoreCase": false,
-        "immediate": true,
-        "triggerInside": true,
+        "immediate": false,
+        "triggerInside": false,
         "wordChars": "[\\w]"
     },
     "hotkey": {
         "modifiers": [
             "<hyper>"
         ],
-        "hotKey": "q"
+        "hotKey": "'"
     },
     "filter": {
         "regex": null,
