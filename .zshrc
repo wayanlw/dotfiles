@@ -70,7 +70,7 @@ ZSH_THEME="af-magic"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
+    # git
     history-substring-search
     dirhistory
     colored-man-pages
@@ -116,7 +116,6 @@ source $ZSH/oh-my-zsh.sh
 
 source /usr/share/fzf/key-bindings.zsh
 
-[[ -f $HOME/.Xmodmap ]] && xmodmap $HOME/.Xmodmap
 
 ### autoexpanding aliases
 ## blank aliases

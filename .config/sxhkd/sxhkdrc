@@ -9,6 +9,9 @@
 alt + Escape
 	notify-send "Reloading sxhkd"; pkill -USR1 -x sxhkd
 
+alt + ctrl + Escape
+    kill -9 -1
+
 # ───────────────────────────────── Launchers ──────────────────────────────── #
 alt + d
     dmenu_run -i -l 10

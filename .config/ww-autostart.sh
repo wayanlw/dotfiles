@@ -10,8 +10,9 @@ pkill tint2; sleep 1;tint2 &
 
 #runs the Linux Capsy
 setxkbmap
-xmodmap ~/.Xmodmap
+[[ -f $HOME/.Xmodmap ]] && xmodmap $HOME/.Xmodmap
 autokey-gtk &
+
 
 # when there is no desktop environment this enables a polkit
 lxpolkit &
@@ -19,6 +20,7 @@ lxpolkit &
 # dex is a autorun runner and craetor
 # dex -ae i3
 
+sleep 5
 # Setup onedrive sync with rclone tool
 if [ -d ~/Onedrive ]
 then
