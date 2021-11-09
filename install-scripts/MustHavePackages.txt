@@ -18,7 +18,7 @@ arandr
 arc-gtk-theme
 
 # ───────────────────────────── system cleansing ───────────────────────────── #
-bleachbit 4.4.1-1
+bleachbit
 
 # ───────────────────────────────── bluetooth ──────────────────────────────── #
 blueman
@@ -28,31 +28,31 @@ bluez-utils
 # ──────────────────────────── clipboard managers ──────────────────────────── #
 parcelliteu
 #clipmenu
-xclip 0.13-3
+xclip
 xsel
 
 
 # ───────────────────────── autostart and session mgt ──────────────────────── #
-lxsession #lxsession-xdg-autostart&
+lxsession #`lxsession-xdg-autostart&`
 xdg-utils #xdg-open to open with default program
-dex # can use to generate *.desktopfiles in ~/.config/autostart/ and simulate autorstart // dex -create ww-autostart.sh -target-directory ~/.config/autostart // dex --autostart --dry-run --enfironment i3
+dex # can use to generate *.desktopfiles in ~/.config/autostart/ and simulate autorstart // `dex -create ww-autostart.sh -target-directory ~/.config/autostart` // `dex --autostart --dry-run --enfironment i3`
 xdg-user-dirs # creating of user directories
 
 # ───────────────────────────────── launcher ───────────────────────────────── #
-dmenu # dmenu_run -i -lines 10
+dmenu # `dmenu_run -i -lines 10`
 rofi
 # ulauncher
 
 # ──────────────────────── taskbar and desktop related ─────────────────────── #
 plank
-# lxpanel
+# lxpanel # there is a memoryleaak in lxpanel
 tint2
 
 # ──────────────────────────── system notification ─────────────────────────── #
 dunst
 
 # ──────────────────────────────── wallpapers ──────────────────────────────── #
-feh # feh feh --bg-scale --randomize ~/Pictures/wallpapers/*
+feh # `feh feh --bg-scale --randomize ~/Pictures/wallpapers/*`
 nitrogen
 # variety # Variety comsumes a lot of resources
 
@@ -95,10 +95,10 @@ networkmanager
 networkmanager-applet
 
 # ─────────────────────────────────── sound ────────────────────────────────── #
-pulseaudio 15.0-1
-pulseaudio-alsa 1:1.2.5-2
-pulseaudio-bluetooth 15.0-1
-pavucontrol 1:5.0-1
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
+pavucontrol
 volumeicon
 
 # ─────────────────────────────────── video ────────────────────────────────── #
@@ -108,7 +108,7 @@ youtube-dl
 ueberzug # required for youtubdl thumbnail display
 
 # ────────────────────────────────── images ────────────────────────────────── #
-sxiv 26-1
+sxiv
 
 # ─────────────────────────────── screen capture ────────────────────────────── #
 flameshot
@@ -131,10 +131,10 @@ ranger
 ncdu
 
 # ─────────────────────────────── lx utilities ─────────────────────────────── #
-lxappearance 0.6.3-4
-lxinput 0.3.5-3
-lxsession 1:0.5.5-1
-lxtask 0.1.10-1
+lxappearance
+lxinput
+lxsession
+lxtask
 
 # ──────────────────────────────── filesystem ──────────────────────────────── #
 os-prober
@@ -148,7 +148,7 @@ openssh
 openvpn
 
 # ───────────────────────────────── compsitor ──────────────────────────────── #
-picom 8.2-1
+picom
 
 
 file syncing and cloning
@@ -159,36 +159,36 @@ clonezilla
 
 # ──────────────────────────── keyboard automation ─────────────────────────── #
 autokey-gtk # install using yay
-sxhkd 0.6.2-1
+sxhkd
 
 # ─────────────────────────────────── fonts ────────────────────────────────── #
-ttf-anonymous-pro 1.003-5
-ttf-cascadia-code 2108.26-1
-ttf-dejavu 2.37+18+g9b5d1b2f-3
-ttf-font-awesome 5.15.4-1
-ttf-roboto 2.138-4
+ttf-anonymous-pro
+ttf-cascadia-code
+ttf-dejavu
+ttf-font-awesome
+ttf-roboto
 
 # ───────────────────────────────── downloads ──────────────────────────────── #
 curl
 aria2
 uget
-wget 1.21.2-1
+wget
 
 
 # ────────────────────────────── virtualization ────────────────────────────── #
-virtualbox 6.1.28-3
-virtualbox-guest-iso 6.1.28-1
+virtualbox
+virtualbox-guest-iso
 docker
 
 
 # archiving
 p7zip
-xarchiver 0.5.4.17-1
+xarchiver
 
 # ────────────────────────────── window managers ───────────────────────────── #
-i3-gaps 4.20-1
-i3lock 2.13-1
-i3status 2.13-3
+i3-gaps
+i3lock
+i3status
 
 openbox
 menumaker # menumaker for openbox `mmaker -vf`
@@ -197,6 +197,6 @@ obconf # appearance config for openbox
 herbstluftwm
 dzen2
 
-lightdm 1:1.30.0-4
-lightdm-gtk-greeter 1:2.0.8-1
-lightdm-gtk-greeter-settings 1.2.2-6
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings

@@ -1,0 +1,107 @@
+# lxpanel <profile> config file. Manually editing is not recommended.
+# Use preference dialog in lxpanel to adjust config when you can.
+
+Global {
+  edge=bottom
+  monitor=1
+  height=26
+  align=center
+  transparent=1
+  background=0
+  tintcolor=#10202a
+  alpha=255
+  usefontcolor=1
+  fontcolor=#f2f2f2
+  usefontsize=1
+  fontsize=10
+  width=30
+}
+Plugin {
+  type=menu
+  Config {
+    system {
+    }
+    separator {
+    }
+    item {
+      command=run
+    }
+    separator {
+    }
+    item {
+      command=logout
+      image=gnome-logout
+    }
+    image=/usr/share/lxpanel/images/my-computer.png
+  }
+}
+Plugin {
+  type=space
+  Config {
+  }
+  expand=0
+}
+Plugin {
+  type=launchbar
+  Config {
+    Button {
+      id=kitty.desktop
+    }
+    Button {
+      id=visual-studio-code.desktop
+    }
+    Button {
+      id=brave-browser.desktop
+    }
+  }
+}
+Plugin {
+  type=deskno
+  Config {
+    BoldFont=1
+    WMLabels=1
+  }
+}
+Plugin {
+  type=space
+  Config {
+  }
+  expand=1
+}
+Plugin {
+  type=launchtaskbar
+  Config {
+    IconsOnly=-1
+    FlatButton=0
+    MaxTaskWidth=150
+    GroupedTasks=1
+    DisableUpscale=0
+    spacing=3
+    LaunchTaskBarMode=1
+    UseMouseWheel=0
+    UseUrgencyHint=-1
+    UseSmallerIcons=0
+    SameMonitorOnly=0
+    ShowAllDesks=-1
+  }
+  expand=1
+}
+Plugin {
+  type=monitors
+  Config {
+    DisplayCPU=1
+    DisplayRAM=1
+    CPUColor=#0000FF
+    RAMColor=#FF0000
+  }
+}
+Plugin {
+  type=dclock
+  Config {
+    ClockFmt=%R
+    TooltipFmt=%A %x
+    BoldFont=0
+    IconOnly=0
+    CenterText=0
+  }
+}
