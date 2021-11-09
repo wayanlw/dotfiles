@@ -138,19 +138,19 @@ function cpcd(){
 }
 
 function goog(){
-q=""
-i=0
+    q=""
+    i=0
 
-for var in "$@"
-do
-   if [ "$i" -eq "0" ]
-   then
-      q+=$var
-   else
-      q+="+"$var
-   fi
-   i+=1
-done
+    for var in "$@"
+    do
+       if [ "$i" -eq "0" ]
+       then
+          q+=$var
+       else
+          q+="+"$var
+       fi
+       i+=1
+    done
 
-xdg-open "http://www.google.com/search?q=$q" >/dev/null 2>&1
+    xdg-open "http://www.google.com/search?q=$q" >/dev/null 2>&1
 }

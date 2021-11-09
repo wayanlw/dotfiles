@@ -23,7 +23,7 @@ set $code code
 # default window layout
 # workspace_layout tabbed
 
-### turn-off wrapping focussing (wont come from last $ws to first $ws)
+### turn-off wrapping focussing. If in the rightmost window on the workspace
 focus_wrapping no
 
 
@@ -37,7 +37,8 @@ for_window [window_role="Preferences"] floating enable, border none
 for_window [window_role="About"] floating enable, border none
 for_window [window_type="dialog"] floating enable, border nonRe
 for_window [window_type="menu"] floating enable, border none
-
+for_window [class="Fsearch"] floating enable;
+for_window [class="Fsearch"] resize set 800 500;
 
 # ---------------------------------------------------------------------------- #
 #                                Plasma Section                                #
@@ -121,7 +122,6 @@ font pango:System San Francisco Display Display Regular 8
 
 # --------------- kill window
 bindsym $mod+Shift+q kill
-bindsym $mod+n kill
 bindsym $mod+$ctrl+q focus parent,kill
 
 # ----------reload the configuration file
@@ -245,7 +245,6 @@ bindsym $mod+e layout toggle split
 
 # ----------toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
 # ----------change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
@@ -340,18 +339,16 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
 # ----------Default Workspaces for APPS. To find the class name use `xprop`. its case-sensitive
-assign [class="Brave-browser"] $ws2
-assign [class="Subl"] $ws3
-# assign [class="Alacritty"] $ws1
+#assign [class="Brave-browser"] $ws2
 #assign [class="kdenlive"] $ws6
 
 # ---------------------------------------------------------------------------- #
 #                  Move Container | Workspace between Monitors                 #
 # ---------------------------------------------------------------------------- #
-bindsym $mod+Shift+m move workspace to output down
+bindsym $mod+Shift+m move workspace to output left
 # bindsym $mod+Shift+less move workspace to output up
 
-bindsym $mod+m move container to output down
+bindsym $mod+m move container to output left
 #bindsym $mod+shift+m move container to output up
 
 
@@ -444,58 +441,9 @@ mode "$mode_launcher" {
 
 }
 
-
-# ---------------------------------------------------------------------------- #
-#                                    COLORS                                    #
-# ---------------------------------------------------------------------------- #
-
-#set $bg-color            #2f343f
-#set $focus-color         #f29111
-#set $inactive-bg-color   #2f343f
-#set $text-color          #f3f4f5
-#set $inactive-text-color #676E7D
-#set $urgent-bg-color     #E53935
-#
-## window colors
-##                       border               background         text                 indicator
-#client.focused          $urgent-bg-color     $focus-color       $text-color          #00ff00
-#client.unfocused        $inactive-bg-color   $inactive-bg-color $inactive-text-color #00ff00
-#client.focused_inactive $inactive-bg-color   $inactive-bg-color $inactive-text-color #00ff00
-#client.urgent           $urgent-bg-color     $urgent-bg-color   $text-color          #00ff00
-
-
-# ---------------------------------------------------------------------------- #
-#                                     BAR                                      #
-# ---------------------------------------------------------------------------- #
-
-#bar {
-#
-#    #status_command i3blocks -c ~/.dotfiles/.config/i3blocks/i3blocks.conf
-#    i3bar_command i3bar
-#    status_command i3status
-#	#tray_output none
-#    font pango:San Francisco Display 9
-#    position top
-#    mode dock
-#    colors {
-#
-#        background $bg-color
-#        statusline #F9FAF9
-#        separator  #454947
-#
-#        #                  border             background         text
-#        #focused_workspace  #F9FAF9 #16a085 #292F34
-#        inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-#        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-#
-#    }
-#
-#}
-
-
-#######
-#THEME#
-#######
+# ──────────────────────────────────────────────────────────────────────────── #
+#                                     THEME                                    #
+# ──────────────────────────────────────────────────────────────────────────── #
 
 # set primary gruvbox colorscheme colors
 set $bg       #282828
@@ -510,6 +458,8 @@ set $darkgray #1d2021
 
 # font used by i3 for titles and bars
 font pango:Hack 8
+
+# ──────────────────────────────── Status bar ──────────────────────────────── #
 
 bar {
 
@@ -535,7 +485,7 @@ bar {
     }
 }
 
-# --------------- start of window title bars & borders section
+# ──────────────────── Window title bars & borders colors ──────────────────── #
 
 # green gruvbox
 # class                 border		|backgr		|text		|indicator	|child_border
@@ -552,10 +502,9 @@ client.urgent           $red		$red		$white		$reload		$red
 #client.urgent            	$red  		$red  		$white  	$red  		$red
 
 
-
-# ---------------------------------------------------------------------------- #
+# ──────────────────────────────────────────────────────────────────────────── #
 #                                 START-UP APPS                                #
-# ---------------------------------------------------------------------------- #
+# ──────────────────────────────────────────────────────────────────────────── #
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # exec --no-startup-id pkill tint2; sleep 1; tint2;

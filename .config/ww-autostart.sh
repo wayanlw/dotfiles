@@ -1,6 +1,7 @@
 #!/bin/bash
 clipmenud &
 dunst &
+picom &
 alttab -d 1 &
 nm-applet &
 pkill volumeicon; sleep 1; volumeicon &
@@ -8,7 +9,7 @@ feh --bg-scale --randomize ~/Pictures/wallpapers/*
 sxhkd -c ~/.dotfiles/.config/sxhkd/sxhkdrc &
 pkill tint2; sleep 1;tint2 &
 
-#runs the Linux Capsy
+# ─────────────────────────── Linux Capsy ─────────────────────────── #
 setxkbmap
 [[ -f $HOME/.Xmodmap ]] && xmodmap $HOME/.Xmodmap
 autokey-gtk &

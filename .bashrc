@@ -21,7 +21,6 @@ PATH=$PATH:~/.dotfiles/scripts
 #     ln -sf "$HOME/.dotfiles/.bash_aliases" "$HOME/.bash_aliases" && source "$HOME/.bash_aliases"
 # fi
 
-[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #
