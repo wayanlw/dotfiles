@@ -1,0 +1,202 @@
+# ───────────────────────────────── terminals ──────────────────────────────── #
+alacritty
+kitty
+zsh #download ohmyzsh too
+tmux
+
+# ──────────────────────────── terminal utilities ──────────────────────────── #
+htop
+tree
+sudo
+which
+
+# ──────────────────────────────── monitor mgt ─────────────────────────────── #
+arandr
+# lxrandr
+
+# ────────────────────────────────── themes ────────────────────────────────── #
+arc-gtk-theme
+
+# ───────────────────────────── system cleansing ───────────────────────────── #
+bleachbit 4.4.1-1
+
+# ───────────────────────────────── bluetooth ──────────────────────────────── #
+blueman
+bluez
+bluez-utils
+
+# ──────────────────────────── clipboard managers ──────────────────────────── #
+parcelliteu
+#clipmenu
+xclip 0.13-3
+xsel
+
+
+# ───────────────────────── autostart and session mgt ──────────────────────── #
+lxsession #lxsession-xdg-autostart&
+xdg-utils #xdg-open to open with default program
+dex # can use to generate *.desktopfiles in ~/.config/autostart/ and simulate autorstart // dex -create ww-autostart.sh -target-directory ~/.config/autostart // dex --autostart --dry-run --enfironment i3
+xdg-user-dirs # creating of user directories
+
+# ───────────────────────────────── launcher ───────────────────────────────── #
+dmenu # dmenu_run -i -lines 10
+rofi
+# ulauncher
+
+# ──────────────────────── taskbar and desktop related ─────────────────────── #
+plank
+# lxpanel
+tint2
+
+# ──────────────────────────── system notification ─────────────────────────── #
+dunst
+
+# ──────────────────────────────── wallpapers ──────────────────────────────── #
+feh # feh feh --bg-scale --randomize ~/Pictures/wallpapers/*
+nitrogen
+# variety # Variety comsumes a lot of resources
+
+
+# ────────────────────────────────── search ────────────────────────────────── #
+fsearch
+mlocate
+fzf
+
+# ──────────────────────────────────── pdf ─────────────────────────────────── #
+qpdfview
+zathura
+zathura-pdf-mupdf
+
+# ──────────────────────────────────── git ─────────────────────────────────── #
+git
+#git-lfs
+
+# ──────────────────────────────── OS Related ──────────────────────────────── #
+gnome-keyring
+lxpolkit
+
+# ───────────────────────────── dropdown terminal ──────────────────────────── #
+tilda
+#guake
+
+# ─────────────────────────────── text editors ─────────────────────────────── #
+gvim
+code
+notepadqq
+#geany
+#neovim
+
+# ───────────────────────────── window management ──────────────────────────── #
+xdotools
+wmctrl
+
+# ────────────────────────────────── network ───────────────────────────────── #
+networkmanager
+networkmanager-applet
+
+# ─────────────────────────────────── sound ────────────────────────────────── #
+pulseaudio 15.0-1
+pulseaudio-alsa 1:1.2.5-2
+pulseaudio-bluetooth 15.0-1
+pavucontrol 1:5.0-1
+volumeicon
+
+# ─────────────────────────────────── video ────────────────────────────────── #
+mpv
+#vlcplayer
+youtube-dl
+ueberzug # required for youtubdl thumbnail display
+
+# ────────────────────────────────── images ────────────────────────────────── #
+sxiv 26-1
+
+# ─────────────────────────────── screen capture ────────────────────────────── #
+flameshot
+peek
+
+# ──────────────────────────────── Cloud Sync ──────────────────────────────── #
+megasync
+dropbox
+
+# ───────────────────────────────── rssreader ──────────────────────────────── #
+newsboat
+
+# ────────────────────────────────── reddit ────────────────────────────────── #
+rtv
+
+# ─────────────────────────────── filemanagers ─────────────────────────────── #
+pcmanfm
+ranger
+#nnn
+ncdu
+
+# ─────────────────────────────── lx utilities ─────────────────────────────── #
+lxappearance 0.6.3-4
+lxinput 0.3.5-3
+lxsession 1:0.5.5-1
+lxtask 0.1.10-1
+
+# ──────────────────────────────── filesystem ──────────────────────────────── #
+os-prober
+ntfs-3g
+udisks2
+udiskie
+#usbutils
+
+# ──────────────────────────────── ssh and vpn ─────────────────────────────── #
+openssh
+openvpn
+
+# ───────────────────────────────── compsitor ──────────────────────────────── #
+picom 8.2-1
+
+
+file syncing and cloning
+rclone
+rsync
+clonezilla
+
+
+# ──────────────────────────── keyboard automation ─────────────────────────── #
+autokey-gtk # install using yay
+sxhkd 0.6.2-1
+
+# ─────────────────────────────────── fonts ────────────────────────────────── #
+ttf-anonymous-pro 1.003-5
+ttf-cascadia-code 2108.26-1
+ttf-dejavu 2.37+18+g9b5d1b2f-3
+ttf-font-awesome 5.15.4-1
+ttf-roboto 2.138-4
+
+# ───────────────────────────────── downloads ──────────────────────────────── #
+curl
+aria2
+uget
+wget 1.21.2-1
+
+
+# ────────────────────────────── virtualization ────────────────────────────── #
+virtualbox 6.1.28-3
+virtualbox-guest-iso 6.1.28-1
+docker
+
+
+# archiving
+p7zip
+xarchiver 0.5.4.17-1
+
+# ────────────────────────────── window managers ───────────────────────────── #
+i3-gaps 4.20-1
+i3lock 2.13-1
+i3status 2.13-3
+
+openbox
+menumaker # menumaker for openbox `mmaker -vf`
+obconf # appearance config for openbox
+
+herbstluftwm
+dzen2
+
+lightdm 1:1.30.0-4
+lightdm-gtk-greeter 1:2.0.8-1
+lightdm-gtk-greeter-settings 1.2.2-6

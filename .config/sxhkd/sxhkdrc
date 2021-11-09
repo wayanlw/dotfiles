@@ -110,7 +110,7 @@ alt + shift + p
 
 # ─────────────────────────────── resize window ────────────────────────────── #
 # the monitor size parameters needs to be set in the script manually.~/.dotfiles/ww-scripts/windowplace-multi.sh
-alt + shift + {w,e,r,5,6,7,8}
+alt + shift + {w,e,r,4,5,6,7}
     ~/.dotfiles/ww-scripts/windowplace-multi.sh {1,2,3,4,5,6,7}
 
 
