@@ -26,7 +26,7 @@ bluez
 bluez-utils
 
 # ──────────────────────────── clipboard managers ──────────────────────────── #
-parcelliteu
+parcellite
 #clipmenu
 xclip
 xsel
@@ -92,7 +92,7 @@ wmctrl
 
 # ────────────────────────────────── network ───────────────────────────────── #
 networkmanager
-networkmanager-applet
+network-manager-applet
 
 # ─────────────────────────────────── sound ────────────────────────────────── #
 pulseaudio
@@ -103,7 +103,7 @@ volumeicon
 
 # ─────────────────────────────────── video ────────────────────────────────── #
 mpv
-#vlcplayer
+#vlc
 youtube-dl
 ueberzug # required for youtubdl thumbnail display
 

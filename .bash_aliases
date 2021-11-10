@@ -95,6 +95,9 @@ function vimbk() {
     vim $1
 }
 
+
+# ────────────────────────── Youtube Video and Audio ───────────────────────── #
+
 # search and watch youtube videos from terminal youtube Video | Youtube Audio
 function uv(){
     link=$(ytfzf -L "'$*'")
@@ -111,6 +114,7 @@ function ua(){
     echo "[+] To stop playing in background enter 'pkill mpv'"
 }
 
+# ─────────────────────────── pring ls at every cd ─────────────────────────── #
 # Prints the ls command when cd
 function cl() {
     DIR="$*";
@@ -123,7 +127,7 @@ function cl() {
         ls -F --color=auto
 }
 
-
+# ─────────── make directories if the parent folders doesnt exists ─────────── #
 function cpcd(){
     if [ -d "$2" ]; then
         ### Take action if $DIR exists ###
@@ -137,6 +141,7 @@ function cpcd(){
     fi
 }
 
+# ───────────────────────────── Terminal Googling ──────────────────────────── #
 function goog(){
     q=""
     i=0

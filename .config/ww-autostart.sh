@@ -16,7 +16,7 @@ autokey-gtk &
 
 
 # when there is no desktop environment this enables a polkit
-lxpolkit &
+lxpolkit & || gnome-polkit &
 
 # dex is a autorun runner and craetor
 # dex -ae i3
