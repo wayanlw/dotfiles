@@ -29,6 +29,7 @@ sudo pacman -S --noconfirm --needed \
         ttf-font-awesome
 		mtools \
 		rsync \
+		python \
 
 # ──────────────────────────────── install yay ─────────────────────────────── #
 printf '\n>>>>>>> installing yay\n'
