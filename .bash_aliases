@@ -100,8 +100,8 @@ function vimbk() {
 
 # search and watch youtube videos from terminal youtube Video | Youtube Audio
 function uv(){
-    link=$(ytfzf -L "'$*'")
-    # link=$(ytfzf -L -t --thumbnail-quality=0 "'$*'")
+    # link=$(ytfzf -L "'$*'")
+    link=$(ytfzf -L -t --thumbnail-quality=0 "'$*'")
     echo -n $link | xclip -sel clip
     mpv --ytdl-format='bestvideo[height<=?720]+bestaudio' $link > /dev/null 2>&1
 

@@ -243,11 +243,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'https://github.com/tpope/vim-surround.git'
     Plug 'vim-airline/vim-airline'
     Plug 'https://github.com/easymotion/vim-easymotion.git'
+    Plug 'justinmk/vim-sneak'
     Plug 'https://github.com/tpope/vim-commentary.git'
-    Plug 'https://github.com/habamax/vim-sugarlily.git'
 
 
     Plug 'https://github.com/morhetz/gruvbox'
+    "Plug 'https://github.com/habamax/vim-sugarlily.git'
     "Plug 'https://github.com/bagrat/vim-buffet.git'
     "Plug 'https://github.com/neoclide/coc.nvim'
     "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
