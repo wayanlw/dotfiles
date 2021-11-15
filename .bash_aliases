@@ -9,8 +9,7 @@ alias lcmd="cat $HOME/.bash_aliases| grep alias | grep -v '^#' | sed  's/^\w*\ *
 alias lwwdir='cd $HOME/.dotfiles/'
 alias ll='ls --human-readable --size -1 --classify'
 alias lla='ls -A --human-readable --size -1 --classify'
-alias rm='mv -t /root/MyTrash/'
-
+# alias rm='mv -t /root/MyTrash/'
 
 alias findpkg='pacman -Qq | grep'
 alias paci='sudo pacman -S'
@@ -61,7 +60,6 @@ alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | eg
 
 alias cp='cp -v'
 alias mv='mv -v'
-alias rm='rm -vi'
 
 # ---------------------------------------------------------------------------- #
 #                                   FUNCTIONS                                  #
@@ -93,6 +91,15 @@ function vimbk() {
     read nul
     cp $1 $1.bak
     vim $1
+}
+
+function rm(){
+    if [ -d $HOME/recycle-bin ]; then
+        mv -t $HOME/recycle-bin "$@" 1> /dev/null
+    else 
+        mkdir $HOME/recycle-bin 
+        mv -t $HOME/recycle-bin "$@" 1> /dev/null
+    fi
 }
 
 

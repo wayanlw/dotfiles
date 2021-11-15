@@ -35,6 +35,13 @@ alt + shift + q
 ctrl + alt + q
     xkill
 
+
+# Test
+
+alt + shift + c
+    ~/.dotfiles/ww-scripts/copy-paste.sh
+
+
 # ─────────────────────────────── run-or-raise ─────────────────────────────── #
 # if the app is not open, it opens the app
 # If it is opens focusses on the app. The relevant app needs to be installed
@@ -47,7 +54,7 @@ alt + shift + f
 alt + shift + t
     wmctrl -x -a kitty || kitty
 
-alt + shift + c
+alt + shift + o
     wmctrl -x -a code || code
 
 alt + shift + x
