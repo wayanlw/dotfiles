@@ -57,6 +57,9 @@ alt + shift + x
 ctrl + shift + z
     flameshot gui
 
+# ------- OCR Script
+alt + shift + z 
+    ~/.dotfiles/ww-scripts/ocr.sh
 alt + z
     wmctrl -x -a fsearch || fsearch
 

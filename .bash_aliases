@@ -93,14 +93,14 @@ function vimbk() {
     vim $1
 }
 
-function rm(){
-    if [ -d $HOME/recycle-bin ]; then
-        mv -t $HOME/recycle-bin "$@" 1> /dev/null
-    else 
-        mkdir $HOME/recycle-bin 
-        mv -t $HOME/recycle-bin "$@" 1> /dev/null
-    fi
-}
+# function rm(){
+#     if [ -d $HOME/recycle-bin ]; then
+#         mv -t $HOME/recycle-bin "$@" 1> /dev/null
+#     else 
+#         mkdir $HOME/recycle-bin 
+#         mv -t $HOME/recycle-bin "$@" 1> /dev/null
+#     fi
+# }
 
 
 # ────────────────────────── Youtube Video and Audio ───────────────────────── #

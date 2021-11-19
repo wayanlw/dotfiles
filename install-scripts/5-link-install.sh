@@ -32,6 +32,7 @@ link_file .config/herbstluftwm/panel.sh
 link_file .config/i3/config
 link_file .config/i3status/config
 link_file .config/kitty/kitty.conf
+link_file .config/openbox/rc.xml
 link_file .config/picom/picom.conf
 link_file .config/rtv/rtv.conf
 link_file .config/sxhkd/sxhkdrc
