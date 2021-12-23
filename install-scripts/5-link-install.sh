@@ -9,13 +9,13 @@ printf "\nThis script links the config files to the HOME folder\n"
 
 # ──────────────────────── cloning the .dotfiles repo ──────────────────────── #
 [ -d $HOME/.dotfiles ] && \
-	printf "\n.dofiles directory already exists. Skipping...\n \n" || \
+	printf "\n.dotfiles directory already exists. Skipping...\n \n" || \
 	printf "\n[+] Cloning the .dotfiles repo\n" \
 	git clone https://github.com/wayanlw/.dotfiles
 
 # ────────────── Linking the files in the ~/.dotfiles directory ────────────── #
 
-function link_file(){
+function link_file{
 	# creates parent directories if they don't exist
 	mkdir -p "${1%/*}"
 	# if the file exists in the .dotfiles link it to the correct file in HOME directory
