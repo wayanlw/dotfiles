@@ -196,7 +196,7 @@ hc set frame_bg_normal_color '#565656aa'
 hc set frame_bg_active_color '#345F0Cef'
 # hc set frame_bg_active_color '#345F0Caa'
 hc set frame_border_width 0
-hc set always_show_frame on
+hc set always_show_frame off # there is a frame for blank frames as well
 hc set frame_bg_transparent on
 hc set frame_transparent_width 3
 hc set frame_gap 3
@@ -229,8 +229,8 @@ hc attr theme.background_color '#141414'
 
 hc set window_gap 0 # gap between windows in the same frame 
 hc set frame_padding 0
-hc set smart_window_surroundings off
-hc set smart_frame_surroundings off
+hc set smart_window_surroundings off 
+hc set smart_frame_surroundings off # no gap when there is only one window
 hc set mouse_recenter_gap 0
 hc set focus_follows_mouse 1
 hc set focus_crosses_monitor_boundaries on
