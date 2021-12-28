@@ -15,7 +15,7 @@ printf "\nThis script links the config files to the HOME folder\n"
 
 # ────────────── Linking the files in the ~/.dotfiles directory ────────────── #
 
-function link_file{
+link_file(){
 	# creates parent directories if they don't exist
 	mkdir -p "${1%/*}"
 	# if the file exists in the .dotfiles link it to the correct file in HOME directory
