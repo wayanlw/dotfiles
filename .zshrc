@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -e $HOME/.bash_aliases ]] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
 
-source /usr/share/fzf/key-bindings.zsh
+# source /usr/share/fzf/key-bindings.zsh
 
 
 ### autoexpanding aliases
