@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.dotfiles/ww-scripts:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -e $HOME/.bash_aliases ]] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
 
-# source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/key-bindings.zsh
 
 
 ### autoexpanding aliases

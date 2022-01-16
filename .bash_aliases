@@ -6,7 +6,8 @@
 
 alias brightness="xrandr --output VGA1 --brightness"
 alias lcmd="cat $HOME/.bash_aliases| grep alias | grep -v '^#' | sed  's/^\w*\ *//'"
-alias lwwdir='cd $HOME/.dotfiles/'
+alias lks="cat .config/sxhkd/sxhkdrc | grep -v '#' | grep -v '^ $' | grep -v '^$'"
+alias lwwdir="cat .config/sxhkd/sxhkdrc | grep -v '#' | grep -v '^ $' | grep -v '^$'"
 alias ll='ls --human-readable --size -1 --classify'
 alias lla='ls -A --human-readable --size -1 --classify'
 # alias rm='mv -t /root/MyTrash/'
@@ -96,8 +97,8 @@ function vimbk() {
 # function rm(){
 #     if [ -d $HOME/recycle-bin ]; then
 #         mv -t $HOME/recycle-bin "$@" 1> /dev/null
-#     else 
-#         mkdir $HOME/recycle-bin 
+#     else
+#         mkdir $HOME/recycle-bin
 #         mv -t $HOME/recycle-bin "$@" 1> /dev/null
 #     fi
 # }

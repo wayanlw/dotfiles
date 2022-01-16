@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# this script runs the general cleanup commands for an arch system
+
+sudo pacman -Sc --noconfirm
+sudo pacman -Rns $(pacman -Qtdq)
+rm -rf ~/.cache/*
