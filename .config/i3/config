@@ -14,7 +14,7 @@ set $alt Mod1
 set $ctrl Control
 
 # ---------- Defualt Programs
-set $term kitty
+set $term alacritty
 set $browser brave-browser
 set $filemgr pcmanfm
 set $code code
