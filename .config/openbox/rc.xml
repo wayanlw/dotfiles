@@ -276,7 +276,7 @@
         <to>4</to>
       </action>
     </keybind>
-    <keybind key="W-d">
+    <keybind key="W-S-d">
       <action name="ToggleShowDesktop" />
     </keybind>
     <!-- ─────────────────────── Keybindings for windows ─────────────────────── -->
@@ -970,7 +970,7 @@
   </menu>
   <applications>
     <application type="normal">
-    <maximized>true</maximized>
+    <maximized>false</maximized>
     <decor>yes</decor>
   </application>
     <!--
