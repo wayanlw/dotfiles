@@ -426,6 +426,9 @@
   </keybind> -->
 
   <!-- ────────────────────────── Window Management ────────────────────────── -->
+	<keybind key="W-S-t">
+		<action name="ToggleDecorations" />
+	</keybind>
 	<keybind key="W-S-w">
 		<action name="ToggleMaximize" />
 	</keybind>
@@ -966,9 +969,9 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-      <application type="normal">
+    <application type="normal">
     <maximized>true</maximized>
-    <decor>no</decor>
+    <decor>yes</decor>
   </application>
     <!--
   # this is an example with comments through out. use these to make your
