@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# Dependencies - webtorrent, mpv
+# Dependencies - peerflix (Previously webtorrent) , mpv
+# sudo npm install peerflix -g 
+# sudo pacman -S mpv
 
 mkdir -p $HOME/.cache/notflix
 
