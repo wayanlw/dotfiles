@@ -23,10 +23,10 @@ alt + {space, shift+space}
 
 # ───────────────────────────── terminal emulator ──────────────────────────── #
 alt + Return
-    kitty
+    alacritty
 
 alt + shift + Return
-    kitty -e tmux
+    alacritty -e tmux
 
 # ──────────────────────────────── Kill Window ─────────────────────────────── #
 alt + shift + q
@@ -45,7 +45,7 @@ alt + shift + f
     wmctrl -x -a brave || brave
 
 alt + shift + t
-    wmctrl -x -a kitty || kitty
+    wmctrl -x -a alacritty || alacritty
 
 alt + shift + c
     wmctrl -x -a code || code
@@ -71,7 +71,7 @@ ctrl + alt + v
 
 alt + w; {f,t,c,n,s}
     {wmctrl -x -a brave || brave,\
-    wmctrl -x -a kitty || kitty,\
+    wmctrl -x -a alacritty || alacritty,\
     wmctrl -x -a code || code,\
     wmctrl -x -a notepadqq || notepadqq,\
     wmctrl -x -a fsearch || fsearch}
@@ -99,7 +99,7 @@ super + s
 # folder using fzf
 
 alt + ctrl + t
-    kitty -e sh ~/.dotfiles/ww-scripts/tmux-switch.sh
+    alacritty -e sh ~/.dotfiles/ww-scripts/tmux-switch.sh
 
 
 # ─────────────────────────── dmenu process killer ─────────────────────────── #

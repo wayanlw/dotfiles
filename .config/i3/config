@@ -84,20 +84,20 @@ bindsym $alt+o floating enable, resize set 50 ppt 96 ppt, move position 50 ppt 0
 #default_floating_border normal
 
 # --------------- Disable titlebars for all windows
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 new_window 1pixel
 
 # --------------- Hide borders
 #hide_edge_borders none
 
 # --------------- GAPS
-# gaps outer 0
-# gaps inner 5
-# bindsym $mod+g gaps inner current plus 5
-# bindsym $mod+Shift+g gaps inner current minus 5
+gaps outer 0
+gaps inner 8
+bindsym $mod+g gaps inner current plus 5
+bindsym $mod+Shift+g gaps inner current minus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-#smart_gaps on
+smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
@@ -134,14 +134,14 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # --------------- dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -l 15
+bindsym $mod+d exec --no-startup-id dmenu_run -i -l 55 -fn 'inconsolata-9'
 ##-- this only displays the startmenu items
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # --------------- terminal
 #bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
-bindsym $mod+Return exec --no-startup-id $term
-bindsym $mod+Shift+Return exec $term -e tmux
+bindsym $mod+Shift+Return exec --no-startup-id $term
+bindsym $mod+Return exec --no-startup-id $term -e tmux
 
 # --------------- switchr(this was implemented with sxhkdrc)
 # bindsym $mod+Shift+t exec $term -e sh ~/.dotfiles/ww-scripts/switchr.sh
@@ -271,12 +271,12 @@ bindsym $mod+b exec --no-startup-id i3-msg "[id=$(wmctrl -l | rofi -dmenu -i -p 
 # ---------------------------------------------------------------------------- #
 
 # ----------Define names for default workspaces for which we configure key bindings later on. We use variables to avoid repeating the names in multiple places.
-set $ws1 "1 "
-set $ws2 "2 "
-set $ws3 "3 "
-set $ws4 "4 "
-set $ws5 "5 "
-set $ws6 "6 "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"

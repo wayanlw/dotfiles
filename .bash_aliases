@@ -27,6 +27,7 @@ alias yayu='yay -Runs'
 
 alias hbc='vim ~/.config/herbstluftwm/autostart'
 alias i3config='vim ~/.config/i3/config'
+alias sxc='vim ~/.config/sxhkd/sxhkdrc'
 
 alias ars='setxkbmap us'
 alias asd='setxkbmap us -variant colemak'
