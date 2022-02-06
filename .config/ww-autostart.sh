@@ -9,6 +9,7 @@ pkill volumeicon; sleep 1; volumeicon &
 feh --bg-scale --randomize ~/Pictures/wallpapers/*
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 pkill tint2; sleep 1;tint2 &
+tilda &
 
 # ─────────────────────────── Linux Capsy ─────────────────────────── #
 #setxkbmap

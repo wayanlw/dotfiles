@@ -127,6 +127,7 @@ pacman_array=(\
 	# ──────────────────────────── keyboard automation ─────────────────────────── #
 	autokey-gtk # install using yay
 	sxhkd \
+    input-remapper-git \
 	# ─────────────────────────────────── fonts ────────────────────────────────── #
 	ttf-anonymous-pro \
 	ttf-cascadia-code \

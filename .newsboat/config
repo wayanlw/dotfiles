@@ -16,6 +16,7 @@ show-read-feeds no
 feed-sort-order unreadarticlecount-asc
 openbrowser-and-mark-jumps-to-next-unread no
 mark-as-read-on-hover yes
+max-items 30 # max articles per feed. if 0 keep everything 
 
 #color info default default reverse
 #color listnormal_unread yellow default
@@ -41,23 +42,37 @@ unbind-key ^D
 unbind-key ^U
 unbind-key g
 unbind-key G
+unbind-key p
 
 # bind keys - vim style
 bind-key j down
 bind-key k up
 bind-key l open
 bind-key h quit
-bind-key ^D pagedown
+
+bind-key ^D pagedow
 bind-key ^U pageup
+
 bind-key b toggle-source-view
 bind-key U toggle-show-read-feeds
 bind-key u show-urls
+
 bind-key g home
 bind-key G end
+
 bind-key i sort
 bind-key I rev-sort
-bind-key o open-in-browser-and-mark-read
-bind-key O open-in-browser
+
+bind-key O open-in-browser-and-mark-read
+bind-key o open-in-browser-noninteractively
+bind-key ^O open-all-unread-in-browser-and-mark-read
+
+bind-key D delete-all-articles #deletes all articles in the feed. Then pressing $ will purge them
+
+# -- Commands ------------------------------------------------------------------
+# Commands can be entered after a semicolon ":"
+# to enter normal commands type with :exec --> eg. :exec open
+# source ~/.newsboat/config
 
 # -- bookmarks -----------------------------------------------------------------
 
