@@ -1,6 +1,7 @@
 #!/bin/bash
 # clipmenud &
-parcellite &
+lxpolkit || gnome-polkit 
+parcellite
 dunst &
 picom &
 alttab -d 1 &
@@ -9,7 +10,6 @@ pkill volumeicon; sleep 1; volumeicon &
 feh --bg-scale --randomize ~/Pictures/wallpapers/*
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 pkill tint2; sleep 1;tint2 &
-tilda &
 
 # ─────────────────────────── Linux Capsy ─────────────────────────── #
 #setxkbmap
@@ -18,7 +18,6 @@ autokey-gtk &
 
 
 # when there is no desktop environment this enables a polkit
-lxpolkit & || gnome-polkit &
 
 # dex is a autorun runner and craetor
 # dex -ae i3

@@ -50,7 +50,7 @@ bind-key k up
 bind-key l open
 bind-key h quit
 
-bind-key ^D pagedow
+bind-key ^D pagedown
 bind-key ^U pageup
 
 bind-key b toggle-source-view
