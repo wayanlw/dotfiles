@@ -27,6 +27,9 @@ hc set default_frame_layout max # max
 #hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close_or_remove # Closes the focused window or removes the current frame if no window is focused
+hc keybind $Mod-n close_and_remove # ww : if the frame has one or no window, close the window and remove the frame # I previously used this : hc keybind $Mod-n or , and . compare tags.focus.curframe_wcount lt 1 . remove , close
+
+
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-Shift-Return spawn alacritty -e tmux # use your $TERMINAL with xterm as fallback
 hc keybind $Mod+Shift+t spawn $term -e sh ~/.dotfiles/bin/switchr.sh
@@ -34,9 +37,9 @@ hc keybind $Mod-d spawn dmenu_run -i -l 10
 hc keybind $Mod-q spawn rofi -combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 hc keybind $Mod-z spawn rofi -show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 
-# open or raise
-hc keybind $Mod-Shift-a spawn bash -c 'wmctrl -x -a brave || brave && herbstclient jumpto urgent' 
-hc keybind $Mod-Shift-x spawn bash -c 'wmctrl -x -a pcmanfm || pcmanfm && herbstclient jumpto urgent' 
+# open or raise. This was addressed by using the sxhkd
+#hc keybind $Mod-Shift-a spawn bash -c 'wmctrl -x -a brave || brave && herbstclient jumpto urgent' 
+#hc keybind $Mod-Shift-x spawn bash -c 'wmctrl -x -a pcmanfm || pcmanfm && herbstclient jumpto urgent' 
 
 # basic movement in tiling and floating mode
 # focusing clients - $mod+arrows | $mod+capsy
@@ -64,6 +67,17 @@ hc keybind $Mod-Shift-Right shift right
 #    chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
 #hc keybind $Mod-Shift-Right or / shift right / \
 #    chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
+
+hc keybind $Mod-Shift-j or / shift left / \
+    chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
+hc keybind $Mod-Shift-k  or / shift down / \
+    chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
+hc keybind $Mod-Shift-i    or / shift up / \
+    chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
+hc keybind $Mod-Shift-l or / shift right / \
+    chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
+
+# Normal window movement
 hc keybind $Mod-Shift-j  shift left
 hc keybind $Mod-Shift-k  shift down
 hc keybind $Mod-Shift-i  shift up
@@ -77,11 +91,6 @@ hc keybind $Mod-Shift-d or , and . compare tags.focus.curframe_wcount lt 2 . rem
 #hc keybind $Mod-u       split   bottom  0.5
 #hc keybind $Mod-o       split   right   0.5
 
-# ww : if the frame has one or no window, close the window and remove the frame
-hc keybind $Mod-n close_and_remove
-# I previously used this : hc keybind $Mod-n or , and . compare tags.focus.curframe_wcount lt 1 . remove , close
-
-
 # ww: create an empty frame at the specified direction and focus on that
 hc keybind $Mod-u chain , split   bottom  0.5 , focus -e down
 hc keybind $Mod-o chain , split   right   0.5 , focus -e right
@@ -94,8 +103,8 @@ hc keybind $Mod-Shift-y chain , split top 0.5 , shift -e up
 hc keybind $Mod-Shift-p chain , split left 0.5 , shift -e left
 # ww: Focus Monitors
 hc keybind Shift-$Alt-i focus_monitor -u
-hc keybind Shift-$Alt-j focus_monitor -r
-hc keybind Shift-$Alt-l focus_monitor -l
+hc keybind Shift-$Alt-j focus_monitor -l
+hc keybind Shift-$Alt-l focus_monitor -r
 hc keybind Shift-$Alt-k focus_monitor -d
 # ww: Lock Monitor
 hc keybind $Mod-0 chain . lock_tag . spawn notify-send 'monitor locked'
