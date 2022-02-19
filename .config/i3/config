@@ -374,6 +374,8 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
+bindsym $mod+0 exec "~/.dotfiles/.config/i3/i3autolock"
+
 # ---------------------------------------------------------------------------- #
 #                                RESIZE WINDOWS                                #
 # ---------------------------------------------------------------------------- #
