@@ -1,21 +1,22 @@
 #!/bin/bash
 # clipmenud &
-lxpolkit || gnome-polkit 
-parcellite
+parcellite &
+pkill tint2; sleep 1;tint2 &
+sxhkd -c ~/.config/sxhkd/sxhkdrc &
 dunst &
 picom &
 alttab -d 1 &
 nm-applet &
 pkill volumeicon; sleep 1; volumeicon &
 feh --bg-scale --randomize ~/Pictures/wallpapers/*
-sxhkd -c ~/.config/sxhkd/sxhkdrc &
-pkill tint2; sleep 1;tint2 &
 
 # ─────────────────────────── Linux Capsy ─────────────────────────── #
 #setxkbmap
 #[[ -f $HOME/.Xmodmap ]] && xmodmap $HOME/.Xmodmap
 autokey-gtk &
 
+# lxsession & || gnome-polkit &
+lxpolkit &
 
 # when there is no desktop environment this enables a polkit
 
