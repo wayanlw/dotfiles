@@ -18,9 +18,12 @@ alt + d
 
 # ─────────────────────────────── rofi Comamnds ────────────────────────────── #
 alt + {space, shift+space}
-    rofi -{combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,\
+    rofi -{show drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,\
 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
 
+# alt + {space, shift+space}
+#     rofi -{combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,\
+# 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
 # ───────────────────────────── terminal emulator ──────────────────────────── #
 alt + Return
     alacritty
