@@ -1,7 +1,11 @@
 #!/bin/bash
 # clipmenud &
 parcellite &
-pkill tint2; sleep 1;tint2 &
+
+# panel selection
+# pkill tint2; sleep 1;tint2 &
+lxpanel &
+
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 dunst &
 picom &
