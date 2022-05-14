@@ -3,8 +3,8 @@
 parcellite &
 
 # panel selection
-# pkill tint2; sleep 1;tint2 &
-lxpanel &
+pkill tint2; sleep 1;tint2 &
+# lxpanel &
 
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 dunst &

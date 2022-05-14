@@ -84,7 +84,7 @@ bindsym $alt+o floating enable, resize set 50 ppt 96 ppt, move position 50 ppt 0
 #default_floating_border normal
 
 # --------------- Disable titlebars for all windows
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 new_window 1pixel
 
 # --------------- Hide borders
@@ -492,8 +492,8 @@ bar {
 # green gruvbox
 # class                 border		|backgr		|text		|indicator	|child_border
 client.focused          $green		$green		$darkgray	$purple		$green
-client.focused_inactive $darkgray	$darkgray	$yellow		$purple		$darkgray
-client.unfocused        $darkgray	$darkgray	$yellow		$purple		$darkgray
+# client.focused_inactive $darkgray	$darkgray	$yellow		$purple		$darkgray
+# client.unfocused        $darkgray	$darkgray	$yellow		$purple		$darkgray
 client.urgent           $red		$red		$white		$reload		$red
 
 # blue gruvbox
