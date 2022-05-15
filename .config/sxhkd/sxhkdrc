@@ -26,11 +26,12 @@ alt + {space, shift+space}
 #     rofi -{combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,\
 # 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
 # ───────────────────────────── terminal emulator ──────────────────────────── #
+# for alacritity `alacritty -e tmux` for kitty `kitty tmux`
 alt + Return
-    alacritty -e tmux
+    kitty -e tmux
 
 alt + shift + Return
-    alacritty
+    kitty
 
 # ──────────────────────────────── Kill Window ─────────────────────────────── #
 alt + shift + q
@@ -49,7 +50,7 @@ alt + shift + f
     wmctrl -x -a edge || microsoft-edge-stable
 
 alt + shift + t
-    wmctrl -x -a alacritty || alacritty
+    wmctrl -x -a kitty || kitty
 
 alt + shift + c
     wmctrl -x -a code || code
@@ -62,7 +63,7 @@ ctrl + shift + z
     flameshot gui
 
 # ------- OCR Script
-alt + shift + z 
+alt + shift + z
     ~/.dotfiles/ww-scripts/ocr.sh
 alt + z
     wmctrl -x -a fsearch || fsearch

@@ -25,6 +25,16 @@ alias yayi='yay -S'
 alias yays='yay -Ss'
 alias yayu='yay -Runs'
 
+
+
+alias apti='sudo apt install'
+alias aptu='sudo apt auto-remove'
+alias apts='apt-cache search --names-only'
+alias aptlist="apt list --installed | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-u:execute(sudo apt auto-remove --yes {})+abort'"
+alias aptorder='grep install /var/log/dpkg.log | fzf'
+alias aptall="apt list | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install --yes {})'"
+
+
 alias hbc='vim ~/.config/herbstluftwm/autostart'
 alias i3config='vim ~/.config/i3/config'
 alias sxc='vim ~/.config/sxhkd/sxhkdrc'
