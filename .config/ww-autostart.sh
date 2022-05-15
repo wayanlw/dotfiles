@@ -12,7 +12,8 @@ picom &
 alttab -d 1 &
 nm-applet &
 pkill volumeicon; sleep 1; volumeicon &
-feh --bg-scale --randomize ~/Pictures/wallpapers/*
+nitrogen --restore &
+#feh --bg-scale --randomize ~/Pictures/wallpapers/*
 
 # ─────────────────────────── Linux Capsy ─────────────────────────── #
 #setxkbmap

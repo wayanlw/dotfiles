@@ -6,7 +6,6 @@
     <strength>10</strength>
     <screen_edge_strength>20</screen_edge_strength>
   </resistance>
-
   <focus>
     <focusNew>yes</focusNew>
     <!-- always try to focus new windows when they appear. other rules do
@@ -25,14 +24,13 @@
     <!-- when followMouse is enabled, and a window is given focus by moving the
        mouse into it, also raise the window -->
   </focus>
-
   <placement>
-    <policy>Smart</policy>
+    <policy>UnderMouse</policy>
     <!-- 'Smart' or 'UnderMouse' -->
-    <center>yes</center>
+    <center>Yes</center>
     <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-    <monitor>Any</monitor>
+    <monitor>Mouse</monitor>
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
@@ -43,9 +41,8 @@
        following: 'Mouse' - where the mouse is, or
                   'Active' - where the active window is -->
   </placement>
-
   <theme>
-    <name>Arc-Dark-OSX</name>
+    <name>Bear2</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -59,9 +56,8 @@
   -->
     <keepBorder>yes</keepBorder>
     <animateIconify>no</animateIconify>
-    
     <font place="ActiveWindow">
-      <name>Sans</name>
+      <name>System-ui</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -69,9 +65,8 @@
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
-    
     <font place="InactiveWindow">
-      <name>Sans</name>
+      <name>System-ui</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -79,7 +74,6 @@
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
-    
     <font place="MenuHeader">
       <name>sans</name>
       <size>10</size>
@@ -89,7 +83,6 @@
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
-    
     <font place="MenuItem">
       <name>sans</name>
       <size>10</size>
@@ -99,7 +92,6 @@
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
-    
     <font place="ActiveOnScreenDisplay">
       <name>sans</name>
       <size>10</size>
@@ -109,7 +101,6 @@
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
-    
     <font place="InactiveOnScreenDisplay">
       <name>sans</name>
       <size>10</size>
@@ -120,7 +111,6 @@
       <!-- 'italic' or 'normal' -->
     </font>
   </theme>
-
   <desktops>
     <!-- this stuff is only used at startup, pagers allow you to change them
        during a session
@@ -142,7 +132,6 @@
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
-
   <resize>
     <drawContents>yes</drawContents>
     <popupShow>Nonpixel</popupShow>
@@ -159,7 +148,6 @@
          distance from bottom edge, or 'Center' -->
     </popupFixedPosition>
   </resize>
-
   <!-- You can reserve a portion of your screen where windows will not cover when
      they are maximized, or when they are initially placed.
      Many programs reserve space automatically, but you can use this in other
@@ -170,7 +158,6 @@
     <left>0</left>
     <right>0</right>
   </margins>
-
   <dock>
     <position>Bottom</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
@@ -189,7 +176,6 @@
     <moveButton>Middle</moveButton>
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
-
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- ───────────────────────────── reconfigure ───────────────────────────── -->
@@ -232,7 +218,6 @@
         <wrap>no</wrap>
       </action>
     </keybind> -->
-
     <!-- Send to  desktop next and previous -->
     <keybind key="W-S-comma">
       <action name="SendToDesktop">
@@ -285,11 +270,11 @@
     <keybind key="W-S-Q">
       <action name="Close"/>
     </keybind>
-    <keybind key="A-Escape">
+    <!-- <keybind key="A-Escape">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
-    </keybind>
+    </keybind> -->
     <keybind key="A-W-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
@@ -341,6 +326,12 @@
           <action name="Raise"/>
           <action name="Unshade"/>
         </finalactions>
+      </action>
+    </keybind>
+    <keybind key="A-grave">
+      <!-- switch between the windows of same app -->
+      <action name="execute">
+        <execute>~/.dotfiles/ww-scripts/wmctrl-switch-by-application.sh</execute>
       </action>
     </keybind>
     <!-- ─────────────────────────── Window resizing ─────────────────────────── -->
@@ -426,9 +417,9 @@
     <action name="Close" />
   </keybind> -->
     <!-- ────────────────────────── Window Management ────────────────────────── -->
-    <keybind key="A-S-t">
+    <!-- <keybind key="A-S-t">
       <action name="ToggleDecorations"/>
-    </keybind>
+    </keybind> -->
     <!-- <keybind key="A-S-w"> -->
     <!--   <action name="ToggleMaximize"/> -->
     <!-- </keybind> -->

@@ -3,6 +3,7 @@
 #│ This is the configuration file for Simple-x-hotkey-deamon(sxhkd)             │
 #│ This file contains the Window Manager Independent hotkeys                    │
 #│ Dependencies : sxhkd. This needs to be auostarted                            │
+#│                wmctrl, dmenu, xdotools, xsel                                 │
 #└──────────────────────────────────────────────────────────────────────────────┘
 
 # ───────────────────────────── Reload the config ──────────────────────────── #
@@ -26,10 +27,10 @@ alt + {space, shift+space}
 # 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
 # ───────────────────────────── terminal emulator ──────────────────────────── #
 alt + Return
-    alacritty
+    alacritty -e tmux
 
 alt + shift + Return
-    alacritty -e tmux
+    alacritty
 
 # ──────────────────────────────── Kill Window ─────────────────────────────── #
 alt + shift + q
@@ -45,7 +46,7 @@ ctrl + alt + q
 # one.
 
 alt + shift + f
-    wmctrl -x -a brave || brave
+    wmctrl -x -a edge || microsoft-edge-stable
 
 alt + shift + t
     wmctrl -x -a alacritty || alacritty
@@ -73,7 +74,7 @@ ctrl + alt + v
 #-------- Multi key option for launcher ---------
 
 alt + w; {f,t,c,n,s}
-    {wmctrl -x -a brave || brave,\
+    {wmctrl -x -a edge || edge,\
     wmctrl -x -a alacritty || alacritty,\
     wmctrl -x -a code || code,\
     wmctrl -x -a notepadqq || notepadqq,\
@@ -94,7 +95,7 @@ super + shift + s
 # uh - Same as above two. but searches the history
 
 super + s
-    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a brave
+    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a edge
 
 
 # ──────────────────────────────── tmux-switch ─────────────────────────────── #
