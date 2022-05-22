@@ -24,6 +24,7 @@
     <!-- when followMouse is enabled, and a window is given focus by moving the
        mouse into it, also raise the window -->
   </focus>
+  <!-- Window Placement -->
   <placement>
     <policy>UnderMouse</policy>
     <!-- 'Smart' or 'UnderMouse' -->

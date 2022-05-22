@@ -139,6 +139,11 @@ alt + shift + {comma,period}
 alt + ctrl + {comma,period}
     ~/.dotfiles/ww-scripts/takeToNext.sh {"prev-noSwitch","next-noSwitch"}
 
+# ─────── tile the current window and the previous window side by side ─────── ;
+alt + {ctrl,shift} + d
+    ~/.dotfiles/ww-scripts/current-last-tile.sh {1,2}
+
+
 # ────────────────────── switching desktops with windows ───────────────────── #
 alt + shift + 1
     wmctrl -r :ACTIVE: -t 0; wmctrl -s 0
