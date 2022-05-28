@@ -35,12 +35,17 @@ alias aptorder='grep install /var/log/dpkg.log | fzf'
 alias aptall="apt list | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install --yes {})'"
 
 
-alias hbc='vim ~/.config/herbstluftwm/autostart'
-alias i3config='vim ~/.config/i3/config'
-alias sxc='vim ~/.config/sxhkd/sxhkdrc'
+alias dnfi='sudo dnf install -y'
+alias dnfu='sudo dnf remove'
+alias dnfs='dnf search'
+alias dnfinf='dnf info'
+alias dnflist="dnf list installed | cut -d' ' -f1 | fzf --preview 'dnf info {}' --layout=reverse --bind 'ctrl-u:execute(sudo dnf remove -y {})+abort'"
+function dnfinst(){
+    dnf search $1 | grep -v '^==' | cut -d' ' -f1 | fzf --preview 'dnf info {}' --layout=reverse --bind 'ctrl-i:execute(sudo dnf install -y {})+abort'
+}
 
-alias ars='setxkbmap us'
-alias asd='setxkbmap us -variant colemak'
+# config files
+alias sxc='vim ~/.config/sxhkd/sxhkdrc'
 
 #changing folders
 alias dl='cd ~/Downloads'
