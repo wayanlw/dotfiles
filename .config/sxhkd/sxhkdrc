@@ -18,23 +18,25 @@ alt + d
     dmenu_run -i -l 10
 
 # ─────────────────────────────── rofi Comamnds ────────────────────────────── #
-alt + {space, shift+space}
-    rofi -{show drun -show combi -show-icons,\
-	show window -show combi -show-icons}
+alt + shift + space
+    rofi -show window -show combi -show-icons
+
+# with KDE krunner is more powerful. Therefore below is commented. 
+# alt + {space, shift+space}
+#   rofi -{show drun -show combi -show-icons,\
+# 	show window -show combi -show-icons}
 
 # alt + {space, shift+space}
 #     rofi -{show drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,\
 # 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
-# alt + {space, shift+space}
-#     rofi -{combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,\
-# 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
+
 # ───────────────────────────── terminal emulator ──────────────────────────── #
-# for alacritity `alacritty -e tmux` for kitty `kitty tmux`
+# for alacritity `alacritty -e tmux` for alacritty `alacritty tmux`
 alt + Return
-    kitty -e tmux
+    alacritty -e tmux
 
 alt + shift + Return
-    kitty
+    alacritty
 
 # ──────────────────────────────── Kill Window ─────────────────────────────── #
 alt + shift + q
@@ -53,7 +55,7 @@ alt + shift + f
     wmctrl -x -a brave-browser || brave-browser
 
 alt + shift + t
-    wmctrl -x -a kitty || kitty
+    wmctrl -x -a alacritty || alacritty
 
 alt + shift + c
     wmctrl -x -a code || code
@@ -89,7 +91,7 @@ alt + w; {f,t,c,n,s}
 # Dependancy xsel (sudo apt install xsel)
 
 super + shift + s
-    xdg-open "https://google.com/search?q=$(xsel)"
+    brave-browser "https://google.com/search?q=$(xsel)"
 
 # ───────────────────────────── Dmenu web search ───────────────────────────── #
 # Can search the web via the demenu. Has multiple options.
@@ -104,7 +106,7 @@ super + s
 
 # ──────────────────────────────── tmux-switch ─────────────────────────────── #
 # Opens a terminal window with tmux and enables the users to directly go in to
-# folder using fzf
+# folder using kzf
 
 alt + ctrl + t
     alacritty -e sh ~/.dotfiles/ww-scripts/tmux-switch.sh
