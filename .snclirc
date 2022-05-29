@@ -1,0 +1,6 @@
+[sncli]
+cfg_sn_username = luxithaw@gmail.com
+cfg_sn_password = Lawawi'sSimpleNotes
+
+
+cfg_editor = vim +{line}

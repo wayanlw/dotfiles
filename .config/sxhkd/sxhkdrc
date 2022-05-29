@@ -91,7 +91,7 @@ alt + w; {f,t,c,n,s}
 # Dependancy xsel (sudo apt install xsel)
 
 super + shift + s
-    brave-browser "https://google.com/search?q=$(xsel)"
+    xdg-open "https://google.com/search?q=$(xsel)"
 
 # ───────────────────────────── Dmenu web search ───────────────────────────── #
 # Can search the web via the demenu. Has multiple options.

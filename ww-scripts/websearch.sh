@@ -13,9 +13,9 @@ SEARCH_ITEM=$(echo $QUERY | awk 'NF{$1=x; sub(/^ /,x)}1')
 
 function BrowserOpen(){
     # this was introduced because in KDE xdg-open is not working
-    # xdg-open $1
-    brave-browser "$1"
-    # firefox $1
+    xdg-open "$1"
+    # brave-browser "$1"
+    # firefox "$1"
 }
 
 

@@ -9,6 +9,9 @@ alias lwwdir="cat .config/sxhkd/sxhkdrc | grep -v '#' | grep -v '^ $' | grep -v 
 alias ll='ls --human-readable --size -1 --classify'
 alias lla='ls -A --human-readable --size -1 --classify'
 # alias rm='mv -t /root/MyTrash/'
+alias v='nvim'
+alias vim='nvim'
+
 
 # ─────────────────────────────── Pacman (Arch) ────────────────────────────── #
 alias findpkg='pacman -Qq | grep'
