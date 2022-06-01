@@ -1,6 +1,7 @@
 #!/bin/bash
 # clipmenud &
 parcellite &
+xbindkeys &
 
 # panel selection
 pkill tint2; sleep 1;tint2 &
