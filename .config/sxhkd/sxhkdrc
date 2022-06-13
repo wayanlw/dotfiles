@@ -18,6 +18,10 @@ alt + d
     dmenu_run -i -l 10
 
 # ─────────────────────────────── rofi Comamnds ────────────────────────────── #
+
+alt + space
+    rofi -show drun -show-icons -font "noto mono 9" -theme solarized
+
 alt + shift + space
     rofi -show window -show combi -show-icons
 
@@ -52,7 +56,7 @@ ctrl + alt + q
 # one.
 
 alt + shift + f
-    wmctrl -x -a brave-browser || brave-browser
+    wmctrl -x -a brave || brave
 
 alt + shift + t
     wmctrl -x -a alacritty || alacritty
@@ -80,7 +84,7 @@ ctrl + alt + v
 #-------- Multi key option for launcher ---------
 
 alt + w; {f,t,c,n,s}
-    {wmctrl -x -a brave-browser || brave-browser,\
+    {wmctrl -x -a brave || brave, \  
     wmctrl -x -a alacritty || alacritty,\
     wmctrl -x -a code || code,\
     wmctrl -x -a notepadqq || notepadqq,\
@@ -101,7 +105,7 @@ super + shift + s
 # uh - Same as above two. but searches the history
 
 super + s
-    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a brave-browser
+    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a brave
 
 
 # ──────────────────────────────── tmux-switch ─────────────────────────────── #
@@ -115,7 +119,7 @@ alt + ctrl + t
 # ─────────────────────────── dmenu process killer ─────────────────────────── #
 # Can kill processes using the dmenu
 alt + shift + p
-    kill -15 $(ps -u $USER -o pid,%mem,%cpu,comm | sort -b -k2 -r | sed -n '1!p' | dmenu -i -l 10 | awk '{print $1}')
+    kill -9 $(ps -u $USER -o pid,%mem,%cpu,comm | sort -b -k2 -r | sed -n '1!p' | dmenu -i -l 10 | awk '{print $1}')
 
 # ──────────────────────────────────────────────────────────────────────────── #
 #                               Window Management                              #

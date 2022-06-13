@@ -111,10 +111,12 @@ source $ZSH/oh-my-zsh.sh
 
 #vim keybindings in zsh terminal. This has to be done before the other keymap commands. Else others will stop working.
 bindkey -v
+bindkey 'jk' vi-cmd-mode
+# bindkey -e jk \\e
 
 [[ -e $HOME/.bash_aliases ]] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
 
-source /usr/share/fzf/shell/key-bindings.zsh
+source /usr/share/fzf/key-bindings.zsh
 
 
 ### autoexpanding aliases
