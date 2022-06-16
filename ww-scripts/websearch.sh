@@ -10,42 +10,51 @@ yt_url='https://www.youtube.com/results?search_query='
 QUERY=$(echo -e "g - google\ngi - google images\nddg - duckduckgo\nu - youtube\nuv - ytfzf video\nua -ytfzf audio\nuh - ytfzf history" | dmenu -l 7 -p "Search: ")
 FIRSTWORD=$(echo $QUERY | cut  -d " " -f1)
 SEARCH_ITEM=$(echo $QUERY | awk 'NF{$1=x; sub(/^ /,x)}1')
+
+function BrowserOpen(){
+    # this was introduced because in KDE xdg-open is not working
+    xdg-open "$1"
+    # brave-browser "$1"
+    # firefox "$1"
+}
+
+
 if [ -n "$QUERY" ]; then
     case $FIRSTWORD in
     "g")
-        xdg-open "${g_url}${SEARCH_ITEM}" 2>/dev/null
-        break;;
+        BrowserOpen "${g_url}${SEARCH_ITEM}" 2>/dev/null
+        ;;
     "gi")
-        xdg-open "${gi_url}${SEARCH_ITEM}" 2>/dev/null
-        break;;
+        BrowserOpen "${gi_url}${SEARCH_ITEM}" 2>/dev/null
+        ;;
     "ddg")
-        xdg-open "${ddg_url}${SEARCH_ITEM}" 2>/dev/null
-        break;;
+        BrowserOpen "${ddg_url}${SEARCH_ITEM}" 2>/dev/null
+        ;;
     "u")
-        xdg-open "${yt_url}${SEARCH_ITEM}" 2>/dev/null
-        break;;
+        BrowserOpen "${yt_url}${SEARCH_ITEM}" 2>/dev/null
+        ;;
     "uv")
         link=$(ytfzf -DL ${SEARCH_ITEM})
         echo -n $link | xclip -sel clip
         pkill mpv
         mpv --ytdl-format='bestvideo[height<=?480]+bestaudio' $link > /dev/null 2>&1
-        break;;
+        ;;
     "ua")
         link=$(ytfzf -DL ${SEARCH_ITEM})
         echo -n $link | xclip -sel clip
         pkill mpv
         mpv --ytdl-format='bestaudio' $link > /dev/null 2>&1
-        break;;
+        ;;
     "uh")
         notify-send test
         link=$(ytfzf -HDL)
         echo -n $link | xclip -sel clip
         pkill mpv
         mpv --ytdl-format='bestvideo[height<=?480]+bestaudio' $link > /dev/null 2>&1
-        break;;
+        ;;
     *)
-        xdg-open "${g_url}${QUERY}" 2>/dev/null
-        break;;
+        BrowserOpen "${g_url}${QUERY}" 2>/dev/null
+        ;;
         # notify-send "invalid option";;
     esac
         #xdg-open "${URL}${QUERY}" 2> /dev/null

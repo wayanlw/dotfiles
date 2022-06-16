@@ -24,19 +24,22 @@ alt + space
 alt + shift + space
 	rofi -show window -show-icons "papirus" -font "Noto mono 10" -width 25
 
+# with KDE krunner is more powerful. Therefore below is commented. 
+# alt + {space, shift+space}
+#   rofi -{show drun -show combi -show-icons,\
+# 	show window -show combi -show-icons}
+
 # alt + {space, shift+space}
 #     rofi -{show drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,\
 # 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
-# alt + {space, shift+space}
-#     rofi -{combi-modi window#drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,\
-# 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
+
 # ───────────────────────────── terminal emulator ──────────────────────────── #
-# for alacritity `alacritty -e tmux` for kitty `kitty tmux`
+# for alacritity `alacritty -e tmux` for alacritty `alacritty tmux`
 alt + Return
-    kitty -e tmux
+    alacritty -e tmux
 
 alt + shift + Return
-    kitty
+    alacritty
 
 # ──────────────────────────────── Kill Window ─────────────────────────────── #
 alt + shift + q
@@ -55,7 +58,7 @@ alt + shift + f
     wmctrl -x -a microsoft-edge || microsoft-edge
 
 alt + shift + t
-    wmctrl -x -a kitty || kitty
+    wmctrl -x -a alacritty || alacritty
 
 alt + shift + c
     wmctrl -x -a code || code
@@ -103,10 +106,9 @@ super + shift + s
 super + s
     ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a microsoft-edge
 
-
 # ──────────────────────────────── tmux-switch ─────────────────────────────── #
 # Opens a terminal window with tmux and enables the users to directly go in to
-# folder using fzf
+# folder using kzf
 
 alt + ctrl + t
     alacritty -e sh ~/.dotfiles/ww-scripts/tmux-switch.sh
@@ -115,7 +117,7 @@ alt + ctrl + t
 # ─────────────────────────── dmenu process killer ─────────────────────────── #
 # Can kill processes using the dmenu
 alt + shift + p
-    kill -15 $(ps -u $USER -o pid,%mem,%cpu,comm | sort -b -k2 -r | sed -n '1!p' | dmenu -i -l 10 | awk '{print $1}')
+    kill -9 $(ps -u $USER -o pid,%mem,%cpu,comm | sort -b -k2 -r | sed -n '1!p' | dmenu -i -l 10 | awk '{print $1}')
 
 # ──────────────────────────────────────────────────────────────────────────── #
 #                               Window Management                              #
