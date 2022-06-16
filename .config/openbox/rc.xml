@@ -411,9 +411,9 @@
         <command>kitty</command>
       </action>
     </keybind>
-    <!-- <keybind key="W-j">
-    <action name="Iconify" />
-  </keybind> -->
+    <keybind key="A-S-m">
+        <action name="Iconify" />
+    </keybind>
     <!-- <keybind key="W-S-q">
     <action name="Close" />
   </keybind> -->

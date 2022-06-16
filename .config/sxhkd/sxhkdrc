@@ -18,9 +18,11 @@ alt + d
     dmenu_run -i -l 10
 
 # ─────────────────────────────── rofi Comamnds ────────────────────────────── #
-alt + {space, shift+space}
-    rofi -{show drun -show combi -show-icons,\
-	show window -show combi -show-icons}
+alt + space
+    rofi -show drun -show-icons "papirus" -font "Noto mono 10" -theme "solarized" -width 25 
+
+alt + shift + space
+	rofi -show window -show-icons "papirus" -font "Noto mono 10" -width 25
 
 # alt + {space, shift+space}
 #     rofi -{show drun -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons,\
@@ -50,7 +52,7 @@ ctrl + alt + q
 # one.
 
 alt + shift + f
-    wmctrl -x -a brave-browser || brave-browser
+    wmctrl -x -a microsoft-edge || microsoft-edge
 
 alt + shift + t
     wmctrl -x -a kitty || kitty
@@ -78,7 +80,7 @@ ctrl + alt + v
 #-------- Multi key option for launcher ---------
 
 alt + w; {f,t,c,n,s}
-    {wmctrl -x -a brave-browser || brave-browser,\
+    {wmctrl -x -a microsoft-edge || microsoft-edge,\
     wmctrl -x -a alacritty || alacritty,\
     wmctrl -x -a code || code,\
     wmctrl -x -a notepadqq || notepadqq,\
@@ -99,7 +101,7 @@ super + shift + s
 # uh - Same as above two. but searches the history
 
 super + s
-    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a brave-browser
+    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a microsoft-edge
 
 
 # ──────────────────────────────── tmux-switch ─────────────────────────────── #
@@ -127,8 +129,8 @@ alt + shift + p
 
 # ────────────────────────────── switch desktops ───────────────────────────── #
 # wmctrl needs to be installed
-alt + {1,2,3,4}
-    wmctrl -s {0,1,2,3}
+# alt + {1,2,3,4}
+#     wmctrl -s {0,1,2,3}
 
 # ──────────────────────── go to previous next desktop ─────────────────────── #
 # wmctrl and xdotool needs to be installed
@@ -148,14 +150,14 @@ alt + {ctrl,shift} + a
 
 
 # ────────────────────── switching desktops with windows ───────────────────── #
-alt + shift + 1
-    wmctrl -r :ACTIVE: -t 0; wmctrl -s 0
-alt + shift + 2
-    wmctrl -r :ACTIVE: -t 1; wmctrl -s 1
-alt + shift + 3
-    wmctrl -r :ACTIVE: -t 2; wmctrl -s 2
-alt + shift + 4
-    wmctrl -r :ACTIVE: -t 3; wmctrl -s 3
+# alt + shift + 1
+#     wmctrl -r :ACTIVE: -t 0; wmctrl -s 0
+# alt + shift + 2
+#     wmctrl -r :ACTIVE: -t 1; wmctrl -s 1
+# alt + shift + 3
+#     wmctrl -r :ACTIVE: -t 2; wmctrl -s 2
+# alt + shift + 4
+#     wmctrl -r :ACTIVE: -t 3; wmctrl -s 3
 
 # ────────────────────── bring window to current dekstop ───────────────────── #
 alt + b
