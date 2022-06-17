@@ -34,21 +34,21 @@ alias aptu='sudo apt auto-remove'
 alias apts='apt-cache search --names-only'
 alias aptlist="apt list --installed | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-u:execute(sudo apt auto-remove --yes {})+abort'"
 alias aptorder='grep install /var/log/dpkg.log | fzf'
-alias aptall="apt list | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install --yes {})'"
+alias aptall="apt list | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install {})'"
 function aptinst() {
 	[[ $1 = "" ]] &&\
-    apt list | cut -d/ -f1 | fzf --preview 'apt show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install -y {})+abort' || \
-    apt-cache search --names-only $1 | cut -d' ' -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install -y {})+abort'
+    apt list | cut -d/ -f1 | fzf --preview 'apt show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install {})+abort' || \
+    apt-cache search --names-only $1 | cut -d' ' -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install {})+abort'
 }
 
 # ────────────────────── Dnf (Fedora) Package Management ───────────────────── #
-alias dnfi='sudo dnf install -y'
+alias dnfi='sudo dnf install'
 alias dnfu='sudo dnf remove'
 alias dnfs='dnf search'
 alias dnfinf='dnf info'
-alias dnflist="dnf list installed | cut -d' ' -f1 | fzf --preview 'dnf info {}' --layout=reverse --bind 'ctrl-u:execute(sudo dnf remove -y {})+abort'"
+alias dnflist="dnf list installed | cut -d' ' -f1 | fzf --preview 'dnf info {}' --layout=reverse --bind 'ctrl-u:execute(sudo dnf remove {})+abort'"
 function dnfinst() {
-	[[ $1 = "" ]] && echo "type a package to search. Eg. dnfinst vim" || dnf search $1 | grep -v '^==' | cut -d' ' -f1 | fzf --preview 'dnf info {}' --layout=reverse --bind 'ctrl-i:execute(sudo dnf install -y {})+abort'
+	[[ $1 = "" ]] && echo "type a package to search. Eg. dnfinst vim" || dnf search $1 | grep -v '^==' | cut -d' ' -f1 | fzf --preview 'dnf info {}' --layout=reverse --bind 'ctrl-i:execute(sudo dnf install {})+abort'
 }
 
 # ─────────────────────────────── config files ─────────────────────────────── #
