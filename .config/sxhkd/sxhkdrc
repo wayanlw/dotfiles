@@ -34,12 +34,12 @@ alt + shift + space
 # 	show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons}
 
 # ───────────────────────────── terminal emulator ──────────────────────────── #
-# for alacritity `alacritty -e tmux` for alacritty `alacritty tmux`
+# for alacritity `kitty -e tmux` for kitty `kitty tmux`
 alt + Return
-    alacritty -e tmux
+    kitty -e tmux
 
 alt + shift + Return
-    alacritty
+    kitty
 
 # ──────────────────────────────── Kill Window ─────────────────────────────── #
 alt + shift + q
@@ -58,13 +58,13 @@ alt + shift + f
     wmctrl -x -a microsoft-edge || microsoft-edge
 
 alt + shift + t
-    wmctrl -x -a alacritty || alacritty
+    wmctrl -x -a kitty || kitty
 
 alt + shift + c
     wmctrl -x -a code || code
 
 alt + shift + x
-    wmctrl -x -a pcmanfm || pcmanfm
+    wmctrl -x -a doublecmd || doublecmd
 
 # ------- screenshot with flameshot
 ctrl + shift + z
@@ -84,7 +84,7 @@ ctrl + alt + v
 
 alt + w; {f,t,c,n,s}
     {wmctrl -x -a microsoft-edge || microsoft-edge,\
-    wmctrl -x -a alacritty || alacritty,\
+    wmctrl -x -a kitty || kitty,\
     wmctrl -x -a code || code,\
     wmctrl -x -a notepadqq || notepadqq,\
     wmctrl -x -a fsearch || fsearch}
@@ -111,7 +111,7 @@ super + s
 # folder using kzf
 
 alt + ctrl + t
-    alacritty -e sh ~/.dotfiles/ww-scripts/tmux-switch.sh
+    kitty -e sh ~/.dotfiles/ww-scripts/tmux-switch.sh
 
 
 # ─────────────────────────── dmenu process killer ─────────────────────────── #
@@ -131,8 +131,8 @@ alt + shift + p
 
 # ────────────────────────────── switch desktops ───────────────────────────── #
 # wmctrl needs to be installed
-# alt + {1,2,3,4}
-#     wmctrl -s {0,1,2,3}
+alt + {1,2,3,4}
+    wmctrl -s {0,1,2,3}
 
 # ──────────────────────── go to previous next desktop ─────────────────────── #
 # wmctrl and xdotool needs to be installed
@@ -152,14 +152,14 @@ alt + {ctrl,shift} + a
 
 
 # ────────────────────── switching desktops with windows ───────────────────── #
-# alt + shift + 1
-#     wmctrl -r :ACTIVE: -t 0; wmctrl -s 0
-# alt + shift + 2
-#     wmctrl -r :ACTIVE: -t 1; wmctrl -s 1
-# alt + shift + 3
-#     wmctrl -r :ACTIVE: -t 2; wmctrl -s 2
-# alt + shift + 4
-#     wmctrl -r :ACTIVE: -t 3; wmctrl -s 3
+alt + shift + 1
+    wmctrl -r :ACTIVE: -t 0; wmctrl -s 0
+alt + shift + 2
+    wmctrl -r :ACTIVE: -t 1; wmctrl -s 1
+alt + shift + 3
+    wmctrl -r :ACTIVE: -t 2; wmctrl -s 2
+alt + shift + 4
+    wmctrl -r :ACTIVE: -t 3; wmctrl -s 3
 
 # ────────────────────── bring window to current dekstop ───────────────────── #
 alt + b

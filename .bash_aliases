@@ -10,8 +10,8 @@ alias lwwdir="cat .config/sxhkd/sxhkdrc | grep -v '#' | grep -v '^ $' | grep -v 
 alias ll='ls -alt'
 alias lla='ls -A --human-readable --size -1 --classify'
 # alias rm='mv -t /root/MyTrash/'
-alias v='nvim'
-alias vim='nvim'
+# alias v='nvim'
+# alias vim='nvim'
 
 
 # ─────────────────────────────── Pacman (Arch) ────────────────────────────── #
@@ -35,6 +35,11 @@ alias apts='apt-cache search --names-only'
 alias aptlist="apt list --installed | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-u:execute(sudo apt auto-remove --yes {})+abort'"
 alias aptorder='grep install /var/log/dpkg.log | fzf'
 alias aptall="apt list | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install --yes {})'"
+function aptinst() {
+	[[ $1 = "" ]] &&\
+    apt list | cut -d/ -f1 | fzf --preview 'apt show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install -y {})+abort' || \
+    apt-cache search --names-only $1 | cut -d' ' -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install -y {})+abort'
+}
 
 # ────────────────────── Dnf (Fedora) Package Management ───────────────────── #
 alias dnfi='sudo dnf install -y'
