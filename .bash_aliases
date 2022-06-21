@@ -7,11 +7,10 @@ alias lcmd="cat $HOME/.bash_aliases| grep alias | grep -v '^#' | sed  's/^\w*\ *
 alias lks="cat .config/sxhkd/sxhkdrc | grep -v '#' | grep -v '^ $' | grep -v '^$'"
 alias lwwdir="cat .config/sxhkd/sxhkdrc | grep -v '#' | grep -v '^ $' | grep -v '^$'"
 # alias ll='ls --human-readable --size -1 --classify'
-alias ll='ls -alt'
+alias ll='ls -al --group-directories-first --human-readable --classify'
 alias lla='ls -A --human-readable --size -1 --classify'
 # alias rm='mv -t /root/MyTrash/'
-# alias v='nvim'
-# alias vim='nvim'
+alias updt='sudo updatedb'
 
 
 # ─────────────────────────────── Pacman (Arch) ────────────────────────────── #
@@ -34,11 +33,14 @@ alias aptu='sudo apt auto-remove'
 alias apts='apt-cache search --names-only'
 alias aptlist="apt list --installed | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-u:execute(sudo apt auto-remove --yes {})+abort'"
 alias aptorder='grep install /var/log/dpkg.log | fzf'
-alias aptall="apt list | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install {})'"
+alias aptall="apt list | cut -d/ -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install {})+abort'"
+
 function aptinst() {
-	[[ $1 = "" ]] &&\
-    apt list | cut -d/ -f1 | fzf --preview 'apt show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install {})+abort' || \
-    apt-cache search --names-only $1 | cut -d' ' -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install {})+abort'
+	if [[ $1 = "" ]];then
+        apt list 2>/dev/null | cut -d/ -f1 | fzf --preview 'apt show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install {})+abort' 
+    else
+        apt-cache search --names-only $1 | cut -d' ' -f1 | fzf --preview 'apt-cache show {}' --layout=reverse --bind 'ctrl-i:execute(sudo apt install --yes {})+abort'
+    fi
 }
 
 # ────────────────────── Dnf (Fedora) Package Management ───────────────────── #
@@ -97,6 +99,12 @@ alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | eg
 alias cp='cp -v'
 alias mv='mv -v'
 
+# ---------------------------------------------------------------------------- #
+#                                   FUNCTIONS                                  #
+# ---------------------------------------------------------------------------- #
+
+
+
 # ────────────────────────── Downloading with aria2c ───────────────────────── #
 alias download='aria2c -x 16 -s 16' # x - number of connections per server, s - splits
 
@@ -108,21 +116,32 @@ function gpush() {
 }
 
 # ───────────────────────────── find with locate ───────────────────────────── #
-function fnd() {
-	locate $1 | fzf
+function fnd(){
+    locate $1 | fzf
 }
+
+function rmsync(){
+    if [ -d $1 ]; then
+        f=$(mktemp -d)
+        rsync -a --delete "$f/" "$1/"
+        rm -rf "$f"
+        rmdir $1
+    fi
+}
+
 
 #preview and edit a file in a given path using vim
-function vil() {
-	find $1 -maxdepth 4 -type f 2>/dev/null | fzf --height 50% --reverse --border --preview "cat {}" --bind "enter:execute(vim {})"
+function vil(){
+	find $1 -maxdepth 4 -type f 2>/dev/null| fzf --height 50% --reverse --border --preview "cat {}" --bind "enter:execute(vim {})"
 }
 
-function weather() {
-	[[ $1 = "" ]] && curl 'wttr.in/?FA' || curl "wttr.in/$1?0FT"
+
+function weather(){
+        [[ $1 = "" ]] && curl 'wttr.in/?FA' || curl "wttr.in/$1?0FT"
 }
 
-function cheat() {
-	[[ $1 = "" ]] && curl cheat.sh/ || curl cheat.sh/$1
+function cheat(){
+        [[ $1 = "" ]] && curl cheat.sh/ || curl cheat.sh/$1
 }
 
 # ──────────────────────────────────────────────────────────────────────────── #
@@ -150,21 +169,21 @@ function vimbk() {
 # ──────────────────────────────────────────────────────────────────────────── #
 
 # search and watch youtube videos from terminal youtube Video | Youtube Audio
-function uv() {
-	# link=$(ytfzf -L "'$*'")
-	link=$(ytfzf -L -t --thumbnail-quality=0 "'$*'")
-	echo -n $link | xclip -sel clip
-	mpv --ytdl-format='bestvideo[height<=?720]+bestaudio' $link >/dev/null 2>&1
-
+function uv(){
+    # link=$(ytfzf -L "'$*'")
+    link=$(ytfzf -L -t --thumbnail-quality=0 "'$*'")
+    echo -n $link | xclip -sel clip
+    mpv --ytdl-format='bestvideo[height<=?720]+bestaudio' $link > /dev/null 2>&1
 }
 
-function ua() {
-	link=$(ytfzf -L "'$*'")
-	# link=$(ytfzf -L -t --thumbnail-quality=0 "'$*'")
-	echo -n $link | xclip -sel clip
-	mpv --ytdl-format='bestaudio' $link >/dev/null 2>&1 &
-	echo "[+] To stop playing in background enter 'pkill mpv'"
+function ua(){
+    link=$(ytfzf -L "'$*'")
+    # link=$(ytfzf -L -t --thumbnail-quality=0 "'$*'")
+    echo -n $link | xclip -sel clip
+    mpv --ytdl-format='bestaudio' $link > /dev/null 2>&1 &
+    echo "[+] To stop playing in background enter 'pkill mpv'"
 }
+
 
 # ───────────────────────────── Terminal Googling ──────────────────────────── #
 function goog() {

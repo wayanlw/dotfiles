@@ -55,7 +55,7 @@ ctrl + alt + q
 # one.
 
 alt + shift + f
-    wmctrl -x -a microsoft-edge || microsoft-edge
+    wmctrl -x -a microsoft-edge-stable || microsoft-edge-stable
 
 alt + shift + t
     wmctrl -x -a kitty || kitty
