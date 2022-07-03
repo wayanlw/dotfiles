@@ -59,6 +59,9 @@ set splitright "creates the new split at bottom
 noremap <leader><Tab> :tabn<CR>
 noremap <leader>t :tabnew<CR>
 
+" buffer command shortcuts
+noremap <leader>b :Buffers<CR>
+
 "" Fast saving and quitting
 nmap <leader>w :w!<cr>
 nmap <leader>wq :wq!<cr>
@@ -238,7 +241,8 @@ map <leader>s? z=
     " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
     Plug 'junegunn/vim-easy-align'
-    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
     Plug 'scrooloose/nerdtree'
     Plug 'https://github.com/tpope/vim-surround.git'
     Plug 'vim-airline/vim-airline'
@@ -283,8 +287,9 @@ let g:airline#extensions#tabline#enabled = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>f :FZF<cr>
-nmap <leader>fh :FZF ~<cr>
+" nmap <leader>f :FZF<cr>
+" nmap <leader>fh :FZF ~<cr>
+nmap <leader>f :Files <cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => gruvbox activation
