@@ -69,8 +69,8 @@ for_window [class="xfce4*"] floating enable; border none
 # ----------------------------- All floating mode ---------------------------- #
 ### Floating mode for all windows and easily place them left and right side of the window
 #for_window [class="^.*"] floating enable
-bindsym $alt+u floating enable, resize set 49 ppt 96 ppt, move position 0 ppt 0 px
-bindsym $alt+o floating enable, resize set 50 ppt 96 ppt, move position 50 ppt 0 ppt
+# bindsym $alt+u floating enable, resize set 49 ppt 96 ppt, move position 0 ppt 0 px
+# bindsym $alt+o floating enable, resize set 50 ppt 96 ppt, move position 50 ppt 0 ppt
 
 # ---------------------------------------------------------------------------- #
 

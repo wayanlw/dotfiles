@@ -82,12 +82,12 @@ ctrl + alt + v
 
 #-------- Multi key option for launcher ---------
 
-alt + w; {f,t,c,n,s}
-    {wmctrl -x -a brave-browser || brave-browser,\
-    wmctrl -x -a kitty || kitty,\
-    wmctrl -x -a code || code,\
-    wmctrl -x -a notepadqq || notepadqq,\
-    wmctrl -x -a fsearch || fsearch}
+# alt + w; {f,t,c,n,s}
+#     {wmctrl -x -a brave-browser || brave-browser,\
+#     wmctrl -x -a kitty || kitty,\
+#     wmctrl -x -a code || code,\
+#     wmctrl -x -a notepadqq || notepadqq,\
+#     wmctrl -x -a fsearch || fsearch}
 
 # ───────────────────────────── Search Selection ───────────────────────────── #
 # Can search the selected text via the default browser.
