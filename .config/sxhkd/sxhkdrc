@@ -55,7 +55,7 @@ ctrl + alt + q
 # one.
 
 alt + shift + f
-    wmctrl -x -a microsoft-edge-stable || microsoft-edge-stable
+    wmctrl -x -a brave || brave
 
 alt + shift + t
     wmctrl -x -a kitty || kitty
@@ -83,7 +83,7 @@ ctrl + alt + v
 #-------- Multi key option for launcher ---------
 
 alt + w; {f,t,c,n,s}
-    {wmctrl -x -a microsoft-edge || microsoft-edge,\
+    {wmctrl -x -a brave || brave,\
     wmctrl -x -a kitty || kitty,\
     wmctrl -x -a code || code,\
     wmctrl -x -a notepadqq || notepadqq,\
@@ -104,7 +104,7 @@ super + shift + s
 # uh - Same as above two. but searches the history
 
 super + s
-    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a microsoft-edge
+    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a brave
 
 # ──────────────────────────────── tmux-switch ─────────────────────────────── #
 # Opens a terminal window with tmux and enables the users to directly go in to

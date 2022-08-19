@@ -19,7 +19,7 @@ alias paci='sudo pacman -S'
 alias pacu='sudo pacman -Runs'
 alias pacs='pacman -Ss'
 alias pacclean='sudo pacman -Runs $(pacman -Qqdt)'
-alias paclist="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less),ctrl-y:execute(echo -n {}|xclip -sel clip)'"
+alias paclist="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less),ctrl-y:execute(echo -n {}|xclip -sel clip),ctrl-u:execute(sudo pacman -Runs {})'"
 alias pacorder='ls -ltr /var/lib/pacman/local'
 alias pacall="pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse --bind 'ctrl-i:execute(sudo pacman -S {})+abort,enter:execute(pacman -Si {} | less)'"
 alias yayall="yay -Slq | fzf --preview 'yay -Si {}' --layout=reverse --bind 'ctrl-i:execute(yay -S {})+abort,enter:execute(yay -Si {} | less)'"
