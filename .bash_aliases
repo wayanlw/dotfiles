@@ -201,3 +201,21 @@ function goog() {
 
 	xdg-open "http://www.google.com/search?q=$q" >/dev/null 2>&1
 }
+
+function wsc(){
+    # starts recording the current terminal output at the dir_path
+    # file size is limited to 2MB
+    local max_file_size=2M
+    local date_now=$(date +"%y%m%d-%H%M%S")
+    local dir_name=terminal_scripts
+    local dir_path=$HOME/$dir_name
+
+    if [ ! -d $dir_path ]; then
+    mkdir -p $dir_path
+    fi
+
+    # echo "[+] capturing the script on ${dir_path}"
+    script -o $max_file_size --log-out ${dir_path}/${date_now}_${1}
+
+    # once the script is started use `pkill script` to stop the script
+}

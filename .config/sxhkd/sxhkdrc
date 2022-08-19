@@ -55,7 +55,7 @@ ctrl + alt + q
 # one.
 
 alt + shift + f
-    wmctrl -x -a brave || brave
+    wmctrl -x -a brave-browser || brave-browser
 
 alt + shift + t
     wmctrl -x -a kitty || kitty
@@ -82,12 +82,12 @@ ctrl + alt + v
 
 #-------- Multi key option for launcher ---------
 
-alt + w; {f,t,c,n,s}
-    {wmctrl -x -a brave || brave,\
-    wmctrl -x -a kitty || kitty,\
-    wmctrl -x -a code || code,\
-    wmctrl -x -a notepadqq || notepadqq,\
-    wmctrl -x -a fsearch || fsearch}
+# alt + w; {f,t,c,n,s}
+#     {wmctrl -x -a brave-browser || brave-browser,\
+#     wmctrl -x -a kitty || kitty,\
+#     wmctrl -x -a code || code,\
+#     wmctrl -x -a notepadqq || notepadqq,\
+#     wmctrl -x -a fsearch || fsearch}
 
 # ───────────────────────────── Search Selection ───────────────────────────── #
 # Can search the selected text via the default browser.
@@ -104,7 +104,7 @@ super + shift + s
 # uh - Same as above two. but searches the history
 
 super + s
-    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a brave
+    ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a brave-browser
 
 # ──────────────────────────────── tmux-switch ─────────────────────────────── #
 # Opens a terminal window with tmux and enables the users to directly go in to
@@ -131,8 +131,8 @@ alt + shift + p
 
 # ────────────────────────────── switch desktops ───────────────────────────── #
 # wmctrl needs to be installed
-alt + {1,2,3,4}
-    wmctrl -s {0,1,2,3}
+# alt + {1,2,3,4}
+#     wmctrl -s {0,1,2,3}
 
 # ──────────────────────── go to previous next desktop ─────────────────────── #
 # wmctrl and xdotool needs to be installed

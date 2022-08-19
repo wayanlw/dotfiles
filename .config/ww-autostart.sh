@@ -18,7 +18,7 @@ nitrogen --restore &
 
 # ─────────────────────────── Linux Capsy ─────────────────────────── #
 #setxkbmap
-#[[ -f $HOME/.Xmodmap ]] && xmodmap $HOME/.Xmodmap
+[[ -f $HOME/.Xmodmap ]] && xmodmap $HOME/.Xmodmap
 autokey-gtk &
 
 # lxsession & || gnome-polkit &

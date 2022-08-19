@@ -1,0 +1,14 @@
+#!/bin/bash
+dir_name=terminal_scripts
+dir_path=$HOME/$dir_name
+date_now=$(date +"%y%m%d-%H%M%S")
+
+if [ ! -d $dir_path ]; then
+    mkdir -p $dir_path
+fi
+
+# echo "[+] capturing the script on ${dir_path}"
+script -o 2MB --log-out ${dir_path}/${date_now}_${1}
+
+# once the script is started use `pkill script` to stop the script
+
