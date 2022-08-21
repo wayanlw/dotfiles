@@ -22,7 +22,8 @@ alt + space
     rofi -show drun -show-icons "papirus" -font "Noto mono 10" -theme "solarized" -width 25 
 
 alt + shift + space
-	rofi -show window -show-icons "papirus" -font "Noto mono 10" -width 25
+    ~/.dotfiles/ww-scripts/switch
+	# rofi -show window -show-icons "papirus" -font "Noto mono 10" -width 25
 
 # with KDE krunner is more powerful. Therefore below is commented. 
 # alt + {space, shift+space}
@@ -103,7 +104,7 @@ super + shift + s
 # uv - video option for ua
 # uh - Same as above two. but searches the history
 
-super + s
+alt + s
     ~/.dotfiles/ww-scripts/websearch.sh && wmctl -x -a brave-browser
 
 # ──────────────────────────────── tmux-switch ─────────────────────────────── #
