@@ -43,7 +43,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Nord-Openbox</name>
+    <name>Clearlooks</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -412,7 +412,7 @@
       </action>
     </keybind>
     <keybind key="A-S-m">
-        <action name="Iconify" />
+      <action name="Iconify"/>
     </keybind>
     <!-- <keybind key="W-S-q">
     <action name="Close" />

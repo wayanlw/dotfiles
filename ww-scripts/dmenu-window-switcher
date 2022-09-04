@@ -1,3 +1,6 @@
+#!/bin/bash
+# WW: This script shows a list of open windows in dmenu. User can switch to any open application quickly by simply selecting the dmenu entry
+
 windows=$(wmctrl -xl | tr -s '[:blank:]' | cut -d ' ' -f 3-3,5- | sed 's/^[a-zA-Z0-9-]*\.//' | sort | uniq)
 
 # Add spaces to align the WM_NAMEs of the windows

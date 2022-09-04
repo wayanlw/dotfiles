@@ -57,6 +57,7 @@ function dnfinst() {
 alias sxc='vim ~/.config/sxhkd/sxhkdrc'
 
 # ───────────────────────────── changing folders ───────────────────────────── #
+alias ww='cd /home/ww-drive'
 alias dl='cd ~/Downloads'
 alias cfg='cd ~/.config'
 alias cd='cl'
@@ -75,7 +76,7 @@ function cl() {
 	fi
 	builtin cd "${DIR}" &&
 		# use your preferred ls command
-		ls -F --color=auto
+		ls -F --color=auto --group-directories-first
 }
 
 # make directories if the parent folders doesnt exists

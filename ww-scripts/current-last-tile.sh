@@ -15,12 +15,12 @@
 # use xrandr | grep ' \connected\ ' to get these information
 
 # taskbar size
-taskbar=50
+taskbar=65
 
 
 # Monitor Dimensions
-width=1920
-height=1080
+width=1600
+height=900
 
 case $1 in
     1) # Previously active windows tiled with the active windows

@@ -22,7 +22,7 @@ alt + space
     rofi -show drun -show-icons "papirus" -font "Noto mono 10" -theme "solarized" -width 25 
 
 alt + shift + space
-    ~/.dotfiles/ww-scripts/switch
+    ~/.dotfiles/ww-scripts/dmenu-window-switcher
 	# rofi -show window -show-icons "papirus" -font "Noto mono 10" -width 25
 
 # with KDE krunner is more powerful. Therefore below is commented. 
@@ -65,7 +65,7 @@ alt + shift + c
     wmctrl -x -a code || code
 
 alt + shift + x
-    wmctrl -x -a doublecmd || doublecmd
+    wmctrl -x -a pcmanfm || pcmanfm
 
 # ------- screenshot with flameshot
 ctrl + shift + z

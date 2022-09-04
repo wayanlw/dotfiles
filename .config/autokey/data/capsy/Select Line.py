@@ -1,2 +1,2 @@
 # Enter script code
-keyboard.send_keys("<home><ctrl>+<shift>+<end>")
+keyboard.send_keys("<end><end><shift>+<home>")
