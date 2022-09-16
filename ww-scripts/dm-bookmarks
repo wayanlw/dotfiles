@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+declare -A bookmark
+
+# Search Engines
+bookmark[google]="https://www.google.com/search?q="
+# Information/News
+bookmark[bbcnews]="https://www.bbc.co.uk/"
+bookmark[cnn]="https://www.cnn.com/"
+bookmark[googlenews]="https://news.google.com/"
+bookmark[wikipedia]="https://en.wikipedia.org/w/"
+bookmark[wiktionary]="https://en.wiktionary.org/w"
+# Social Media
+bookmark[reddit]="https://www.reddit.com/"
+bookmark[odysee]="https://odysee.com/$/"
+bookmark[youtube]="https://www.youtube.com/"
+# Online Shopping
+bookmark[amazon]="https://www.amazon.com/"
+bookmark[craigslist]="https://www.craigslist.org/"
+bookmark[ebay]="https://www.ebay.com/"
+bookmark[gumtree]="https://www.gumtree.com.au/"
+# Linux
+bookmark[archwiki]="https://wiki.archlinux.org/"
+# Development
+# Etc
+
+main() {
+  # As this is loaded from other file it is technically not defined
+  # shellcheck disable=SC2154 # Choosing  a search engine by name from array above.
+  engine=$(printf '%s\n' "${!bookmark[@]}" | sort | dmenu -i -l 20 -p 'Choose search engine:') || exit 1
+  # engine=$(printf '%s\n' "${!bookmark[@]}" | sort | dmenu -i -l 20 -p 'Choose search engine:' "$@") || exit 1
+  notify-send $engine
+  # Getting the URL of the search engine we chose.
+  url="${bookmark["${engine}"]}"
+
+  # # Searching the chosen engine.
+  # query=$(echo "$engine" | dmenu -i -l 20 -p 'Enter search query:')
+
+  # query="$(echo -n "${query}" | jq -s -R -r @uri)"
+  # Display search results in web browser
+  # shellcheck disable=SC2154
+  xdg-open "${url}"
+  # ${DMBROWSER} "${url}${query}"
+}
+
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main
+# [[ "${BASH_SOURCE[0]}" == "${0}" ]] && main "$@"

@@ -99,6 +99,7 @@ alias grep="grep --color=auto"
 alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
 alias cp='cp -v'
 alias mv='mv -v'
+alias rsync='rsync -hav --progress'
 
 # ---------------------------------------------------------------------------- #
 #                                   FUNCTIONS                                  #

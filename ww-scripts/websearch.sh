@@ -7,7 +7,18 @@ yt_url='https://www.youtube.com/results?search_query='
 
 
 #QUERY=$(echo '' | dmenu -p "Search:" -fn "-xos4-terminus-medium-r-*-*-14-*" -b)
-QUERY=$(echo -e "g - google\ngi - google images\nddg - duckduckgo\nu - youtube\nuv - ytfzf video\nua -ytfzf audio\nuh - ytfzf history" | dmenu -l 7 -p "Search: ")
+QUERY=$(echo -e "\
+g - google\n\
+o - open url\n\
+x - more search engines\n\
+b - bookmarks\n\
+gi - google images\n\
+ddg - duckduckgo\n\
+u - youtube\n\
+uv - ytfzf video\n\
+ua -ytfzf audio\n\
+uh - ytfzf history" \
+| dmenu -l 7 -p "Search: ")
 FIRSTWORD=$(echo $QUERY | cut  -d " " -f1)
 SEARCH_ITEM=$(echo $QUERY | awk 'NF{$1=x; sub(/^ /,x)}1')
 
@@ -30,12 +41,22 @@ if [ -n "$QUERY" ]; then
     "ddg")
         BrowserOpen "${ddg_url}${SEARCH_ITEM}" 2>/dev/null
         ;;
+    "o")
+        BrowserOpen "https://${SEARCH_ITEM}" 2>/dev/null
+        ;;
     "u")
         BrowserOpen "${yt_url}${SEARCH_ITEM}" 2>/dev/null
+        ;;
+    "x")
+        "$HOME/.dotfiles/ww-scripts/dm-websearch" 2>/dev/null
+        ;;
+    "b")
+        "$HOME/.dotfiles/ww-scripts/dm-bookmarks" 2>/dev/null
         ;;
     "uv")
         link=$(ytfzf -DL ${SEARCH_ITEM})
         echo -n $link | xclip -sel clip
+        # BrowserOpen "${link}" 2>/dev/null
         pkill mpv
         mpv --ytdl-format='bestvideo[height<=?480]+bestaudio' $link > /dev/null 2>&1
         ;;
