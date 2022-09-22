@@ -1,4 +1,4 @@
-echo "Setting timedatectl..."
+echo "\n\nSetting timedatectl  ===================================\n"
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 
@@ -6,7 +6,7 @@ sudo hwclock --systohc
 # sudo reflector -c Australia -a 12 --sort rate --save /etc/pacman.d/mirrorlist
 
 # ───────────────────────── Installing basic packages ──────────────────────── #
-echo "installing packages..."
+echo "\n\ninstalling packages  ===================================\n"
 sudo pacman -S --noconfirm --needed \
 		dmenu \
 		rofi \
@@ -32,7 +32,7 @@ sudo pacman -S --noconfirm --needed \
 		python \
 
 # ──────────────────────────────── install yay ─────────────────────────────── #
-printf '\n>>>>>>> installing yay\n'
+printf '\n\ninstalling yay  ===================================\n'
 pacman -S --needed --noconfirm git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -51,8 +51,8 @@ yay -S --noconfirm \
 		autokey-gtk \
 		alttab-git
 
-echo "enabling lightdm..."
+echo "\n\nenabling lightdm  ===================================\n"
 sudo systemctl enable lightdm
 
-echo "adding i3 to xinitrc..."
+echo "\n\nadding i3 to xinitrc  ===================================\n"
 echo "exec i3" > /home/suadmin/.xinitrc
