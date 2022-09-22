@@ -47,10 +47,6 @@ cd
 # makepkg -si
 # cd
 
-yay -S --noconfirm \
-		autokey-gtk \
-		alttab-git
-
 echo "\n\nenabling lightdm  ===================================\n"
 sudo systemctl enable lightdm
 
