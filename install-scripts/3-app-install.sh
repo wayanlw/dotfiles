@@ -63,9 +63,9 @@ pacman_array=(\
 	#guake \
 	# ─────────────────────────────── text editors ─────────────────────────────── #
 	gvim \
-	code \
-	notepadqq \
-	#geany \
+	#code \
+	#notepadqq \
+	geany \
 	#neovim \
 	# ───────────────────────────── window management ──────────────────────────── #
 	xdotool \
@@ -121,13 +121,13 @@ pacman_array=(\
 	# ───────────────────────────────── compsitor ──────────────────────────────── #
 	picom \
 	# ──────────────────────── file syncing and cloning ──────────────────────── #
-	rclone \
+	# rclone \
 	rsync \
-	clonezilla \
+	# clonezilla \
 	# ──────────────────────────── keyboard automation ─────────────────────────── #
 	autokey-gtk # install using yay
 	sxhkd \
-    input-remapper-git \
+    	# input-remapper-git \
 	# ─────────────────────────────────── fonts ────────────────────────────────── #
 	ttf-anonymous-pro \
 	ttf-cascadia-code \
@@ -140,10 +140,11 @@ pacman_array=(\
 	uget \
 	wget \
 	# ────────────────────────────── virtualization ────────────────────────────── #
-	virtualbox \
-	virtualbox-guest-iso \
-	docker \
+	#virtualbox \
+	#virtualbox-guest-iso \
+	#docker \
 	# archiving \
+	# ──────────────────────────────    Archiving    ───────────────────────────── #
 	p7zip \
 	xarchiver \
 	# ────────────────────────────── window managers ───────────────────────────── #
