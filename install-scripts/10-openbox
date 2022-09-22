@@ -1,0 +1,50 @@
+#!/bin/bash
+pacman_array=(\
+# Base : openbox and then a display manager
+    openbox \
+# Themeing: 
+    obconf \
+    lxappearance \
+    lxappearance-obconf \
+# Menu: 
+    menumaker
+# Panels: Plank or tint2
+    tint2 \
+    jgmenu \
+# Compositor
+    picom \
+# PowerManagement
+    xfce4-power-manager \
+    acpid \
+    volumeicon \
+
+)
+
+# ───────────────────────────── Trapping Contrl+c ──────────────────────────── #
+cleanup ()
+{
+# kill -s SIGTERM $!
+echo "You've presed ctrl+c. Exiting"
+exit 0
+}
+
+trap cleanup SIGINT SIGTERM
+
+# ──────────────────────────────── installing ──────────────────────────────── #
+
+printf "\n\n\n[+] >>>>>> Installing openbox and related packages\n "
+
+for name in ${pacman_array[@]}; do
+	printf "\n\n[+] Installing $name ===============================\n"
+	sudo pacman -S --noconfirm --needed $name
+done
+
+# yay -S obmenu-generator
+# obmenu-generator -u -p -c
+mmaker -vf OpenBox3
+
+# OBOX_CONFIG="$/.config/openbox"
+# [ -d $HOME/$OBOX_CONFIG ] && mv $HOME/$OBOX_CONFIG $HOME/$OBOX_CONFIG.bak 
+# ln -sf $HOME/.dotfiles/$OBOX_CONFIG $HOME/$OBOX_CONFIG 
+
+# openbox --reconfigure
