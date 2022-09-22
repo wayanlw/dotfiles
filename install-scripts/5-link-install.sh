@@ -42,7 +42,6 @@ link_file .newsboat/config
 link_file .newsboat/urls
 link_file .tmux.conf
 link_file .vimrc
-link_file .vimrc
 link_file .zshrc
 
 # ────────────────────────── Linking Fonts directory ───────────────────────── #
