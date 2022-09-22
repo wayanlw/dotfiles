@@ -55,7 +55,7 @@ echo "GRUB_DISABLE_OS_PROBER=false" >> etc/default/grub
 update-grub
 
 # ─────────────────────── adding users and sudo config ─────────────────────── #
-useradd -mG wheel suadmin
+useradd -mG wheel ww
 echo suadmin:password | chpasswd
 #usermod -aG libvert suadmin
 echo "suadmin ALL=(ALL) ALL" >> /etc/sudoers.d/suadmin
