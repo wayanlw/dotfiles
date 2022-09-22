@@ -73,4 +73,4 @@ echo "\n\nenabling lightdm  ===================================\n"
 sudo systemctl enable lightdm
 
 echo "\n\nadding i3 to xinitrc  ===================================\n"
-echo "exec i3" > /home/suadmin/.xinitrc
+echo "exec i3" > $HOME/.xinitrc
