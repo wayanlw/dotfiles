@@ -17,24 +17,31 @@ HomeDirList=(
 )
 for i in ${HomeDirList[@]}; do
 	dir="${i##*/}"
-    echo $SharedDir/$dir
+    # Check if destination directory exists. If not create directory
     if [ ! -d $SharedDir/$dir ]; then 
         echo "[!] Note : Destination Directory $i doesn't exist.Creating $SharedDir/$dir"
-        mkdir $SharedDir/$dir
+        sudo mkdir $SharedDir/$dir
     fi
+    # Check if the source directory has a link
 	if [ -L $i ]; then
-		echo "[#] $i link exists. Please check the link"
+        CUR_LINK=$(readlink "$i")
+        # Compare the current link to the required link and if the link is correct OK. else 
+        if [ $CUR_LINK != "${SharedDir}/${dir}" ];then 
+            echo "[#] $i link exists. Please check the link" 
+        else 
+            echo " [ OK ] Already linked" 
+        fi
 	elif [ -d $i ]; then
 		if [ -z "$(ls -A $i)" ]; then
             rmdir $i
             ln -sf $SharedDir/$dir $i
-            echo "[+] Success: $i linked"
+            echo "[ OK ] Success: $i linked"
         else
         echo "[-] Failed: Directory $i is not empty"
         fi
 	else
 		echo $dir
             ln -sf $SharedDir/$dir $i
-		echo "[+] Success: $i linked to $SharedDir/$dir"
+		echo "[ OK ] Success: $i linked to $SharedDir/$dir"
 	fi
 done
