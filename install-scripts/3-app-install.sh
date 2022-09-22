@@ -154,8 +154,8 @@ pacman_array=(\
 	openbox \
 	menumaker # menumaker for openbox mmaker -vf
 	obconf # appearance config for openbox
-	herbstluftwm \
-	dzen2 \
+	#herbstluftwm \
+	#dzen2 \
 	lightdm \
 	lightdm-gtk-greeter \
 	lightdm-gtk-greeter-settings \
