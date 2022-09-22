@@ -27,6 +27,9 @@ alias yayi='yay -S'
 alias yays='yay -Ss'
 alias yayu='yay -Runs'
 
+# ─────────────────────────────── Pacman (Arch) ────────────────────────────── #
+# alias bacall="sudo pacman -Sgg | grep blackarch | cut -d' ' -f2 | fzf --layout=reverse --bind 'ctrl-i:execute(sudo pacman -S {})+abort,enter:execute(pacman -Si {} | less)'"
+alias bacall="sudo pacman -Sgg | grep blackarch | cut -d' ' -f2 | fzf --preview 'pacman -Si {}' --layout=reverse --bind 'ctrl-i:execute(sudo pacman -S {})+abort,enter:execute(pacman -Si {} | less)'"
 # ────────────────────── Apt (Debian) Package Management ───────────────────── #
 alias apti='sudo apt install'
 alias aptu='sudo apt auto-remove'

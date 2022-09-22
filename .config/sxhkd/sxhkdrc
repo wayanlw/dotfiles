@@ -56,7 +56,7 @@ ctrl + alt + q
 # one.
 
 alt + shift + f
-    wmctrl -x -a brave-browser || brave-browser
+    wmctrl -x -a brave || brave
 
 alt + shift + t
     wmctrl -x -a kitty || kitty
@@ -132,8 +132,8 @@ alt + shift + p
 
 # ────────────────────────────── switch desktops ───────────────────────────── #
 # wmctrl needs to be installed
-# alt + {1,2,3,4}
-#     wmctrl -s {0,1,2,3}
+alt + {1,2,3,4}
+    wmctrl -s {0,1,2,3}
 
 # ──────────────────────── go to previous next desktop ─────────────────────── #
 # wmctrl and xdotool needs to be installed
