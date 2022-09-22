@@ -25,6 +25,7 @@ function link_file(){
 echo "[+] Linking dot files -------------"
 link_file .Xmodmap
 link_file .bash_aliases
+link_file .xbindkeyrc
 link_file .config/alacritty/alacritty.yml
 link_file .config/autokey/data/capsy
 link_file .config/herbstluftwm/autostart
