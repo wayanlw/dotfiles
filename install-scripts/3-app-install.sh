@@ -187,13 +187,13 @@ trap cleanup SIGINT SIGTERM
 printf "\n\n\n[+] >>>>>> Installing Pacman Packages\n "
 
 for name in ${pacman_array[@]}; do
-	printf "[+] Installing $name -------------------------\n"
+	printf "\n\n[+] Installing $name ===============================\n"
 	sudo pacman -S --noconfirm --needed $name
 done
 
 printf "\n\n\n[+] >>>>>> Installing Yay Packages\n "
 
 for name in ${yay_array[@]}; do
-	printf "[+] Installing $name -------------------------\n"
+	printf "\n\n[+] Installing $name  ===============================\n"
 	sudo yay -S --noconfirm --needed $name
 done
