@@ -1,4 +1,4 @@
-echo "\n\nSetting timedatectl  ===================================\n"
+printf "\n\nSetting timedatectl  ===================================\n"
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 
@@ -6,8 +6,8 @@ sudo hwclock --systohc
 # sudo reflector -c Australia -a 12 --sort rate --save /etc/pacman.d/mirrorlist
 
 # ───────────────────────── Installing basic packages ──────────────────────── #
-echo "\n\ninstalling packages  ===================================\n"
-sudo pacman -S --noconfirm --needed \
+
+pacman_array=(\
 		dmenu \
 		rofi \
 		fzf \
@@ -21,15 +21,37 @@ sudo pacman -S --noconfirm --needed \
 		xdg-utils \
 		xorg \
 		xorg-xinit \
-        arc-gtk-theme \
-        i3lock \
-        lxappearance \
-        lxsession \
-        pcmanfm \
-        ttf-font-awesome
+        	arc-gtk-theme \
+        	i3lock \
+        	lxappearance \
+        	lxsession \
+        	pcmanfm \
+        	ttf-font-awesome
 		mtools \
 		rsync \
 		python \
+)
+
+# ───────────────────────────── Trapping Contrl+c ──────────────────────────── #
+cleanup ()
+{
+# kill -s SIGTERM $!
+echo "You've presed ctrl+c. Exiting"
+exit 0
+}
+
+trap cleanup SIGINT SIGTERM
+
+# ──────────────────────────────── installing ──────────────────────────────── #
+
+printf "\n\n\n[+] >>>>>> Installing BASIC Pacman Packages\n "
+
+for name in ${pacman_array[@]}; do
+	printf "\n\n[+] Installing $name ===============================\n"
+	sudo pacman -S --noconfirm --needed $name
+done
+
+
 
 # ──────────────────────────────── install yay ─────────────────────────────── #
 printf '\n\ninstalling yay  ===================================\n'
