@@ -11,7 +11,7 @@ alias ll='ls -al --group-directories-first --human-readable --classify'
 alias lla='ls -A --human-readable --size -1 --classify'
 # alias rm='mv -t /root/MyTrash/'
 alias updt='sudo updatedb'
-
+alias script='script -o 2M -O $(date +"%Y-%m-%d_%I:%M:%S_%p").log' 
 
 # ─────────────────────────────── Pacman (Arch) ────────────────────────────── #
 alias findpkg='pacman -Qq | grep'
