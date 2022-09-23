@@ -60,11 +60,11 @@ alt + shift + f
     # ~/.dotfiles/ww-scripts/run-or-raise.sh brave
 
 alt + shift + t
-    # ~/.dotfiles/ww-scripts/run-or-raise.sh kitty
     wmctrl -x -a kitty || kitty
+    # ~/.dotfiles/ww-scripts/run-or-raise.sh kitty
 
 alt + shift + c
-    wmctrl -x -a kitty || kitty
+    wmctrl -x -a code || code
     # ~/.dotfiles/ww-scripts/run-or-raise.sh code
 
 alt + shift + x
