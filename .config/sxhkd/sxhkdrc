@@ -57,15 +57,19 @@ ctrl + alt + q
 
 alt + shift + f
     wmctrl -x -a brave || brave
+    # ~/.dotfiles/ww-scripts/run-or-raise.sh brave
 
 alt + shift + t
+    # ~/.dotfiles/ww-scripts/run-or-raise.sh kitty
     wmctrl -x -a kitty || kitty
 
 alt + shift + c
-    wmctrl -x -a code || code
+    wmctrl -x -a kitty || kitty
+    # ~/.dotfiles/ww-scripts/run-or-raise.sh code
 
 alt + shift + x
     wmctrl -x -a pcmanfm || pcmanfm
+    # ~/.dotfiles/ww-scripts/run-or-raise.sh pcmanfm
 
 # ------- screenshot with flameshot
 ctrl + shift + z

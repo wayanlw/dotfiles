@@ -38,8 +38,8 @@ hc keybind $Mod-q spawn rofi -combi-modi window#drun -theme solarized -font "hac
 hc keybind $Mod-z spawn rofi -show window -theme solarized -font "hack 10" -show combi -icon-theme "Papirus" -show-icons
 
 # open or raise. This was addressed by using the sxhkd
-#hc keybind $Mod-Shift-a spawn bash -c 'wmctrl -x -a brave || brave && herbstclient jumpto urgent' 
-#hc keybind $Mod-Shift-x spawn bash -c 'wmctrl -x -a pcmanfm || pcmanfm && herbstclient jumpto urgent' 
+hc keybind $Mod-Shift-a spawn bash -c 'wmctrl -x -a brave || brave && herbstclient jumpto urgent' 
+hc keybind $Mod-Shift-x spawn bash -c 'wmctrl -x -a pcmanfm || pcmanfm && herbstclient jumpto urgent' 
 
 # basic movement in tiling and floating mode
 # focusing clients - $mod+arrows | $mod+capsy
@@ -257,7 +257,10 @@ hc set swap_monitors_to_get_tag 1
 # hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
+hc rule _NET_WM_STATE='_NET_WM_STATE_DEMANDS_ATTENTION' focus=on
+hc rule windowtype='_NET_WM_STATE_DEMANDS_ATTENTION' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc rule urgent focus=on
 
 hc set tree_style '╾│ ├└╼─┐'
 
