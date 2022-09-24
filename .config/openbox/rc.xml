@@ -533,6 +533,76 @@
         <height>50%</height>
       </action>
     </keybind>
+    <!-- ──────────────────────────── TILING ───────────────────────────── -->
+    <!-- Vertical tiling -->
+        <keybind key="C-W-v">
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <width>50%</width>
+          </action>
+          <action name="MaximizeVert"/>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <y>0</y>
+          </action>
+          <action name="NextWindow">
+            <interactive>no</interactive>
+            <dialog>none</dialog>
+            <finalactions>
+              <action name="UnmaximizeFull"/>
+              <action name="MoveResizeTo">
+                <width>50%</width>
+              </action>
+              <action name="MaximizeVert"/>
+              <action name="MoveResizeTo">
+                <x>-0</x>
+                <y>0</y>
+              </action>
+            </finalactions>
+          </action>
+        </keybind>
+
+        <!-- Horizontal tiling -->
+        <keybind key="C-W-h">
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <height>50%</height>
+          </action>
+          <action name="MaximizeHorz"/>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <y>0</y>
+          </action>
+          <action name="NextWindow">
+            <interactive>no</interactive>
+            <dialog>none</dialog>
+            <finalactions>
+              <action name="UnmaximizeFull"/>
+              <action name="MoveResizeTo">
+                <height>50%</height>
+              </action>
+              <action name="MaximizeHorz"/>
+              <action name="MoveResizeTo">
+                <x>0</x>
+                <y>-0</y>
+              </action>
+            </finalactions>
+          </action>
+        </keybind>
+
+        <!-- Restore window dimensions -->
+        <keybind key="C-W-r">
+          <action name="UnmaximizeFull"/>
+          <action name="NextWindow">
+            <interactive>no</interactive>
+            <dialog>none</dialog>
+            <finalactions>
+              <action name="UnmaximizeFull"/>
+            </finalactions>
+          </action> 
+        </keybind>
+      
+          
     <!-- ──────────────────────────── NEXT MONITOR ───────────────────────────── -->
     <keybind key="W-m">
       <action name="MoveResizeTo">
