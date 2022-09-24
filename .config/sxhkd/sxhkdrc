@@ -136,8 +136,8 @@ alt + shift + p
 
 # ────────────────────────────── switch desktops ───────────────────────────── #
 # wmctrl needs to be installed
-alt + {1,2,3,4}
-    wmctrl -s {0,1,2,3}
+# alt + {1,2,3,4}
+#     wmctrl -s {0,1,2,3}
 
 # ──────────────────────── go to previous next desktop ─────────────────────── #
 # wmctrl and xdotool needs to be installed
