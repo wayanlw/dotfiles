@@ -232,6 +232,28 @@
         <wrap>no</wrap>
       </action>
     </keybind>
+
+    <keybind key="W-C-comma">
+      <action name="SendToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+      <action name="GoToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-C-period">
+      <action name="SendToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+      <action name="GoToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
     <keybind key="S-A-Up">
       <action name="SendToDesktop">
         <to>up</to>
@@ -267,6 +289,8 @@
     <keybind key="W-S-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
+
+
     <!-- ─────────────────────── Keybindings for windows ─────────────────────── -->
     <keybind key="W-S-Q">
       <action name="Close"/>
@@ -281,7 +305,9 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-    <!-- ────────────────── Keybindings for window switching ─────────────────── -->
+
+
+    <!-- ────────────────── Next/Previous Windows Switching (Alt-Tab) ─────────────────── -->
     <keybind key="W-o">
       <action name="NextWindow">
         <finalactions>
@@ -335,14 +361,8 @@
         <execute>~/.dotfiles/ww-scripts/wmctrl-switch-by-application.sh</execute>
       </action>
     </keybind>
-    <!-- ─────────────────────────── Window resizing ─────────────────────────── -->
-    <keybind key="A-r">
-      <action name="Resize"/>
-    </keybind>
-    <keybind key="A-m">
-      <action name="Move"/>
-    </keybind>
-    <!-- ──────── Keybindings for window switchings ───────── -->
+
+    <!-- ──────── Directional Window Switching window-vimkeys ──────── -->
     <keybind key="W-l">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
@@ -383,6 +403,16 @@
         <direction>down</direction>
       </action>
     </keybind>
+
+    <!-- ─────────────────────────── Window resizing ─────────────────────────── -->
+    <keybind key="A-r">
+      <action name="Resize"/>
+    </keybind>
+    <keybind key="A-m">
+      <action name="Move"/>
+    </keybind>
+
+
     <!-- ──────────────── Keybindings for running applications ───────────────── -->
     <keybind key="W-e">
       <action name="Execute">
@@ -417,6 +447,8 @@
     <!-- <keybind key="W-S-q">
     <action name="Close" />
   </keybind> -->
+
+
     <!-- ────────────────────────── Window Management ────────────────────────── -->
     <!-- <keybind key="A-S-t">
       <action name="ToggleDecorations"/>
@@ -424,6 +456,9 @@
     <!-- <keybind key="A-S-w"> -->
     <!--   <action name="ToggleMaximize"/> -->
     <!-- </keybind> -->
+
+
+	<!-- Alt Shift w/e/r/s Window Tiling -->
     <keybind key="A-S-w">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
@@ -455,6 +490,17 @@
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
         <monitor>next</monitor>
+        <x>0</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+
+    <!-- tiling with the vim keys -->
+    <keybind key="W-S-p">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
         <width>100%</width>
@@ -497,6 +543,8 @@
         <height>50%</height>
       </action>
     </keybind>
+
+    <!-- tiling with the windows-arrow keys -->
     <keybind key="W-S-Left">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
@@ -533,76 +581,76 @@
         <height>50%</height>
       </action>
     </keybind>
-    <!-- ──────────────────────────── TILING ───────────────────────────── -->
+    <!-- ──────────────────────────── AUTO V/H TILING ───────────────────────────── -->
     <!-- Vertical tiling -->
-        <keybind key="C-W-v">
-          <action name="UnmaximizeFull"/>
-          <action name="MoveResizeTo">
-            <width>50%</width>
-          </action>
-          <action name="MaximizeVert"/>
-          <action name="MoveResizeTo">
-            <x>0</x>
-            <y>0</y>
-          </action>
-          <action name="NextWindow">
-            <interactive>no</interactive>
-            <dialog>none</dialog>
-            <finalactions>
-              <action name="UnmaximizeFull"/>
-              <action name="MoveResizeTo">
-                <width>50%</width>
-              </action>
-              <action name="MaximizeVert"/>
-              <action name="MoveResizeTo">
-                <x>-0</x>
-                <y>0</y>
-              </action>
-            </finalactions>
-          </action>
-        </keybind>
+	<keybind key="A-S-v">
+		<action name="UnmaximizeFull"/>
+		<action name="MoveResizeTo">
+		<width>50%</width>
+		</action>
+		<action name="MaximizeVert"/>
+		<action name="MoveResizeTo">
+		<x>0</x>
+		<y>0</y>
+		</action>
+		<action name="NextWindow">
+		<interactive>no</interactive>
+		<dialog>none</dialog>
+		<finalactions>
+			<action name="UnmaximizeFull"/>
+			<action name="MoveResizeTo">
+			<width>50%</width>
+			</action>
+			<action name="MaximizeVert"/>
+			<action name="MoveResizeTo">
+			<x>-0</x>
+			<y>0</y>
+			</action>
+		</finalactions>
+		</action>
+	</keybind>
 
-        <!-- Horizontal tiling -->
-        <keybind key="C-W-h">
-          <action name="UnmaximizeFull"/>
-          <action name="MoveResizeTo">
-            <height>50%</height>
-          </action>
-          <action name="MaximizeHorz"/>
-          <action name="MoveResizeTo">
-            <x>0</x>
-            <y>0</y>
-          </action>
-          <action name="NextWindow">
-            <interactive>no</interactive>
-            <dialog>none</dialog>
-            <finalactions>
-              <action name="UnmaximizeFull"/>
-              <action name="MoveResizeTo">
-                <height>50%</height>
-              </action>
-              <action name="MaximizeHorz"/>
-              <action name="MoveResizeTo">
-                <x>0</x>
-                <y>-0</y>
-              </action>
-            </finalactions>
-          </action>
-        </keybind>
+	<!-- Horizontal tiling -->
+	<keybind key="A-S-h">
+		<action name="UnmaximizeFull"/>
+		<action name="MoveResizeTo">
+		<height>50%</height>
+		</action>
+		<action name="MaximizeHorz"/>
+		<action name="MoveResizeTo">
+		<x>0</x>
+		<y>0</y>
+		</action>
+		<action name="NextWindow">
+		<interactive>no</interactive>
+		<dialog>none</dialog>
+		<finalactions>
+			<action name="UnmaximizeFull"/>
+			<action name="MoveResizeTo">
+			<height>50%</height>
+			</action>
+			<action name="MaximizeHorz"/>
+			<action name="MoveResizeTo">
+			<x>0</x>
+			<y>-0</y>
+			</action>
+		</finalactions>
+		</action>
+	</keybind>
 
-        <!-- Restore window dimensions -->
-        <keybind key="C-W-r">
-          <action name="UnmaximizeFull"/>
-          <action name="NextWindow">
-            <interactive>no</interactive>
-            <dialog>none</dialog>
-            <finalactions>
-              <action name="UnmaximizeFull"/>
-            </finalactions>
-          </action> 
-        </keybind>
-      
-          
+	<!-- Restore window dimensions -->
+	<keybind key="C-W-r">
+		<action name="UnmaximizeFull"/>
+		<action name="NextWindow">
+		<interactive>no</interactive>
+		<dialog>none</dialog>
+		<finalactions>
+			<action name="UnmaximizeFull"/>
+		</finalactions>
+		</action>
+	</keybind>
+
+
     <!-- ──────────────────────────── NEXT MONITOR ───────────────────────────── -->
     <keybind key="W-m">
       <action name="MoveResizeTo">
@@ -640,6 +688,7 @@
       </action>
     </keybind>
     <!-- ─────────────────────────── Desktop related ─────────────────────────── -->
+	<!-- GoToDesktop -->
     <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -660,6 +709,8 @@
         <to>4</to>
       </action>
     </keybind>
+
+	<!-- SendToDesktop -->
     <keybind key="W-S-1">
       <action name="SendToDesktop">
         <to>1</to>
@@ -681,6 +732,8 @@
       </action>
     </keybind>
   </keyboard>
+
+
   <!-- ──────────────────────────────── MOUSE ──────────────────────────────── -->
   <mouse>
     <dragThreshold>1</dragThreshold>
