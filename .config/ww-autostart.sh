@@ -3,6 +3,7 @@
 parcellite &
 xbindkeys &
 xfce4-power-manager &
+keepassxc &
 
 # panel selection
 pkill tint2; sleep 1;tint2 &
