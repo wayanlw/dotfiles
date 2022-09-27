@@ -3,7 +3,7 @@
 #│ This is the configuration file for Simple-x-hotkey-deamon(sxhkd)             │
 #│ This file contains the Window Manager Independent hotkeys                    │
 #│ Dependencies : sxhkd. This needs to be auostarted                            │
-#│                wmctrl, dmenu, xdotools, xsel                                 │
+#│ wmctrl, dmenu, j4-dmenu-desktop, xdotools, xsel                              │
 #└──────────────────────────────────────────────────────────────────────────────┘
 
 # ───────────────────────────── Reload the config ──────────────────────────── #
@@ -15,7 +15,7 @@ alt + ctrl + Escape
 
 # ───────────────────────────────── Launchers ──────────────────────────────── #
 alt + d
-    dmenu_run -i -l 10
+    j4-dmenu-desktop --dmenu="dmenu -i -l 10"
 
 # ─────────────────────────────── rofi Comamnds ────────────────────────────── #
 alt + space
