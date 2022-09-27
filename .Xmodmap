@@ -1,57 +1,15 @@
-keycode 66 = Mode_switch
-keysym l = l L Right
-keysym i = i I Up 
-keysym k = k K Down 
-keysym j = j J Left 
+clear Lock
+remove mod4 = Hyper_L
+keycode 66 = Hyper_L
+add Lock = Hyper_L
 
-
-keysym y = y Y Home
-keysym p = p P End
-
-keysym o = o O Next
-keysym u = u U Prior
-
-keysym n = n N BackSpace
-keysym b = b B BackSpace
-
-keysym comma = comma less Delete
-keysym v = v V Delete
-
-keysym q = q Q Escape
-keysym x = x X Return
-keysym Tab = Tab ISO_Left_Tab Shift_L 
-keysym semicolon = semicolon colon colon
-keysym exclam = 1 exclam exclam
-keysym slash = slash question Return
-
-!! Swapping Control and Alt Keys
-! clear control
-! clear mod1
-! keycode 37 = Alt_L Meta_L
-! keycode 64 = Control_L
-! add control = Control_L Control_R
-! add mod1 = Alt_L Meta_L
-
-!pointer = 1 2 3 4 5 6 7 5 6 10 11 12
-
-
-! below is used with autokey-gtk
-!! ---------- To replace the capslock key with hyper key --------------
-!! Unmap capslock
-!clear Lock
-!keycode 66 = Hyper_L
+! this is to map the Alt_GR to Control_L. But didnt work
+! keycode 108 = Control_L
 !
-!! Leave mod4 as windows key _only_
-!remove mod4 = Hyper_L
-!
-!! Set mod3 to capslock
-!add mod3 = Hyper_L
-
-
-!!-------------------instructions
-!to list all the keys available
-!xmodmap -pke | fzf
-!to reset the keymap
-!setxkbmap
-!to identify a key 
-!xev >> then type the keycode. It will be displayed in the terminal
+! ---- Swap Contrl and Alt in the XOrg
+!clear control
+!clear mod1
+!keycode 37 = Alt_L Meta_L
+!keycode 64 = Control_L
+!add control = Control_L Control_R
+!add mod1 = Alt_L Meta_L
