@@ -107,7 +107,9 @@ alias rsync='rsync -hav --progress'
 #                                   FUNCTIONS                                  #
 # ---------------------------------------------------------------------------- #
 
-
+function loc(){
+    locate --ignore-case --regexp "/${1}$"
+}
 
 # ────────────────────────── Downloading with aria2c ───────────────────────── #
 alias download='aria2c -x 16 -s 16' # x - number of connections per server, s - splits
