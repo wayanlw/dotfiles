@@ -175,10 +175,11 @@ hc keybind $Mod-Control-m jumpto last-minimized
 #            or , and . compare tags.focus.curframe_wcount = 2                   \
 #                     . cycle_layout +1 horizontal vertical  horizontal max grid    \
 #               , cycle_layout +1
-hc keybind $Mod-h cycle_layout +1 horizontal vertical
-hc keybind $Mod-space cycle_layout +1 grid max grid
-hc keybind $Mod-v set_layout horizontal
+# hc keybind $Mod-v cycle_layout +1 horizontal vertical
+hc keybind $Mod-v set_layout vertical
+hc keybind $Mod-c set_layout horizontal
 hc keybind $Mod-x set_layout max
+hc keybind $Mod-space cycle_layout +1 grid max grid
 
 ## -----------------------  mouse
 hc mouseunbind --all
@@ -188,7 +189,11 @@ hc mousebind $Mod-Button3 resize
 
 ## -----------------------  focus
 hc keybind $Mod-BackSpace cycle_monitor             # cycle monitor
-hc keybind $Mod-Tab cycle                           # cycle windows within frame
+# hc keybind $Mod-Tab cycle                         # cycle windows within frame
+hc keybind $Mod-h cycle -1                         # cycle windows within frame
+hc keybind $Mod-semicolon cycle +1                         # cycle windows within frame
+hc keybind $Mod-Shift-Tab cycle -1                         # cycle windows within frame
+hc keybind $Mod-Tab cycle +1                         # cycle windows within frame
 hc keybind $Mod-grave use_previous                  # cycle previous tag 
 #hc keybind $Mod-x cycle_frame                      # cycle the frame in the same tag
 #hc keybind $Mod-v cycle_all +1                     # cycle all windows in the current tag 
@@ -210,10 +215,12 @@ hc set frame_bg_transparent on
 hc set frame_transparent_width 3
 hc set frame_gap 3
 
-hc attr theme.title_height 0 #15 # removes the window titles. default was 15
+hc attr theme.title_align left
+hc attr theme.title_when multiple_tabs # when to show window title ( always | one_tab | multiple_tabs)
+hc attr theme.title_height 14 # title height ( 0 removes the tile | 15 is the default )
 hc attr theme.title_font 'Dejavu Sans:pixelsize=12'  # example using Xft
 # hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
-#hc attr theme.padding_top 0  # space below the title's baseline (i.e. text depth)
+hc attr theme.padding_top 2  # space below the title's baseline (i.e. text depth)
 hc attr theme.active.color '#FB8C00'
 hc attr theme.title_color '#ffffff'
 hc attr theme.normal.color '#323232dd'
