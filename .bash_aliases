@@ -46,12 +46,12 @@ function aptinst() {
 }
 
 # ────────────────────── Dnf (Fedora) Package Management ───────────────────── #
-alias dnfi='sudo dnf install'
-alias dnfu='sudo dnf remove'
-alias dnfs='dnf search'
-alias dnfinf='dnf info'
-alias dnflist="dnf list installed | cut -d' ' -f1 | fzf --preview 'dnf info {}' --layout=reverse --bind 'ctrl-u:execute(sudo dnf remove {})+abort'"
-function dnfinst() {
+alias di='sudo dnf install'
+alias du='sudo dnf remove'
+alias ds='dnf search'
+alias dinf='dnf info'
+alias dlist="dnf list installed | cut -d' ' -f1 | fzf --preview 'dnf info {}' --layout=reverse --bind 'ctrl-u:execute(sudo dnf remove {})+abort'"
+function din() {
 	[[ $1 = "" ]] && echo "type a package to search. Eg. dnfinst vim" || dnf search $1 | grep -v '^==' | cut -d' ' -f1 | fzf --preview 'dnf info {}' --layout=reverse --bind 'ctrl-i:execute(sudo dnf install {})+abort'
 }
 

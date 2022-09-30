@@ -84,24 +84,24 @@ for_window [class="xfce4*"] floating enable; border none
 #default_floating_border normal
 
 # --------------- Disable titlebars for all windows
-for_window [class="^.*"] border pixel 2
-new_window 1pixel
+#for_window [class="^.*"] border pixel 2
+#new_window 1pixel
 
 # --------------- Hide borders
 #hide_edge_borders none
 
 # --------------- GAPS
-gaps outer 0
-gaps inner 3
-bindsym $mod+g gaps inner current plus 5
-bindsym $mod+Shift+g gaps inner current minus 5
+#gaps outer 0
+#gaps inner 3
+#bindsym $mod+g gaps inner current plus 5
+#bindsym $mod+Shift+g gaps inner current minus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+#smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+#smart_borders on
 
 # ---------------------------------------------------------------------------- #
 #                                     FONTS                                    #
@@ -134,7 +134,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # --------------- dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -l 55 -fn 'inconsolata-9'
+# bindsym $mod+d exec --no-startup-id dmenu_run -i -l 55 -fn 'inconsolata-9'
+bindsym $mod+d exec --no-startup-id dmenu_run -i -l 55 -fn 'monospace'
 ##-- this only displays the startmenu items
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
