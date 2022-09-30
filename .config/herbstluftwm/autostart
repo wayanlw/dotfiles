@@ -92,15 +92,15 @@ hc keybind $Mod-Shift-d or , and . compare tags.focus.curframe_wcount lt 2 . rem
 #hc keybind $Mod-o       split   right   0.5
 
 # ww: create an empty frame at the specified direction and focus on that
-hc keybind $Mod-u chain , split   bottom  0.5 , focus -e down
-hc keybind $Mod-o chain , split   right   0.5 , focus -e right
 hc keybind $Mod-y chain , split   top  0.5 , focus -e up
-hc keybind $Mod-p chain , split   left  0.5 , focus -e left
+hc keybind $Mod-p chain , split   bottom  0.5 , focus -e down
+hc keybind $Mod-u chain , split   left  0.5 , focus -e left
+hc keybind $Mod-o chain , split   right   0.5 , focus -e right
 # ww : shift + u/o to create a frame and move the current window to it.
-hc keybind $Mod-Shift-u chain , split bottom 0.5 , shift -e down
-hc keybind $Mod-Shift-o chain , split right 0.5 , shift -e right
 hc keybind $Mod-Shift-y chain , split top 0.5 , shift -e up
-hc keybind $Mod-Shift-p chain , split left 0.5 , shift -e left
+hc keybind $Mod-Shift-p chain , split bottom 0.5 , shift -e down
+hc keybind $Mod-Shift-u chain , split left 0.5 , shift -e left
+hc keybind $Mod-Shift-o chain , split right 0.5 , shift -e right
 # ww: Focus Monitors
 hc keybind Shift-$Alt-i focus_monitor -u
 hc keybind Shift-$Alt-j focus_monitor -l
@@ -243,6 +243,7 @@ hc set smart_frame_surroundings off # no gap when there is only one window
 hc set mouse_recenter_gap 0
 hc set focus_follows_mouse 1
 hc set focus_crosses_monitor_boundaries on
+hc set focus_stealing_prevention off
 
 
 ## -----------------------  rules
