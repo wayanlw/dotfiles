@@ -15,11 +15,14 @@ alt + ctrl + Escape
 
 # ───────────────────────────────── Launchers ──────────────────────────────── #
 alt + d
-    j4-dmenu-desktop --dmenu="dmenu -i -l 10"
+    dmenu_run -i -l 10
 
 # ─────────────────────────────── rofi Comamnds ────────────────────────────── #
+# alt + space
+#     rofi -show drun -show-icons "papirus" -font "Noto mono 10" -theme "solarized" -width 25 
+
 alt + space
-    rofi -show drun -show-icons "papirus" -font "Noto mono 10" -theme "solarized" -width 25 
+    j4-dmenu-desktop --dmenu="dmenu -i -l 10"
 
 alt + shift + space
     ~/.dotfiles/ww-scripts/dmenu-window-switcher
