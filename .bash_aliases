@@ -15,7 +15,7 @@ alias script='script -o 2M -O $(date +"%Y-%m-%d_%I:%M:%S_%p").log'
 
 # ─────────────────────────────── Pacman (Arch) ────────────────────────────── #
 alias findpkg='pacman -Qq | grep'
-alias paci='sudo pacman -S'
+alias paci='sudo pacman -S --needed'
 alias pacu='sudo pacman -Runs'
 alias pacs='pacman -Ss'
 alias pacclean='sudo pacman -Runs $(pacman -Qqdt)'
@@ -46,9 +46,9 @@ function aptinst() {
 }
 
 # ────────────────────── Dnf (Fedora) Package Management ───────────────────── #
-alias di='sudo dnf install'
-alias du='sudo dnf remove'
-alias ds='dnf search'
+alias dnfi='sudo dnf install'
+alias dnfu='sudo dnf remove'
+alias dnfs='dnf search'
 alias dinf='dnf info'
 alias dlist="dnf list installed | cut -d' ' -f1 | fzf --preview 'dnf info {}' --layout=reverse --bind 'ctrl-u:execute(sudo dnf remove {})+abort'"
 function din() {
