@@ -1,177 +1,102 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.dotfiles/ww-scripts:$PATH
+# The source for creation of this .zshrc is https://github.com/mattmc3/zsh_unplugged
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# ─────────────────── Provides zsh detailed auto completion ────────────────── #
+autoload -U compinit
+compinit
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="fino-time"
-ZSH_THEME="ww"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+#
+#
+# This section is the bare-bone plugin manager
+# The plugins is saved in to ~/.config/zsh/plugins/zsh_unplugged
+#
+#
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+# where do you want to store your plugins?
+ZPLUGINDIR=${ZPLUGINDIR:-${ZDOTDIR:-$HOME/.config/zsh}/plugins}
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+# get zsh_unplugged and store it with your other plugins
+if [[ ! -d $ZPLUGINDIR/zsh_unplugged ]]; then
+  git clone --quiet https://github.com/mattmc3/zsh_unplugged $ZPLUGINDIR/zsh_unplugged
+fi
+source $ZPLUGINDIR/zsh_unplugged/zsh_unplugged.zsh
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# ─────────────────────────────── Plugins List ─────────────────────────────── #
+# make list of the Zsh plugins you use
+repos=(
+	# plugins that you want loaded first
+	sindresorhus/pure
+	romkatv/zsh-defer
 
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+	# other plugins
+	zsh-users/zsh-completions
+	rupa/z
+	# Aloxaf/fzf-tab
+	# ...
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    # git
-    history-substring-search
-    dirhistory
-    colored-man-pages
-    web-search
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    z
+	# plugins you want loaded last
+	zsh-users/zsh-syntax-highlighting
+	zsh-users/zsh-history-substring-search
+	zsh-users/zsh-autosuggestions
 )
+# ────────────────────────── Plugin Update Function ────────────────────────── #
+function zsh-plugin-update {
+  ZPLUGINDIR=${ZPLUGINDIR:-$HOME/.config/zsh/plugins}
+  for d in $ZPLUGINDIR/*/.git(/); do
+    echo "Updating ${d:h:t}..."
+    command git -C "${d:h}" pull --ff --recurse-submodules --depth 1 --rebase --autostash
+  done
+}
 
-source $ZSH/oh-my-zsh.sh
+# ─────────────────────────── Plugin List Function ─────────────────────────── #
+function zsh-plugin-list {
+    for d in $ZPLUGINDIR/*/.git; do
+      git -C "${d:h}" remote get-url origin
+    done
+}
 
-# User configuration
+# ─────────────────────── Hyper Speed Plugins - Compile ────────────────────── #
+# What if I want my plugins to be even faster?
+# If you are an experienced Zsh user, you may know about zcompile, which takes your Zsh scripts and potentially speeds them up by compiling them to byte code.
+function zsh-plugin-compile {
+  ZPLUGINDIR=${ZPLUGINDIR:-$HOME/.config/zsh/plugins}
+  autoload -U zrecompile
+  local f
+  for f in $ZPLUGINDIR/**/*.zsh{,-theme}(N); do
+    zrecompile -pq "$f"
+  done
+}
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# ──────────────────────────── Remove all Plugins ──────────────────────────── #
+function zsh-plugin-remove-all {
+	ZPLUGINDIR=~/.config/zsh/plugins
+	rm -rf $ZPLUGINDIR
+	zsh
+}
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# ──────────────────────────────────────────────────────────────────────────── #
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# ww Section
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#PATH=$PATH:$HOME/.dotfiles/scripts
+# ──────────────────────────────────────────────────────────────────────────── #
 
-#vim keybindings in zsh terminal. This has to be done before the other keymap commands. Else others will stop working.
-# bindkey -v
-# bindkey 'jk' vi-cmd-mode
-# bindkey -e jk \\e
-
+ # ───────────────────────────── ww - loading PATH ──────────────────────────── #
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.dotfiles/ww-scripts:$PATH
+# ────────────────────────────── ww-sourcing files ────────────────────────────── #
 [[ -e $HOME/.bash_aliases ]] && source $HOME/.bash_aliases || ln -sf $HOME/.dotfiles/.bash_aliases $HOME/.bash_aliases && source $HOME/.bash_aliases
+source /usr/share/fzf/key-bindings.zsh
 
-# source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/shell/key-bindings.zsh
-
-
-
-### autoexpanding aliases
-## blank aliases
-#typeset -a baliases
-#baliases=()
-#
-#balias() {
-#  alias $@
-#  args="$@"
-#  args=${args%%\=*}
-#  baliases+=(${args##* })
-#}
-#
-## ignored aliases
-#typeset -a ialiases
-#ialiases=()
-#
-#ialias() {
-#  alias $@
-#  args="$@"
-#  args=${args%%\=*}
-#  ialiases+=(${args##* })
-#}
-#
-## functionality
-#expand-alias-space() {
-#  [[ $LBUFFER =~ "\<(${(j:|:)baliases})\$" ]]; insertBlank=$?
-#  if [[ ! $LBUFFER =~ "\<(${(j:|:)ialiases})\$" ]]; then
-#    zle _expand_alias
-#  fi
-#  zle self-insert
-#  if [[ "$insertBlank" = "0" ]]; then
-#    zle backward-delete-char
-#  fi
-#}
-#zle -N expand-alias-space
-#
-#bindkey " " expand-alias-space
-#bindkey -M isearch " " magic-space
-#
-## command aliases
-#alias inst='sudo pacman -Sy'
-#
-## blank aliases, without trailing whitespace
-#balias clh='curl localhost:'
-#
-## "ignored" aliases, not expanded
-#ialias l='exa -al'
-#ialias curl='curl --silent --show-error'
-
-# global aliases
+# ──────────────────────────────── ww-aliases ──────────────────────────────── #
 alias -g L='| less'
 alias -g G='| grep'
 alias -g F='| fzf'
-#ialias -g grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
+
+# ────────────────────────────── ww-keymap model ───────────────────────────── #
+# bindkey -v
+# bindkey 'jk' vi-cmd-mode
+bindkey -e jk \\e
+
+
+# now load your plugins
+plugin-load $repos # Don't change the name of this function
