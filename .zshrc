@@ -94,8 +94,8 @@ alias -g F='| fzf'
 
 # ────────────────────────────── ww-keymap model ───────────────────────────── #
 # bindkey -v
-# bindkey 'jk' vi-cmd-mode
-bindkey -e jk \\e
+bindkey 'jk' vi-cmd-mode
+# bindkey -e jk \\e
 
 
 # now load your plugins
