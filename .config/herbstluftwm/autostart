@@ -220,7 +220,7 @@ hc attr theme.title_when multiple_tabs # when to show window title ( always | on
 hc attr theme.title_height 14 # title height ( 0 removes the tile | 15 is the default )
 hc attr theme.title_font 'Dejavu Sans:pixelsize=12'  # example using Xft
 # hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
-hc attr theme.padding_top 2  # space below the title's baseline (i.e. text depth)
+hc attr theme.padding_top 0  # space below the title's baseline (i.e. text depth)
 hc attr theme.active.color '#FB8C00'
 hc attr theme.title_color '#ffffff'
 hc attr theme.normal.color '#323232dd'
@@ -250,16 +250,15 @@ hc set smart_frame_surroundings off # no gap when there is only one window
 hc set mouse_recenter_gap 0
 hc set focus_follows_mouse 1
 hc set focus_crosses_monitor_boundaries on
+hc set swap_monitors_to_get_tag 1
 hc set focus_stealing_prevention off
 
 
 ## -----------------------  rules
 hc unrule -F
 # hc rule class=XTerm tag=3 # move all xterms to tag 3
-hc rule class=Brave-browser tag=2 # move all brave to tag 3
 hc rule focus=on # normally focus new clients
 hc rule floatplacement=center # float placement center
-hc set swap_monitors_to_get_tag 1
 # hc rule focus=off # normally do not focus new clients
 # give focus to most common terminals
 # hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
@@ -269,8 +268,12 @@ hc rule _NET_WM_STATE='_NET_WM_STATE_DEMANDS_ATTENTION' focus=on
 hc rule windowtype='_NET_WM_STATE_DEMANDS_ATTENTION' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule urgent focus=on
-
 hc set tree_style '╾│ ├└╼─┐'
+
+hc rule class=Brave-browser tag=2 # move all brave to tag 3
+# hc rule class=KeePassXC floating=on # move all brave to tag 3
+
+
 
 # unlock, just to be sure
 hc unlock
