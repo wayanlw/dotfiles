@@ -18,14 +18,17 @@ device_name = "AT Translated Set 2 keyboard"
 [[dual_role]]
 input = "KEY_CAPSLOCK"
 hold = ["KEY_F16"]
-tap = ["KEY_F17"]
+tap = ["KEY_ESC"]
 
+# ww: The below code creates a small delay in traditional alt-tab.
+# ww: You can disable it and use the normal shift key for shift functionality.
 [[dual_role]]
 input = "KEY_TAB"
 hold = ["KEY_RIGHTSHIFT"]
 tap = ["KEY_TAB"]
 
 # ────────────────────────────── Alt-tab mapping ───────────────────────────── #
+# ww: Enables quick alttab to swith to last active window
 [[remap]]
 input = ["KEY_F16","KEY_Z"]
 output = ["KEY_LEFTALT","KEY_TAB"]
@@ -92,7 +95,7 @@ output = ["KEY_LEFTCTRL","KEY_A"]
 
 [[remap]]
 input = ["KEY_F16","KEY_Q"]
-output = ["KEY_LEFTCTRL","KEY_ESC"]
+output = ["KEY_ESC"]
 
 [[remap]]
 input = ["KEY_F16","KEY_X"]
@@ -124,7 +127,7 @@ output = ["KEY_BACKSPACE"]
 input = ["KEY_F16","KEY_N"]
 output = ["KEY_LEFTCTRL","KEY_BACKSPACE"]
 [[remap]]
-input = ["KEY_F16","KEY_N"]
+input = ["KEY_F16","KEY_M"]
 output = ["KEY_LEFTCTRL","KEY_BACKSPACE"]
 [[remap]]
 input = ["KEY_F16","KEY_DOT"]
