@@ -1,0 +1,131 @@
+# The name of the device to remap.
+# Run `sudo evremap list-devices` to see the devices available
+# on your system.
+device_name = "AT Translated Set 2 keyboard"
+
+# If you have multiple devices with the same name, you can optionally
+# specify the `phys` value that is printed by the `list-devices` subcommand
+# phys = "usb-0000:07:00.3-2.1.1/input0"
+# source : https://github.com/wez/evremap
+
+
+
+# ────────────────────────────── Dual Role Keys ────────────────────────────── #
+# Configure CAPSLOCK as a Dual Role key.
+# Holding it produces LEFTCTRL, but tapping it
+# will produce ESC.
+# Both `tap` and `hold` can expand multiple output keys.
+[[dual_role]]
+input = "KEY_CAPSLOCK"
+hold = ["KEY_F16"]
+tap = ["KEY_F17"]
+
+[[dual_role]]
+input = "KEY_TAB"
+hold = ["KEY_RIGHTSHIFT"]
+tap = ["KEY_TAB"]
+
+# ────────────────────────────── Alt-tab mapping ───────────────────────────── #
+[[remap]]
+input = ["KEY_F16","KEY_Z"]
+output = ["KEY_LEFTALT","KEY_TAB"]
+
+# ──────────────────────────────── Arrow Keys ──────────────────────────────── #
+[[remap]]
+input = ["KEY_F16","KEY_J"]
+output = ["KEY_LEFT"]
+[[remap]]
+input = ["KEY_F16","KEY_I"]
+output = ["KEY_UP"]
+[[remap]]
+input = ["KEY_F16","KEY_K"]
+output = ["KEY_DOWN"]
+[[remap]]
+input = ["KEY_F16","KEY_L"]
+output = ["KEY_RIGHT"]
+
+[[remap]]
+input = ["KEY_F16","KEY_H"]
+output = ["KEY_LEFTCTRL","KEY_LEFT"]
+[[remap]]
+input = ["KEY_F16","KEY_SEMICOLON"]
+output = ["KEY_LEFTCTRL","KEY_RIGHT"]
+
+[[remap]]
+input = ["KEY_F16","KEY_Y"]
+output = ["KEY_HOME"]
+[[remap]]
+input = ["KEY_F16","KEY_P"]
+output = ["KEY_END"]
+
+
+[[remap]]
+input = ["KEY_F16","KEY_U"]
+output = ["KEY_PAGEUP"]
+[[remap]]
+input = ["KEY_F16","KEY_O"]
+output = ["KEY_PAGEDOWN"]
+# ─────────────────────────────── Ctrl Keybinds ────────────────────────────── #
+[[remap]]
+input = ["KEY_F16","KEY_D"]
+output = ["KEY_LEFTCTRL","KEY_C"]
+[[remap]]
+input = ["KEY_F16","KEY_F"]
+output = ["KEY_LEFTCTRL","KEY_V"]
+[[remap]]
+input = ["KEY_F16","KEY_S"]
+output = ["KEY_LEFTCTRL","KEY_X"]
+
+[[remap]]
+input = ["KEY_F16","KEY_E"]
+output = ["KEY_LEFTCTRL","KEY_Z"]
+[[remap]]
+input = ["KEY_F16","KEY_R"]
+output = ["KEY_LEFTCTRL","KEY_Y"]
+
+[[remap]]
+input = ["KEY_F16","KEY_A"]
+output = ["KEY_LEFTCTRL","KEY_S"]
+[[remap]]
+input = ["KEY_F16","KEY_W"]
+output = ["KEY_LEFTCTRL","KEY_A"]
+
+[[remap]]
+input = ["KEY_F16","KEY_Q"]
+output = ["KEY_LEFTCTRL","KEY_ESC"]
+
+[[remap]]
+input = ["KEY_F16","KEY_X"]
+output = ["KEY_LEFTCTRL","KEY_F"]
+
+
+# ────────────────────────────────── Other ───────────────────────────────── #
+[[remap]]
+input = ["KEY_F16","KEY_SLASH"]
+output = ["KEY_ENTER"]
+[[remap]]
+input = ["KEY_F16","KEY_ENTER"]
+output = ["KEY_END","KEY_ENTER"]
+[[remap]]
+input = ["KEY_F16","KEY_G"]
+output = ["KEY_END","KEY_LEFTSHIFT","KEY_HOME"]
+
+# ──────────────────────────────── Delete Keys ─────────────────────────────── #
+[[remap]]
+input = ["KEY_F16","KEY_V"]
+output = ["KEY_DELETE"]
+[[remap]]
+input = ["KEY_F16","KEY_COMMA"]
+output = ["KEY_DELETE"]
+[[remap]]
+input = ["KEY_F16","KEY_N"]
+output = ["KEY_BACKSPACE"]
+[[remap]]
+input = ["KEY_F16","KEY_N"]
+output = ["KEY_LEFTCTRL","KEY_BACKSPACE"]
+[[remap]]
+input = ["KEY_F16","KEY_N"]
+output = ["KEY_LEFTCTRL","KEY_BACKSPACE"]
+[[remap]]
+input = ["KEY_F16","KEY_DOT"]
+output = ["KEY_LEFTCTRL","KEY_DELETE"]
