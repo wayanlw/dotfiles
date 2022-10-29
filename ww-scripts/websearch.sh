@@ -2,7 +2,7 @@
 
 g_url='https://google.com/search?q='
 gi_url='https://www.google.com/search?tbm=isch&q='
-ddg_url='https://duckduckgo.com/?q='
+ddg_url='https://duckduckgo.com/?q=\'
 yt_url='https://www.youtube.com/results?search_query='
 
 
@@ -13,7 +13,7 @@ o - open url\n\
 x - more search engines\n\
 b - bookmarks\n\
 gi - google images\n\
-ddg - duckduckgo\n\
+d - duckduckgo\n\
 u - youtube\n\
 uv - ytfzf video\n\
 ua -ytfzf audio\n\
@@ -38,7 +38,7 @@ if [ -n "$QUERY" ]; then
     "gi")
         BrowserOpen "${gi_url}${SEARCH_ITEM}" 2>/dev/null
         ;;
-    "ddg")
+    "d")
         BrowserOpen "${ddg_url}${SEARCH_ITEM}" 2>/dev/null
         ;;
     "o")
