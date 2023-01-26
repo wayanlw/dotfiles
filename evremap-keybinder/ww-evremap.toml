@@ -33,9 +33,15 @@ tap = ["KEY_TAB"]
 input = ["KEY_F16","KEY_Z"]
 output = ["KEY_LEFTALT","KEY_TAB"]
 
+# ────────────────────────────── Alt CTRL mapping ──────────────────────────── #
+
 [[remap]]
 input = ["KEY_RIGHTALT"]
 output = ["KEY_LEFTCTRL"]
+
+[[remap]]
+input = ["KEY_LEFTALT","KEY_Q"]
+output = ["KEY_LEFTCTRL","KEY_W"]
 
 # ──────────────────────────────── Arrow Keys ──────────────────────────────── #
 [[remap]]
