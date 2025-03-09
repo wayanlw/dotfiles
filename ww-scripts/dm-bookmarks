@@ -28,7 +28,7 @@ bookmark[archwiki]="https://wiki.archlinux.org/"
 main() {
   # As this is loaded from other file it is technically not defined
   # shellcheck disable=SC2154 # Choosing  a search engine by name from array above.
-  engine=$(printf '%s\n' "${!bookmark[@]}" | sort | dmenu -i -l 20 -p 'Choose search engine:') || exit 1
+  engine=$(printf '%s\n' "${!bookmark[@]}" | sort | rofi -dmenu -i -p 'Choose search engine:') || exit 1
   # engine=$(printf '%s\n' "${!bookmark[@]}" | sort | dmenu -i -l 20 -p 'Choose search engine:' "$@") || exit 1
   notify-send $engine
   # Getting the URL of the search engine we chose.

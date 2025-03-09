@@ -1,6 +1,7 @@
 #!/bin/bash
 
 g_url='https://google.com/search?q='
+c_url='https://chat.openai.com/chat?q='
 gi_url='https://www.google.com/search?tbm=isch&q='
 ddg_url='https://duckduckgo.com/?q=\'
 yt_url='https://www.youtube.com/results?search_query='
@@ -9,6 +10,7 @@ yt_url='https://www.youtube.com/results?search_query='
 #QUERY=$(echo '' | dmenu -p "Search:" -fn "-xos4-terminus-medium-r-*-*-14-*" -b)
 QUERY=$(echo -e "\
 g - google\n\
+c - chatgpt\n\
 o - open url\n\
 x - more search engines\n\
 b - bookmarks\n\
@@ -18,7 +20,11 @@ u - youtube\n\
 uv - ytfzf video\n\
 ua -ytfzf audio\n\
 uh - ytfzf history" \
-| dmenu -l 7 -p "Search: ")
+| wmenu -p "Search >  " -i -l 8 )
+
+#| dmenu -l 7 -p "Search: ")
+#| fuzzel -d -p "Search >  " -i -l 8 --width 50  --inner-pad 10 --font mono:size=10)
+
 FIRSTWORD=$(echo $QUERY | cut  -d " " -f1)
 SEARCH_ITEM=$(echo $QUERY | awk 'NF{$1=x; sub(/^ /,x)}1')
 
@@ -34,6 +40,9 @@ if [ -n "$QUERY" ]; then
     case $FIRSTWORD in
     "g")
         BrowserOpen "${g_url}${SEARCH_ITEM}" 2>/dev/null
+        ;;
+	"c")
+        BrowserOpen "${c_url}${SEARCH_ITEM}" 2>/dev/null
         ;;
     "gi")
         BrowserOpen "${gi_url}${SEARCH_ITEM}" 2>/dev/null
