@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+
+<!--
+  This is a very simple config file with many options missing. For a complete
+  set of options with comments, see docs/rc.xml.all
+-->
+
+<labwc_config>
+
+<!-- _____________________________theme_______________________________-->
+  <theme>
+    <name></name>
+    <cornerRadius>8</cornerRadius>
+    <font name="sans" size="10" />
+  </theme>
+
+<!-- _____________________________Window Placement____________________-->
+  <placement>
+    <policy>UnderMouse</policy>
+    <!-- 'Smart' or 'UnderMouse' -->
+    <center>Yes</center>
+    <!-- whether to place windows in the center of the free area found or
+       the top left corner -->
+    <monitor>Mouse</monitor>
+    <!-- with Smart placement on a multi-monitor system, try to place new windows
+       on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
+       the active window is, 'Primary' - only on the primary monitor -->
+    <primaryMonitor>Active</primaryMonitor>
+    <!-- The monitor where Openbox should place popup dialogs such as the
+       focus cycling popup, or the desktop switch popup.  It can be an index
+       from 1, specifying a particular monitor.  Or it can be one of the
+       following: 'Mouse' - where the mouse is, or
+                  'Active' - where the active window is -->
+  </placement>
+  <desktops>
+    <!-- this stuff is only used at startup, pagers allow you to change them
+       during a session
+
+       these are default values to use when other ones are not already set
+       by other applications, or saved in your session
+
+       use obconf if you want to change these without having to log out
+       and back in -->
+    <firstdesk>1</firstdesk>
+    <names>
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
+    </names>
+    <popupTime>500</popupTime>
+    <!-- The number of milliseconds to show the popup for when switching
+       desktops.  Set this to 0 to disable the popup. -->
+  </desktops>
+<!-- ____________________________ focus _______________________________-->
+  <focus>
+    <followMouse>yes</followMouse>
+    <!-- move focus to a window when you move the mouse into it -->
+    <focusDelay>200</focusDelay>
+    <!-- when followMouse is enabled, the mouse must be inside the window for
+       this many milliseconds (1000 = 1 sec) before moving focus to it -->
+    <raiseOnFocus>no</raiseOnFocus>
+    <!-- when followMouse is enabled, and a window is given focus by moving the
+       mouse into it, also raise the window -->
+  </focus>
+
+<!-- ____________________________ WindowSwitcher _______________________________-->
+  <windowSwitcher show="yes" preview="no" outlines="yes" allWorkspaces="no">
+    <fields>
+      <!-- <field content="type" width="25%" /> -->
+      <field content="trimmed_identifier" width="25%" />
+      <!-- <field content="identifier" width="25%" /> -->
+      <field content="title" width="50%" />
+    </fields>
+  </windowSwitcher>
+
+<!-- ____________________________ Keyboard _______________________________-->
+
+
+  <keyboard>
+    <!-- the <default /> will bring in all default keybindings. If you re-define any of them after that, original will be replaced. To see the full list of default keybindings go to https://github.com/labwc/labwc/blob/master/docs/rc.xml.all -->
+    <default />
+
+    <!-- Use a different terminal emulator -->
+    <keybind key="W-Return">
+      <action name="Execute" command="kitty" />
+    </keybind>
+    <keybind key="W-R">
+      <action name="Execute" command="labwc --reconfigure" />
+    </keybind>
+    <keybind key="W-d">
+      <action name="Execute" command="wmenu-run -i -l 10" />
+    </keybind>
+    <keybind key="W-s">
+      <action name="Execute" command="sh ~/.dotfiles/ww-scripts/websearch.sh" />
+    </keybind>
+    <keybind key="A-space">
+      <action name="Execute" command="fuzzel" />
+    </keybind>
+    <!--
+      Remove a previously defined keybind
+      A shorter alternative is <keybind key="W-F4" />
+    -->
+    <keybind key="A-S-Q">
+      <action name="Close" />
+    </keybind>
+    <keybind key="A-S-m">
+      <action name="Iconify" />
+      <!-- Iconofy is minimize-->
+    </keybind>
+    <keybind key="W-F4">
+      <action name="None" />
+    </keybind>
+
+    <keybind key="S-A-E">
+      <action name="SnapToEdge" direction="left" />
+    </keybind>
+    <keybind key="S-A-R">
+      <action name="SnapToEdge" direction="right" />
+    </keybind>
+
+    <keybind key="W-Space">
+      <action name="ShowMenu" menu="client-list-combined-menu" />
+      <position>
+        <x>center</x>
+        <y>center</y>
+      </position>
+    </keybind>
+
+    <keybind key="A-S-w">
+      <action name="ToggleMaximize" />
+    </keybind>
+    <keybind key="A-W-Space">
+      <action name="ShowMenu" menu="client-menu" atCursor="no" />
+    </keybind>
+    <keybind key="W-o">
+      <action name="NextWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="W-u">
+      <action name="PreviousWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+<!-- ────────────────── Keybindings for desktop switching ────────────────── -->
+    <keybind key="W-comma">
+      <action name="GoToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-period">
+      <action name="GoToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-S-comma">
+      <action name="SendToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-S-period">
+      <action name="SendToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+    <keybind key="W-C-comma">
+      <action name="SendToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+      <action name="GoToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-C-period">
+      <action name="SendToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+      <action name="GoToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+    <keybind key="W-1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+
+    <keybind key="W-S-1">
+      <action name="SendToDesktop">
+        <to>1</to>
+        <wrap>no</wrap>
+      </action>
+      <action name="GoToDesktop">
+        <to>1</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-S-2">
+      <action name="SendToDesktop">
+        <to>2</to>
+        <wrap>no</wrap>
+      </action>
+      <action name="GoToDesktop">
+        <to>2</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-S-3">
+      <action name="SendToDesktop">
+        <to>3</to>
+        <wrap>no</wrap>
+      </action>
+      <action name="GoToDesktop">
+        <to>3</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-S-4">
+      <action name="SendToDesktop">
+        <to>4</to>
+        <wrap>no</wrap>
+      </action>
+      <action name="GoToDesktop">
+        <to>4</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+  </keyboard>
+
+
+
+
+  <mouse>
+    <default />
+    <context name="TitleBar">
+      <mousebind button="Middle" action="Press">
+        <action name="Close" />
+      </mousebind>
+    </context>
+      
+    <!-- Show a custom menu on desktop right click -->
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="some-custom-menu" />
+      </mousebind>
+    </context>
+  </mouse>
+
+</labwc_config>
