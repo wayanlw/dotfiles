@@ -19,6 +19,10 @@ uv - ytfzf video\n\
 ua -ytfzf audio\n\
 uh - ytfzf history" \
 | dmenu -l 7 -p "Search: ")
+# | wmenu -p "Search >  " -i -l 8 )
+#| fuzzel -d -p "Search >  " -i -l 8 --width 50  --inner-pad 10 --font mono:size=10)
+
+
 FIRSTWORD=$(echo $QUERY | cut  -d " " -f1)
 SEARCH_ITEM=$(echo $QUERY | awk 'NF{$1=x; sub(/^ /,x)}1')
 
