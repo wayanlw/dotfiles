@@ -1,0 +1,3 @@
+#!/bin/bash
+sfwbar >/dev/null 2>&1 &
+swaybg -i ~/.dotfiles/wallpaper/wallpaper.jpg >/dev/null 2>&1 &
